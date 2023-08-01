@@ -4,6 +4,7 @@ const savedTheme = localStorage.getItem("theme");
 
 function updatePrismTheme(theme) {
   const prismThemeLink = document.getElementById("style");
+  if (prismThemeLink?.href === undefined) return;
   prismThemeLink.href = `../css/prism-${theme}.css`;
 }
 
@@ -16,7 +17,11 @@ if (savedTheme === "dark") {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  Prism.highlightAll();
+  try {
+    Prism.highlightAll();
+  } catch (err) {
+    console.debug("Prism is not");
+  }
 });
 
 themeToggle.addEventListener("click", () => {

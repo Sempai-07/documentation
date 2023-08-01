@@ -76,6 +76,15 @@ button {
 }
 
 /* Dark theme */
+#themeToggle {
+  padding: 10px 20px;
+  background-color: #0088cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 body.dark-theme {
   background-color: #1e1e1e;
   color: #8a8a8a;
