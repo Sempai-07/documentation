@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>setPassportDataErrors - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>setPassportDataErrors - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Informs a user that some of the Telegram Passport elements they provided
+        contains errors. The user will not be able to re-submit their Passport
+        to you until the errors are fixed (the contents of the field for which
+        you returned the error must change). Returns True on success.
+      </p>
+      <p>
+        Use this if the data submitted by the user doesn't satisfy the standards
+        your service requires for any reason. For example, if a birthday date
+        seems invalid, a submitted document is blurry, a scan shows evidence of
+        tampering, etc. Supply some details in the error message to make sure
+        the user knows how to correct the issues.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>user_id</code></td>
+          <td>
+            User identifier<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>errors</code></td>
+          <td>
+            An array describing the errors<br />
+            <strong>Type:</strong> <code>readonly PassportElementError[]</code>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Usage:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+        
+const bot = new TelegramBot("BOT_TOKEN");
+
+bot.setPassportDataErrors({
+  user_id: 123456789,
+  errors: [
+    { type: "passport", message: "Invalid birthday date." },
+    { type: "document", message: "Document scan is blurry." }
+  ],
+  message_thread_id: 987654321
+}).then((data) => {
+  console.log(data);
+});
+        
+bot.login();
+      </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./answerPreCheckoutQuery.html">answerPreCheckoutQuery</a>
+          <a href="./sendGame.html">sendGame</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

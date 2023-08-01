@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@1.6.5</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@1.6.5</h1>
+
+    <div>
+      <h2>Added</h2>
+      <ul>
+        <li>
+          Now you can install <code>telegramsjs</code> using <code>Yarn</code>.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Fixed</h2>
+      <h3>Context</h3>
+      <ul>
+        <li>
+          When calling context methods for the
+          <code>callback_query</code> event, the message identifier
+          (<code>message_id</code>) was not being passed.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Changed</h2>
+      <h3>Markup</h3>
+      <ul>
+        <li>
+          The <code>generateReplyMarkup</code> method now returns a complete
+          object with an array instead of the string that the
+          <code>getReplyMarkup</code> method used to return.
+        </li>
+        <li>
+          Improved typing in <code>Markup</code>, now using more accurate and
+          useful types for parameters (previously, some functions lacked
+          parameters, and there were many <code>any</code> types, but now they
+          are no longer present).
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Removed</h2>
+      <h3 class="removed">Markup</h3>
+      <ul>
+        <li>
+          The <code>getReplyMarkup</code> method has been removed since the
+          latest updates no longer require a string in
+          <code>reply_markup</code> and related fields.
+        </li>
+        <li>
+          All statistical methods in <code>Markup</code>, which were mistakenly
+          added in the previous update, have been removed.
+        </li>
+        <li>
+          Removed the <code>botRequest</code> method, replaced with a parameter
+          in <code>userRequest</code>.
+        </li>
+        <li>
+          Removed the <code>channelRequest</code> and
+          <code>groupRequest</code> methods, now replaced by
+          <code>chatRequest</code>.
+        </li>
+      </ul>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

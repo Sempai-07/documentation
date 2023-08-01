@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@0.8.0</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@0.8.0</h1>
+
+    <div>
+      <h2>Added</h2>
+      <ul>
+        <li>
+          Now the <code>Search</code> class can be imported directly from the
+          library.
+        </li>
+        <li>
+          Added a new path <code>markup</code> to import only the
+          <code>Keyboard</code> and <code>Markup</code> classes.
+        </li>
+        <li>
+          Introduced the <code>MessageCollector</code> class for collecting
+          messages.
+        </li>
+        <li>
+          Added the <code>createMessageCollector</code> method for the
+          <code>message</code> event.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Fixed</h2>
+      <ul>
+        <li>Fixed the <code>send</code> method (<code>parseMode</code>).</li>
+      </ul>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setChatPermissions - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>setChatPermissions - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to set default chat permissions for all members. The bot
+        must be an administrator in the group or a supergroup for this to work
+        and must have the can_restrict_members administrator rights. Returns
+        True on success.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>chat_id</code></td>
+          <td>
+            Unique identifier for the target chat or username of the target
+            supergroup (in the format @supergroupusername)<br />
+            <strong>Type:</strong> <code>number | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>permissions</code></td>
+          <td>
+            An object for new default chat permissions<br />
+            <strong>Type:</strong> <code>object</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>use_independent_chat_permissions</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if chat permissions are set independently. Otherwise, the
+            can_send_other_messages and can_add_web_page_previews permissions
+            will imply the can_send_messages, can_send_audios,
+            can_send_documents, can_send_photos, can_send_videos,
+            can_send_video_notes, and can_send_voice_notes permissions; the
+            can_send_polls permission will imply the can_send_messages
+            permission.<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>True on success.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+bot.setChatPermissions({
+  chat_id: "SUPERGROUP_USERNAME",
+  permissions: {
+    can_send_messages: false,
+    can_send_media_messages: false,
+    can_send_polls: false,
+    can_send_other_messages: false,
+    can_add_web_page_previews: false,
+    can_change_info: false,
+    can_invite_users: false,
+    can_pin_messages: false,
+  },
+  use_independent_chat_permissions: true,
+}).then((data) => {
+  console.log(data);
+});
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./unbanChatSenderChat.html">unbanChatSenderChat</a>
+          <a href="./exportChatInviteLink.html">exportChatInviteLink</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

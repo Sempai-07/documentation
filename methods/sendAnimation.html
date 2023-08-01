@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sendAnimation - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>sendAnimation - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to send animation files (GIF or H.264/MPEG-4 AVC video
+        without sound). On success, the sent Message is returned. Bots can
+        currently send animation files of up to 50 MB in size; this limit may be
+        changed in the future.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>chat_id</code></td>
+          <td>
+            Unique identifier for the target chat or username of the target
+            channel (in the format @channelusername)<br />
+            <strong>Type:</strong> <code>number | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>message_thread_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Unique identifier for the target message thread (topic) of the
+            forum; for forum supergroups only<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>animation</code></td>
+          <td>
+            Animation to send. Pass a file_id as String to send an animation
+            that exists on the Telegram servers (recommended), pass an HTTP URL
+            as a String for Telegram to get an animation from the Internet, or
+            upload a new one using multipart/form-data.<br />
+            <strong>Type:</strong> <code>F | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>duration</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Duration of sent animation in seconds<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>width</code><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Animation width<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>height</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Animation height<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>thumbnail</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Thumbnail of the file sent; can be ignored if thumbnail generation
+            for the file is supported server-side. The thumbnail should be in
+            JPEG format and less than 200 kB in size. A thumbnail's width and
+            height should not exceed 320. Ignored if the file is not uploaded
+            using multipart/form-data. Thumbnails can't be reused and can be
+            only uploaded as a new file, so you can pass
+            "attach://&lt;file_attach_name&gt;" if the thumbnail was uploaded
+            using multipart/form-data under &lt;file_attach_name&gt;.<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>caption</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Animation caption (may also be used when resending animation by
+            file_id), 0-1024 characters after entities parsing<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>parse_mode</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Mode for parsing entities in the animation caption. See formatting
+            options for more details.<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>caption_entities</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            A list of special entities that appear in the caption, which can be
+            specified instead of parse_mode<br />
+            <strong>Type:</strong> <code>MessageEntity[]</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>has_spoiler</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the animation needs to be covered with a spoiler
+            animation<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>disable_notification</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Sends the message silently. Users will receive a notification with
+            no sound.<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>protect_content</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Protects the contents of the sent message from forwarding and
+            saving<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>reply_to_message_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            If the message is a reply, ID of the original message<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>allow_sending_without_reply</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the message should be sent even if the specified
+            replied-to message is not found<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>reply_markup</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Additional interface options. An object for an inline keyboard,
+            custom reply keyboard, instructions to remove reply keyboard, or to
+            force a reply from the user.<br />
+            <strong>Type:</strong>
+            <code
+              >InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove
+              | ForceReply</code
+            >
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        Returns
+        <a href="https://core.telegram.org/bots/api#animation"
+          >Meessage.Animation</a
+        >
+        on success.
+      </p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Sending an animation file using file_id
+bot.sendAnimation({
+  chat_id: 123456789,
+  animation: "ANIMATION_FILE_ID_HERE",
+  duration: 10,
+  width: 320,
+  height: 240,
+  caption: "Check out this funny animation!",
+}).then((data) => {
+  console.log(data);
+});
+
+// Sending an animation file using an HTTP URL
+bot.sendAnimation({
+  chat_id: 123456789,
+  animation: "https://example.com/animation.gif",
+}).then((data) => {
+  console.log(data);
+});
+
+// Uploading a new animation file
+// Please note that this is just an example and the implementation may vary based on your programming environment.
+const fs = require("fs");
+const animationFilePath = "path/to/animation.gif";
+const animationStream = fs.createReadStream(animationFilePath);
+
+bot.sendAnimation({
+  chat_id: 123456789,
+  animation: animationStream,
+  duration: 8,
+  width: 480,
+  height: 360,
+}).then((data) => {
+  console.log(data);
+});
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./sendVideo.html">sendVideo</a>
+          <a href="./sendVoice.html">sendVoice</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

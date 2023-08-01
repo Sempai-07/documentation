@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>createInvoiceLink - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>createInvoiceLink - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to create a link for an invoice. Returns the created
+        invoice link as a String on success.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td>
+            Product name, 1-32 characters<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>
+            Product description, 1-255 characters<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>payload</code></td>
+          <td>
+            Bot-defined invoice payload, 1-128 bytes. This will not be displayed
+            to the user, use for your internal processes.<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>provider_token</code></td>
+          <td>
+            Payment provider token, obtained via BotFather<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>currency</code></td>
+          <td>
+            Three-letter ISO 4217 currency code, see more on currencies<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>prices</code></td>
+          <td>
+            Price breakdown, a list of components (e.g. product price, tax,
+            discount, delivery cost, delivery tax, bonus, etc.)<br />
+            <strong>Type:</strong> <code>LabeledPrice</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>max_tip_amount</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            The maximum accepted amount for tips in the smallest units of the
+            currency (integer, not float/double). For example, for a maximum tip
+            of US$ 1.45 pass max_tip_amount = 145. See the exp parameter in
+            currencies.json, it shows the number of digits past the decimal
+            point for each currency (2 for the majority of currencies). Defaults
+            to 0<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>suggested_tip_amounts</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            An array of suggested amounts of tips in the smallest units of the
+            currency (integer, not float/double). At most 4 suggested tip
+            amounts can be specified. The suggested tip amounts must be
+            positive, passed in a strictly increased order, and must not exceed
+            max_tip_amount.<br />
+            <strong>Type:</strong> <code>number[]</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>provider_data</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Data about the invoice, which will be shared with the payment
+            provider. A detailed description of required fields should be
+            provided by the payment provider.<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>photo_url</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            URL of the product photo for the invoice. Can be a photo of the
+            goods or a marketing image for a service.<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>photo_size</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Photo size in bytes<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>photo_width</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Photo width<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>photo_height</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Photo height<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>need_name</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if you require the user's full name to complete the
+            order<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>need_phone_number</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if you require the user's phone number to complete
+            theorder<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>need_email</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if you require the user's email address to complete
+            theorder<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>need_shipping_address</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if you require the user's shipping address to complete
+            theorder<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>send_phone_number_to_provider</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the user's phone number should be sent to the
+            provider<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>send_email_to_provider</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the user's email address should be sent to the
+            provider<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>is_flexible</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the final price depends on the shipping method<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Type:</strong></p>
+      <p><code>string</code></p>
+      <p><strong>Usage:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+
+const bot = new TelegramBot("BOT_TOKEN");
+
+bot.createInvoiceLink({
+  title: "Example Product",
+  description: "This is an example product",
+  payload: "example_payload",
+  provider_token: "YOUR_PROVIDER_TOKEN",
+  currency: "USD",
+  prices: [{ label: "Product Price", amount: 1000 }]
+}).then((link) => {
+  console.log("Invoice Link:", link);
+});
+
+bot.login();
+      </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./sendInvoice.html">sendInvoice</a>
+          <a href="./answerShippingQuery.html">answerShippingQuery</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

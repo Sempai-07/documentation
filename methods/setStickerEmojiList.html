@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setStickerEmojiList - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <h1>setStickerEmojiList - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to change the list of emoji assigned to a regular or
+        custom emoji sticker. The sticker must belong to a sticker set created
+        by the bot. Returns True on success.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>sticker</code></td>
+            <td>
+              File identifier of the sticker.
+              <br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>emoji_list</code></td>
+            <td>
+              A list of 1-20 emoji associated with the sticker.
+              <br />
+              <strong>Type:</strong> <code>string[]</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>Returns <code>true</code> on success.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+const stickerId = "sticker_file_id"; // Replace with the file identifier of the sticker
+const emojiList = ["😀", "😄", "😊"]; // Replace with the list of emoji you want to assign to the sticker
+
+// Change the list of emoji assigned to the sticker
+const result = bot.setStickerEmojiList({
+  sticker: stickerId,
+  emoji_list: emojiList,
+});
+
+console.log(result);
+    </code></pre>
+    </div>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/languages/javascript.min.js"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

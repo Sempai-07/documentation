@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Telegramsjs</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+    </div>
+    <br />
+    <div align="center">
+      <h1>Telegramsjs</h1>
+      <br />
+      <img
+        src="https://raw.githubusercontent.com/Sempai-07/Telegramsjs/main/docs/avatar.png"
+        alt="telegramsjs-icon"
+        width="300px"
+      /><br />
+    </div>
+    <div>
+      <h1>List of methods that are available in telegram api (BaseClient)</h1>
+      <details>
+        <summary>Methods</summary>
+        <ul>
+          <li><a href="./methods/getMe.html">getMe</a></li>
+          <li><a href="./methods/deleteWebhook.html">deleteWebhook</a></li>
+          <li><a href="./methods/getWebhookInfo.html">getWebhookInfo</a></li>
+          <li><a href="./methods/sendMessage.html">sendMessage</a></li>
+          <li><a href="./methods/sendPhoto.html">sendPhoto</a></li>
+          <li><a href="./methods/sendAudio.html">sendAudio</a></li>
+          <li><a href="./methods/sendDocument.html">sendDocument</a></li>
+          <li><a href="./methods/sendVideo.html">sendVideo</a></li>
+          <li><a href="./methods/sendAnimation.html">sendAnimation</a></li>
+          <li><a href="./methods/sendVoice.html">sendVoice</a></li>
+          <li><a href="./methods/sendVideoNote.html">sendVideoNote</a></li>
+          <li><a href="./methods/sendMediaGroup.html">sendMediaGroup</a></li>
+          <li><a href="./methods/sendLocation.html">sendLocation</a></li>
+          <li><a href="./methods/sendVenue.html">sendVenue</a></li>
+          <li><a href="./methods/forwardMessage.html">forwardMessage</a></li>
+          <li><a href="./methods/copyMessage.html">copyMessage</a></li>
+          <li><a href="./methods/sendContact.html">sendContact</a></li>
+          <li><a href="./methods/sendPoll.html">sendPoll</a></li>
+          <li><a href="./methods/sendDice.html">sendDice</a></li>
+          <li><a href="./methods/sendChatAction.html">sendChatAction</a></li>
+          <li>
+            <a href="./methods/getUserProfilePhotos.html"
+              >getUserProfilePhotos</a
+            >
+          </li>
+          <li><a href="./methods/getFile.html">getFile</a></li>
+          <li><a href="./methods/downloadFile.html">downloadFile</a></li>
+          <li><a href="./methods/banChatMember.html">banChatMember</a></li>
+          <li><a href="./methods/unbanChatMember.html">unbanChatMember</a></li>
+          <li>
+            <a href="./methods/restrictChatMember.html">restrictChatMember</a>
+          </li>
+          <li>
+            <a href="./methods/promoteChatMember.html">promoteChatMember</a>
+          </li>
+          <li>
+            <a href="./methods/setChatAdministratorCustomTitle.html"
+              >setChatAdministratorCustomTitle</a
+            >
+          </li>
+          <li>
+            <a href="./methods/banChatSenderChat.html">banChatSenderChat</a>
+          </li>
+          <li>
+            <a href="./methods/unbanChatSenderChat.html">unbanChatSenderChat</a>
+          </li>
+          <li>
+            <a href="./methods/setChatPermissions.html">setChatPermissions</a>
+          </li>
+          <li>
+            <a href="./methods/exportChatInviteLink.html"
+              >exportChatInviteLink</a
+            >
+          </li>
+          <li>
+            <a href="./methods/createChatInviteLink.html"
+              >createChatInviteLink</a
+            >
+          </li>
+          <li>
+            <a href="./methods/editChatInviteLink.html">editChatInviteLink</a>
+          </li>
+          <li>
+            <a href="./methods/revokeChatInviteLink.html"
+              >revokeChatInviteLink</a
+            >
+          </li>
+          <li>
+            <a href="./methods/approveChatJoinRequest.html"
+              >approveChatJoinRequest</a
+            >
+          </li>
+          <li>
+            <a href="./methods/declineChatJoinRequest.html"
+              >declineChatJoinRequest</a
+            >
+          </li>
+          <li><a href="./methods/setChatPhoto.html">setChatPhoto</a></li>
+          <li><a href="./methods/deleteChatPhoto.html">deleteChatPhoto</a></li>
+          <li><a href="./methods/setChatTitle.html">setChatTitle</a></li>
+          <li>
+            <a href="./methods/setChatDescription.html">setChatDescription</a>
+          </li>
+          <li><a href="./methods/pinChatMessage.html">pinChatMessage</a></li>
+          <li>
+            <a href="./methods/unpinChatMessage.html">unpinChatMessage</a>
+          </li>
+          <li>
+            <a href="./methods/unpinAllChatMessages.html"
+              >unpinAllChatMessages</a
+            >
+          </li>
+          <li><a href="./methods/leaveChat.html">leaveChat</a></li>
+          <li><a href="./methods/getChat.html">getChat</a></li>
+          <li>
+            <a href="./methods/getChatAdministrators.html"
+              >getChatAdministrators</a
+            >
+          </li>
+          <li>
+            <a href="./methods/getChatMemberCount.html">getChatMemberCount</a>
+          </li>
+          <li><a href="./methods/getChatMember.html">getChatMember</a></li>
+          <li>
+            <a href="./methods/setChatStickerSet.html">setChatStickerSet</a>
+          </li>
+          <li>
+            <a href="./methods/deleteChatStickerSet.html"
+              >deleteChatStickerSet</a
+            >
+          </li>
+          <li>
+            <a href="./methods/getForumTopicIconStickers.html"
+              >getForumTopicIconStickers</a
+            >
+          </li>
+          <li>
+            <a href="./methods/createForumTopic.html">createForumTopic</a>
+          </li>
+          <li><a href="./methods/editForumTopic.html">editForumTopic</a></li>
+          <li><a href="./methods/closeForumTopic.html">closeForumTopic</a></li>
+          <li>
+            <a href="./methods/reopenForumTopic.html">reopenForumTopic</a>
+          </li>
+          <li>
+            <a href="./methods/deleteForumTopic.html">deleteForumTopic</a>
+          </li>
+          <li>
+            <a href="./methods/unpinAllForumTopicMessages.html"
+              >unpinAllForumTopicMessages</a
+            >
+          </li>
+          <li>
+            <a href="./methods/editGeneralForumTopic.html"
+              >editGeneralForumTopic</a
+            >
+          </li>
+          <li>
+            <a href="./methods/closeGeneralForumTopic.html"
+              >closeGeneralForumTopic</a
+            >
+          </li>
+          <li>
+            <a href="./methods/reopenGeneralForumTopic.html"
+              >reopenGeneralForumTopic</a
+            >
+          </li>
+          <li>
+            <a href="./methods/hideGeneralForumTopic.html"
+              >hideGeneralForumTopic</a
+            >
+          </li>
+          <li>
+            <a href="./methods/unhideGeneralForumTopic.html"
+              >unhideGeneralForumTopic</a
+            >
+          </li>
+          <li>
+            <a href="./methods/answerCallbackQuery.html">answerCallbackQuery</a>
+          </li>
+          <li><a href="./methods/setMyCommands.html">setMyCommands</a></li>
+          <li>
+            <a href="./methods/deleteMyCommands.html">deleteMyCommands</a>
+          </li>
+          <li><a href="./methods/getMyCommands.html">getMyCommands</a></li>
+          <li><a href="./methods/setMyName.html">setMyName</a></li>
+          <li><a href="./methods/getMyName.html">getMyName</a></li>
+          <li>
+            <a href="./methods/setMyDescription.html">setMyDescription</a>
+          </li>
+          <li>
+            <a href="./methods/getMyDescription.html">getMyDescription</a>
+          </li>
+          <li>
+            <a href="./methods/setMyShortDescription.html"
+              >setMyShortDescription</a
+            >
+          </li>
+          <li>
+            <a href="./methods/getMyShortDescription.html"
+              >getMyShortDescription</a
+            >
+          </li>
+          <li>
+            <a href="./methods/setChatMenuButton.html">setChatMenuButton</a>
+          </li>
+          <li>
+            <a href="./methods/getChatMenuButton.html">getChatMenuButton</a>
+          </li>
+          <li>
+            <a href="./methods/setMyDefaultAdministratorRights.html"
+              >setMyDefaultAdministratorRights</a
+            >
+          </li>
+          <li>
+            <a href="./methods/getMyDefaultAdministratorRights.html"
+              >getMyDefaultAdministratorRights</a
+            >
+          </li>
+          <li><a href="./methods/editMessageText.html">editMessageText</a></li>
+          <li>
+            <a href="./methods/editMessageCaption.html">editMessageCaption</a>
+          </li>
+          <li>
+            <a href="./methods/editMessageMedia.html">editMessageMedia</a>
+          </li>
+          <li>
+            <a href="./methods/editMessageLiveLocation.html"
+              >editMessageLiveLocation</a
+            >
+          </li>
+          <li>
+            <a href="./methods/stopMessageLiveLocation.html"
+              >stopMessageLiveLocation</a
+            >
+          </li>
+          <li>
+            <a href="./methods/editMessageReplyMarkup.html"
+              >editMessageReplyMarkup</a
+            >
+          </li>
+          <li><a href="./methods/stopPoll.html">stopPoll</a></li>
+          <li><a href="./methods/sendSticker.html">sendSticker</a></li>
+          <li><a href="./methods/getStickerSet.html">getStickerSet</a></li>
+          <li>
+            <a href="./methods/getCustomEmojiStickers.html"
+              >getCustomEmojiStickers</a
+            >
+          </li>
+          <li>
+            <a href="./methods/uploadStickerFile.html">uploadStickerFile</a>
+          </li>
+          <li>
+            <a href="./methods/createNewStickerSet.html">createNewStickerSet</a>
+          </li>
+          <li><a href="./methods/addStickerToSet.html">addStickerToSet</a></li>
+          <li>
+            <a href="./methods/setStickerPositionInSet.html"
+              >setStickerPositionInSet</a
+            >
+          </li>
+          <li>
+            <a href="./methods/deleteStickerFromSet.html"
+              >deleteStickerFromSet</a
+            >
+          </li>
+          <li>
+            <a href="./methods/setStickerEmojiList.html">setStickerEmojiList</a>
+          </li>
+          <li>
+            <a href="./methods/setStickerKeywords.html">setStickerKeywords</a>
+          </li>
+          <li>
+            <a href="./methods/setStickerMaskPosition.html"
+              >setStickerMaskPosition</a
+            >
+          </li>
+          <li>
+            <a href="./methods/setStickerSetTitle.html">setStickerSetTitle</a>
+          </li>
+          <li>
+            <a href="./methods/setStickerSetThumbnail.html"
+              >setStickerSetThumbnail</a
+            >
+          </li>
+          <li>
+            <a href="./methods/setCustomEmojiStickerSetThumbnail.html"
+              >setCustomEmojiStickerSetThumbnail</a
+            >
+          </li>
+          <li>
+            <a href="./methods/deleteStickerSet.html">deleteStickerSet</a>
+          </li>
+          <li>
+            <a href="./methods/answerInlineQuery.html">answerInlineQuery</a>
+          </li>
+          <li>
+            <a href="./methods/answerWebAppQuery.html">answerWebAppQuery</a>
+          </li>
+          <li><a href="./methods/sendInvoice.html">sendInvoice</a></li>
+          <li>
+            <a href="./methods/createInvoiceLink.html">createInvoiceLink</a>
+          </li>
+          <li>
+            <a href="./methods/answerShippingQuery.html">answerShippingQuery</a>
+          </li>
+          <li>
+            <a href="./methods/answerPreCheckoutQuery.html"
+              >answerPreCheckoutQuery</a
+            >
+          </li>
+          <li>
+            <a href="./methods/setPassportDataErrors.html"
+              >setPassportDataErrors</a
+            >
+          </li>
+          <li><a href="./methods/sendGame.html">sendGame</a></li>
+          <li><a href="./methods/setGameScore.html">setGameScore</a></li>
+          <li>
+            <a href="./methods/getGameHighScores.html">getGameHighScores</a>
+          </li>
+          <li><a href="./methods/deleteMessage.html">deleteMessage</a></li>
+        </ul>
+      </details>
+    </div>
+    <br /><br />
+    <div>
+      <h1>Changes</h1>
+      <ul style="column-count: 3">
+        <li><a href="./changeslog/1-7-0.html">1.7.0</a></li>
+        <li><a href="./changeslog/1-6-11.html">1.6.11</a></li>
+        <li><a href="./changeslog/1-6-5.html">1.6.5</a></li>
+        <li><a href="./changeslog/1-6-1.html">1.6.1</a></li>
+        <li><a href="./changeslog/1-5-0.html">1.5.0</a></li>
+        <li><a href="./changeslog/1-0-0.html">1.0.0</a></li>
+        <li><a href="./changeslog/0-9-1.html">0.9.1</a></li>
+        <li><a href="./changeslog/0-9-0.html">0.9.0</a></li>
+        <li><a href="./changeslog/0-8-0.html">0.8.0</a></li>
+        <li><a href="./changeslog/0-7-0.html">0.7.0</a></li>
+        <li><a href="./changeslog/0-6-1.html">0.6.1</a></li>
+        <li><a href="./changeslog/0-6-0.html">0.6.0</a></li>
+        <li><a href="./changeslog/0-5-1.html">0.5.1</a></li>
+        <li><a href="./changeslog/0-4-1.html">0.4.1</a></li>
+        <li><a href="./changeslog/0-3-0.html">0.3.0</a></li>
+        <li><a href="./changeslog/0-2-0.html">0.2.0</a></li>
+        <li><a href="./changeslog/0-1-0.html">0.1.0</a></li>
+        <li><a href="./changeslog/0-0-6.html">0.0.6</a></li>
+      </ul>
+    </div>
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+        body.classList.toggle("light-theme");
+
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

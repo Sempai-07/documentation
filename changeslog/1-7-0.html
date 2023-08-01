@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@1.7.0</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@1.7.0</h1>
+
+    <div>
+      <h2>Removed</h2>
+      <h3 class="removed">HTML</h3>
+      <ul>
+        <li>
+          The <code>list</code> and <code>paragraph</code> element creation
+          functions have been removed, along with the
+          <code>image</code> function.
+        </li>
+      </ul>
+
+      <h3 class="removed">Markdown</h3>
+      <ul>
+        <li>
+          The functions for creating list elements (<code>list</code>), headings
+          (<code>heading</code>), images (<code>image</code>), code blocks
+          (<code>code</code>), and lists (<code>list</code>) have been removed.
+        </li>
+      </ul>
+
+      <h3 class="removed">Other</h3>
+      <ul>
+        <li>
+          In the markup functions, <code>ParameterError</code> errors have been
+          eliminated when an essential parameter is not specified.
+        </li>
+        <li>
+          Unnecessary getters and types were removed from
+          <code>CombinedClass</code>.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Added</h2>
+      <h3>Markdown</h3>
+      <ul>
+        <li>
+          <code>inlineCode</code>: Wraps the input text with backticks to
+          represent inline code formatting.
+        </li>
+        <li>
+          <code>codeBlock</code>: Formats the input text as a preformatted code
+          block without specifying the language.
+        </li>
+        <li>
+          <code>codeBlockWithLanguage</code>: Formats the input text as a
+          preformatted code block with the specified language for syntax
+          highlighting.
+        </li>
+        <li>
+          <code>spoiler</code>: Returns the input text wrapped in a spoiler with
+          the corresponding class.
+        </li>
+      </ul>
+
+      <h3>HTML</h3>
+      <ul>
+        <li>
+          <code>spoiler</code>: Returns the input text wrapped in a spoiler with
+          the corresponding class.
+        </li>
+        <li>
+          <code>emoji</code>: Returns an emoji with the specified identifier and
+          text.
+        </li>
+        <li>
+          <code>inlineCode</code>: Wraps the input text with backticks to
+          represent inline code formatting.
+        </li>
+        <li>
+          <code>codeBlock</code>: Formats the input text as a preformatted code
+          block without specifying the language.
+        </li>
+        <li>
+          <code>codeBlockWithLanguage</code>: Formats the input text as a
+          preformatted code block with the specified language for syntax
+          highlighting.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Changed</h2>
+      <ul>
+        <li>
+          Now the <code>Collection</code> class will not appear in the output of
+          functions as <code>[Collection { item: {}...}, 15]</code>. Only
+          specific values will be displayed where necessary, instead of the
+          entire class.
+        </li>
+        <li>
+          All classes and functions, except <code>session</code> (which will be
+          further developed), <code>processUpdate</code>, and
+          <code>request</code>, have completely removed the use of
+          <code>any</code> 🧸.
+        </li>
+        <li>
+          Methods like <code>checkMessageLinks</code> are now accessible in the
+          <code>util</code> object within all events (except
+          <code>update</code>).
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Fixed</h2>
+      <h3>Collection</h3>
+      <ul>
+        <li>
+          The <code>at</code> method now correctly retrieves values from the end
+          of the collection when using negative indices (without using
+          <code>at</code> es2022).
+        </li>
+      </ul>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>banChatMember - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>banChatMember - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to ban a user in a group, a supergroup, or a channel. In
+        the case of supergroups and channels, the user will not be able to
+        return to the chat on their own using invite links, etc., unless
+        unbanned first. The bot must be an administrator in the chat for this to
+        work and must have the appropriate administrator rights. Returns True on
+        success.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>chat_id</code></td>
+          <td>
+            Unique identifier for the target group or username of the target
+            supergroup or channel (in the format @channelusername)<br />
+            <strong>Type:</strong> <code>number | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>user_id</code></td>
+          <td>
+            Unique identifier of the target user<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>until_date</code></td>
+          <td>
+            Date when the user will be unbanned, Unix time. If the user is
+            banned for more than 366 days or less than 30 seconds from the
+            current time, they are considered to be banned forever. Applied for
+            supergroups and channels only.<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>revoke_messages</code></td>
+          <td>
+            Pass True to delete all messages from the chat for the user that is
+            being removed. If False, the user will be able to see messages in
+            the group that were sent before the user was removed. Always True
+            for supergroups and channels.<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>True on success.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+bot.banChatMember({
+  chat_id: "CHAT_ID",
+  user_id: "USER_ID",
+  until_date: 1672531200,
+  revoke_messages: true,
+}).then((data) => {
+  console.log(data);
+});
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./downloadFile.html">downloadFile</a>
+          <a href="./unbanChatMember.html">unbanChatMember</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

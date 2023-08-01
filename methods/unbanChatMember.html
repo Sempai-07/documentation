@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unbanChatMember - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>unbanChatMember - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to unban a previously banned user in a supergroup or
+        channel. The user will not return to the group or channel automatically,
+        but will be able to join via link, etc. The bot must be an administrator
+        for this to work. By default, this method guarantees that after the call
+        the user is not a member of the chat, but will be able to join it. So if
+        the user is a member of the chat they will also be removed from the
+        chat. If you don't want this, use the parameter only_if_banned. Returns
+        True on success.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>chat_id</code></td>
+          <td>
+            Unique identifier for the target group or username of the target
+            supergroup or channel (in the format @channelusername)<br />
+            <strong>Type:</strong> <code>number | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>user_id</code></td>
+          <td>
+            Unique identifier of the target user<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>only_if_banned</code></td>
+          <td>
+            Do nothing if the user is not banned<br />
+            <strong>Type:</strong> <code>boolean</code>{
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>True on success.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+bot.unbanChatMember({
+  chat_id: "CHAT_ID",
+  user_id: "USER_ID",
+  only_if_banned: true,
+}).then((data) => {
+  console.log(data);
+});
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./banChatMember.html">banChatMember</a>
+          <a href="./restrictChatMember.html">restrictChatMember</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

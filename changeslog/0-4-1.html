@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@0.4.1</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@0.4.1</h1>
+
+    <div>
+      <h2>Added:</h2>
+      <ul>
+        <li>
+          Added error handling for <code>TelegramApiError</code> in
+          <code>setMyCommands</code>, <code>deleteMyCommands</code>, and
+          <code>getMyCommands</code>.
+        </li>
+        <li>
+          Added new Telegram API 6.7 functions: <code>getMyName</code> and
+          <code>setMyName</code>.
+        </li>
+        <li>
+          Added new <code>button</code> parameter in
+          <code>answerInlineQuery</code> function.
+        </li>
+        <li>
+          <code>client</code> object is now available in all events. New
+          functions added: <code>getShortDescription</code>,
+          <code>setShortDescription</code>, <code>getDescription</code>,
+          <code>setDescription</code>, <code>deleteCommands</code>,
+          <code>getCommands</code>, <code>setCommands</code>,
+          <code>getName</code>, and <code>setName</code>.
+        </li>
+        <li>Added <code>leave</code> method to <code>chat</code> object.</li>
+        <li>
+          In the <code>TelegramBot</code> class, you can now specify default
+          parameters <code>parseMode</code> and <code>chatId</code> for all
+          functions.
+        </li>
+        <li>Added <code>decodeIntents</code> function.</li>
+        <li>
+          Added <code>uptime</code> method to <code>TelegramBot</code> class,
+          which shows the bot's start time.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Changed:</h2>
+      <ul>
+        <li>
+          Methods <code>send</code>, <code>reply</code>, and
+          <code>update</code> now accept two parameters. Example:
+          <code>send('text', {parseMode: 'HTML'})</code>.
+        </li>
+        <li>
+          In functions <code>getFile</code>, <code>downloadFile</code>,
+          <code>portChatInviteLink</code>, <code>deleteChatPhoto</code>,
+          <code>unpinAllChatMessage</code>, <code>leaveChat</code>,
+          <code>getChat</code>, <code>getChatAdministrators</code>,
+          <code>getChatMemberCount</code>, <code>deleteChatStickerSet</code>,
+          <code>closeGeneralForumTopic</code>,
+          <code>reopenGeneralForumTopic</code>,
+          <code>hideGeneralForumTopic</code>,
+          <code>deleteStickerForomSet</code>, <code>deleteStickerSet</code>,
+          <code>unhideGeneralForumTopic</code>, <code>getMyDescription</code>,
+          <code>getMyShortDescription</code>, <code>getChatMenuButton</code>,
+          <code>getMyDefaulfAdministratorRights</code>,
+          <code>getStickerSet</code>, <code>getCustomEmojiSticers</code>, only
+          one parameter is now accepted.
+        </li>
+        <li>
+          In <code>html</code> and <code>markdownv</code> functions, an error
+          will be thrown to the console if the necessary parameters are not
+          specified.
+        </li>
+        <li>
+          The text in the <code>TelegramApiError</code> error is now more
+          precise.
+        </li>
+        <li>
+          The <code>defer</code> function has been renamed to
+          <code>deferUpdate</code>.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Fixed:</h2>
+      <ul>
+        <li>
+          Fixed parameter calls in <code>addStickerToSet</code>,
+          <code>setPassportDataErrors</code>, <code>createNewStickerSet</code>,
+          <code>sendPoll</code>, and <code>setChatPermissions</code> functions
+          that were using <code>JSON.stringify</code> by default.
+        </li>
+        <li>
+          Fixed parameter calls in <code>portChatInviteLink</code> and
+          <code>getForumTopicIconSticker</code> functions.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Documentation:</h2>
+      <p>
+        Documentation has been written for this library, and examples have been
+        added for some classes!
+        <a href="https://github.com/Sempai-07/Telegramsjs/tree/main/docs"
+          >Telegramsjs</a
+        >
+        (More examples will be added in the second part)
+      </p>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

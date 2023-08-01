@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getChatMenuButton - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>getChatMenuButton - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to get the current value of the bot's menu button in a
+        private chat, or the default menu button. Returns MenuButton on success.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>chatId</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              Unique identifier for the target private chat. If not specified,
+              default bot's menu button will be returned.
+              <br />
+              <strong>Type:</strong> <code>number</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        Returns
+        <a href="https://core.telegram.org/bots/api#menubutton">MenuButton</a>
+        on success.
+      </p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Get the current value of the bot's menu button in a private chat
+const chatId = 123456789;
+const currentMenuButton = bot.getChatMenuButton(chatId);
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./setChatMenuButton.html">setChatMenuButton</a>
+          <a href="./setMyDefaultAdministratorRights.html"
+            >setMyDefaultAdministratorRights</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

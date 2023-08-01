@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>copyMessage - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>copyMessage - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to copy messages of any kind. Service messages and
+        invoice messages can't be copied. A quiz poll can be copied only if the
+        value of the field correct_option_id is known to the bot. The method is
+        analogous to the method forwardMessage, but the copied message doesn't
+        have a link to the original message. Returns the MessageId of the sent
+        message on success.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>chat_id</code></td>
+          <td>
+            Unique identifier for the target chat or username of the target
+            channel (in the format @channelusername)<br />
+            <strong>Type:</strong> <code>number | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>message_thread_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Unique identifier for the target message thread (topic) of the
+            forum; for forum supergroups only<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>from_chat_id</code></td>
+          <td>
+            Unique identifier for the chat where the original message was sent
+            (or channel username in the format @channelusername)<br />
+            <strong>Type:</strong> <code>number | string</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>message_id</code></td>
+          <td>
+            Message identifier in the chat specified in from_chat_id<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>caption</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            New caption for media, 0-1024 characters after entities parsing. If
+            not specified, the original caption is kept<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>parse_mode</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Mode for parsing entities in the new caption. See formatting options
+            for more details.<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>caption_entities</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            A list of special entities that appear in the new caption, which can
+            be specified instead of parse_mode<br />
+            <strong>Type:</strong> <code>MessageEntity[]</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>disable_notification</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Sends the message silently. Users will receive a notification with
+            no sound.<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>protect_content</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Protects the contents of the sent message from forwarding and
+            saving<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>reply_to_message_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            If the message is a reply, ID of the original message<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>allow_sending_without_reply</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the message should be sent even if the specified
+            replied-to message is not found<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>reply_markup</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Additional interface options. An object for an inline keyboard,
+            custom reply keyboard, instructions to remove reply keyboard, or to
+            force a reply from the user.<br />
+            <strong>Type:</strong>
+            <code
+              >InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove
+              | ForceReply</code
+            >
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        <a href="https://core.telegram.org/bots/api#messageid">MessageId</a>
+      </p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+        
+const bot = new TelegramBot("BOT_TOKEN");
+
+bot.copyMessage({
+  message_id: 123456789,
+  from_chat_id: 123456789,
+  chat_id: 123456789
+}).then((data) => {
+  console.log(data);
+});
+        
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./forwardMessage.html">forwardMessage</a>
+          <a href="./sendContact.html">sendContact</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

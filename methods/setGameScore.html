@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>setGameScore - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>setGameScore - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to set the score of the specified user in a game
+        message. On success, if the message is not an inline message, the
+        Message is returned, otherwise True is returned. An error is returned if
+        the new score is not greater than the user's current score in the chat
+        and `force` is False.
+      </p>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>user_id</code></td>
+          <td>
+            User identifier<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>score</code></td>
+          <td>
+            New score, must be non-negative<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>force</code><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the high score is allowed to decrease. This can be
+            useful when fixing mistakes or banning cheaters<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>disable_edit_message</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Pass True if the game message should not be automatically edited to
+            include the current scoreboard<br />
+            <strong>Type:</strong> <code>boolean</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>chat_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Required if inline_message_id is not specified. Unique identifier
+            for the target chat<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>message_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Required if inline_message_id is not specified. Identifier of the
+            sent message<br />
+            <strong>Type:</strong> <code>number</code>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <code>inline_message_id</code
+            ><span class="optional-parameter">(optional)</span>
+          </td>
+          <td>
+            Required if chat_id and message_id are not specified. Identifier of
+            the inline message<br />
+            <strong>Type:</strong> <code>string</code>
+          </td>
+        </tr>
+      </table>
+      <p><strong>Return Type:</strong></p>
+      <p><code>(Update.Edited &amp; Message.GameMessage) | true</code></p>
+      <p><strong>Usage:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Set the user's score in the game message
+bot.setGameScore({
+  user_id: 123456789,
+  score: 100,
+  chat_id: 987654321, // Unique identifier for the target chat
+  message_id: 123, // Identifier of the sent message
+}).then((data) => {
+  console.log(data);
+});
+
+// Or set the user's score in an inline game message
+bot.setGameScore({
+  user_id: 123456789,
+  score: 200,
+  inline_message_id: "inline_message_id", // Identifier of the inline message
+}).then((data) => {
+  console.log(data);
+});
+
+bot.login();
+      </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./sendGame.html">sendGame</a>
+          <a href="./getGameHighScores.html">getGameHighScores</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

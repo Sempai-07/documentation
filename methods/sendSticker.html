@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sendSticker - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>sendSticker - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to send static .WEBP, animated .TGS, or video .WEBM
+        stickers. On success, the sent Message is returned.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>chat_id</code></td>
+            <td>
+              Unique identifier for the target chat or username of the target
+              channel (in the format @channelusername).
+              <br />
+              <strong>Type:</strong> <code>number | string</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>message_thread_id</code></td>
+            <td>
+              <span class="optional-parameter">Optional</span>
+              Unique identifier for the target message thread (topic) of the
+              forum; for forum supergroups only.
+              <br />
+              <strong>Type:</strong> <code>number</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>sticker</code></td>
+            <td>
+              Sticker to send. Pass a <code>file_id</code> as
+              <code>string</code> to send a file that exists on the Telegram
+              servers (recommended), pass an HTTP URL as a
+              <code>string</code> for Telegram to get a .WEBP sticker from the
+              Internet, or upload a new .WEBP or .TGS sticker using
+              multipart/form-data. Video stickers can only be sent by a
+              <code>file_id</code>. Animated stickers can't be sent via an HTTP
+              URL.
+              <br />
+              <strong>Type:</strong> <code>F | string</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>emoji</code></td>
+            <td>
+              Emoji associated with the sticker; only for just uploaded
+              stickers.
+              <br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>disable_notification</code></td>
+            <td>
+              Sends the message silently. Users will receive a notification with
+              no sound.
+              <br />
+              <strong>Type:</strong> <code>boolean</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>protect_content</code></td>
+            <td>
+              Protects the contents of the sent message from forwarding and
+              saving.
+              <br />
+              <strong>Type:</strong> <code>boolean</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>reply_to_message_id</code></td>
+            <td>
+              If the message is a reply, ID of the original message.
+              <br />
+              <strong>Type:</strong> <code>number</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>allow_sending_without_reply</code></td>
+            <td>
+              Pass True if the message should be sent even if the specified
+              replied-to message is not found.
+              <br />
+              <strong>Type:</strong> <code>boolean</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>reply_markup</code></td>
+            <td>
+              Additional interface options. An object for an inline keyboard,
+              custom reply keyboard, instructions to remove reply keyboard or to
+              force a reply from the user.
+              <br />
+              <strong>Type:</strong>
+              <code
+                >InlineKeyboardMarkup | ReplyKeyboardMarkup |
+                ReplyKeyboardRemove | ForceReply</code
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        Returns a
+        <a href="https://core.telegram.org/bots/api#sticker"
+          >Message.StickerMessage</a
+        >
+        on success.
+      </p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Send a sticker
+const sticker = "https://example.com/sticker.webp";
+const chatId = 123456789; // Replace with the chat ID
+const sentMessage = bot.sendSticker({
+  chat_id: chatId,
+  sticker: sticker,
+  emoji: "😄",
+  reply_to_message_id: 987654321 // Replace with the message ID to reply to
+});
+console.log(sentMessage);
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./stopPoll.html">stopPoll</a>
+          <a href="./getStickerSet.html">getStickerSet</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

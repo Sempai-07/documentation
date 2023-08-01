@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@0.3.0</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@0.3.0</h1>
+    <div>
+      <p>
+        In the new update of Telegramsjs@0.3.0, new functions were added that
+        can be useful for developers.
+      </p>
+      <p>
+        In particular, the following functions were added to the
+        <code>html</code> and <code>markdownv</code> objects:
+      </p>
+      <ul>
+        <li>
+          <code>bold()</code> - a function that adds bold formatting to text.
+        </li>
+        <li>
+          <code>italic()</code> - a function that adds italic formatting to
+          text.
+        </li>
+        <li>
+          <code>underline()</code> - a function that adds underline formatting
+          to text.
+        </li>
+        <li>
+          <code>strikethrough()</code> - a function that adds strikethrough
+          formatting to text.
+        </li>
+        <li>
+          <code>code()</code> - a function that adds code formatting to text.
+        </li>
+        <li><code>link()</code> - a function that adds a link to text.</li>
+        <li><code>image()</code> - a function that adds an image to text.</li>
+        <li>
+          <code>paragraph()</code> - a function that adds a paragraph to text.
+        </li>
+        <li><code>list()</code> - a function that adds a list to text.</li>
+        <li>
+          <code>codeBlock()</code> - a function that adds a code block to text.
+        </li>
+      </ul>
+    </div>
+    <br />
+    <div>
+      <h2>Notes</h2>
+      <p>
+        In addition, the <code>heading()</code> function was added to the
+        <code>markdownv</code> object, which adds a heading to text.
+      </p>
+      <p>
+        These functions can be useful for formatting text in chatbots and other
+        applications that work with text. For example, they can be used to add
+        emphasis, code formatting, links, and images to messages.
+      </p>
+      <p>
+        Thanks to these functions, developers can make messages in their
+        chatbots more visually appealing and easier for users to understand.
+      </p>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

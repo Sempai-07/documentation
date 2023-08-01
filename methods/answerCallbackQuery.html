@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>answerCallbackQuery - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>answerCallbackQuery - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to send answers to callback queries sent from inline
+        keyboards. The answer will be displayed to the user as a notification at
+        the top of the chat screen or as an alert. On success, True is returned.
+      </p>
+      <p>
+        Alternatively, the user can be redirected to the specified Game URL. For
+        this option to work, you must first create a game for your bot via
+        @BotFather and accept the terms. Otherwise, you may use links like
+        t.me/your_bot?start=XXXX that open your bot with a parameter.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>callback_query_id</code></td>
+            <td>
+              Unique identifier for the query to be answered<br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>text</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              Text of the notification. If not specified, nothing will be shown
+              to the user, 0-200 characters<br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>show_alert</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              If True, an alert will be shown by the client instead of a
+              notification at the top of the chat screen. Defaults to false.<br />
+              <strong>Type:</strong> <code>boolean</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>url</code><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              URL that will be opened by the user's client. If you have created
+              a Game and accepted the conditions via @BotFather, specify the URL
+              that opens your game - note that this will only work if the query
+              comes from a callback_game button. Otherwise, you may use links
+              like t.me/your_bot?start=XXXX that open your bot with a
+              parameter.<br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>cache_time</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              The maximum amount of time in seconds that the result of the
+              callback query may be cached client-side. Telegram apps will
+              support caching starting in version 3.14. Defaults to 0.
+              <br />
+              <strong>Type:</strong> <code>number</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>Returns True on success.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+const callbackQueryId = "UNIQUE_CALLBACK_QUERY_ID";
+
+// Answer callback query with a text notification
+bot.answerCallbackQuery({ callback_query_id: callbackQueryId, text: "This is a notification." }).then((success) => {
+  console.log("Callback Query Answered:", success);
+});
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./unhideGeneralForumTopic.html">unhideGeneralForumTopic</a>
+          <a href="./setMyCommands.html">setMyCommands</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

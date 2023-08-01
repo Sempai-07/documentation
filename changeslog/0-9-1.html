@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@0.9.1</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@0.9.1</h1>
+
+    <div>
+      <h2>Fixes</h2>
+      <ul>
+        <li>
+          Comments in the <code>Markup</code> and <code>Keyboard</code> classes.
+        </li>
+        <li>
+          <code>setWebApp</code> function in the <code>Markup</code> class.
+        </li>
+        <li>
+          <code>toJSON</code> function in the <code>Keyboard</code> class.
+        </li>
+      </ul>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

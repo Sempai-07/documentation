@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setMyShortDescription - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>setMyShortDescription - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to change the bot's short description, which is shown on
+        the bot's profile page and is sent together with the link when users
+        share the bot. Returns True on success.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>short_description</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              New short description for the bot; 0-120 characters. Pass an empty
+              string to remove the dedicated short description for the given
+              language.
+              <br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>language_code</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              A two-letter ISO 639-1 language code. If empty, the short
+              description will be applied to all users for whose language there
+              is no dedicated short description.
+              <br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>Returns True on success.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Set bot's short description
+bot.setMyShortDescription({
+  short_description: "A simple bot for weather updates.",
+  language_code: "en"
+});
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./getMyDescription.html">getMyDescription</a>
+          <a href="./getMyShortDescription.html">getMyShortDescription</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

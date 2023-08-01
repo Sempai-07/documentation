@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@1.0.0</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@1.0.0</h1>
+
+    <div>
+      <h2>Fixed</h2>
+      <ul>
+        <li>
+          Fixed the <code>sendVideoNote</code> method by adding the
+          <code>replyMarkup</code> parameter.
+        </li>
+        <li>
+          Fixed the <code>banChatSenderChat</code> method by adding the
+          <code>senderChatId</code> parameter.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Changed</h2>
+      <ul>
+        <li>
+          The <code>Collection</code> class is no longer a separate library. In
+          the release of version <code>1.0.0</code>, the
+          <code>@telegram.ts/collection</code> library will be removed or
+          deprecated.
+        </li>
+        <li>
+          The formatting methods <code>markdownv</code> and
+          <code>html</code> are no longer separate methods in the library. In
+          the release of version <code>1.0.0</code>, the
+          <code>@telegram.ts/formatters</code> library will be removed or
+          deprecated.
+        </li>
+        <li>
+          The <code>Events</code> constant has been updated for new events.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2 class="removed">Removed</h2>
+      <ul>
+        <li>
+          Removed duplicate methods <code>setStickerKeywords</code>,
+          <code>setStickerMaskPosition</code>, <code>deleteWebhook</code>.
+        </li>
+        <li>
+          Removed methods <code>isLocation</code>, <code>isPoll</code>,
+          <code>isContact</code>, <code>isVoice</code>,
+          <code>isVideoNote</code>, <code>isSticker</code>,
+          <code>isAudio</code>, <code>isDocument</code>, <code>isPhoto</code>,
+          <code>typing</code>, <code>remove</code>, <code>deleted</code>,
+          <code>createMessageCollector</code>,
+          <code>deferUpdate...</code> permanently 🫡
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Added</h2>
+      <ul>
+        <li>
+          Added a new method to the <code>TelegramBot</code> class:
+          <ul>
+            <li>
+              <code
+                >command('command_name', (message: object, args: string[] |
+                undefined))</code
+              >
+              - for easier command creation.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Added new methods to the <code>Collection</code> class:
+          <ul>
+            <li>
+              <code>with(index: number, value: V)</code> - returns a new
+              collection with the replaced value at the specified index.
+            </li>
+            <li>
+              <code>toReversed()</code> - returns a new
+              <code>Collection</code> instance with key-value pairs in reverse
+              order.
+            </li>
+            <li>
+              <code>toSplised()</code> - returns a new
+              <code>Collection</code> instance that contains a subset of
+              key-value pairs, starting from the specified start index
+              (inclusive) and ending at the specified end index (exclusive).
+            </li>
+            <li>
+              <code>chunk(size: number)</code> - splits the collection into
+              sub-collections of the specified size and returns an array of new
+              collections.
+            </li>
+            <li>
+              <code>keyOf(value: V)</code> - returns the first key that
+              corresponds to the specified value in the collection.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Added parameters to the constructor of the <code>Markup</code> class:
+          <ul>
+            <li>
+              <code>loginUrl</code>, <code>switchInlineQuery</code>,
+              <code>switchInlineQueryCurrentChat</code>,
+              <code>switchInlineQueryChosenChat</code>,
+              <code>callbackGame</code>, <code>pay</code>.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Added methods:
+              <ul>
+                <li>
+                  <code
+                    >setLoginUrl(url: string, forward_text?: string,
+                    bot_username?: string, request_write_access?: boolean)</code
+                  >
+                  - sets the login URL for the markup.
+                </li>
+                <li>
+                  <code>setSwitchInlineQuery(switchInlineQuery: string)</code> -
+                  sets the switch inline query for the markup.
+                </li>
+                <li>
+                  <code
+                    >setSwitchInlineQueryCurrentChat(switchInlineQueryCurrentChat:
+                    string)</code
+                  >
+                  - sets the switch inline query for the current chat.
+                </li>
+                <li>
+                  <code
+                    >setSwitchInlineQueryChosenChat(switchInlineQueryChosenChat:
+                    {query?: string, allow_user_chats?: boolean,
+                    allow_bot_chats?: boolean, allow_group_chats?: boolean,
+                    allow_channel_chats?: boolean })</code
+                  >
+                  - sets the chosen switch inline query for the markup.
+                </li>
+                <li>
+                  <code
+                    >setCallbackGame(callbackGame: {user_id: number, score:
+                    number, force?: boolean, disable_edit_message?: boolean,
+                    chat_id?: number, message_id?: number, inline_message_id?:
+                    number })</code
+                  >
+                  - sets the callback game for the markup.
+                </li>
+                <li>
+                  <code>setPay(pay: boolean)</code> - sets the "pay" option for
+                  the markup.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <p>
+        <strong>Attention:</strong> It's not perfect, but it's better than
+        nothing. I will fix the error.
+      </p>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

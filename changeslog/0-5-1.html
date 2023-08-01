@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramjs@0.5.1</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramjs@0.5.1</h1>
+
+    <div>
+      <h2>Fixes</h2>
+      <ul>
+        <li>
+          Fixed issues with <code>once</code> and <code>on</code> functions, now
+          they work reliably as the <code>BaseClient</code> class inherits from
+          the <code>EventEmitter</code> class.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Added</h2>
+      <ul>
+        <li>
+          Added the <code>ChatRight</code> constant, which provides all rights
+          for the chat.
+        </li>
+        <li>
+          Added an asynchronous method <code>ping()</code> for the
+          <code>TelegramBot</code> class.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2 class="removed">Removed</h2>
+      <ul>
+        <li>
+          Removed the use of the <code>JSON.stringify</code> method from the
+          <code>restrictChatMember</code> and <code>sendPoll</code> methods.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Changes</h2>
+      <ul>
+        <li>Expanded information in the <code>client</code> object.</li>
+      </ul>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

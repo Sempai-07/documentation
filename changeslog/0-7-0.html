@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Telegramsjs@0.7.0</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <h1>Telegramsjs@0.7.0</h1>
+
+    <div>
+      <h2>Fixes</h2>
+      <ul>
+        <li>Renamed the method <code>deleted</code> to <code>remove</code>.</li>
+        <li>Added typings to <code>d.ts</code> (not all of them).</li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Changes</h2>
+      <ul>
+        <li>
+          The <code>deleted</code> method in the <code>TelegramBot</code> class
+          has been renamed to <code>remove</code>.
+        </li>
+        <li>
+          The <code>offSetType</code> parameter in the
+          <code>TelegramBot</code> class will default to <code>time</code>.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Additions</h2>
+      <ul>
+        <li>
+          Added the method <code>updateId</code> to the
+          <code>TelegramBot</code> class (and others) - returns the last offset.
+        </li>
+        <li>
+          Added the method <code>lastObject</code> to the
+          <code>TelegramBot</code> class (and others) - returns the last offset
+          object.
+        </li>
+        <li>
+          Added the <code>CashSession</code> and
+          <code>SimpleStorage</code> classes.
+        </li>
+        <li>
+          Added the constant <code>SessionTypes</code> - types for storing
+          offsets and more. Used for <code>offSetType</code>.
+        </li>
+        <li>
+          Added the path <code>require('telegramsjs/session')</code> - only
+          <code>SimpleStorage</code>, <code>SessionTypes</code> and
+          <code>CashSession</code> will be available.
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h2>Under libraries</h2>
+      <h3>@telegram.ts/collection@0.4.0</h3>
+      <ul>
+        <li>Additions:</li>
+        <ul>
+          <li>
+            Added the methods <code>equals</code>, <code>tap</code>,
+            <code>random</code>, <code>at</code>, <code>lastKey</code>,
+            <code>last</code>, <code>ensure</code>.
+          </li>
+        </ul>
+        <li>
+          <a href="https://telegram-ts-collection.surge.sh/">Documentation</a>
+        </li>
+      </ul>
+
+      <h3>@telegram.ts/formatters@0.3.5</h3>
+      <ul>
+        <li>Additions:</li>
+        <ul>
+          <li>
+            Now you can import methods using
+            <code>require('@telegram.ts/formatters/html')</code> or
+            <code>require('@telegram.ts/formatters/markdownv')</code>.
+          </li>
+        </ul>
+        <li>
+          <a href="https://telegram-ts-formatters.surge.sh/">Documentation</a>
+        </li>
+        <li>Added typings to <code>d.ts</code>.</li>
+      </ul>
+    </div>
+    <script>
+      const body = document.body;
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>

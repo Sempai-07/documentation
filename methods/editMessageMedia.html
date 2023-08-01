@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>editMessageMedia - Telegram Bot API</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>editMessageMedia - Telegram Bot API</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this method to edit animation, audio, document, photo, or video
+        messages. If a message is part of a message album, then it can be edited
+        only to an audio for audio albums, only to a document for document
+        albums and to a photo or a video otherwise. When an inline message is
+        edited, a new file can't be uploaded; use a previously uploaded file via
+        its file_id or specify a URL. On success, if the edited message is not
+        an inline message, the edited Message is returned, otherwise True is
+        returned.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>chat_id</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              Required if <code>inline_message_id</code> is not specified.
+              Unique identifier for the target chat or username of the target
+              channel (in the format @channelusername).
+              <br />
+              <strong>Type:</strong> <code>number | string</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>message_id</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              Required if <code>inline_message_id</code> is not specified.
+              Identifier of the message to edit.
+              <br />
+              <strong>Type:</strong> <code>number</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>inline_message_id</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              Required if <code>chat_id</code> and <code>message_id</code> are
+              not specified. Identifier of the inline message.
+              <br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>media</code></td>
+            <td>
+              An object for a new media content of the message.
+              <br />
+              <strong>Type:</strong> <code>InputMedia(F)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>reply_markup</code
+              ><span class="optional-parameter">(optional)</span>
+            </td>
+            <td>
+              An object for a new inline keyboard.
+              <br />
+              <strong>Type:</strong> <code>InlineKeyboardMarkup</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        Returns
+        <code
+          >(Update.Edited &
+          <a href="https://core.telegram.org/bots/api#message">Message</a>) |
+          true</code
+        >
+        on success.
+      </p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Edit a message media
+const editedMedia = bot.editMessageMedia({
+  chat_id: 123456789, // Replace with the chat ID
+  message_id: 987654321, // Replace with the message ID
+  media: // media....
+});
+console.log(editedMedia);
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./editMessageCaption.html">editMessageCaption</a>
+          <a href="./editMessageLiveLocation.html">editMessageLiveLocation</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>
