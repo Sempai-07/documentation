@@ -58,15 +58,21 @@ div {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 a {
   color: #0088cc;
   text-decoration: none;
+  margin-right: 15px;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+button {
+  margin-right: 15px;
 }
 
 /* Dark theme */
