@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Bot API "request" Function</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Telegram Bot API "request" Function</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this function to make a request to the Telegram Bot API. The
+        "request" function performs the API call using the provided method and
+        parameters. It returns a Promise that resolves with the response from
+        the API call.
+      </p>
+      <p><strong>Parameters:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>method</code></td>
+            <td>
+              The API method to call.
+              <br />
+              <strong>Type:</strong> <code>string</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>params</code></td>
+            <td>
+              Optional. The parameters to include in the API call.
+              <br />
+              <strong>Type:</strong> <code>object</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Returns:</strong></p>
+      <p>
+        A Promise that resolves with the response from the API call as a
+        <code>TelegramApiResponse</code> object.
+      </p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+// Example of using the "request" function to make an API call
+
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Example API call using the "request" function
+async function getMe() {
+  try {
+    const response = await bot.request("getMe");
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Call the function to make the API call
+getMe().then(data => console.log(data);
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./lastObject.html">lastObject</a>
+          <a href="./uptime.html">uptime</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Bot API "updateId" Property</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Telegram Bot API "updateId" Property</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        Use this property to get the last update ID received by the Telegram
+        bot. The "updateId" property provides the ID of the last update
+        processed by the bot. It returns the update ID as a number or null if
+        not available.
+      </p>
+      <p><strong>Returns:</strong></p>
+      <p>The last update ID received by the bot, or null if not available.</p>
+      <p><strong>Example:</strong></p>
+      <pre><code class="language-javascript">
+// Example of using the "updateId" property to get the last update ID
+
+const { TelegramBot } = require("telegramsjs");
+const bot = new TelegramBot("BOT_TOKEN");
+
+// Example function to get the last update ID using the "updateId" property
+function getLastUpdateId() {
+  const lastUpdateId = bot.updateId;
+  console.log(`Last Update ID: ${lastUpdateId}`);
+}
+
+// Call the function to get the last update ID
+getLastUpdateId().then(data => console.log(data));
+
+bot.login();
+    </code></pre>
+      <div class="navigation">
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+        <div class="links-navigation">
+          <a href="./ping.html">ping</a>
+          <a href="./lastObject.html">lastObject</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script>
+      function copyCode() {
+        const codeElement = document.querySelector("code.language-javascript");
+        const code = codeElement.textContent;
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = code;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        alert("Code copied to clipboard!");
+      }
+    </script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>
