@@ -1,12 +1,17 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Telegramsjs@0.6.0</title>
     <link rel="stylesheet" href="../css/changeslog.css" />
   </head>
   <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
     <h1>Telegramsjs@0.6.0</h1>
-
     <div>
       <h2>Fixed</h2>
       <ul>
@@ -204,15 +209,6 @@
         </li>
       </ul>
     </div>
-    <script>
-      const body = document.body;
-      const savedTheme = localStorage.getItem("theme");
-
-      if (savedTheme === "dark") {
-        body.classList.add("dark-theme");
-      } else {
-        body.classList.add("light-theme");
-      }
-    </script>
+    <script src="../js/code-block.js"></script>
   </body>
 </html>
