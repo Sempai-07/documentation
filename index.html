@@ -357,27 +357,6 @@
         <li><a href="./changeslog/0-0-6.html">0.0.6</a></li>
       </ul>
     </div>
-    <script>
-      const themeToggle = document.getElementById("themeToggle");
-      const body = document.body;
-
-      themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-theme");
-        body.classList.toggle("light-theme");
-
-        if (body.classList.contains("dark-theme")) {
-          localStorage.setItem("theme", "dark");
-        } else {
-          localStorage.setItem("theme", "light");
-        }
-      });
-
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "dark") {
-        body.classList.add("dark-theme");
-      } else {
-        body.classList.add("light-theme");
-      }
-    </script>
+    <script src="./js/code-block.js"></script>
   </body>
 </html>
