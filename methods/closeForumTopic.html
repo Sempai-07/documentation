@@ -56,15 +56,16 @@
 const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-const chatId = "SUPERGROUP_USERNAME";
-const messageThreadId = 123456789;
-
 // Close the forum topic
-bot.closeForumTopic({
-  chat_id: chatId,
-  message_thread_id: messageThreadId
-}).then((success) => {
-  console.log("Forum Topic Closed:", success);
+bot.command("close_forum", async (ctx) => {
+  bot.closeForumTopic({
+    chat_id: ctx.chat.id,
+    message_thread_id: ctx.message_thread_id
+  }).then(data => {
+    ctx.reply("Success!");
+  }).catch(data => {
+    ctx.reply("Error!");
+  });
 });
 
 bot.login();

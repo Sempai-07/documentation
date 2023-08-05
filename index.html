@@ -18,14 +18,40 @@
       <h1>Telegramsjs</h1>
       <br />
       <img
+        id="avatar"
         src="https://raw.githubusercontent.com/Sempai-07/Telegramsjs/main/docs/avatar.png"
         alt="telegramsjs-icon"
         width="300px"
       /><br />
+      <p>
+        <a href="https://core.telegram.org/bots/api"
+          ><img
+            src="https://img.shields.io/badge/Bot%20API-v.6.7-00aced.svg?style=flat-square&logo=telegram"
+            alt="Bot API"
+        /></a>
+        <a href="https://www.npmjs.com/package/telegramsjs"
+          ><img
+            src="https://img.shields.io/npm/v/telegramsjs.svg?maxAge=3600"
+            alt="NPM Version"
+        /></a>
+        <a href="https://www.npmjs.com/package/telegramsjs"
+          ><img
+            src="https://img.shields.io/npm/dt/telegramsjs.svg?maxAge=3600"
+            alt="NPM Downloads"
+        /></a>
+      </p>
     </div>
     <br />
     <div>
-      <h2>List of methods that are available in telegram api (BaseClient)</h2>
+      <div class="telegram-warning">
+        ⚠️ This documentation is currently under development, so there may be
+        some unfinished parts in the examples or descriptions. If you have any
+        ideas for improvement, please write them on
+        <a href="https://github.com/Sempai-07/telegramsjs-docs">GitHub</a>. 🧐
+      </div>
+      <h2>Classes</h2>
+      <li id="li-classes"><a href="./Markup.html">Markup</a></li>
+      <h2>BaseClient</h2>
       <details>
         <summary>Methods</summary>
         <ul>
@@ -333,10 +359,7 @@
           <li><a href="./methods/deleteMessage.html">deleteMessage</a></li>
         </ul>
       </details>
-    </div>
-    <br />
-    <div>
-      <h2>List of methods that are available in telegram api (TelegramBot)</h2>
+      <h2>TelegramBot</h2>
       <details>
         <summary>Methods</summary>
         <ul>
@@ -347,10 +370,7 @@
           <li><a href="./TelegramBot/login.html">login</a></li>
         </ul>
       </details>
-    </div>
-    <br />
-    <div>
-      <h2>List of methods Request</h2>
+      <h2>Request</h2>
       <details>
         <summary>Methods</summary>
         <ul>
@@ -360,10 +380,7 @@
           <li><a href="./Request/updateId.html">updateId</a></li>
         </ul>
       </details>
-    </div>
-    <br />
-    <div>
-      <h2>List of methods IntentsBitField</h2>
+      <h2>IntentsBitField</h2>
       <details>
         <summary>Methods</summary>
         <ul>
@@ -376,11 +393,86 @@
           </li>
         </ul>
       </details>
+      <h2>Collection</h2>
+      <details>
+        <summary>Methods</summary>
+        <ul>
+          <li><a href="./Collection/get.html">get</a></li>
+          <li><a href="./Collection/set.html">set</a></li>
+          <li><a href="./Collection/has.html">has</a></li>
+          <li><a href="./Collection/delete.html">delete</a></li>
+          <li><a href="./Collection/clear.html">clear</a></li>
+          <li><a href="./Collection/forEach.html">forEach</a></li>
+          <li><a href="./Collection/filter.html">filter</a></li>
+          <li><a href="./Collection/map.html">map</a></li>
+          <li><a href="./Collection/some.html">some</a></li>
+          <li><a href="./Collection/every.html">every</a></li>
+          <li><a href="./Collection/reduce.html">reduce</a></li>
+          <li><a href="./Collection/find.html">find</a></li>
+          <li><a href="./Collection/reduceRight.html">reduceRight</a></li>
+          <li><a href="./Collection/flat.html">flat</a></li>
+          <li><a href="./Collection/keys.html">keys</a></li>
+          <li><a href="./Collection/values.html">values</a></li>
+          <li><a href="./Collection/findKey.html">findKey</a></li>
+          <li><a href="./Collection/toArray.html">toArray</a></li>
+          <li><a href="./Collection/keyArray.html">keyArray</a></li>
+          <li><a href="./Collection/flatMap.html">flatMap</a></li>
+          <li><a href="./Collection/mapValues.html">mapValues</a></li>
+          <li><a href="./Collection/defaultSort.html">defaultSort</a></li>
+          <li><a href="./Collection/sorted.html">sorted</a></li>
+          <li><a href="./Collection/combineEntries.html">combineEntries</a></li>
+          <li><a href="./Collection/difference.html">difference</a></li>
+          <li><a href="./Collection/subtract.html">subtract</a></li>
+          <li><a href="./Collection/subset.html">subset</a></li>
+          <li><a href="./Collection/intersect.html">intersect</a></li>
+          <li><a href="./Collection/equals.html">equals</a></li>
+          <li><a href="./Collection/tap.html">tap</a></li>
+          <li><a href="./Collection/random.html">random</a></li>
+          <li><a href="./Collection/at.html">at</a></li>
+          <li><a href="./Collection/lastKey.html">lastKey</a></li>
+          <li><a href="./Collection/last.html">last</a></li>
+          <li><a href="./Collection/ensure.html">ensure</a></li>
+          <li><a href="./Collection/keyAt.html">keyAt</a></li>
+          <li><a href="./Collection/randomKey.html">randomKey</a></li>
+          <li><a href="./Collection/reverse.html">reverse</a></li>
+          <li><a href="./Collection/sweep.html">sweep</a></li>
+          <li><a href="./Collection/partition.html">partition</a></li>
+          <li><a href="./Collection/entries.html">entries</a></li>
+          <li><a href="./Collection/toArrayByKey.html">toArrayByKey</a></li>
+          <li><a href="./Collection/merge.html">merge</a></li>
+          <li><a href="./Collection/clone.html">clone</a></li>
+          <li><a href="./Collection/chunk.html">chunk</a></li>
+          <li><a href="./Collection/keyOf.html">keyOf</a></li>
+          <li><a href="./Collection/with.html">with</a></li>
+          <li><a href="./Collection/toMap.html">toMap</a></li>
+          <li><a href="./Collection/toReversed.html">toReversed</a></li>
+          <li><a href="./Collection/toSplised.html">toSplised</a></li>
+          <li><a href="./Collection/toJSON.html">toJSON</a></li>
+        </ul>
+      </details>
+      <h2>MessageCollection</h2>
+      <details>
+        <summary>Methods</summary>
+        <ul>
+          <li>
+            <a href="./MessageCollection/handleMessage.html">handleMessage</a>
+          </li>
+          <li><a href="./MessageCollection/collected.html">collected</a></li>
+          <li><a href="./MessageCollection/count.html">count</a></li>
+          <li><a href="./MessageCollection/clear.html"></a></li>
+          <li><a href="./MessageCollection/setFilter.html">setFilter</a></li>
+          <li><a href="./MessageCollection/setTime.html">setTime</a></li>
+          <li><a href="./MessageCollection/setMax.html">setMax</a></li>
+          <li><a href="./MessageCollection/isRunning.html">isRunning</a></li>
+          <li><a href="./MessageCollection/stop.html">stop</a></li>
+        </ul>
+      </details>
     </div>
     <br /><br />
     <div>
       <h2>Changes</h2>
       <ul style="column-count: 3">
+        <li><a href="./changeslog/1-7-1.html">1.7.1</a></li>
         <li><a href="./changeslog/1-7-0.html">1.7.0</a></li>
         <li><a href="./changeslog/1-6-11.html">1.6.11</a></li>
         <li><a href="./changeslog/1-6-5.html">1.6.5</a></li>

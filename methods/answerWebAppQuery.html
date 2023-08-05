@@ -70,9 +70,9 @@ const result = {
 const sentWebAppMessage = bot.answerWebAppQuery({
   web_app_query_id: webAppQueryId,
   result: result,
-});
+}).then(data => console.log(data));
 
-console.log(sentWebAppMessage);
+bot.login();
     </code></pre>
       <div class="navigation">
         <button class="copy-button" onclick="copyCode()">Copy Code</button>

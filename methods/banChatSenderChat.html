@@ -51,11 +51,15 @@
 const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-bot.banChatSenderChat({
-  chat_id: "SUPERGROUP_OR_CHANNEL_USERNAME",
-  sender_chat_id: "SENDER_CHAT_ID",
-}).then((data) => {
-  console.log(data);
+bot.command("ban", async (ctx, args) => {
+  bot.banChatSenderChat({
+    chat_id: "test",
+    sender_chat_id: Number(args[1]),
+  }).then((data) => {
+    ctx.reply("Ban success!");
+  }).catch((err) => {
+    ctx.reply("Ban erorr");
+  });
 });
 
 bot.login();

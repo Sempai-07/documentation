@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code>
+          subtract(collection: Collection&lt;K, V&gt;): Collection&lt;K, V&gt; </code
+        ><br />
+        Subtracts the elements of the given collection from this collection.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const otherCollection = new Collection();
+// Add some entries to otherCollection
+
+collection.subtract(otherCollection);
+// Your code here to handle the modified collection (collection)
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>collection</code>: The collection to subtract. It should be of
+          type <code>Collection&lt;K, V&gt;</code>.
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>The modified Collection instance (for chaining).</p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./difference.html">difference</a>
+      <a href="./subset.html">subset</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

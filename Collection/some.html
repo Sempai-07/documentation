@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code>
+          some( callbackFn: (value: V, key: K, collection: Collection&lt;K,
+          V&gt;) =&gt; boolean, thisArg?: unknown, ) </code
+        ><br />
+        Tests whether at least one element in the collection passes the test
+        implemented by the provided function.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const hasSome = collection.some((value, key, collection) =&gt; {
+  // Your function logic here, return true to indicate a match, false otherwise
+  return true;
+});
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>callbackFn</code>: Function to test for each element. It should
+          take three arguments: the value, the key, and the collection instance.
+        </li>
+        <li>
+          <code>thisArg</code>: An optional object to use as <code>this</code>
+          when executing the callback.
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>True if at least one element passes the test, false otherwise.</p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./map.html">map</a>
+      <a href="./every.html">every</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

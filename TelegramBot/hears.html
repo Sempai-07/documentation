@@ -36,7 +36,7 @@
             <td>
               The text to match in the received messages.
               <br />
-              <strong>Type:</strong> <code>string</code>
+              <strong>Type:</strong> <code>string | string[] | RegExp </code>
             </td>
           </tr>
           <tr>
@@ -53,6 +53,10 @@
           </tr>
         </tbody>
       </table>
+      <div class="telegram-warning">
+        ⚠️ Regular expressions are being tested, as they might be reworked or
+        even disappear, so it is not recommended to use regular expressions. 🧐
+      </div>
       <p><strong>Example:</strong></p>
       <pre><code class="language-javascript">
 // Example of using the "hears" function to reply when a message contains "hi"
@@ -68,6 +72,14 @@ bot.hears("hi", (ctx) => {
 // Callback function #2
 bot.hears("marmok", (ctx) => {
   ctx.reply("Marmok put like and subscribe! 😛");
+});
+
+bot.hears(["help", "start"], (ctx) => {
+  ctx.reply("/help command!");
+});
+
+bot.hears(/.*marmok.*/, (ctx) => {
+  ctx.reply("hi marmok!");
 });
 
 // Start the bot

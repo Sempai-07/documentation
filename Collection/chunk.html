@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code> chunk(size: number): [number, V][] </code><br />
+        Splits the collection into subcollections of the given size and returns
+        an array with new collections.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const size = 3;
+const chunks = collection.chunk(size);
+// Your code here to handle the array with new collections
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>size</code>: The amount by which this class will be divided. It
+          should be of type <code>number</code>.
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        An array with new collections, each containing key-value pairs from the
+        original collection, divided into subcollections of the given size.
+      </p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./clone.html">clone</a>
+      <a href="./keyOf.html">keyOf</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

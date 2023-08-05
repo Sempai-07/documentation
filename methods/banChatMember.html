@@ -72,13 +72,17 @@
 const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-bot.banChatMember({
-  chat_id: "CHAT_ID",
-  user_id: "USER_ID",
-  until_date: 1672531200,
-  revoke_messages: true,
-}).then((data) => {
-  console.log(data);
+bot.command("ban", async (ctx, args) => {
+  bot.banChatMember({
+    chat_id: ctx.chat.id,
+    user_id: Number(args[1]),
+    until_date: 1672531200,
+    revoke_messages: true,
+  }).then((data) => {
+    ctx.reply("User ban");
+   }).catch((err) => {
+    ctx.reply("User error ban");
+   });
 });
 
 bot.login();

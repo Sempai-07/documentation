@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code>values(): IterableIterator&lt;V&gt;</code><br />
+        Returns an iterator that contains all the values of the elements in the
+        collection.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const valuesIterator = collection.values();
+for (const value of valuesIterator) {
+  // Your code here to handle each value
+}
+        </code>
+      </pre>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        An iterator that contains all the values of the elements in the
+        collection.
+      </p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./keys.html">keys</a>
+      <a href="./findKey.html">findKey</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

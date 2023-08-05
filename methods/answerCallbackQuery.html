@@ -98,14 +98,26 @@
       <p>Returns True on success.</p>
       <p><strong>Example:</strong></p>
       <pre><code class="language-javascript">
-const { TelegramBot } = require("telegramsjs");
+const { TelegramBot, Markup } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-const callbackQueryId = "UNIQUE_CALLBACK_QUERY_ID";
+const button = {
+  inline_keyboard: [[Markup.callback("marmok", "data")]]
+};
 
-// Answer callback query with a text notification
-bot.answerCallbackQuery({ callback_query_id: callbackQueryId, text: "This is a notification." }).then((success) => {
-  console.log("Callback Query Answered:", success);
+bot.command("test", (ctx) => {
+  ctx.reply("Like 😈", {
+    reply_markup: button
+  });
+});
+
+bot.on("callback_query", async (ctx) => {
+  if (ctx.data !== "data") return;
+  bot.answerCallbackQuery({
+    callback_query_id: ctx.id,
+    show_alert: true,
+    text: "Marmok 🧦"
+  }).catch(data => console.log);
 });
 
 bot.login();

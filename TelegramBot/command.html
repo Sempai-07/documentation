@@ -35,7 +35,7 @@
             <td>
               The command string or an array of command strings to listen for.
               <br />
-              <strong>Type:</strong> <code>string | string[]</code>
+              <strong>Type:</strong> <code>string | string[] | RegExp</code>
             </td>
           </tr>
           <tr>
@@ -72,6 +72,10 @@
           </tr>
         </tbody>
       </table>
+      <div class="telegram-warning">
+        ⚠️ Regular expressions are being tested, as they might be reworked or
+        even disappear, so it is not recommended to use regular expressions. 🧐
+      </div>
       <p><strong>Example:</strong></p>
       <pre><code class="language-javascript">
 const { TelegramBot } = require("telegramsjs");
@@ -93,6 +97,10 @@ bot.command(["username", "chatid"], (ctx, args) => {
     return;
   }
 }, "supergroup");
+
+bot.command(/.*marmok.*/, (ctx) => {
+  ctx.reply("hi marmok!");
+});
 
 bot.login();
     </code></pre>

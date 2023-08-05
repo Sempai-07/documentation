@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code> subset(keys: K[]): Collection&lt;K, V&gt; </code><br />
+        Creates a new Collection that contains a subset of items based on the
+        provided keys.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const keys = [/* An array of keys */];
+
+const subsetCollection = collection.subset(keys);
+// Your code here to handle the subsetCollection
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>keys</code>: An array of keys to include in the subset. It
+          should be of type <code>K[]</code>.
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>A new Collection instance containing the subset of items.</p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./subtract.html">subtract</a>
+      <a href="./intersect.html">intersect</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

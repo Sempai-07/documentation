@@ -162,15 +162,18 @@
       </p>
       <pre><code class="language-javascript">
 const { TelegramBot } = require("telegramsjs");
-        
 const bot = new TelegramBot("BOT_TOKEN");
 
-bot.copyMessage({
-  message_id: 123456789,
-  from_chat_id: 123456789,
-  chat_id: 123456789
-}).then((data) => {
-  console.log(data);
+bot.command("copy_message", async (ctx) => {
+  bot.copyMessage({
+    message_id: ctx.message_id,
+    from_chat_id: ctx.from.id,
+    chat_id: ctx.chat.id
+  }).then(() => {
+    ctx.reply("Success!");
+  }).catch(() => {
+    ctx.reply("Error!");
+  });
 });
         
 bot.login();

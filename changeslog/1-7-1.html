@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegramsjs@1.7.1</title>
+    <link rel="stylesheet" href="../css/changeslog.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <h1>Telegramsjs@1.7.1</h1>
+    <div>
+      <h2>Fixes</h2>
+      <ul>
+        <li>
+          <code>setStickerEmoji</code> -> <code>setStickerEmojiList</code>
+        </li>
+        <li>
+          <code>Context</code> parameters responsible for <code>id</code>,
+          <code>message_id</code>, <code>callback_query_id</code>, and so on,
+          were constantly being passed as <code>undefined</code>, leading to
+          errors.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Added</h2>
+      <ul>
+        <li>
+          In <code>hears</code>, you can now specify an array of words to track.
+        </li>
+        <li>
+          <code>command</code> and <code>hears</code> now accept regular
+          expressions (test feature).
+        </li>
+        <li>
+          In the <code>end</code> and <code>interval</code> events of the
+          <code>MessageCollector</code> class, a parameter has been added that
+          returns the <code>MessageCollector</code> instance itself.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Changed</h2>
+      <ul>
+        <li>
+          <code>with</code> and <code>keyAt</code> methods in the
+          <code>Collection</code> class can now accept negative numbers.
+        </li>
+        <li>
+          The error in <code>TelegramApiError</code> now shows the parameters of
+          the function where the error occurred, but only if the
+          <code>parameters</code> option was not received from Telegram.
+        </li>
+        <li>
+          The <code>ok</code> parameter in <code>TelegramApiError</code> will
+          now return only <code>boolean</code> values, not
+          <code>undefined</code>.
+        </li>
+        <li>
+          The <code>login</code> method will now entirely throw an exception if
+          something goes wrong, and it becomes asynchronous.
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div>
+      <h2>Updated</h2>
+      <ul>
+        <li>The <code>ChatPermission</code> constant.</li>
+        <li>The <code>GroupStatus</code> constant.</li>
+      </ul>
+    </div>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

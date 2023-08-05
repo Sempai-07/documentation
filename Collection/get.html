@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Constructor:</strong></p>
+      <pre>
+        <code class="language-javascript">
+const collection = new Collection([
+  [key1, value1],
+  [key2, value2],
+  // Add more key-value pairs as needed
+]);
+        </code>
+      </pre>
+      <p><strong>Properties:</strong></p>
+      <ul>
+        <li>
+          <code>size</code>: The number of key-value pairs in the collection.
+        </li>
+      </ul>
+      <p><strong>Methods:</strong></p>
+      <p>
+        <code>get(key: K): V | undefined</code><br />
+        Retrieve the value associated with the given key. Returns the value
+        associated with the key or undefined if the key is not in the
+        collection.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const value = collection.get(key);
+console.log(value); // Output: The value associated with the key or undefined
+        </code>
+      </pre>
+    </div>
+    <div class="navigation-collection">
+      <a href="./toJSON.html">toJSON</a>
+      <a href="./set.html">set</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

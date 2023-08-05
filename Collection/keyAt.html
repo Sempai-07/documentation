@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code> keyAt(index: number): K | undefined </code><br />
+        Retrieve the key at the specified index in the collection.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const index = 0; // Replace with the desired index
+const keyAtIndex = collection.keyAt(index);
+// Your code here to handle the keyAtIndex, it might be undefined if the index is out of range.
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>index</code>: The index of the key to retrieve. Should be of
+          type <code>number</code>.
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        The key at the specified index, or undefined if the index is out of
+        range.
+      </p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./ensure.html">ensure</a>
+      <a href="./randomKey.html">randomKey</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

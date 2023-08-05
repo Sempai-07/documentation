@@ -55,7 +55,7 @@
               same sticker had already been added to the set, then the set isn't
               changed.
               <br />
-              <strong>Type:</strong> <code>InputSticker(F)</code>
+              <strong>Type:</strong> <code>InputSticker&ltF&gt</code>
             </td>
           </tr>
         </tbody>
@@ -67,18 +67,19 @@
 const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-const userId = 123456789; // Replace with the user ID of the sticker set owner
-const name = "animals_by_my_bot"; // Replace with the name of the sticker set
 const sticker = { sticker: "path/to/new_sticker.webp" }; // Replace with the path to the new sticker file
 
 // Add the new sticker to the sticker set
-const result = bot.addStickerToSet({
-  user_id: userId,
-  name,
-  sticker
+bot.command("sticker", async (ctx, args) => {
+  const result = await bot.addStickerToSet({
+    user_id: ctx.from.id,
+    name: args[1],
+    sticker
+  });
+  ctx.reply(`addStickerToSet ${result}`);
 });
 
-console.log(result);
+bot.login();
     </code></pre>
       <div class="navigation">
         <button class="copy-button" onclick="copyCode()">Copy Code</button>

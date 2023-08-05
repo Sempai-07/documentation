@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code>
+          flatMap( callbackFn: (value: V, key: K, collection: Collection&lt;K,
+          V&gt;) =&gt; U[], thisArg?: unknown, ) </code
+        ><br />
+        Applies a mapping function to each value in the collection and flattens
+        the result.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const flatMappedCollection = collection.flatMap((value, key, collection) =&gt; {
+  // Your mapping function logic here to return an array of mapped values
+  return [mappedValue1, mappedValue2, ...];
+}, thisArg);
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>callbackFn</code>: The mapping function to apply. It should take
+          three arguments: the value, the key, and the collection instance. The
+          function should return an array of mapped values.
+        </li>
+        <li>
+          <code>thisArg</code>: An optional value to use as <code>this</code>
+          when calling the function.
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>A new Collection instance with the flattened mapped values.</p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./keyArray.html">keyArray</a>
+      <a href="./mapValues.html">mapValues</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

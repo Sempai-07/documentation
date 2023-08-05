@@ -92,14 +92,18 @@
 const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-bot.createChatInviteLink({
-  chat_id: "SUPERGROUP_USERNAME",
-  name: "Group Invite Link",
-  expire_date: Math.floor(Date.now() / 1000) + 86400,
-  member_limit: 100,
-  creates_join_request: true,
-}).then((inviteLink) => {
-  console.log("New Invite Link:", inviteLink);
+bot.command("create_link", async (ctx) => {
+  bot.createChatInviteLink({
+    chat_id: ctx.chat.id,
+    name: "Group Invite Link",
+    expire_date: Math.floor(Date.now() / 1000) + 86400,
+    member_limit: 100,
+    creates_join_request: true
+  }).then((inviteLink) => {
+    ctx.reply("New Invite Link: " + inviteLink);
+  }).catch(() => {
+    ctx.reply("Error !");
+  });
 });
 
 bot.login();

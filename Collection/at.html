@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code> at(index: number): V | undefined </code><br />
+        Retrieve the value at the specified index in the collection.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const index = 2; // Replace with the desired index
+const valueAtIndex = collection.at(index);
+if (valueAtIndex !== undefined) {
+  // Your code here to handle the value at the specified index
+} else {
+  // Your code here to handle the case when the index is out of range
+}
+        </code>
+      </pre>
+      <p><strong>Parameters:</strong></p>
+      <ul>
+        <li>
+          <code>index</code>: The index of the value to retrieve. Use a positive
+          index to access from the beginning, and a negative index to access
+          from the end (e.g., -1 for the last element).
+        </li>
+      </ul>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        The value at the specified index, or undefined if the index is out of
+        range.
+      </p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./random.html">random</a>
+      <a href="./lastKey.html">lastKey</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>

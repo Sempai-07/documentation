@@ -34,7 +34,7 @@
       <pre><code class="language-javascript">
 // Example of using the "decodeIntents" function to get an array of intent strings
 
-const { decodeIntents, IntentBits, IntentsBitField, TelegramIntentBits } = require("telegramsjs");
+const { decodeIntents, IntentBits, IntentsBitField } = require("telegramsjs");
 
 const intents = new IntentsBitField().add(IntentBits.Message);
 const decodedIntents = decodeIntents(intents);

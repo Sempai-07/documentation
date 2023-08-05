@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collection&lt;K, V&gt;</title>
+    <link rel="stylesheet" href="../css/methods.css" />
+    <link id="style" rel="stylesheet" href="../css/prism-vs.css" />
+  </head>
+  <body>
+    <div>
+      <button id="themeToggle">Switch theme</button>
+      <a href="../index.html">Home</a>
+    </div>
+    <br />
+    <div>
+      <h1>Collection&lt;K, V&gt;</h1>
+      <p><strong>Description:</strong></p>
+      <p>
+        This class represents a collection with key-value pairs. It uses an
+        underlying map to store the data.
+      </p>
+      <p><strong>Method:</strong></p>
+      <p>
+        <code>toJSON(): { [key: string]: V }</code><br />
+        Returns an object that contains all the elements of the collection as
+        properties with keys in string format.
+      </p>
+      <pre>
+        <code class="language-javascript">
+const json = collection.toJSON();
+// Your code here to work with the json object
+        </code>
+      </pre>
+      <p><strong>Return Value:</strong></p>
+      <p>
+        An object containing the elements of the collection with keys in string
+        format.
+      </p>
+    </div>
+    <div class="navigation-collection">
+      <a href="./toSplised.html">toSplised</a>
+      <a href="./get.html">get</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script src="../js/code-block.js"></script>
+  </body>
+</html>
