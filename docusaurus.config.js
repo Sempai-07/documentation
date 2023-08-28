@@ -26,7 +26,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/Sempai-07/telegramsjs-docs/tree/new",
+          editUrl: "https://github.com/Sempai-07/telegramsjs-docs/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -56,7 +56,7 @@ const config = {
         title: "telegramsjs",
         logo: {
           alt: "tsjs logo",
-          src: "img/Telegramsjs.png",
+          src: "img/telegramsjs.png",
         },
         items: [
           {
@@ -82,7 +82,7 @@ const config = {
         logo: {
           alt: "telegramsjs",
           src: "img/telegramsjs.png",
-          href: "https://opensource.fb.com",
+          href: "https://github.com/Sempai-07/telegramsjs",
           width: 60,
           height: 60,
         },
@@ -126,7 +126,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-    plugins: [
+  plugins: [
     // ... Your other plugins.
     [
       require.resolve("docusaurus-plugin-search-local"),
@@ -139,7 +139,7 @@ const config = {
         // language: ["en", "zh"],
         // ```
         // When applying `zh` in language, please install `nodejieba` in your project.
-        searchResultLimits: 20
+        searchResultLimits: 20,
       },
     ],
   ],
