@@ -4,10 +4,10 @@ Use this method to change the title of a chat. Titles can't be changed for priva
 
 **Parameters:**
 
-| Parameter         | Description                                                                                                                |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id` | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number | string` |
-| `options.title`   | New chat title, 1-128 characters.**Type:** `string`                                                                        |
+| Parameter | Description                                                                                                                |
+| --------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id` | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number | string` |
+| `title`   | New chat title, 1-128 characters.**Type:** `string`                                                                        |
 
 **Return Value:**
 
@@ -20,10 +20,7 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 bot
-  .setChatTitle({
-    chat_id: "SUPERGROUP_USERNAME",
-    title: "New Supergroup Title",
-  })
+  .setChatTitle("SUPERGROUP_USERNAME", "New Supergroup Title")
   .then((success) => {
     console.log("Chat title changed:", success);
   });

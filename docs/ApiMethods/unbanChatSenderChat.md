@@ -4,10 +4,10 @@ Use this method to unban a previously banned channel chat in a supergroup or cha
 
 **Parameters:**
 
-| Parameter                | Description                                                                                                                           |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `options.chat_id`        | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number \| string` |
-| `options.sender_chat_id` | Unique identifier of the target sender chat.**Type:** `number`                                                                        |
+| Parameter        | Description                                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `chat_id`        | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number \| string` |
+| `sender_chat_id` | Unique identifier of the target sender chat.**Type:** `number`                                                                        |
 
 **Return Value:**
 
@@ -20,10 +20,7 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 bot
-  .unbanChatSenderChat({
-    chat_id: "SUPERGROUP_OR_CHANNEL_USERNAME",
-    sender_chat_id: "SENDER_CHAT_ID",
-  })
+  .unbanChatSenderChat("SUPERGROUP_OR_CHANNEL_USERNAME", "SENDER_CHAT_ID")
   .then((data) => {
     console.log(data);
   });

@@ -4,10 +4,10 @@ Use this method to approve a chat join request. The bot must be an administrator
 
 ## Parameters:
 
-| Parameter         | Description                                                                                                             |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id` | Unique identifier for the target chat or username of the target channel (in the format @channelusername). Type: `number | string` |
-| `options.user_id` | Unique identifier of the target user. Type: `number`                                                                    |
+| Parameter | Description                                                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id` | Unique identifier for the target chat or username of the target channel (in the format @channelusername). Type: `number | string` |
+| `user_id` | Unique identifier of the target user. Type: `number`                                                                    |
 
 ## Return Value:
 
@@ -19,14 +19,9 @@ Use this method to approve a chat join request. The bot must be an administrator
 const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
-bot
-  .approveChatJoinRequest({
-    chat_id: "SUPERGROUP_USERNAME",
-    user_id: USER_ID,
-  })
-  .then((success) => {
-    console.log("Join request approved:", success);
-  });
+bot.approveChatJoinRequest("SUPERGROUP_USERNAME", "USER_ID").then((success) => {
+  console.log("Join request approved:", success);
+});
 
 bot.login();
 ```

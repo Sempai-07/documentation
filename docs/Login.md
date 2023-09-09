@@ -1,6 +1,7 @@
 ---
 sidebar_position: 7
 ---
+
 # Bot starting
 
 The Telegram Bot API "login" function is a crucial step in starting your Telegram bot's functionality. By invoking the "login" function, you initialize the bot, process incoming updates, and emit the "ready" event when the bot is ready to interact with users on Telegram. This function serves as the entry point for your bot's operations.

@@ -4,10 +4,10 @@ Use this method to change the default administrator rights requested by the bot 
 
 **Parameters:**
 
-| Parameter              | Description                                                                                                                                                                                                      |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `options.rights`       | An object describing new default administrator rights. If not specified, the default administrator rights will be cleared.**Type:** `ChatAdministratorRights`**(optional)**                                      |
-| `options.for_channels` | Pass True to change the default administrator rights of the bot in channels. Otherwise, the default administrator rights of the bot for groups and supergroups will be changed.**Type:** `boolean`**(optional)** |
+| Parameter      | Description                                                                                                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rights`       | An object describing new default administrator rights. If not specified, the default administrator rights will be cleared.**Type:** `ChatAdministratorRights`**(optional)**                                      |
+| `for_channels` | Pass True to change the default administrator rights of the bot in channels. Otherwise, the default administrator rights of the bot for groups and supergroups will be changed.**Type:** `boolean`**(optional)** |
 
 **Return Value:**
 
@@ -30,7 +30,7 @@ const defaultRights = {
   can_pin_messages: true,
   can_promote_members: true,
 };
-bot.setMyDefaultAdministratorRights({ rights: defaultRights });
+bot.setMyDefaultAdministratorRights(defaultRights);
 
 bot.login();
 ```

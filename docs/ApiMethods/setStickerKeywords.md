@@ -23,10 +23,7 @@ const stickerId = "sticker_file_id"; // Replace with the file identifier of the 
 const keywords = ["happy", "smile", "funny"]; // Replace with the list of search keywords for the sticker
 
 // Change the search keywords assigned to the sticker
-const result = bot.setStickerKeywords({
-  sticker: stickerId,
-  keywords: keywords,
-});
+const result = bot.setStickerKeywords(stickerId, keywords);
 
 console.log(result);
 ```

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 ---
+
 # Hears Callback
 
 The Telegram Bot API "Hears" Callback function allows you to register a callback function that will be executed when a message containing specific text is received. This function listens for messages containing the specified text and triggers the provided callback function when a match is found.

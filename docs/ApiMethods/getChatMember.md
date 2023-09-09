@@ -4,10 +4,10 @@ Use this method to get information about a member of a chat. The method is only 
 
 ## Parameters:
 
-| Parameter         | Description                                                                                                             |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `options.chat_id` | Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername). |
-| `options.user_id` | Unique identifier of the target user.                                                                                   |
+| Parameter | Description                                                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `chat_id` | Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername). |
+| `user_id` | Unique identifier of the target user.                                                                                   |
 
 ## Return Value:
 
@@ -20,14 +20,9 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 // Get information about a chat member
-bot
-  .getChatMember({
-    chat_id: "CHAT_ID_OR_USERNAME",
-    user_id: "USER_ID",
-  })
-  .then((chatMember) => {
-    console.log("Chat Member:", chatMember);
-  });
+bot.getChatMember("CHAT_ID_OR_USERNAME", "USER_ID").then((chatMember) => {
+  console.log("Chat Member:", chatMember);
+});
 
 bot.login();
 ```

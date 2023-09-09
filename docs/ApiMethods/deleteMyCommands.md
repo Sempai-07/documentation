@@ -4,10 +4,10 @@ Use this method to delete the list of the bot's commands for the given scope and
 
 ## Parameters:
 
-| Parameter               | Description                                                                                                                                                                        |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `options.scope`         | An object, describing scope of users for which the commands are relevant. Defaults to BotCommandScopeDefault. **Type:** `BotCommandScope`                                          |
-| `options.language_code` | A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands. **Type:** `string` |
+| Parameter       | Description                                                                                                                                                                        |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `scope`         | An object, describing scope of users for which the commands are relevant. Defaults to BotCommandScopeDefault. **Type:** `BotCommandScope`                                          |
+| `language_code` | A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands. **Type:** `string` |
 
 ## Return Value:
 
@@ -21,10 +21,7 @@ const bot = new TelegramBot("BOT_TOKEN");
 
 // Delete bot commands for a specific scope and language
 bot
-  .deleteMyCommands({
-    scope: { type: "chat", chat_id: -123456789 },
-    language_code: "en",
-  })
+  .deleteMyCommands({ type: "chat", chat_id: -123456789 }, "en")
   .then((success) => {
     console.log("Bot Commands Deleted:", success);
   });

@@ -1,0 +1,286 @@
+# Telegram Bot Utility Functions
+
+This document provides documentation for various utility functions related to working with Telegram bot messages.
+
+## `checkMessageLinks`
+
+Checks if a message contains any links.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains links, otherwise `false`.
+
+## `extractUserMentions`
+
+Extracts user mentions from a message.
+
+### Parameters:
+
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| `message` | The message to extract mentions from. |
+
+### Return Value:
+
+An array of user mentions found in the message.
+
+## `extractHashtags`
+
+Extracts hashtags from a message.
+
+### Parameters:
+
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| `message` | The message to extract hashtags from. |
+
+### Return Value:
+
+An array of hashtags found in the message.
+
+## `checkLocation`
+
+Checks if a location object is valid.
+
+### Parameters:
+
+| Parameter            | Description                    |
+| -------------------- | ------------------------------ |
+| `location`           | The location object to check.  |
+| `location.latitude`  | The latitude of the location.  |
+| `location.longitude` | The longitude of the location. |
+
+### Return Value:
+
+Returns `true` if the location object is valid, otherwise `false`.
+
+## `checkUserMentions`
+
+Checks if a message contains any user mentions.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains user mentions, otherwise `false`.
+
+## `checkHashtags`
+
+Checks if a message contains any hashtags.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains hashtags, otherwise `false`.
+
+## `checkPhoneNumber`
+
+Checks if a phone number is valid.
+
+### Parameters:
+
+| Parameter     | Description                |
+| ------------- | -------------------------- |
+| `phoneNumber` | The phone number to check. |
+
+### Return Value:
+
+Returns `true` if the phone number is valid, otherwise `false`.
+
+## `extractUserIdFromLink`
+
+Extracts the user ID from a Telegram link.
+
+### Parameters:
+
+| Parameter | Description                                    |
+| --------- | ---------------------------------------------- |
+| `link`    | The Telegram link to extract the user ID from. |
+
+### Return Value:
+
+The extracted user ID or `null` if not found.
+
+## `checkGroupOrChannel`
+
+Checks if a message contains a Telegram group or channel link.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains a group or channel link, otherwise `false`.
+
+## `checkEmoji`
+
+Checks if a message contains only emoji characters.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains only emoji characters, otherwise `false`.
+
+## `checkSticker`
+
+Checks if a message contains only a Telegram sticker.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains only a Telegram sticker, otherwise `false`.
+
+## `extractUsernameFromLink`
+
+Extracts the username from a Telegram link.
+
+### Parameters:
+
+| Parameter | Description                                     |
+| --------- | ----------------------------------------------- |
+| `link`    | The Telegram link to extract the username from. |
+
+### Return Value:
+
+The extracted username or `null` if not found.
+
+## `checkBot`
+
+Checks if a message contains a Telegram bot username.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains a Telegram bot username, otherwise `false`.
+
+## `checkChannel`
+
+Checks if a message contains a Telegram channel link (excluding usernames).
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains a Telegram channel link, otherwise `false`.
+
+## `checkLink`
+
+Checks if a message contains a Telegram link.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains a Telegram link, otherwise `false`.
+
+## `checkGroup`
+
+Checks if a message contains a Telegram group link.
+
+### Parameters:
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| `message` | The message to check. |
+
+### Return Value:
+
+Returns `true` if the message contains a Telegram group link, otherwise `false`.
+
+## `checkUsername`
+
+Checks if a username is valid.
+
+### Parameters:
+
+| Parameter  | Description            |
+| ---------- | ---------------------- |
+| `username` | The username to check. |
+
+### Return Value:
+
+Returns `true` if the username is valid, otherwise `false`.
+
+## `extractUsername`
+
+Extracts the username from a Telegram link.
+
+### Parameters:
+
+| Parameter | Description                                     |
+| --------- | ----------------------------------------------- |
+| `link`    | The Telegram link to extract the username from. |
+
+### Return Value:
+
+The extracted username or `null` if not found.
+
+## Example
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="library" label="Library">
+
+```js
+const { extractUsername } = require("telegramsjs");
+
+const response = extractUsername("@SempaiJS");
+
+console.log(response);
+```
+
+</TabItem>
+<TabItem value="context" label="Context">
+
+```js
+bot.command("userhas", (ctx) => {
+  const response = ctx.util.extractUsername(ctx.text);
+  ctx.reply(response ? "Yes, I passed" : "No I didn't pass");
+});
+```
+
+</TabItem>
+</Tabs>

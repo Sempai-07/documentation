@@ -4,10 +4,10 @@ Use this method to get the current list of the bot's commands for the given scop
 
 ## Parameters:
 
-| Parameter                            | Description                                                                                                |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `options.scope` _(optional)_         | An object, describing the scope of users. Defaults to BotCommandScopeDefault. .**Type:** `BotCommandScope` |
-| `options.language_code` _(optional)_ | A two-letter ISO 639-1 language code or an empty string. .**Type:** `string`                               |
+| Parameter                    | Description                                                                                                |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `scope` _(optional)_         | An object, describing the scope of users. Defaults to BotCommandScopeDefault. .**Type:** `BotCommandScope` |
+| `language_code` _(optional)_ | A two-letter ISO 639-1 language code or an empty string. .**Type:** `string`                               |
 
 ## Return Value:
 
@@ -20,10 +20,7 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 // Get bot commands for a specific scope and language
-const commands = bot.getMyCommands({
-  scope: { type: "chat", chat_id: -123456789 },
-  language_code: "en",
-});
+const commands = bot.getMyCommands({ type: "chat", chat_id: -123456789 }, "en");
 console.log("Bot Commands:", commands);
 
 bot.login();

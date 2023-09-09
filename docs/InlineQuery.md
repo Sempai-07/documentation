@@ -1,16 +1,17 @@
 ---
 sidebar_position: 5
 ---
+
 # Handling Inline Queries
 
 The Telegram Bot API's `inlineQuery` method allows you to register a callback function that gets executed when an inline query matches the specified text or patterns. Inline queries provide a way for users to interact with your bot directly in chat by typing a query, and your bot can respond with relevant results.
 
 ## Parameters
 
-| Parameter | Description                                                      |
-| --------- | ---------------------------------------------------------------- |
-| `text`    | The text or patterns to match in the inline query. **Type:** `string \| string[] \| RegExp`              |
-| `callback`| The callback function to be executed when a matching inline query is received. It receives the matched inline query object as a parameter. **Type:** `(inlineQuery: InlineQuery & Context<F>) => void`|
+| Parameter  | Description                                                                                                                                                                                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `text`     | The text or patterns to match in the inline query. **Type:** `string \| string[] \| RegExp`                                                                                                            |
+| `callback` | The callback function to be executed when a matching inline query is received. It receives the matched inline query object as a parameter. **Type:** `(inlineQuery: InlineQuery & Context<F>) => void` |
 
 ## Examples
 
@@ -21,12 +22,12 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 // Example usage for matching a single text
-bot.inlineQuery('search', (ctx) => {
+bot.inlineQuery("search", (ctx) => {
   // Your callback logic here
 });
 
 // Example usage for matching multiple texts using an array
-bot.inlineQuery(['help', 'info'], (ctx) => {
+bot.inlineQuery(["help", "info"], (ctx) => {
   // Your callback logic here
 });
 
@@ -37,12 +38,12 @@ bot.inlineQuery(/^start/, async (ctx) => {
   // Your logic to generate results based on the query
   const results = [
     {
-      type: 'article',
-      id: '1',
-      title: 'Result 1',
+      type: "article",
+      id: "1",
+      title: "Result 1",
       input_message_content: {
-        message_text: 'This is result 1'
-      }
+        message_text: "This is result 1",
+      },
     },
     // Add more results as needed
   ];

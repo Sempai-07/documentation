@@ -4,10 +4,10 @@ Use this method to set the result of an interaction with a Web App and send a co
 
 ## Parameters:
 
-| Parameter                  | Description                                                            |
-| -------------------------- | ---------------------------------------------------------------------- |
-| `options.web_app_query_id` | Unique identifier for the query to be answered. Type: `string`         |
-| `options.result`           | An object describing the message to be sent. Type: `InlineQueryResult` |
+| Parameter          | Description                                                            |
+| ------------------ | ---------------------------------------------------------------------- |
+| `web_app_query_id` | Unique identifier for the query to be answered. Type: `string`         |
+| `result`           | An object describing the message to be sent. Type: `InlineQueryResult` |
 
 ## Return Value:
 
@@ -25,10 +25,7 @@ const result = {
 };
 
 const sentWebAppMessage = bot
-  .answerWebAppQuery({
-    web_app_query_id: webAppQueryId,
-    result: result,
-  })
+  .answerWebAppQuery(webAppQueryId, result)
   .then((data) => console.log(data));
 
 bot.login();

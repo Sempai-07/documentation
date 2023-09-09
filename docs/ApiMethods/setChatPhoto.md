@@ -4,10 +4,10 @@ Use this method to set a new profile photo for the chat. Photos can't be changed
 
 **Parameters:**
 
-| Parameter         | Description                                                                                                                |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id` | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number | string` |
-| `options.photo`   | New chat photo, uploaded using multipart/form-data.**Type:** `F`                                                           |
+| Parameter | Description                                                                                                                |
+| --------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id` | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number | string` |
+| `photo`   | New chat photo, uploaded using multipart/form-data.**Type:** `F`                                                           |
 
 **Return Value:**
 
@@ -21,14 +21,9 @@ const bot = new TelegramBot("BOT_TOKEN");
 
 // Assume you have the photo file ready to upload as 'chatPhotoFile'
 
-bot
-  .setChatPhoto({
-    chat_id: "SUPERGROUP_USERNAME",
-    photo: chatPhotoFile,
-  })
-  .then((success) => {
-    console.log("Chat photo set:", success);
-  });
+bot.setChatPhoto("SUPERGROUP_USERNAME", chatPhotoFile).then((success) => {
+  console.log("Chat photo set:", success);
+});
 
 bot.login();
 ```

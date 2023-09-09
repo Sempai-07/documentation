@@ -4,10 +4,10 @@ Use this method to ban a channel chat in a supergroup or a channel. Until the ch
 
 ## Parameters:
 
-| Parameter                | Description                                                                                                             |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id`        | Unique identifier for the target chat or username of the target channel (in the format @channelusername). Type: `number | string` |
-| `options.sender_chat_id` | Unique identifier of the target sender chat. Type: `number`                                                             |
+| Parameter        | Description                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id`        | Unique identifier for the target chat or username of the target channel (in the format @channelusername). Type: `number | string` |
+| `sender_chat_id` | Unique identifier of the target sender chat. Type: `number`                                                             |
 
 ## Return Value:
 
@@ -21,10 +21,7 @@ const bot = new TelegramBot("BOT_TOKEN");
 
 bot.command("ban", async (ctx, args) => {
   bot
-    .banChatSenderChat({
-      chat_id: "test",
-      sender_chat_id: Number(args[1]),
-    })
+    .banChatSenderChat(123456789, Number(args[1]))
     .then((data) => {
       ctx.reply("Ban success!");
     })

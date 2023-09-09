@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Telegramsjs
 
 [![Image](https://raw.githubusercontent.com/Sempai-07/Telegramsjs/main/docs/avatar.png)](https://github.com/Sempai-07/Telegramsjs)
@@ -12,7 +15,7 @@ sidebar_position: 1
 
 ## ⚙️ Introduction
 
-`Telegramsjs` is a lightweight Node.js library for creating Telegram bots. It provides an easy-to-use and flexible framework for building bots without relying on third-party libraries such as `Telegraf.js` or `node-telegram-bot-api`. With a syntax similar to `Discord.js`, this library allows developers to create Telegram bots with ease and efficiency.
+`Telegramsjs` is a lightweight Node.js library for creating Telegram bots. It provides an easy-to-use and flexible framework for building bots without relying on third-party libraries such as `Telegraf.js` or `node-telegram-bot-api`. This library allows developers to create Telegram bots with ease and efficiency.
 
 ## ⚒️ Installation
 
@@ -26,79 +29,10 @@ npm install telegramsjs
 
 To get started, create a new instance of the `TelegramBot` class by providing your Telegram bot token:
 
-### TypeScript Example
+<Tabs>
+<TabItem value="js" label="JavaScript">
 
-```typescript
-import { TelegramBot, Context } from "telegramsjs";
-import { UserFromGetMe, Message } from "@telegram.ts/types";
-
-const bot = new TelegramBot("BOT_TOKEN");
-
-function isCommand(ctx: Context): boolean {
-  return ctx.entities?.[0].type === "bot_command" && ctx.text[0] === "/";
-}
-
-bot.on("ready", async (client: UserFromGetMe) => {
-  bot.setMyCommands({
-    commands: [
-      {
-        command: "/start",
-        description: "starting command",
-      },
-      {
-        command: "/remove",
-        description: "remove session",
-      },
-      {
-        command: "/stats",
-        description: "statistics session",
-      },
-    ],
-  });
-
-  console.log(`Starting ${client.username}`);
-});
-
-bot.use({});
-
-bot.on("message", (ctx) => {
-  if (isCommand(ctx)) return;
-  bot.session.counter = bot.session.counter || 0;
-  bot.session.counter++;
-  ctx.replyWithMarkdownV2(
-    `Counter updated, new value: \`${bot.session.counter}\``,
-  );
-});
-
-bot.command("start", (ctx) => {
-  const username = ctx.from.username
-    ? `@${ctx.from.username}`
-    : ctx.from.first_name;
-  ctx.replyWithMarkdown(`${username}, *thanks for using telegramsjs ❤️*`);
-});
-
-bot.command("remove", (ctx) => {
-  ctx.replyWithMarkdownV2(
-    `Removing session from database: \`${bot.session.counter ?? 0}\``,
-  );
-  bot.session = null;
-});
-
-bot.command("stats", (ctx) => {
-  const username = ctx.from.username
-    ? `@${ctx.from.username}`
-    : ctx.from.first_name;
-  ctx.replyWithMarkdownV2(
-    `Database has \`${bot.session?.counter ?? 0}\` messages from ${username}`,
-  );
-});
-
-bot.login();
-```
-
-### JavaScript Example
-
-```javascript
+```js
 const { TelegramBot } = require("telegramsjs");
 
 const bot = new TelegramBot("BOT_TOKEN");
@@ -148,7 +82,7 @@ bot.command("start", (ctx) => {
 
 bot.command("remove", (ctx) => {
   ctx.replyWithMarkdownV2(
-    `Removing session from database: \`${bot.session.counter ?? 0}\``,
+    `Removing session from database: \`${bot.session.counter}\``,
   );
   bot.session = null;
 });
@@ -164,6 +98,89 @@ bot.command("stats", (ctx) => {
 
 bot.login();
 ```
+
+</TabItem>
+<TabItem value="ts" label="TypeScript">
+
+```ts
+import { TelegramBot } from "telegramsjs";
+import { Message, User } from "@telegram.ts/types";
+
+const bot = new TelegramBot("BOT_TOKEN");
+
+let session = { counter: 0 };
+
+function isCommand(ctx: Message) {
+  if (ctx.text) {
+    return ctx.entities?.[0].type === "bot_command" && ctx.text[0] === "/";
+  }
+  return false;
+}
+
+function isFromUser(ctx: unknown): ctx is User {
+  if (typeof ctx !== "object" || ctx === null) return false;
+  if ("first_name" in ctx) {
+    return true;
+  }
+  return false;
+}
+
+bot.on("ready", async (client) => {
+  bot.setMyCommands({
+    commands: [
+      {
+        command: "/start",
+        description: "starting command",
+      },
+      {
+        command: "/remove",
+        description: "remove session",
+      },
+      {
+        command: "/stats",
+        description: "statistics session",
+      },
+    ],
+  });
+
+  console.log(`Starting ${client.username}`);
+});
+
+bot.on("message", (ctx) => {
+  if (isCommand(ctx)) return;
+  session.counter++;
+  ctx.replyWithMarkdownV2(`Counter updated, new value: \`${session.counter}\``);
+  bot.use(session);
+});
+
+bot.command("start", (ctx) => {
+  const from = ctx.from;
+  if (!isFromUser(from)) return;
+  const username = from.username ? `@${from.username}` : from.first_name;
+  ctx.replyWithMarkdown(`${username}, *thanks for using telegramsjs ❤️*`);
+});
+
+bot.command("remove", (ctx) => {
+  ctx.replyWithMarkdownV2(
+    `Removing session from database: \`${session.counter}\``,
+  );
+  session.counter = 0;
+});
+
+bot.command("stats", (ctx) => {
+  const from = ctx.from;
+  if (!isFromUser(from)) return;
+  const username = from.username ? `@${from.username}` : from.first_name;
+  ctx.replyWithMarkdownV2(
+    `Database has \`${session.counter}\` messages from ${username}`,
+  );
+});
+
+bot.login();
+```
+
+</TabItem>
+</Tabs>
 
 ## 🎃 Conclusion
 

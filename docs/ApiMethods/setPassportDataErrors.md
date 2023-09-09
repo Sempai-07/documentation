@@ -6,10 +6,10 @@ Use this if the data submitted by the user doesn't satisfy the standards your se
 
 **Parameters:**
 
-| Parameter         | Description                                                                 |
-| ----------------- | --------------------------------------------------------------------------- |
-| `options.user_id` | User identifier. **Type:** `number`                                         |
-| `options.errors`  | An array describing the errors. **Type:** `readonly PassportElementError[]` |
+| Parameter | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| `user_id` | User identifier. **Type:** `number`                                         |
+| `errors`  | An array describing the errors. **Type:** `readonly PassportElementError[]` |
 
 **Usage:**
 
@@ -19,14 +19,10 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 bot
-  .setPassportDataErrors({
-    user_id: 123456789,
-    errors: [
-      { type: "passport", message: "Invalid birthday date." },
-      { type: "document", message: "Document scan is blurry." },
-    ],
-    message_thread_id: 987654321,
-  })
+  .setPassportDataErrors(123456789, [
+    { type: "passport", message: "Invalid birthday date." },
+    { type: "document", message: "Document scan is blurry." },
+  ])
   .then((data) => {
     console.log(data);
   });

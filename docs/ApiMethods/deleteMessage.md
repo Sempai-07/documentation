@@ -13,10 +13,10 @@ Use this method to delete a message, including service messages, with the follow
 
 ## Parameters:
 
-| Parameter            | Description                                                                                                                 |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id`    | Unique identifier for the target chat or username of the target channel (in the format @channelusername). **Type:** `number | string` |
-| `options.message_id` | Identifier of the message to delete. **Type:** `number`                                                                     |
+| Parameter    | Description                                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id`    | Unique identifier for the target chat or username of the target channel (in the format @channelusername). **Type:** `number | string` |
+| `message_id` | Identifier of the message to delete. **Type:** `number`                                                                     |
 
 ## Return Value:
 
@@ -29,12 +29,7 @@ const { TelegramBot } = require("telegramsjs");
 const bot = new TelegramBot("BOT_TOKEN");
 
 bot.command("hello", async (ctx) => {
-  bot
-    .deleteMessage({
-      chat_id: ctx.chat.id,
-      message_id: ctx.message_id,
-    })
-    .catch(() => console.log);
+  bot.deleteMessage(ctx.chat.id, ctx.message_id).catch(() => console.log);
 
   ctx.reply("Hello user");
 });

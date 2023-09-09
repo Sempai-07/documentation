@@ -6,9 +6,9 @@ Use this method to send text messages. On success, the sent Message is returned.
 
 | Parameter                             | Description                                                                                                                                                                                    |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------------------- | ----------- |
-| `options.chat_id`                     | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number                                                                     | string`             |
+| `chat_id`                             | Unique identifier for the target chat or username of the target channel (in the format @channelusername).**Type:** `number                                                                     | string`             |
+| `text`                                | Text of the message to be sent, 1-4096 characters after entities parsing.**Type:** `string`                                                                                                    |
 | `options.message_thread_id`           | Unique identifier for the target message thread (topic) of the forum; for forum supergroups only.**Type:** `number`                                                                            |
-| `options.text`                        | Text of the message to be sent, 1-4096 characters after entities parsing.**Type:** `string`                                                                                                    |
 | `options.parse_mode`                  | Mode for parsing entities in the message text. See formatting options for more details.**Type:** `string`                                                                                      |
 | `options.entities`                    | A list of special entities that appear in message text, which can be specified instead of parse_mode.**Type:** `string`                                                                        |
 | `options.disable_web_page_preview`    | Boolean Disables link previews for links in this message.**Type:** `boolean`                                                                                                                   |
@@ -29,14 +29,9 @@ const { TelegramBot } = require("telegramsjs");
 
 const bot = new TelegramBot("BOT_TOKEN");
 
-bot
-  .sendMessage({
-    chat_id: 123456789,
-    text: `text`,
-  })
-  .then((data) => {
-    console.log(data);
-  });
+bot.sendMessage(123456789, `text`).then((data) => {
+  console.log(data);
+});
 
 bot.login();
 ```

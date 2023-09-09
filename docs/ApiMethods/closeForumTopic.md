@@ -4,10 +4,10 @@ Use this method to close an open topic in a forum supergroup chat. The bot must 
 
 ## Parameters:
 
-| Parameter                   | Description                                                                                                                       |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id`           | Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername). **Type:** `number | string` |
-| `options.message_thread_id` | Unique identifier for the target message thread of the forum topic. **Type:** `number`                                            |
+| Parameter           | Description                                                                                                                       |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id`           | Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername). **Type:** `number | string` |
+| `message_thread_id` | Unique identifier for the target message thread of the forum topic. **Type:** `number`                                            |
 
 ## Return Value:
 
@@ -22,10 +22,7 @@ const bot = new TelegramBot("BOT_TOKEN");
 // Close the forum topic
 bot.command("close_forum", async (ctx) => {
   bot
-    .closeForumTopic({
-      chat_id: ctx.chat.id,
-      message_thread_id: ctx.message_thread_id,
-    })
+    .closeForumTopic(ctx.chat.id, ctx.message_thread_id)
     .then((data) => {
       ctx.reply("Success!");
     })

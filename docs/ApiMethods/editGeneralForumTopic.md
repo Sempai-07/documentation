@@ -4,10 +4,10 @@ Use this method to edit the name of the 'General' topic in a forum supergroup ch
 
 ## Parameters:
 
-| Parameter         | Description                                                                                                    |
-| ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| `options.chat_id` | Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) |
-| `options.name`    | New topic name, 1-128 characters                                                                               |
+| Parameter | Description                                                                                                    |
+| --------- | -------------------------------------------------------------------------------------------------------------- |
+| `chat_id` | Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) |
+| `name`    | New topic name, 1-128 characters                                                                               |
 
 ## Return Value:
 
@@ -23,14 +23,9 @@ const chatId = "SUPERGROUP_USERNAME";
 const newTopicName = "New General Topic Name";
 
 // Edit the 'General' topic name
-bot
-  .editGeneralForumTopic({
-    chat_id: chatId,
-    name: newTopicName,
-  })
-  .then((success) => {
-    console.log("General Topic Name Updated:", success);
-  });
+bot.editGeneralForumTopic(chatId, newTopicName).then((success) => {
+  console.log("General Topic Name Updated:", success);
+});
 
 bot.login();
 ```

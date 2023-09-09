@@ -4,10 +4,10 @@ Use this method to set a new group sticker set for a supergroup. The bot must be
 
 **Parameters:**
 
-| Parameter                  | Description                                                                                                                       |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options.chat_id`          | Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername). **Type:** `number | string` |
-| `options.sticker_set_name` | Name of the sticker set to be set as the group sticker set. **Type:** `string`                                                    |
+| Parameter          | Description                                                                                                                       |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `chat_id`          | Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername). **Type:** `number | string` |
+| `sticker_set_name` | Name of the sticker set to be set as the group sticker set. **Type:** `string`                                                    |
 
 **Return Value:**
 Returns True on success. The group sticker set is set for the specified supergroup.
@@ -20,10 +20,7 @@ const bot = new TelegramBot("BOT_TOKEN");
 
 // Set a new group sticker set for a supergroup
 bot
-  .setChatStickerSet({
-    chat_id: "SUPERGROUP_ID_OR_USERNAME",
-    sticker_set_name: "STICKER_SET_NAME",
-  })
+  .setChatStickerSet("SUPERGROUP_ID_OR_USERNAME", "STICKER_SET_NAME")
   .then((result) => {
     console.log("Sticker set set:", result);
   });

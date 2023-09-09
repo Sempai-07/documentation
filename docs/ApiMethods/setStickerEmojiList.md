@@ -23,10 +23,7 @@ const stickerId = "sticker_file_id"; // Replace with the file identifier of the 
 const emojiList = ["😀", "😄", "😊"]; // Replace with the list of emoji you want to assign to the sticker
 
 // Change the list of emoji assigned to the sticker
-const result = bot.setStickerEmojiList({
-  sticker: stickerId,
-  emoji_list: emojiList,
-});
+const result = bot.setStickerEmojiList(stickerId, emojiList);
 
 console.log(result);
 ```

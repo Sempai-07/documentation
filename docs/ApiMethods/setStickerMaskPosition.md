@@ -4,10 +4,10 @@ Use this method to change the mask position of a mask sticker. The sticker must 
 
 **Parameters:**
 
-| Parameter               | Description                                                                                                                                   |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `options.sticker`       | File identifier of the sticker.**Type:** `string`                                                                                             |
-| `options.mask_position` | An object with the position where the mask should be placed on faces. Omit the parameter to remove the mask position.**Type:** `MaskPosition` |
+| Parameter       | Description                                                                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sticker`       | File identifier of the sticker.**Type:** `string`                                                                                             |
+| `mask_position` | An object with the position where the mask should be placed on faces. Omit the parameter to remove the mask position.**Type:** `MaskPosition` |
 
 **Return Value:**
 
@@ -28,10 +28,7 @@ const maskPosition = {
 }; // Replace with the mask position object, or omit it to remove the mask position
 
 // Change the mask position of the sticker
-const result = bot.setStickerMaskPosition({
-  sticker: stickerId,
-  mask_position: maskPosition,
-});
+const result = bot.setStickerMaskPosition(stickerId, maskPosition);
 
 console.log(result);
 ```

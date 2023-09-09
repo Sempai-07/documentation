@@ -1,14 +1,15 @@
 ---
 sidebar_position: 2
 ---
+
 # Action Handler
 
 The Telegram Bot API Action Handler is a powerful tool that allows you to register and manage custom action functions for your Telegram bot. With this action handler, you can listen for specific action data and execute callback functions when those actions are triggered.
 
 ## Parameters
 
-| Parameter  | Description                                                                                                                                                                                                                                                               |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameter  | Description                                                                                                                                                                                                                                                          |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`     | Specify the action data string or an array of action data strings that your bot should listen for. You can also use regular expressions for advanced matching. **Type:** `string \| string[] \| RegExp`                                                              |
 | `callback` | Define a callback function that will be executed when the specified action is triggered. This function takes a `CallbackQuery` object as an argument, allowing you to handle the action effectively. **Type:** `(callbackQuery: CallbackQuery & Context<F>) => void` |
 | `answer`   | _(Optional)_ Decide whether your bot should answer the action with a response. If set to `true`, the action will be acknowledged with an answer. **Type:** `boolean`                                                                                                 |

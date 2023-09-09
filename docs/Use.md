@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 ---
+
 # Session Management
 
 The Telegram Bot API's `use` function allows you to manage user sessions and maintain user-specific data throughout interactions with your bot. By setting a session using the `use` function, you can associate session data with the bot instance, enabling you to store and retrieve information across different requests and interactions.
@@ -9,8 +10,8 @@ The Telegram Bot API's `use` function allows you to manage user sessions and mai
 
 | Parameter | Description                                            |
 | --------- | ------------------------------------------------------ |
-| `session` | The session object to be used by the bot.             |
-| `combine` | Whether to combine previous sessions. Default is true.|
+| `session` | The session object to be used by the bot.              |
+| `combine` | Whether to combine previous sessions. Default is true. |
 
 ## Example
 

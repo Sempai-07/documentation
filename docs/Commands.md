@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 ---
+
 # Command Handler
 
 The Telegram Bot API Command Handler is a versatile tool that allows you to effortlessly manage and execute custom command functions for your Telegram bot. With this command handler, you can seamlessly listen for specific commands and trigger callback functions upon receiving those commands.

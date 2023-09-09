@@ -4,10 +4,10 @@ Use this method to set the title of a created sticker set. Returns True on succe
 
 **Parameters:**
 
-| Parameter       | Description                                           |
-| --------------- | ----------------------------------------------------- |
-| `options.name`  | Sticker set name.**Type:** `string`                   |
-| `options.title` | Sticker set title, 1-64 characters.**Type:** `string` |
+| Parameter | Description                                           |
+| --------- | ----------------------------------------------------- |
+| `name`    | Sticker set name.**Type:** `string`                   |
+| `title`   | Sticker set title, 1-64 characters.**Type:** `string` |
 
 **Return Value:**
 
@@ -23,10 +23,7 @@ const stickerSetName = "animals_by_bot_username"; // Replace with the sticker se
 const newTitle = "New Sticker Set Title"; // Replace with the new title for the sticker set
 
 // Set the title of the sticker set
-const result = bot.setStickerSetTitle({
-  name: stickerSetName,
-  title: newTitle,
-});
+const result = bot.setStickerSetTitle(stickerSetName, newTitle);
 
 console.log(result);
 ```
