@@ -1,0 +1,16 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">   <h1>Telegramsjs</h1><br>   <img src=\"https://raw.githubusercontent.com/Sempai-07/Telegramsjs/main/docs/avatar.png\"><br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+   "dependencies": {
+     "docsify-cli": "^4.4.4",
+     "docsify": "4.13.1"
+   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
