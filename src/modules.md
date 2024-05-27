@@ -774,7 +774,7 @@ ___
 
 ### version
 
-• **version**: `string` = `"3.0.0-beta.26"`
+• **version**: `string` = `"3.0.0"`
 
 ## Functions
 
