@@ -6,10 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-   "dependencies": {
-     "docsify-cli": "^4.4.4",
-     "docsify": "4.13.1"
-   },
+  "dependencies": {
+    "maricmd": "^1.1.3"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
