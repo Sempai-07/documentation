@@ -2,61 +2,19 @@
 
 Represents a custom keyboard for Telegram bots.
 
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/Keyboard.md#constructor)
-
-### Properties
-
-- [input\_field\_placeholder](./src/classes/Keyboard.md#input_field_placeholder)
-- [is\_persistent](./src/classes/Keyboard.md#is_persistent)
-- [keyboard](./src/classes/Keyboard.md#keyboard)
-- [one\_time\_keyboard](./src/classes/Keyboard.md#one_time_keyboard)
-- [resize\_keyboard](./src/classes/Keyboard.md#resize_keyboard)
-- [selective](./src/classes/Keyboard.md#selective)
-
-### Methods
-
-- [add](./src/classes/Keyboard.md#add)
-- [build](./src/classes/Keyboard.md#build)
-- [clone](./src/classes/Keyboard.md#clone)
-- [oneTime](./src/classes/Keyboard.md#onetime)
-- [persistent](./src/classes/Keyboard.md#persistent)
-- [placeholder](./src/classes/Keyboard.md#placeholder)
-- [requestChat](./src/classes/Keyboard.md#requestchat)
-- [requestContact](./src/classes/Keyboard.md#requestcontact)
-- [requestLocation](./src/classes/Keyboard.md#requestlocation)
-- [requestPoll](./src/classes/Keyboard.md#requestpoll)
-- [requestUsers](./src/classes/Keyboard.md#requestusers)
-- [resized](./src/classes/Keyboard.md#resized)
-- [row](./src/classes/Keyboard.md#row)
-- [selected](./src/classes/Keyboard.md#selected)
-- [text](./src/classes/Keyboard.md#text)
-- [webApp](./src/classes/Keyboard.md#webapp)
-- [from](./src/classes/Keyboard.md#from)
-- [requestChat](./src/classes/Keyboard.md#requestchat-1)
-- [requestContact](./src/classes/Keyboard.md#requestcontact-1)
-- [requestLocation](./src/classes/Keyboard.md#requestlocation-1)
-- [requestPoll](./src/classes/Keyboard.md#requestpoll-1)
-- [requestUsers](./src/classes/Keyboard.md#requestusers-1)
-- [text](./src/classes/Keyboard.md#text-1)
-- [webApp](./src/classes/Keyboard.md#webapp-1)
-
 ## Constructors
 
-### constructor
+### new Keyboard()
 
-• **new Keyboard**(`keyboard?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **new Keyboard**(`keyboard`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Creates an instance of Keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `keyboard` | `KeyboardButton`[][] | A 2D array of keyboard buttons. |
+• **keyboard**: `KeyboardButton`[][]= `undefined`
+
+A 2D array of keyboard buttons.
 
 #### Returns
 
@@ -64,65 +22,65 @@ Creates an instance of Keyboard.
 
 ## Properties
 
-### input\_field\_placeholder
+### input\_field\_placeholder?
 
-• `Optional` **input\_field\_placeholder**: `string`
+> `optional` **input\_field\_placeholder**: `string`
 
 The placeholder text for the input field.
 
-___
+***
 
-### is\_persistent
+### is\_persistent?
 
-• `Optional` **is\_persistent**: `boolean`
+> `optional` **is\_persistent**: `boolean`
 
 Indicates whether the keyboard is persistent.
 
-___
+***
 
 ### keyboard
 
-• `Readonly` **keyboard**: `KeyboardButton`[][]
+> `readonly` **keyboard**: `KeyboardButton`[][]
 
 A 2D array of keyboard buttons.
 
-___
+***
 
-### one\_time\_keyboard
+### one\_time\_keyboard?
 
-• `Optional` **one\_time\_keyboard**: `boolean`
+> `optional` **one\_time\_keyboard**: `boolean`
 
 Indicates whether the keyboard is a one-time keyboard.
 
-___
+***
 
-### resize\_keyboard
+### resize\_keyboard?
 
-• `Optional` **resize\_keyboard**: `boolean`
+> `optional` **resize\_keyboard**: `boolean`
 
 Indicates whether the keyboard should be resized.
 
-___
+***
 
-### selective
+### selective?
 
-• `Optional` **selective**: `boolean`
+> `optional` **selective**: `boolean`
 
 Indicates whether the keyboard is selective.
 
 ## Methods
 
-### add
+### add()
 
-▸ **add**(`...buttons`): [`Keyboard`](./src/classes/Keyboard.md)
+> **add**(...`buttons`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds buttons to the last row of the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...buttons` | `KeyboardButton`[] | The buttons to add. |
+• ...**buttons**: `KeyboardButton`[]
+
+The buttons to add.
 
 #### Returns
 
@@ -130,11 +88,11 @@ Adds buttons to the last row of the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### build
+### build()
 
-▸ **build**(): `KeyboardButton`[][]
+> **build**(): `KeyboardButton`[][]
 
 Builds the keyboard structure.
 
@@ -144,19 +102,17 @@ Builds the keyboard structure.
 
 The built keyboard structure.
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`keyboard?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **clone**(`keyboard`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Creates a deep copy of the current Keyboard instance.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `keyboard` | `KeyboardButton`[][] |
+• **keyboard**: `KeyboardButton`[][]= `undefined`
 
 #### Returns
 
@@ -164,19 +120,19 @@ Creates a deep copy of the current Keyboard instance.
 
 A new instance of Keyboard with the same buttons and properties.
 
-___
+***
 
-### oneTime
+### oneTime()
 
-▸ **oneTime**(`isEnabled?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **oneTime**(`isEnabled`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Sets the keyboard as a one-time keyboard or not.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `isEnabled` | `boolean` | `true` | Indicates whether the keyboard should be a one-time keyboard. |
+• **isEnabled**: `boolean`= `true`
+
+Indicates whether the keyboard should be a one-time keyboard.
 
 #### Returns
 
@@ -184,19 +140,19 @@ Sets the keyboard as a one-time keyboard or not.
 
 The current instance for chaining.
 
-___
+***
 
-### persistent
+### persistent()
 
-▸ **persistent**(`isEnabled?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **persistent**(`isEnabled`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Sets the keyboard as persistent or not.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `isEnabled` | `boolean` | `true` | Indicates whether the keyboard should be persistent. |
+• **isEnabled**: `boolean`= `true`
+
+Indicates whether the keyboard should be persistent.
 
 #### Returns
 
@@ -204,19 +160,19 @@ Sets the keyboard as persistent or not.
 
 The current instance for chaining.
 
-___
+***
 
-### placeholder
+### placeholder()
 
-▸ **placeholder**(`value`): [`Keyboard`](./src/classes/Keyboard.md)
+> **placeholder**(`value`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Sets the placeholder text for the input field.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `string` | The placeholder text. |
+• **value**: `string`
+
+The placeholder text.
 
 #### Returns
 
@@ -224,21 +180,27 @@ Sets the placeholder text for the input field.
 
 The current instance for chaining.
 
-___
+***
 
-### requestChat
+### requestChat()
 
-▸ **requestChat**(`text`, `requestId`, `options?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **requestChat**(`text`, `requestId`, `options`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a request chat button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `requestId` | `number` | The request ID. |
-| `options` | `Omit`\<`KeyboardButtonRequestChat`, ``"request_id"``\> | Additional options for the button. |
+• **text**: `string`
+
+The button text.
+
+• **requestId**: `number`
+
+The request ID.
+
+• **options**: `Omit`\<`KeyboardButtonRequestChat`, `"request_id"`\>= `undefined`
+
+Additional options for the button.
 
 #### Returns
 
@@ -246,19 +208,19 @@ Adds a request chat button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### requestContact
+### requestContact()
 
-▸ **requestContact**(`text`): [`Keyboard`](./src/classes/Keyboard.md)
+> **requestContact**(`text`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a request contact button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -266,19 +228,19 @@ Adds a request contact button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### requestLocation
+### requestLocation()
 
-▸ **requestLocation**(`text`): [`Keyboard`](./src/classes/Keyboard.md)
+> **requestLocation**(`text`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a request location button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -286,20 +248,23 @@ Adds a request location button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### requestPoll
+### requestPoll()
 
-▸ **requestPoll**(`text`, `type?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **requestPoll**(`text`, `type`?): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a request poll button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `type?` | ``"quiz"`` \| ``"regular"`` | The type of the poll button. |
+• **text**: `string`
+
+The button text.
+
+• **type?**: `"quiz"` \| `"regular"`
+
+The type of the poll button.
 
 #### Returns
 
@@ -307,21 +272,27 @@ Adds a request poll button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### requestUsers
+### requestUsers()
 
-▸ **requestUsers**(`text`, `requestId`, `options?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **requestUsers**(`text`, `requestId`, `options`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a request users button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `requestId` | `number` | The request ID. |
-| `options` | `Omit`\<`KeyboardButtonRequestUsers`, ``"request_id"``\> | Additional options for the button. |
+• **text**: `string`
+
+The button text.
+
+• **requestId**: `number`
+
+The request ID.
+
+• **options**: `Omit`\<`KeyboardButtonRequestUsers`, `"request_id"`\>= `{}`
+
+Additional options for the button.
 
 #### Returns
 
@@ -329,19 +300,19 @@ Adds a request users button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### resized
+### resized()
 
-▸ **resized**(`isEnabled?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **resized**(`isEnabled`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Sets the keyboard to be resized or not.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `isEnabled` | `boolean` | `true` | Indicates whether the keyboard should be resized. |
+• **isEnabled**: `boolean`= `true`
+
+Indicates whether the keyboard should be resized.
 
 #### Returns
 
@@ -349,19 +320,19 @@ Sets the keyboard to be resized or not.
 
 The current instance for chaining.
 
-___
+***
 
-### row
+### row()
 
-▸ **row**(`...buttons`): [`Keyboard`](./src/classes/Keyboard.md)
+> **row**(...`buttons`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a new row of buttons to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...buttons` | `KeyboardButton`[] | The buttons to add. |
+• ...**buttons**: `KeyboardButton`[]
+
+The buttons to add.
 
 #### Returns
 
@@ -369,19 +340,19 @@ Adds a new row of buttons to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### selected
+### selected()
 
-▸ **selected**(`isEnabled?`): [`Keyboard`](./src/classes/Keyboard.md)
+> **selected**(`isEnabled`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Sets the keyboard as selective or not.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `isEnabled` | `boolean` | `true` | Indicates whether the keyboard should be selective. |
+• **isEnabled**: `boolean`= `true`
+
+Indicates whether the keyboard should be selective.
 
 #### Returns
 
@@ -389,19 +360,19 @@ Sets the keyboard as selective or not.
 
 The current instance for chaining.
 
-___
+***
 
-### text
+### text()
 
-▸ **text**(`text`): [`Keyboard`](./src/classes/Keyboard.md)
+> **text**(`text`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a text button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -409,20 +380,23 @@ Adds a text button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### webApp
+### webApp()
 
-▸ **webApp**(`text`, `url`): [`Keyboard`](./src/classes/Keyboard.md)
+> **webApp**(`text`, `url`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Adds a web app button to the keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `url` | `string` | The URL of the web app. |
+• **text**: `string`
+
+The button text.
+
+• **url**: `string`
+
+The URL of the web app.
 
 #### Returns
 
@@ -430,19 +404,19 @@ Adds a web app button to the keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### from
+### from()
 
-▸ **from**(`source`): [`Keyboard`](./src/classes/Keyboard.md)
+> `static` **from**(`source`): [`Keyboard`](./src/classes/Keyboard.md)
 
 Creates a Keyboard instance from another instance or a 2D array of buttons.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `source` | [`Keyboard`](./src/classes/Keyboard.md) \| `KeyboardButton`[][] | The source Keyboard instance or 2D array of buttons. |
+• **source**: [`Keyboard`](./src/classes/Keyboard.md) \| `KeyboardButton`[][]
+
+The source Keyboard instance or 2D array of buttons.
 
 #### Returns
 
@@ -450,21 +424,27 @@ Creates a Keyboard instance from another instance or a 2D array of buttons.
 
 A new instance of Keyboard.
 
-___
+***
 
-### requestChat
+### requestChat()
 
-▸ **requestChat**(`text`, `requestId`, `options?`): `RequestChatButton`
+> `static` **requestChat**(`text`, `requestId`, `options`): `RequestChatButton`
 
 Creates a request chat button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `requestId` | `number` | The request ID. |
-| `options` | `Omit`\<`KeyboardButtonRequestChat`, ``"request_id"``\> | Additional options for the button. |
+• **text**: `string`
+
+The button text.
+
+• **requestId**: `number`
+
+The request ID.
+
+• **options**: `Omit`\<`KeyboardButtonRequestChat`, `"request_id"`\>= `undefined`
+
+Additional options for the button.
 
 #### Returns
 
@@ -472,19 +452,19 @@ Creates a request chat button.
 
 The created request chat button.
 
-___
+***
 
-### requestContact
+### requestContact()
 
-▸ **requestContact**(`text`): `RequestContactButton`
+> `static` **requestContact**(`text`): `RequestContactButton`
 
 Creates a request contact button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -492,19 +472,19 @@ Creates a request contact button.
 
 The created request contact button.
 
-___
+***
 
-### requestLocation
+### requestLocation()
 
-▸ **requestLocation**(`text`): `RequestLocationButton`
+> `static` **requestLocation**(`text`): `RequestLocationButton`
 
 Creates a request location button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -512,20 +492,23 @@ Creates a request location button.
 
 The created request location button.
 
-___
+***
 
-### requestPoll
+### requestPoll()
 
-▸ **requestPoll**(`text`, `type?`): `RequestPollButton`
+> `static` **requestPoll**(`text`, `type`?): `RequestPollButton`
 
 Creates a request poll button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `type?` | ``"quiz"`` \| ``"regular"`` | The type of the poll button. |
+• **text**: `string`
+
+The button text.
+
+• **type?**: `"quiz"` \| `"regular"`
+
+The type of the poll button.
 
 #### Returns
 
@@ -533,21 +516,27 @@ Creates a request poll button.
 
 The created request poll button.
 
-___
+***
 
-### requestUsers
+### requestUsers()
 
-▸ **requestUsers**(`text`, `requestId`, `options?`): `RequestUsersButton`
+> `static` **requestUsers**(`text`, `requestId`, `options`): `RequestUsersButton`
 
 Creates a request users button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `requestId` | `number` | The request ID. |
-| `options` | `Omit`\<`KeyboardButtonRequestUsers`, ``"request_id"``\> | Additional options for the button. |
+• **text**: `string`
+
+The button text.
+
+• **requestId**: `number`
+
+The request ID.
+
+• **options**: `Omit`\<`KeyboardButtonRequestUsers`, `"request_id"`\>= `{}`
+
+Additional options for the button.
 
 #### Returns
 
@@ -555,19 +544,19 @@ Creates a request users button.
 
 The created request users button.
 
-___
+***
 
-### text
+### text()
 
-▸ **text**(`text`): `CommonButton`
+> `static` **text**(`text`): `CommonButton`
 
 Creates a text button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -575,20 +564,23 @@ Creates a text button.
 
 The created text button.
 
-___
+***
 
-### webApp
+### webApp()
 
-▸ **webApp**(`text`, `url`): `WebAppButton`
+> `static` **webApp**(`text`, `url`): `WebAppButton`
 
 Creates a web app button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `url` | `string` | The URL of the web app. |
+• **text**: `string`
+
+The button text.
+
+• **url**: `string`
+
+The URL of the web app.
 
 #### Returns
 

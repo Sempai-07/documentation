@@ -2,55 +2,27 @@
 
 Represents an error thrown when an HTTP request returns an error response.
 
-## Hierarchy
+## Extends
 
 - [`BaseError`](./src/classes/BaseError.md)
 
-  ↳ **`HTTPResponseError`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/HTTPResponseError.md#constructor)
-
-### Properties
-
-- [description](./src/classes/HTTPResponseError.md#description)
-- [error\_code](./src/classes/HTTPResponseError.md#error_code)
-- [message](./src/classes/HTTPResponseError.md#message)
-- [name](./src/classes/HTTPResponseError.md#name)
-- [parameters](./src/classes/HTTPResponseError.md#parameters)
-- [request](./src/classes/HTTPResponseError.md#request)
-- [stack](./src/classes/HTTPResponseError.md#stack)
-- [prepareStackTrace](./src/classes/HTTPResponseError.md#preparestacktrace)
-- [stackTraceLimit](./src/classes/HTTPResponseError.md#stacktracelimit)
-
-### Accessors
-
-- [headers](./src/classes/HTTPResponseError.md#headers)
-- [status](./src/classes/HTTPResponseError.md#status)
-- [statusText](./src/classes/HTTPResponseError.md#statustext)
-- [url](./src/classes/HTTPResponseError.md#url)
-
-### Methods
-
-- [captureStackTrace](./src/classes/HTTPResponseError.md#capturestacktrace)
-
 ## Constructors
 
-### constructor
+### new HTTPResponseError()
 
-• **new HTTPResponseError**(`response`, `request?`): [`HTTPResponseError`](./src/classes/HTTPResponseError.md)
+> **new HTTPResponseError**(`response`, `request`?): [`HTTPResponseError`](./src/classes/HTTPResponseError.md)
 
 Constructs a new HTTPResponseError instance.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `response` | [`IRequestFailt`](./src/interfaces/IRequestFailt.md) | The error response object. |
-| `request?` | `Response` | The original request object that triggered the error. |
+• **response**: [`IRequestFailt`](./src/interfaces/IRequestFailt.md)
+
+The error response object.
+
+• **request?**: `Response`
+
+The original request object that triggered the error.
 
 #### Returns
 
@@ -58,173 +30,167 @@ Constructs a new HTTPResponseError instance.
 
 #### Overrides
 
-[BaseError](./src/classes/BaseError.md).[constructor](./src/classes/BaseError.md#constructor)
+[`BaseError`](./src/classes/BaseError.md).[`constructor`](./src/classes/BaseError.md#constructors)
 
 ## Properties
 
 ### description
 
-• **description**: `string`
+> **description**: `string`
 
 The description of the error.
 
-___
+***
 
 ### error\_code
 
-• **error\_code**: `string` \| `number`
+> **error\_code**: `string` \| `number`
 
 The error code associated with the error.
 
-___
+***
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
 
 #### Inherited from
 
-[BaseError](./src/classes/BaseError.md).[message](./src/classes/BaseError.md#message)
+[`BaseError`](./src/classes/BaseError.md).[`message`](./src/classes/BaseError.md#message)
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Inherited from
 
-[BaseError](./src/classes/BaseError.md).[name](./src/classes/BaseError.md#name)
+[`BaseError`](./src/classes/BaseError.md).[`name`](./src/classes/BaseError.md#name)
 
-___
+***
 
 ### parameters
 
-• **parameters**: `undefined` \| \{ `migrate_to_chat_id?`: `number` ; `retry_after?`: `number`  }
+> **parameters**: `undefined` \| `object`
 
 Additional parameters associated with the error.
 
-___
+***
 
-### request
+### request?
 
-• `Optional` **request**: `Response`
+> `optional` **request**: `Response`
 
 The original request object that triggered the error.
 
-___
+***
 
-### stack
+### stack?
 
-• `Optional` **stack**: `string`
+> `optional` **stack**: `string`
 
 #### Inherited from
 
-[BaseError](./src/classes/BaseError.md).[stack](./src/classes/BaseError.md#stack)
+[`BaseError`](./src/classes/BaseError.md).[`stack`](./src/classes/BaseError.md#stack)
 
-___
+***
 
-### prepareStackTrace
+### prepareStackTrace()?
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
 
 Optional override for formatting stack traces
 
-**`See`**
+#### See
 
 https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
-#### Type declaration
+#### Parameters
 
-▸ (`err`, `stackTraces`): `any`
+• **err**: `Error`
 
-##### Parameters
+• **stackTraces**: `CallSite`[]
 
-| Name | Type |
-| :------ | :------ |
-| `err` | `Error` |
-| `stackTraces` | `CallSite`[] |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-[BaseError](./src/classes/BaseError.md).[prepareStackTrace](./src/classes/BaseError.md#preparestacktrace)
+[`BaseError`](./src/classes/BaseError.md).[`prepareStackTrace`](./src/classes/BaseError.md#preparestacktrace)
 
-___
+***
 
 ### stackTraceLimit
 
-▪ `Static` **stackTraceLimit**: `number`
+> `static` **stackTraceLimit**: `number`
 
 #### Inherited from
 
-[BaseError](./src/classes/BaseError.md).[stackTraceLimit](./src/classes/BaseError.md#stacktracelimit)
+[`BaseError`](./src/classes/BaseError.md).[`stackTraceLimit`](./src/classes/BaseError.md#stacktracelimit)
 
 ## Accessors
 
 ### headers
 
-• `get` **headers**(): ``null`` \| `Headers`
+> `get` **headers**(): `null` \| `Headers`
 
 Gets the headers of the original request that triggered the error.
 
 #### Returns
 
-``null`` \| `Headers`
+`null` \| `Headers`
 
-___
+***
 
 ### status
 
-• `get` **status**(): ``null`` \| `number`
+> `get` **status**(): `null` \| `number`
 
 Gets the status code of the original request that triggered the error.
 
 #### Returns
 
-``null`` \| `number`
+`null` \| `number`
 
-___
+***
 
 ### statusText
 
-• `get` **statusText**(): ``null`` \| `string`
+> `get` **statusText**(): `null` \| `string`
 
 Gets the status text of the original request that triggered the error.
 
 #### Returns
 
-``null`` \| `string`
+`null` \| `string`
 
-___
+***
 
 ### url
 
-• `get` **url**(): ``null`` \| `string`
+> `get` **url**(): `null` \| `string`
 
 Gets the URL of the original request that triggered the error.
 
 #### Returns
 
-``null`` \| `string`
+`null` \| `string`
 
 ## Methods
 
-### captureStackTrace
+### captureStackTrace()
 
-▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `targetObject` | `object` |
-| `constructorOpt?` | `Function` |
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
 
 #### Returns
 
@@ -232,4 +198,4 @@ Create .stack property on a target object
 
 #### Inherited from
 
-[BaseError](./src/classes/BaseError.md).[captureStackTrace](./src/classes/BaseError.md#capturestacktrace)
+[`BaseError`](./src/classes/BaseError.md).[`captureStackTrace`](./src/classes/BaseError.md#capturestacktrace)

@@ -2,7 +2,7 @@
   <h1>Telegramsjs</h1><br>
   <img src="https://raw.githubusercontent.com/Sempai-07/Telegramsjs/main/docs/avatar.png"><br>
 
-[![Bot API](https://img.shields.io/badge/Bot%20API-v.7.3-00aced.svg?style=flat-square&logo=telegram)](https://core.telegram.org/bots/api)
+[![Bot API](https://img.shields.io/badge/Bot%20API-v.7.2-00aced.svg?style=flat-square&logo=telegram)](https://core.telegram.org/bots/api)
 [![NPM Version](https://img.shields.io/npm/v/telegramsjs.svg?maxAge=3600)](https://www.npmjs.com/package/telegramsjs)
 [![NPM Downloads](https://img.shields.io/npm/dt/telegramsjs.svg?maxAge=3600)](https://www.npmjs.com/package/telegramsjs)
 
@@ -24,7 +24,7 @@ npm install telegramsjs
 
 ### Example
 
-```javascript
+```js
 // esm/ts module
 import { TelegramBot } from "telegramsjs";
 // cjs module
@@ -44,7 +44,7 @@ process.once("SIGINT", () => bot.disconnect("SIGINT"));
 process.once("SIGTERM", () => bot.disconnect("SIGTERM"));
 ```
 
-```javascript
+```js
 // esm/ts module
 import { TelegramBot, InlineKeyboard } from "telegramsjs";
 // cjs module
@@ -80,7 +80,7 @@ process.once("SIGTERM", () => bot.disconnect("SIGTERM"));
 
 ### Webhook
 
-```javascript
+```js
 // esm/ts module
 import { TelegramBot, InlineKeyboard } from "telegramsjs";
 // cjs module

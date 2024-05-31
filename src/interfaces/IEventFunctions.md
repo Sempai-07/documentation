@@ -1,615 +1,407 @@
 # Interface: IEventFunctions
 
-## Table of contents
-
-### Properties
-
-- [business\_connection](./src/interfaces/IEventFunctions.md#business_connection)
-- [business\_message](./src/interfaces/IEventFunctions.md#business_message)
-- [callback\_query](./src/interfaces/IEventFunctions.md#callback_query)
-- [callback\_query:data](./src/interfaces/IEventFunctions.md#callback_query:data)
-- [channel\_post](./src/interfaces/IEventFunctions.md#channel_post)
-- [chat\_boost](./src/interfaces/IEventFunctions.md#chat_boost)
-- [chat\_join\_request](./src/interfaces/IEventFunctions.md#chat_join_request)
-- [chat\_member](./src/interfaces/IEventFunctions.md#chat_member)
-- [chosen\_inline\_result](./src/interfaces/IEventFunctions.md#chosen_inline_result)
-- [deleted\_business\_messages](./src/interfaces/IEventFunctions.md#deleted_business_messages)
-- [disconnect](./src/interfaces/IEventFunctions.md#disconnect)
-- [edited\_business\_message](./src/interfaces/IEventFunctions.md#edited_business_message)
-- [edited\_channel\_post](./src/interfaces/IEventFunctions.md#edited_channel_post)
-- [edited\_message](./src/interfaces/IEventFunctions.md#edited_message)
-- [inline\_query](./src/interfaces/IEventFunctions.md#inline_query)
-- [message](./src/interfaces/IEventFunctions.md#message)
-- [message:caption](./src/interfaces/IEventFunctions.md#message:caption)
-- [message:text](./src/interfaces/IEventFunctions.md#message:text)
-- [message\_reaction](./src/interfaces/IEventFunctions.md#message_reaction)
-- [message\_reaction\_count](./src/interfaces/IEventFunctions.md#message_reaction_count)
-- [my\_chat\_member](./src/interfaces/IEventFunctions.md#my_chat_member)
-- [poll](./src/interfaces/IEventFunctions.md#poll)
-- [poll\_answer](./src/interfaces/IEventFunctions.md#poll_answer)
-- [pre\_checkout\_query](./src/interfaces/IEventFunctions.md#pre_checkout_query)
-- [rate\_limit](./src/interfaces/IEventFunctions.md#rate_limit)
-- [ready](./src/interfaces/IEventFunctions.md#ready)
-- [removed\_chat\_boost](./src/interfaces/IEventFunctions.md#removed_chat_boost)
-- [shipping\_query](./src/interfaces/IEventFunctions.md#shipping_query)
-- [update](./src/interfaces/IEventFunctions.md#update)
-
 ## Properties
 
-### business\_connection
+### business\_connection()
 
-• **business\_connection**: (`data`: `BusinessConnection` & [`Context`](./src/modules.md#context)) => `void`
+> **business\_connection**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `BusinessConnection` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `BusinessConnection` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### business\_message
+### business\_message()
 
-• **business\_message**: (`data`: `Message` & `Private` & [`Context`](./src/modules.md#context)) => `void`
+> **business\_message**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `Private` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `Private` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### callback\_query
+### callback\_query()
 
-• **callback\_query**: (`data`: `CallbackQuery` & [`Context`](./src/modules.md#context)) => `void`
+> **callback\_query**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `CallbackQuery` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `CallbackQuery` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### callback\_query:data
+### callback\_query:data()
 
-• **callback\_query:data**: (`data`: `CallbackQuery` & \{ `data`: `string`  } & [`Context`](./src/modules.md#context)) => `void`
+> **callback\_query:data**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `CallbackQuery` & `object` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `CallbackQuery` & \{ `data`: `string`  } & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### channel\_post
+### channel\_post()
 
-• **channel\_post**: (`data`: `Message` & `Channel` & [`Context`](./src/modules.md#context)) => `void`
+> **channel\_post**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `Channel` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `Channel` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### chat\_boost
+### chat\_boost()
 
-• **chat\_boost**: (`data`: `ChatBoostUpdated` & [`Context`](./src/modules.md#context)) => `void`
+> **chat\_boost**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ChatBoostUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ChatBoostUpdated` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### chat\_join\_request
+### chat\_join\_request()
 
-• **chat\_join\_request**: (`data`: `ChatJoinRequest` & [`Context`](./src/modules.md#context)) => `void`
+> **chat\_join\_request**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ChatJoinRequest` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ChatJoinRequest` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### chat\_member
+### chat\_member()
 
-• **chat\_member**: (`data`: `ChatMemberUpdated` & [`Context`](./src/modules.md#context)) => `void`
+> **chat\_member**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ChatMemberUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ChatMemberUpdated` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### chosen\_inline\_result
+### chosen\_inline\_result()
 
-• **chosen\_inline\_result**: (`data`: `ChosenInlineResult` & [`Context`](./src/modules.md#context)) => `void`
+> **chosen\_inline\_result**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ChosenInlineResult` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ChosenInlineResult` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### deleted\_business\_messages
+### deleted\_business\_messages()
 
-• **deleted\_business\_messages**: (`data`: `BusinessMessagesDeleted` & [`Context`](./src/modules.md#context)) => `void`
+> **deleted\_business\_messages**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `BusinessMessagesDeleted` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `BusinessMessagesDeleted` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### disconnect
+### disconnect()
 
-• **disconnect**: (`data`: [`TelegramBot`](./src/classes/TelegramBot.md) & \{ `reason?`: `string`  }) => `void`
+> **disconnect**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: [`TelegramBot`](./src/classes/TelegramBot.md) & `object`
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | [`TelegramBot`](./src/classes/TelegramBot.md) & \{ `reason?`: `string`  } |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### edited\_business\_message
+### edited\_business\_message()
 
-• **edited\_business\_message**: (`data`: `Message` & `Edited` & `Private` & [`Context`](./src/modules.md#context)) => `void`
+> **edited\_business\_message**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `Edited` & `Private` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `Edited` & `Private` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### edited\_channel\_post
+### edited\_channel\_post()
 
-• **edited\_channel\_post**: (`data`: `Message` & `Edited` & `Channel` & [`Context`](./src/modules.md#context)) => `void`
+> **edited\_channel\_post**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `Edited` & `Channel` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `Edited` & `Channel` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### edited\_message
+### edited\_message()
 
-• **edited\_message**: (`data`: `Message` & `Edited` & `NonChannel` & [`Context`](./src/modules.md#context)) => `void`
+> **edited\_message**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `Edited` & `NonChannel` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `Edited` & `NonChannel` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### inline\_query
+### inline\_query()
 
-• **inline\_query**: (`data`: `InlineQuery` & [`Context`](./src/modules.md#context)) => `void`
+> **inline\_query**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `InlineQuery` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `InlineQuery` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### message
+### message()
 
-• **message**: (`data`: `Message` & `NonChannel` & [`Context`](./src/modules.md#context)) => `void`
+> **message**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `NonChannel` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `NonChannel` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### message:caption
+### message:caption()
 
-• **message:caption**: (`data`: `Message` & `NonChannel` & `ICaptionableMessage` & [`Context`](./src/modules.md#context)) => `void`
+> **message:caption**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `NonChannel` & `ICaptionableMessage` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `NonChannel` & `ICaptionableMessage` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### message:text
+### message:text()
 
-• **message:text**: (`data`: `Message` & `NonChannel` & `CommonMessage` & `MsgWith`\<``"text"``\> & [`Context`](./src/modules.md#context)) => `void`
+> **message:text**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Message` & `NonChannel` & `CommonMessage` & `MsgWith`\<`"text"`\> & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Message` & `NonChannel` & `CommonMessage` & `MsgWith`\<``"text"``\> & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### message\_reaction
+### message\_reaction()
 
-• **message\_reaction**: (`data`: `MessageReactionUpdated` & [`Context`](./src/modules.md#context)) => `void`
+> **message\_reaction**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `MessageReactionUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `MessageReactionUpdated` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### message\_reaction\_count
+### message\_reaction\_count()
 
-• **message\_reaction\_count**: (`data`: `MessageReactionCountUpdated` & [`Context`](./src/modules.md#context)) => `void`
+> **message\_reaction\_count**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `MessageReactionCountUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `MessageReactionCountUpdated` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### my\_chat\_member
+### my\_chat\_member()
 
-• **my\_chat\_member**: (`data`: `ChatMemberUpdated` & [`Context`](./src/modules.md#context)) => `void`
+> **my\_chat\_member**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ChatMemberUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ChatMemberUpdated` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### poll
+### poll()
 
-• **poll**: (`data`: `Poll` & [`Context`](./src/modules.md#context)) => `void`
+> **poll**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Poll` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Poll` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### poll\_answer
+### poll\_answer()
 
-• **poll\_answer**: (`data`: `PollAnswer` & [`Context`](./src/modules.md#context)) => `void`
+> **poll\_answer**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `PollAnswer` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `PollAnswer` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### pre\_checkout\_query
+### pre\_checkout\_query()
 
-• **pre\_checkout\_query**: (`data`: `PreCheckoutQuery` & [`Context`](./src/modules.md#context)) => `void`
+> **pre\_checkout\_query**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `PreCheckoutQuery` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `PreCheckoutQuery` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### rate\_limit
+### rate\_limit()
 
-• **rate\_limit**: (`data`: [`IRateLimit`](./src/interfaces/IRateLimit.md)) => `void`
+> **rate\_limit**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: [`IRateLimit`](./src/Interface/IRateLimit.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | [`IRateLimit`](./src/interfaces/IRateLimit.md) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### ready
+### ready()
 
-• **ready**: (`data`: `UserFromGetMe`) => `void`
+> **ready**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `UserFromGetMe`
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `UserFromGetMe` |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### removed\_chat\_boost
+### removed\_chat\_boost()
 
-• **removed\_chat\_boost**: (`data`: `ChatBoostRemoved` & [`Context`](./src/modules.md#context)) => `void`
+> **removed\_chat\_boost**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ChatBoostRemoved` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ChatBoostRemoved` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### shipping\_query
+### shipping\_query()
 
-• **shipping\_query**: (`data`: `ShippingQuery` & [`Context`](./src/modules.md#context)) => `void`
+> **shipping\_query**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `ShippingQuery` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `ShippingQuery` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### update
+### update()
 
-• **update**: (`data`: `Update`) => `void`
+> **update**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: `Update`
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `Update` |
-
-##### Returns
+#### Returns
 
 `void`

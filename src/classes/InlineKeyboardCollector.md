@@ -2,83 +2,27 @@
 
 Collector class for handling inline keyboard callback queries.
 
-## Hierarchy
+## Extends
 
-- `Collector`\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>
-
-  ↳ **`InlineKeyboardCollector`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/InlineKeyboardCollector.md#constructor)
-
-### Properties
-
-- [collected](./src/classes/InlineKeyboardCollector.md#collected)
-- [filter](./src/classes/InlineKeyboardCollector.md#filter)
-- [isEnded](./src/classes/InlineKeyboardCollector.md#isended)
-- [lastCollectedTimestamp](./src/classes/InlineKeyboardCollector.md#lastcollectedtimestamp)
-- [options](./src/classes/InlineKeyboardCollector.md#options)
-- [received](./src/classes/InlineKeyboardCollector.md#received)
-- [telegram](./src/classes/InlineKeyboardCollector.md#telegram)
-- [captureRejectionSymbol](./src/classes/InlineKeyboardCollector.md#capturerejectionsymbol)
-- [captureRejections](./src/classes/InlineKeyboardCollector.md#capturerejections)
-- [defaultMaxListeners](./src/classes/InlineKeyboardCollector.md#defaultmaxlisteners)
-- [errorMonitor](./src/classes/InlineKeyboardCollector.md#errormonitor)
-
-### Accessors
-
-- [endReason](./src/classes/InlineKeyboardCollector.md#endreason)
-- [lastCollectedAt](./src/classes/InlineKeyboardCollector.md#lastcollectedat)
-- [next](./src/classes/InlineKeyboardCollector.md#next)
-
-### Methods
-
-- [[asyncIterator]](./src/classes/InlineKeyboardCollector.md#[asynciterator])
-- [addListener](./src/classes/InlineKeyboardCollector.md#addlistener)
-- [checkEnd](./src/classes/InlineKeyboardCollector.md#checkend)
-- [collect](./src/classes/InlineKeyboardCollector.md#collect)
-- [dispose](./src/classes/InlineKeyboardCollector.md#dispose)
-- [emit](./src/classes/InlineKeyboardCollector.md#emit)
-- [eventNames](./src/classes/InlineKeyboardCollector.md#eventnames)
-- [getMaxListeners](./src/classes/InlineKeyboardCollector.md#getmaxlisteners)
-- [handleCollect](./src/classes/InlineKeyboardCollector.md#handlecollect)
-- [handleDispose](./src/classes/InlineKeyboardCollector.md#handledispose)
-- [listenerCount](./src/classes/InlineKeyboardCollector.md#listenercount)
-- [listeners](./src/classes/InlineKeyboardCollector.md#listeners)
-- [off](./src/classes/InlineKeyboardCollector.md#off)
-- [on](./src/classes/InlineKeyboardCollector.md#on)
-- [once](./src/classes/InlineKeyboardCollector.md#once)
-- [prependListener](./src/classes/InlineKeyboardCollector.md#prependlistener)
-- [prependOnceListener](./src/classes/InlineKeyboardCollector.md#prependoncelistener)
-- [rawListeners](./src/classes/InlineKeyboardCollector.md#rawlisteners)
-- [removeAllListeners](./src/classes/InlineKeyboardCollector.md#removealllisteners)
-- [removeListener](./src/classes/InlineKeyboardCollector.md#removelistener)
-- [resetTimer](./src/classes/InlineKeyboardCollector.md#resettimer)
-- [setMaxListeners](./src/classes/InlineKeyboardCollector.md#setmaxlisteners)
-- [stop](./src/classes/InlineKeyboardCollector.md#stop)
-- [getEventListeners](./src/classes/InlineKeyboardCollector.md#geteventlisteners)
-- [listenerCount](./src/classes/InlineKeyboardCollector.md#listenercount-1)
-- [on](./src/classes/InlineKeyboardCollector.md#on-1)
-- [once](./src/classes/InlineKeyboardCollector.md#once-1)
-- [setMaxListeners](./src/classes/InlineKeyboardCollector.md#setmaxlisteners-1)
+- `Collector`\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>
 
 ## Constructors
 
-### constructor
+### new InlineKeyboardCollector()
 
-• **new InlineKeyboardCollector**(`telegram`, `options?`): [`InlineKeyboardCollector`](./src/classes/InlineKeyboardCollector.md)
+> **new InlineKeyboardCollector**(`telegram`, `options`): [`InlineKeyboardCollector`](./src/classes/InlineKeyboardCollector.md)
 
 Creates an instance of InlineKeyboardCollector.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `telegram` | [`TelegramBot`](./src/classes/TelegramBot.md) | The TelegramBot instance. |
-| `options` | `ICollectorOptions`\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\> | The options for the collector. |
+• **telegram**: [`TelegramBot`](./src/classes/TelegramBot.md)
+
+The TelegramBot instance.
+
+• **options**: `ICollectorOptions`\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>= `{}`
+
+The options for the collector.
 
 #### Returns
 
@@ -86,139 +30,134 @@ Creates an instance of InlineKeyboardCollector.
 
 #### Overrides
 
-Collector\&lt;
+`Collector<
   string,
   InlineCollectorContext
-\&gt;.constructor
+>.constructor`
 
 ## Properties
 
 ### collected
 
-• **collected**: [`Collection`](./src/classes/./src/classes/Collection.md)\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>
+> **collected**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>
 
 Collection of collected data.
 
 #### Inherited from
 
-Collector.collected
+`Collector.collected`
 
-___
+***
 
-### filter
+### filter()
 
-• **filter**: (`data`: [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext), `collected`: [`Collection`](./src/classes/Collection.md)\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>) => `boolean` \| `Promise`\<`boolean`\>
+> **filter**: (`data`, `collected`) => `boolean` \| `Promise`\<`boolean`\>
 
 Filter function to determine if data should be collected.
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`, `collected`): `boolean` \| `Promise`\<`boolean`\>
+• **data**: [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)
 
-##### Parameters
+• **collected**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>
 
-| Name | Type |
-| :------ | :------ |
-| `data` | [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext) |
-| `collected` | [`Collection`](./src/classes/Collection.md)\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\> |
-
-##### Returns
+#### Returns
 
 `boolean` \| `Promise`\<`boolean`\>
 
 #### Inherited from
 
-Collector.filter
+`Collector.filter`
 
-___
+***
 
 ### isEnded
 
-• **isEnded**: `boolean` = `false`
+> **isEnded**: `boolean` = `false`
 
 Indicates whether the collector has ended.
 
 #### Inherited from
 
-Collector.isEnded
+`Collector.isEnded`
 
-___
+***
 
 ### lastCollectedTimestamp
 
-• **lastCollectedTimestamp**: ``null`` \| `number` \| `Date` = `null`
+> **lastCollectedTimestamp**: `null` \| `number` \| `Date` = `null`
 
 Timestamp of the last collected item.
 
 #### Inherited from
 
-Collector.lastCollectedTimestamp
+`Collector.lastCollectedTimestamp`
 
-___
+***
 
 ### options
 
-• `Readonly` **options**: `ICollectorOptions`\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\> = `{}`
+> `readonly` **options**: `ICollectorOptions`\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\> = `{}`
 
 The options for the collector.
 
 #### Inherited from
 
-Collector.options
+`Collector.options`
 
-___
+***
 
 ### received
 
-• **received**: `number` = `0`
+> **received**: `number` = `0`
 
 The number of received callback queries.
 
-___
+***
 
 ### telegram
 
-• `Readonly` **telegram**: [`TelegramBot`](TelegramBot.md)
+> `readonly` **telegram**: [`TelegramBot`](./src/classes/TelegramBot.md)
 
 The TelegramBot instance.
 
-___
+***
 
 ### captureRejectionSymbol
 
-▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](Api.md#capturerejectionsymbol)
+> `static` `readonly` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](Api.md#capturerejectionsymbol)
 
 #### Inherited from
 
-Collector.captureRejectionSymbol
+`Collector.captureRejectionSymbol`
 
-___
+***
 
 ### captureRejections
 
-▪ `Static` **captureRejections**: `boolean`
+> `static` **captureRejections**: `boolean`
 
 Sets or gets the default captureRejection value for all emitters.
 
 #### Inherited from
 
-Collector.captureRejections
+`Collector.captureRejections`
 
-___
+***
 
 ### defaultMaxListeners
 
-▪ `Static` **defaultMaxListeners**: `number`
+> `static` **defaultMaxListeners**: `number`
 
 #### Inherited from
 
-Collector.defaultMaxListeners
+`Collector.defaultMaxListeners`
 
-___
+***
 
 ### errorMonitor
 
-▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](Api.md#errormonitor)
+> `static` `readonly` **errorMonitor**: *typeof* [`errorMonitor`](Api.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -230,47 +169,39 @@ regular `'error'` listener is installed.
 
 #### Inherited from
 
-Collector.errorMonitor
+`Collector.errorMonitor`
 
 ## Accessors
 
 ### endReason
 
-• `get` **endReason**(): ``null`` \| `string`
+> `get` **endReason**(): `null` \| `string`
 
 Gets the reason for ending the collector.
 
 #### Returns
 
-``null`` \| `string`
+`null` \| `string`
 
 The reason for ending the collector or null.
 
-#### Overrides
-
-Collector.endReason
-
-___
+***
 
 ### lastCollectedAt
 
-• `get` **lastCollectedAt**(): ``null`` \| `number` \| `Date`
+> `get` **lastCollectedAt**(): `null` \| `number` \| `Date`
 
 Gets the timestamp of the last collected item.
 
 #### Returns
 
-``null`` \| `number` \| `Date`
+`null` \| `number` \| `Date`
 
-#### Inherited from
-
-Collector.lastCollectedAt
-
-___
+***
 
 ### next
 
-• `get` **next**(): `Promise`\<`V`\>
+> `get` **next**(): `Promise`\<`V`\>
 
 Returns a promise that resolves with the next collected item.
 
@@ -278,58 +209,83 @@ Returns a promise that resolves with the next collected item.
 
 `Promise`\<`V`\>
 
-#### Inherited from
-
-Collector.next
-
 ## Methods
 
-### [asyncIterator]
+### `[asyncIterator]`()
 
-▸ **[asyncIterator]**(): `AsyncGenerator`\<[[`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext), [`Collection`](./src/classes/Collection.md)\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>], `any`, `unknown`\>
+> **\[asyncIterator\]**(): `AsyncGenerator`\<[[`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md), [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>], `any`, `unknown`\>
 
 Async generator for iterating over collected items.
 
 #### Returns
 
-`AsyncGenerator`\<[[`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext), [`Collection`](./src/classes/Collection.md)\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>], `any`, `unknown`\>
+`AsyncGenerator`\<[[`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md), [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>], `any`, `unknown`\>
 
 #### Inherited from
 
-Collector.[asyncIterator]
+`Collector.[asyncIterator]`
 
-___
+***
 
-### addListener
+### `[captureRejectionSymbol]`()?
 
-▸ **addListener**(`eventName`, `listener`): `this`
+> `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
 
-Alias for `emitter.on(eventName, listener)`.
+#### Type parameters
+
+• **K**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+• **error**: `Error`
+
+• **event**: `string` \| `symbol`
+
+• ...**args**: `AnyRest`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`Collector.[captureRejectionSymbol]`
+
+***
+
+### addListener()
+
+> **addListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Alias for `emitter.on(eventName, listener)`.
+
+#### Type parameters
+
+• **K**
+
+#### Parameters
+
+• **eventName**: `string` \| `symbol`
+
+• **listener**
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.addListener`
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-Collector.addListener
+### checkEnd()
 
-___
-
-### checkEnd
-
-▸ **checkEnd**(): `boolean`
+> **checkEnd**(): `boolean`
 
 Checks if the collector should end based on the options.
 
@@ -341,61 +297,61 @@ True if the collector should end, false otherwise.
 
 #### Inherited from
 
-Collector.checkEnd
+`Collector.checkEnd`
 
-___
+***
 
-### collect
+### collect()
 
-▸ **collect**(`callbackQuery`): ``null`` \| `string`
+> **collect**(`callbackQuery`): `null` \| `string`
 
 Collects the callback query.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `callbackQuery` | [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext) | The callback query context. |
+• **callbackQuery**: [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)
+
+The callback query context.
 
 #### Returns
 
-``null`` \| `string`
+`null` \| `string`
 
 The ID of the callback query or null.
 
 #### Overrides
 
-Collector.collect
+`Collector.collect`
 
-___
+***
 
-### dispose
+### dispose()
 
-▸ **dispose**(`callbackQuery`): ``null`` \| `string`
+> **dispose**(`callbackQuery`): `null` \| `string`
 
 Disposes of the callback query.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `callbackQuery` | [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext) | The callback query context. |
+• **callbackQuery**: [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)
+
+The callback query context.
 
 #### Returns
 
-``null`` \| `string`
+`null` \| `string`
 
 The ID of the callback query or null.
 
 #### Overrides
 
-Collector.dispose
+`Collector.dispose`
 
-___
+***
 
-### emit
+### emit()
 
-▸ **emit**(`eventName`, `...args`): `boolean`
+> **emit**\<`K`\>(`eventName`, ...`args`): `boolean`
 
 Synchronously calls each of the listeners registered for the event named`eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -435,30 +391,33 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 // event with parameters 1, 2, 3, 4, 5 in third listener
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `...args` | `any`[] |
+• **eventName**: `string` \| `symbol`
+
+• ...**args**: `AnyRest`
 
 #### Returns
 
 `boolean`
 
-**`Since`**
+#### Inherited from
+
+`Collector.emit`
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-Collector.emit
+### eventNames()
 
-___
-
-### eventNames
-
-▸ **eventNames**(): (`string` \| `symbol`)[]
+> **eventNames**(): (`string` \| `symbol`)[]
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -480,19 +439,19 @@ console.log(myEE.eventNames());
 
 (`string` \| `symbol`)[]
 
-**`Since`**
+#### Inherited from
+
+`Collector.eventNames`
+
+#### Since
 
 v6.0.0
 
-#### Inherited from
+***
 
-Collector.eventNames
+### getMaxListeners()
 
-___
-
-### getMaxListeners
-
-▸ **getMaxListeners**(): `number`
+> **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](./src/classes/InlineKeyboardCollector.md#defaultmaxlisteners).
@@ -501,27 +460,27 @@ set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](./src/c
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+`Collector.getMaxListeners`
+
+#### Since
 
 v1.0.0
 
-#### Inherited from
+***
 
-Collector.getMaxListeners
+### handleCollect()
 
-___
-
-### handleCollect
-
-▸ **handleCollect**(`msg`): `Promise`\<`void`\>
+> **handleCollect**(`msg`): `Promise`\<`void`\>
 
 Handles the collection of a new item.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `msg` | [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext) | The item to collect. |
+• **msg**: [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)
+
+The item to collect.
 
 #### Returns
 
@@ -529,21 +488,21 @@ Handles the collection of a new item.
 
 #### Inherited from
 
-Collector.handleCollect
+`Collector.handleCollect`
 
-___
+***
 
-### handleDispose
+### handleDispose()
 
-▸ **handleDispose**(`msg`): `Promise`\<`void`\>
+> **handleDispose**(`msg`): `Promise`\<`void`\>
 
 Handles the disposal of an item.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `msg` | [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext) | The item to dispose. |
+• **msg**: [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)
+
+The item to dispose.
 
 #### Returns
 
@@ -551,43 +510,50 @@ Handles the disposal of an item.
 
 #### Inherited from
 
-Collector.handleDispose
+`Collector.handleDispose`
 
-___
+***
 
-### listenerCount
+### listenerCount()
 
-▸ **listenerCount**(`eventName`, `listener?`): `number`
+> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
 
 Returns the number of listeners listening to the event named `eventName`.
 
 If `listener` is provided, it will return how many times the listener
 is found in the list of the listeners of the event.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event being listened for |
-| `listener?` | `Function` | The event handler function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event being listened for
+
+• **listener?**: `Function`
+
+The event handler function
 
 #### Returns
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+`Collector.listenerCount`
+
+#### Since
 
 v3.2.0
 
-#### Inherited from
+***
 
-Collector.listenerCount
+### listeners()
 
-___
-
-### listeners
-
-▸ **listeners**(`eventName`): `Function`[]
+> **listeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -599,144 +565,149 @@ console.log(util.inspect(server.listeners('connection')));
 // Prints: [ [Function] ]
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
+• **eventName**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+`Collector.listeners`
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-Collector.listeners
+### off()
 
-___
-
-### off
-
-▸ **off**(`eventName`, `listener`): `this`
+> **off**\<`K`\>(`eventName`, `listener`): `this`
 
 Alias for `emitter.removeListener()`.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+• **eventName**: `string` \| `symbol`
+
+• **listener**
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.off`
+
+#### Since
 
 v10.0.0
 
-#### Inherited from
+***
 
-Collector.off
+### on()
 
-___
+#### on(event, listener)
 
-### on
+> **on**(`event`, `listener`): `this`
 
-▸ **on**(`event`, `listener`): `this`
+##### Parameters
 
-#### Parameters
+• **event**: `string`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` |
-| `listener` | (...`data`: `any`[]) => `void` |
+• **listener**
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-Collector.on
+`Collector.on`
 
-▸ **on**\<`T`\>(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Type parameters
+> **on**\<`T`\>(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `ICollectorEvent`\<`K`, `V`\> |
+##### Type parameters
 
-#### Parameters
+• **T** *extends* keyof `ICollectorEvent`\<`K`, `V`\>
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `listener` | `ICollectorEvent`\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>[`T`] |
+##### Parameters
 
-#### Returns
+• **event**: `T`
 
-`this`
+• **listener**: `ICollectorEvent`\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>\[`T`\]
 
-#### Inherited from
-
-Collector.on
-
-___
-
-### once
-
-▸ **once**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` |
-| `listener` | (...`data`: `any`[]) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-Collector.once
+`Collector.on`
 
-▸ **once**\<`T`\>(`event`, `listener`): `this`
+***
 
-#### Type parameters
+### once()
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `ICollectorEvent`\<`K`, `V`\> |
+#### once(event, listener)
 
-#### Parameters
+> **once**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `listener` | `ICollectorEvent`\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\>[`T`] |
+##### Parameters
 
-#### Returns
+• **event**: `string`
+
+• **listener**
+
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-Collector.once
+`Collector.once`
 
-___
+#### once(event, listener)
 
-### prependListener
+> **once**\<`T`\>(`event`, `listener`): `this`
 
-▸ **prependListener**(`eventName`, `listener`): `this`
+##### Type parameters
+
+• **T** *extends* keyof `ICollectorEvent`\<`K`, `V`\>
+
+##### Parameters
+
+• **event**: `T`
+
+• **listener**: `ICollectorEvent`\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>\[`T`\]
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`Collector.once`
+
+***
+
+### prependListener()
+
+> **prependListener**\<`K`\>(`eventName`, `listener`): `this`
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -751,30 +722,37 @@ server.prependListener('connection', (stream) => {
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event. |
-| `listener` | (...`args`: `any`[]) => `void` | The callback function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event.
+
+• **listener**
+
+The callback function
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.prependListener`
+
+#### Since
 
 v6.0.0
 
-#### Inherited from
+***
 
-Collector.prependListener
+### prependOnceListener()
 
-___
-
-### prependOnceListener
-
-▸ **prependOnceListener**(`eventName`, `listener`): `this`
+> **prependOnceListener**\<`K`\>(`eventName`, `listener`): `this`
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -787,30 +765,37 @@ server.prependOnceListener('connection', (stream) => {
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event. |
-| `listener` | (...`args`: `any`[]) => `void` | The callback function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event.
+
+• **listener**
+
+The callback function
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.prependOnceListener`
+
+#### Since
 
 v6.0.0
 
-#### Inherited from
+***
 
-Collector.prependOnceListener
+### rawListeners()
 
-___
-
-### rawListeners
-
-▸ **rawListeners**(`eventName`): `Function`[]
+> **rawListeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -839,29 +824,31 @@ newListeners[0]();
 emitter.emit('log');
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
+• **eventName**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+`Collector.rawListeners`
+
+#### Since
 
 v9.4.0
 
-#### Inherited from
+***
 
-Collector.rawListeners
+### removeAllListeners()
 
-___
-
-### removeAllListeners
-
-▸ **removeAllListeners**(`event?`): `this`
+> **removeAllListeners**(`event`?): `this`
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -873,27 +860,25 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event?` | `string` \| `symbol` |
+• **event?**: `string` \| `symbol`
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.removeAllListeners`
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-Collector.removeAllListeners
+### removeListener()
 
-___
-
-### removeListener
-
-▸ **removeListener**(`eventName`, `listener`): `this`
+> **removeListener**\<`K`\>(`eventName`, `listener`): `this`
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -972,40 +957,45 @@ ee.emit('ping');
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+• **eventName**: `string` \| `symbol`
+
+• **listener**
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.removeListener`
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-Collector.removeListener
+### resetTimer()
 
-___
-
-### resetTimer
-
-▸ **resetTimer**(`param0?`): `void`
+> **resetTimer**(`param0`): `void`
 
 Resets the timer for the collector.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `param0` | `Object` | An object containing new time and idle values. |
-| `param0.idle?` | `number` | - |
-| `param0.time?` | `number` | - |
+• **param0**= `{}`
+
+An object containing new time and idle values.
+
+• **param0.idle?**: `number`
+
+• **param0.time?**: `number`
 
 #### Returns
 
@@ -1013,13 +1003,13 @@ Resets the timer for the collector.
 
 #### Inherited from
 
-Collector.resetTimer
+`Collector.resetTimer`
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n`): `this`
+> **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1030,35 +1020,33 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+• **n**: `number`
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`Collector.setMaxListeners`
+
+#### Since
 
 v0.3.5
 
-#### Inherited from
+***
 
-Collector.setMaxListeners
+### stop()
 
-___
-
-### stop
-
-▸ **stop**(`reason?`): `void`
+> **stop**(`reason`): `void`
 
 Stops the collector.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `reason` | `string` | `"user"` | The reason for stopping the collector. |
+• **reason**: `string`= `"user"`
+
+The reason for stopping the collector.
 
 #### Returns
 
@@ -1066,13 +1054,71 @@ Stops the collector.
 
 #### Inherited from
 
-Collector.stop
+`Collector.stop`
 
-___
+***
 
-### getEventListeners
+### addAbortListener()
 
-▸ **getEventListeners**(`emitter`, `name`): `Function`[]
+`Experimental`
+
+> `static` **addAbortListener**(`signal`, `resource`): `Disposable`
+
+Listens once to the `abort` event on the provided `signal`.
+
+Listening to the `abort` event on abort signals is unsafe and may
+lead to resource leaks since another third party with the signal can
+call `e.stopImmediatePropagation()`. Unfortunately Node.js cannot change
+this since it would violate the web standard. Additionally, the original
+API makes it easy to forget to remove listeners.
+
+This API allows safely using `AbortSignal`s in Node.js APIs by solving these
+two issues by listening to the event such that `stopImmediatePropagation` does
+not prevent the listener from running.
+
+Returns a disposable so that it may be unsubscribed from more easily.
+
+```js
+import { addAbortListener } from 'node:events';
+
+function example(signal) {
+  let disposable;
+  try {
+    signal.addEventListener('abort', (e) => e.stopImmediatePropagation());
+    disposable = addAbortListener(signal, (e) => {
+      // Do something when signal is aborted.
+    });
+  } finally {
+    disposable?.[Symbol.dispose]();
+  }
+}
+```
+
+#### Parameters
+
+• **signal**: `AbortSignal`
+
+• **resource**
+
+#### Returns
+
+`Disposable`
+
+Disposable that removes the `abort` listener.
+
+#### Inherited from
+
+`Collector.addAbortListener`
+
+#### Since
+
+v18.18.0
+
+***
+
+### getEventListeners()
+
+> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -1101,28 +1147,75 @@ const { getEventListeners, EventEmitter } = require('events');
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `EventEmitter` \| `_DOMEventTarget` |
-| `name` | `string` \| `symbol` |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`
+
+• **name**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+`Collector.getEventListeners`
+
+#### Since
 
 v15.2.0, v14.17.0
 
+***
+
+### getMaxListeners()
+
+> `static` **getMaxListeners**(`emitter`): `number`
+
+Returns the currently set max amount of listeners.
+
+For `EventEmitter`s this behaves exactly the same as calling `.getMaxListeners` on
+the emitter.
+
+For `EventTarget`s this is the only way to get the max event listeners for the
+event target. If the number of event handlers on a single EventTarget exceeds
+the max set, the EventTarget will print a warning.
+
+```js
+import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
+
+{
+  const ee = new EventEmitter();
+  console.log(getMaxListeners(ee)); // 10
+  setMaxListeners(11, ee);
+  console.log(getMaxListeners(ee)); // 11
+}
+{
+  const et = new EventTarget();
+  console.log(getMaxListeners(et)); // 10
+  setMaxListeners(11, et);
+  console.log(getMaxListeners(et)); // 11
+}
+```
+
+#### Parameters
+
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`
+
+#### Returns
+
+`number`
+
 #### Inherited from
 
-Collector.getEventListeners
+`Collector.getMaxListeners`
 
-___
+#### Since
 
-### listenerCount
+v18.17.0
 
-▸ **listenerCount**(`emitter`, `eventName`): `number`
+***
+
+### ~~listenerCount()~~
+
+> `static` **listenerCount**(`emitter`, `eventName`): `number`
 
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
@@ -1137,32 +1230,35 @@ console.log(listenerCount(myEmitter, 'event'));
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | `EventEmitter` | The emitter to query |
-| `eventName` | `string` \| `symbol` | The event name |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+
+The emitter to query
+
+• **eventName**: `string` \| `symbol`
+
+The event name
 
 #### Returns
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+`Collector.listenerCount`
+
+#### Since
 
 v0.9.12
 
-**`Deprecated`**
+#### Deprecated
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-#### Inherited from
+***
 
-Collector.listenerCount
+### on()
 
-___
-
-### on
-
-▸ **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`\<`any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterableIterator`\<`any`\>
 
 ```js
 const { on, EventEmitter } = require('events');
@@ -1220,11 +1316,13 @@ process.nextTick(() => ac.abort());
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | `EventEmitter` | - |
-| `eventName` | `string` | The name of the event being listened for |
-| `options?` | `StaticEventEmitterOptions` | - |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+
+• **eventName**: `string`
+
+The name of the event being listened for
+
+• **options?**: `StaticEventEmitterOptions`
 
 #### Returns
 
@@ -1232,19 +1330,21 @@ process.nextTick(() => ac.abort());
 
 that iterates `eventName` events emitted by the `emitter`
 
-**`Since`**
+#### Inherited from
+
+`Collector.on`
+
+#### Since
 
 v13.6.0, v12.16.0
 
-#### Inherited from
+***
 
-Collector.on
+### once()
 
-___
+#### once(emitter, eventName, options)
 
-### once
-
-▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1326,49 +1426,51 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `_NodeEventTarget` |
-| `eventName` | `string` \| `symbol` |
-| `options?` | `StaticEventEmitterOptions` |
+• **emitter**: `_NodeEventTarget`
 
-#### Returns
+• **eventName**: `string` \| `symbol`
+
+• **options?**: `StaticEventEmitterOptions`
+
+##### Returns
 
 `Promise`\<`any`[]\>
 
-**`Since`**
+##### Inherited from
+
+`Collector.once`
+
+##### Since
 
 v11.13.0, v10.16.0
 
-#### Inherited from
+#### once(emitter, eventName, options)
 
-Collector.once
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
-▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
+##### Parameters
 
-#### Parameters
+• **emitter**: `_DOMEventTarget`
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `_DOMEventTarget` |
-| `eventName` | `string` |
-| `options?` | `StaticEventEmitterOptions` |
+• **eventName**: `string`
 
-#### Returns
+• **options?**: `StaticEventEmitterOptions`
+
+##### Returns
 
 `Promise`\<`any`[]\>
 
-#### Inherited from
+##### Inherited from
 
-Collector.once
+`Collector.once`
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n?`, `...eventTargets`): `void`
+> `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
 
 ```js
 const {
@@ -1384,19 +1486,20 @@ setMaxListeners(5, target, emitter);
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n?` | `number` | A non-negative number. The maximum number of listeners per `EventTarget` event. |
-| `...eventTargets` | (`EventEmitter` \| `_DOMEventTarget`)[] | - |
+• **n?**: `number`
+
+A non-negative number. The maximum number of listeners per `EventTarget` event.
+
+• ...**eventTargets?**: (`EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`)[]
 
 #### Returns
 
 `void`
 
-**`Since`**
-
-v15.4.0
-
 #### Inherited from
 
-Collector.setMaxListeners
+`Collector.setMaxListeners`
+
+#### Since
+
+v15.4.0

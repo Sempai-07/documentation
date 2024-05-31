@@ -2,162 +2,120 @@
 
 Interface for reaction event collector.
 
-## Hierarchy
+## Extends
 
-- `ICollectorEvent`\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\>
-
-  ↳ **`IReactionEventCollector`**
-
-## Table of contents
-
-### Properties
-
-- [collect](./src/interfaces/IReactionEventCollector.md#collect)
-- [create](./src/interfaces/IReactionEventCollector.md#create)
-- [dispose](./src/interfaces/IReactionEventCollector.md#dispose)
-- [end](./src/interfaces/IReactionEventCollector.md#end)
-- [ignore](./src/interfaces/IReactionEventCollector.md#ignore)
-- [user](./src/interfaces/IReactionEventCollector.md#user)
+- `ICollectorEvent`\<`string`, [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)\>
 
 ## Properties
 
-### collect
+### collect()
 
-• **collect**: (`data`: [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext), `collect`: [`Collection`](./src/classes/Collection.md)\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\>) => `void`
+> **collect**: (`data`, `collect`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`, `collect`): `void`
+• **data**: [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)
 
-##### Parameters
+• **collect**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)\>
 
-| Name | Type |
-| :------ | :------ |
-| `data` | [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext) |
-| `collect` | [`Collection`](./src/classes/Collection.md)\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\> |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-ICollectorEvent.collect
+`ICollectorEvent.collect`
 
-___
+***
 
-### create
+### create()
 
-• **create**: (`data`: [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)) => `void`
+> **create**: (`data`) => `void`
 
 Event emitted when a reaction is created.
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)
 
-##### Parameters
+The reaction context.
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext) | The reaction context. |
-
-##### Returns
+#### Returns
 
 `void`
 
-___
+***
 
-### dispose
+### dispose()
 
-• **dispose**: (`data`: [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext), `collect`: [`Collection`](./src/classes/Collection.md)\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\>) => `void`
+> **dispose**: (`data`, `collect`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`, `collect`): `void`
+• **data**: [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)
 
-##### Parameters
+• **collect**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)\>
 
-| Name | Type |
-| :------ | :------ |
-| `data` | [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext) |
-| `collect` | [`Collection`](./src/classes/Collection.md)\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\> |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-ICollectorEvent.dispose
+`ICollectorEvent.dispose`
 
-___
+***
 
-### end
+### end()
 
-• **end**: (`collected`: [`Collection`](./src/classes/Collection.md)\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\>, `reason`: `string`) => `void`
+> **end**: (`collected`, `reason`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`collected`, `reason`): `void`
+• **collected**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)\>
 
-##### Parameters
+• **reason**: `string`
 
-| Name | Type |
-| :------ | :------ |
-| `collected` | [`Collection`](./src/classes/Collection.md)\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\> |
-| `reason` | `string` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-ICollectorEvent.end
+`ICollectorEvent.end`
 
-___
+***
 
-### ignore
+### ignore()
 
-• **ignore**: (`data`: [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)) => `void`
+> **ignore**: (`data`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext) |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-ICollectorEvent.ignore
+`ICollectorEvent.ignore`
 
-___
+***
 
-### user
+### user()
 
-• **user**: (`data`: [`Collection`](./src/classes/Collection.md)\<`number`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext) \| [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)[]\>) => `void`
+> **user**: (`data`) => `void`
 
 Event emitted when a user reacts.
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `void`
+• **data**: [`Collection`](./src/packages/collection/Collection.md)\<`number`, [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md) \| [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)[]\>
 
-##### Parameters
+The collection of user reactions.
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | [`Collection`](./src/classes/Collection.md)\<`number`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext) \| [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)[]\> | The collection of user reactions. |
-
-##### Returns
+#### Returns
 
 `void`

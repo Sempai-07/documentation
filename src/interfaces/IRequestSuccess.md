@@ -2,25 +2,16 @@
 
 ## Type parameters
 
-| Name |
-| :------ |
-| `T` |
-
-## Table of contents
-
-### Properties
-
-- [ok](./src/interfaces/IRequestSuccess.md#ok)
-- [result](./src/interfaces/IRequestSuccess.md#result)
+• **T**
 
 ## Properties
 
 ### ok
 
-• **ok**: ``true``
+> **ok**: `true`
 
-___
+***
 
 ### result
 
-• **result**: `T`
+> **result**: `T`

@@ -1,47 +1,81 @@
 # Interface: ILoginOptions
 
-## Table of contents
-
-### Properties
-
-- [polling](./src/interfaces/ILoginOptions.md#polling)
-- [webhook](./src/interfaces/ILoginOptions.md#webhook)
-
 ## Properties
 
-### polling
+### polling?
 
-• `Optional` **polling**: `Object`
+> `optional` **polling**: `object`
 
-#### Type declaration
+#### allowed\_updates?
 
-| Name | Type |
-| :------ | :------ |
-| `allowed_updates?` | readonly (``"message"`` \| ``"edited_message"`` \| ``"channel_post"`` \| ``"edited_channel_post"`` \| ``"inline_query"`` \| ``"chosen_inline_result"`` \| ``"callback_query"`` \| ``"shipping_query"`` \| ``"pre_checkout_query"`` \| ``"poll"`` \| ``"poll_answer"`` \| ``"my_chat_member"`` \| ``"chat_join_request"`` \| ``"chat_boost"`` \| ``"removed_chat_boost"`` \| ``"chat_member"`` \| ``"message_reaction"`` \| ``"message_reaction_count"`` \| ``"business_connection"`` \| ``"business_message"`` \| ``"edited_business_message"`` \| ``"deleted_business_messages"``)[] |
-| `drop_pending_updates?` | `boolean` |
-| `limit?` | `number` |
-| `offset?` | `number` |
-| `timeout?` | `number` |
+> `optional` **allowed\_updates**: readonly (`"message"` \| `"edited_message"` \| `"channel_post"` \| `"edited_channel_post"` \| `"inline_query"` \| `"chosen_inline_result"` \| `"callback_query"` \| `"shipping_query"` \| `"pre_checkout_query"` \| `"poll"` \| `"poll_answer"` \| `"my_chat_member"` \| `"chat_join_request"` \| `"chat_boost"` \| `"removed_chat_boost"` \| `"chat_member"` \| `"message_reaction"` \| `"message_reaction_count"` \| `"business_connection"` \| `"business_message"` \| `"edited_business_message"` \| `"deleted_business_messages"`)[]
 
-___
+#### drop\_pending\_updates?
 
-### webhook
+> `optional` **drop\_pending\_updates**: `boolean`
 
-• `Optional` **webhook**: `Object`
+#### limit?
 
-#### Type declaration
+> `optional` **limit**: `number`
 
-| Name | Type |
-| :------ | :------ |
-| `allowed_updates?` | readonly (``"message"`` \| ``"edited_message"`` \| ``"channel_post"`` \| ``"edited_channel_post"`` \| ``"inline_query"`` \| ``"chosen_inline_result"`` \| ``"callback_query"`` \| ``"shipping_query"`` \| ``"pre_checkout_query"`` \| ``"poll"`` \| ``"poll_answer"`` \| ``"my_chat_member"`` \| ``"chat_join_request"`` \| ``"chat_boost"`` \| ``"removed_chat_boost"`` \| ``"chat_member"`` \| ``"message_reaction"`` \| ``"message_reaction_count"`` \| ``"business_connection"`` \| ``"business_message"`` \| ``"edited_business_message"`` \| ``"deleted_business_messages"``)[] |
-| `certificate?` | `string` \| `Buffer` \| `ReadStream` |
-| `drop_pending_updates?` | `boolean` |
-| `host?` | `string` |
-| `ip_address?` | `string` |
-| `max_connections?` | `number` |
-| `path?` | `string` |
-| `port?` | `number` |
-| `requestCallback?` | `RequestListener` |
-| `secret_token?` | `string` |
-| `tlsOptions?` | `TlsOptions` |
-| `url` | `string` |
+#### offset?
+
+> `optional` **offset**: `number`
+
+#### timeout?
+
+> `optional` **timeout**: `number`
+
+***
+
+### webhook?
+
+> `optional` **webhook**: `object`
+
+#### allowed\_updates?
+
+> `optional` **allowed\_updates**: readonly (`"message"` \| `"edited_message"` \| `"channel_post"` \| `"edited_channel_post"` \| `"inline_query"` \| `"chosen_inline_result"` \| `"callback_query"` \| `"shipping_query"` \| `"pre_checkout_query"` \| `"poll"` \| `"poll_answer"` \| `"my_chat_member"` \| `"chat_join_request"` \| `"chat_boost"` \| `"removed_chat_boost"` \| `"chat_member"` \| `"message_reaction"` \| `"message_reaction_count"` \| `"business_connection"` \| `"business_message"` \| `"edited_business_message"` \| `"deleted_business_messages"`)[]
+
+#### certificate?
+
+> `optional` **certificate**: `string` \| `Buffer` \| `ReadStream`
+
+#### drop\_pending\_updates?
+
+> `optional` **drop\_pending\_updates**: `boolean`
+
+#### host?
+
+> `optional` **host**: `string`
+
+#### ip\_address?
+
+> `optional` **ip\_address**: `string`
+
+#### max\_connections?
+
+> `optional` **max\_connections**: `number`
+
+#### path?
+
+> `optional` **path**: `string`
+
+#### port?
+
+> `optional` **port**: `number`
+
+#### requestCallback?
+
+> `optional` **requestCallback**: `RequestListener`
+
+#### secret\_token?
+
+> `optional` **secret\_token**: `string`
+
+#### tlsOptions?
+
+> `optional` **tlsOptions**: `TlsOptions`
+
+#### url
+
+> **url**: `string`

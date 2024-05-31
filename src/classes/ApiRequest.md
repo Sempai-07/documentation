@@ -3,71 +3,31 @@
 A class for making requests to the Telegram API.
 Extends ManagerEvents class for event handling.
 
-## Hierarchy
+## Extends
 
 - [`ManagerEvents`](./src/classes/ManagerEvents.md)
 
-  ↳ **`ApiRequest`**
+## Extended by
 
-  ↳↳ [`Api`](./src/classes/Api.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/ApiRequest.md#constructor)
-
-### Properties
-
-- [authToken](./src/classes/ApiRequest.md#authtoken)
-- [media](./src/classes/ApiRequest.md#media)
-- [requestOptions](./src/classes/ApiRequest.md#requestoptions)
-- [captureRejectionSymbol](./src/classes/ApiRequest.md#capturerejectionsymbol)
-- [captureRejections](./src/classes/ApiRequest.md#capturerejections)
-- [defaultMaxListeners](./src/classes/ApiRequest.md#defaultmaxlisteners)
-- [errorMonitor](./src/classes/ApiRequest.md#errormonitor)
-
-### Methods
-
-- [addListener](./src/classes/ApiRequest.md#addlistener)
-- [decrementMaxListeners](./src/classes/ApiRequest.md#decrementmaxlisteners)
-- [emit](./src/classes/ApiRequest.md#emit)
-- [eventNames](./src/classes/ApiRequest.md#eventnames)
-- [getMaxListeners](./src/classes/ApiRequest.md#getmaxlisteners)
-- [incrementMaxListeners](./src/classes/ApiRequest.md#incrementmaxlisteners)
-- [listenerCount](./src/classes/ApiRequest.md#listenercount)
-- [listeners](./src/classes/ApiRequest.md#listeners)
-- [off](./src/classes/ApiRequest.md#off)
-- [on](./src/classes/ApiRequest.md#on)
-- [once](./src/classes/ApiRequest.md#once)
-- [prependListener](./src/classes/ApiRequest.md#prependlistener)
-- [prependOnceListener](./src/classes/ApiRequest.md#prependoncelistener)
-- [rawListeners](./src/classes/ApiRequest.md#rawlisteners)
-- [removeAllListeners](./src/classes/ApiRequest.md#removealllisteners)
-- [removeListener](./src/classes/ApiRequest.md#removelistener)
-- [request](./src/classes/ApiRequest.md#request)
-- [setMaxListeners](./src/classes/ApiRequest.md#setmaxlisteners)
-- [transferDataToServer](./src/classes/ApiRequest.md#transferdatatoserver)
-- [getEventListeners](./src/classes/ApiRequest.md#geteventlisteners)
-- [listenerCount](./src/classes/ApiRequest.md#listenercount-1)
-- [on](./src/classes/ApiRequest.md#on-1)
-- [once](./src/classes/ApiRequest.md#once-1)
-- [setMaxListeners](./src/classes/ApiRequest.md#setmaxlisteners-1)
+- [`Api`](./src/classes/Api.md)
 
 ## Constructors
 
-### constructor
+### new ApiRequest()
 
-• **new ApiRequest**(`authToken`, `requestOptions?`): [`ApiRequest`](./src/classes/ApiRequest.md)
+> **new ApiRequest**(`authToken`, `requestOptions`): [`ApiRequest`](./src/classes/ApiRequest.md)
 
 Constructs a new ApiRequest instance.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `authToken` | `string` | The Telegram Bot API token. |
-| `requestOptions` | `RequestInit` | Options for configuring the request (e.g., custom agent). |
+• **authToken**: `string`
+
+The Telegram Bot API token.
+
+• **requestOptions**: `RequestInit`= `undefined`
+
+Options for configuring the request (e.g., custom agent).
 
 #### Returns
 
@@ -75,69 +35,69 @@ Constructs a new ApiRequest instance.
 
 #### Overrides
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[constructor](./src/classes/ManagerEvents.md#constructor)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`constructor`](./src/classes/ManagerEvents.md#constructors)
 
 ## Properties
 
 ### authToken
 
-• `Readonly` **authToken**: `string`
+> `readonly` **authToken**: `string`
 
 The Telegram Bot API token.
 
-___
+***
 
 ### media
 
-• **media**: [`Media`](./src/classes/Media.md)
+> **media**: [`Media`](./src/classes/Media.md)
 
 Media instance for handling media-related requests.
 
-___
+***
 
 ### requestOptions
 
-• `Readonly` **requestOptions**: `RequestInit`
+> `readonly` **requestOptions**: `RequestInit`
 
 Options for configuring the request (e.g., custom agent).
 
-___
+***
 
 ### captureRejectionSymbol
 
-▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](./src/classes/Api.md#capturerejectionsymbol)
+> `static` `readonly` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](./src/classes/Api.md#capturerejectionsymbol)
 
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[captureRejectionSymbol](./src/classes/ManagerEvents.md#capturerejectionsymbol)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`captureRejectionSymbol`](./src/classes/ManagerEvents.md#capturerejectionsymbol)
 
-___
+***
 
 ### captureRejections
 
-▪ `Static` **captureRejections**: `boolean`
+> `static` **captureRejections**: `boolean`
 
 Sets or gets the default captureRejection value for all emitters.
 
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[captureRejections](./src/classes/ManagerEvents.md#capturerejections)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`captureRejections`](./src/classes/ManagerEvents.md#capturerejections)
 
-___
+***
 
 ### defaultMaxListeners
 
-▪ `Static` **defaultMaxListeners**: `number`
+> `static` **defaultMaxListeners**: `number`
 
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[defaultMaxListeners](./src/classes/ManagerEvents.md#defaultmaxlisteners)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`defaultMaxListeners`](./src/classes/ManagerEvents.md#defaultmaxlisteners)
 
-___
+***
 
 ### errorMonitor
 
-▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](./src/classes/Api.md#errormonitor)
+> `static` `readonly` **errorMonitor**: *typeof* [`errorMonitor`](./src/classes/Api.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -149,40 +109,69 @@ regular `'error'` listener is installed.
 
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[errorMonitor](./src/classes/ManagerEvents.md#errormonitor)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`errorMonitor`](./src/classes/ManagerEvents.md#errormonitor)
 
 ## Methods
 
-### addListener
+### `[captureRejectionSymbol]`()?
 
-▸ **addListener**(`eventName`, `listener`): `this`
+> `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
 
-Alias for `emitter.on(eventName, listener)`.
+#### Type parameters
+
+• **K**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+• **error**: `Error`
+
+• **event**: `string` \| `symbol`
+
+• ...**args**: `AnyRest`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`[captureRejectionSymbol]`](./src/classes/ManagerEvents.md#%5Bcapturerejectionsymbol%5D)
+
+***
+
+### addListener()
+
+> **addListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Alias for `emitter.on(eventName, listener)`.
+
+#### Type parameters
+
+• **K**
+
+#### Parameters
+
+• **eventName**: `string` \| `symbol`
+
+• **listener**
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`addListener`](./src/classes/ManagerEvents.md#addlistener)
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[addListener](./src/classes/ManagerEvents.md#addlistener)
+### decrementMaxListeners()
 
-___
-
-### decrementMaxListeners
-
-▸ **decrementMaxListeners**(): `void`
+> **decrementMaxListeners**(): `void`
 
 Decrements the maximum number of listeners.
 
@@ -192,13 +181,13 @@ Decrements the maximum number of listeners.
 
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[decrementMaxListeners](./src/classes/ManagerEvents.md#decrementmaxlisteners)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`decrementMaxListeners`](./src/classes/ManagerEvents.md#decrementmaxlisteners)
 
-___
+***
 
-### emit
+### emit()
 
-▸ **emit**(`eventName`, `...args`): `boolean`
+> **emit**\<`K`\>(`eventName`, ...`args`): `boolean`
 
 Synchronously calls each of the listeners registered for the event named`eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -238,30 +227,33 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 // event with parameters 1, 2, 3, 4, 5 in third listener
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `...args` | `any`[] |
+• **eventName**: `string` \| `symbol`
+
+• ...**args**: `AnyRest`
 
 #### Returns
 
 `boolean`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`emit`](./src/classes/ManagerEvents.md#emit)
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[emit](./src/classes/ManagerEvents.md#emit)
+### eventNames()
 
-___
-
-### eventNames
-
-▸ **eventNames**(): (`string` \| `symbol`)[]
+> **eventNames**(): (`string` \| `symbol`)[]
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -283,19 +275,19 @@ console.log(myEE.eventNames());
 
 (`string` \| `symbol`)[]
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`eventNames`](./src/classes/ManagerEvents.md#eventnames)
+
+#### Since
 
 v6.0.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[eventNames](./src/classes/ManagerEvents.md#eventnames)
+### getMaxListeners()
 
-___
-
-### getMaxListeners
-
-▸ **getMaxListeners**(): `number`
+> **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](./src/classes/ApiRequest.md#defaultmaxlisteners).
@@ -304,19 +296,19 @@ set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](./src/c
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`getMaxListeners`](./src/classes/ManagerEvents.md#getmaxlisteners)
+
+#### Since
 
 v1.0.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[getMaxListeners](./src/classes/ManagerEvents.md#getmaxlisteners)
+### incrementMaxListeners()
 
-___
-
-### incrementMaxListeners
-
-▸ **incrementMaxListeners**(): `void`
+> **incrementMaxListeners**(): `void`
 
 Increments the maximum number of listeners.
 
@@ -326,43 +318,50 @@ Increments the maximum number of listeners.
 
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[incrementMaxListeners](./src/classes/ManagerEvents.md#incrementmaxlisteners)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`incrementMaxListeners`](./src/classes/ManagerEvents.md#incrementmaxlisteners)
 
-___
+***
 
-### listenerCount
+### listenerCount()
 
-▸ **listenerCount**(`eventName`, `listener?`): `number`
+> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
 
 Returns the number of listeners listening to the event named `eventName`.
 
 If `listener` is provided, it will return how many times the listener
 is found in the list of the listeners of the event.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event being listened for |
-| `listener?` | `Function` | The event handler function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event being listened for
+
+• **listener?**: `Function`
+
+The event handler function
 
 #### Returns
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`listenerCount`](./src/classes/ManagerEvents.md#listenercount)
+
+#### Since
 
 v3.2.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[listenerCount](./src/classes/ManagerEvents.md#listenercount)
+### listeners()
 
-___
-
-### listeners
-
-▸ **listeners**(`eventName`): `Function`[]
+> **listeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -374,185 +373,211 @@ console.log(util.inspect(server.listeners('connection')));
 // Prints: [ [Function] ]
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
+• **eventName**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`listeners`](./src/classes/ManagerEvents.md#listeners)
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[listeners](./src/classes/ManagerEvents.md#listeners)
+### off()
 
-___
+#### off(event, listener)
 
-### off
-
-▸ **off**(`event`, `listener`): `this`
+> **off**(`event`, `listener`): `this`
 
 Removes a listener for the specified event.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | `string` | The event name. |
-| `listener` | (...`args`: `any`[]) => `void` | The listener function. |
+• **event**: `string`
 
-#### Returns
+The event name.
+
+• **listener**
+
+The listener function.
+
+##### Returns
 
 `this`
 
 The ManagerEvents instance.
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[off](./src/classes/ManagerEvents.md#off)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`off`](./src/classes/ManagerEvents.md#off)
 
-▸ **off**\<`T`\>(`event`, `listener`): `this`
+#### off(event, listener)
+
+> **off**\<`T`\>(`event`, `listener`): `this`
 
 Removes a typed listener for the specified event.
 
-#### Type parameters
+##### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`IEventFunctions`](../interfaces/IEventFunctions.md) |
+• **T** *extends* keyof [`IEventFunctions`](./src/interfaces/IEventFunctions.md)
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | `T` | The event name. |
-| `listener` | [`IEventFunctions`](../interfaces/IEventFunctions.md)[`T`] | The listener function. |
+• **event**: `T`
 
-#### Returns
+The event name.
+
+• **listener**: [`IEventFunctions`](./src/interfaces/IEventFunctions.md)\[`T`\]
+
+The listener function.
+
+##### Returns
 
 `this`
 
 The ManagerEvents instance.
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[off](./src/classes/ManagerEvents.md#off)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`off`](./src/classes/ManagerEvents.md#off)
 
-___
+***
 
-### on
+### on()
 
-▸ **on**(`event`, `listener`): `this`
+#### on(event, listener)
+
+> **on**(`event`, `listener`): `this`
 
 Adds a listener for the specified event.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | `string` | The event name. |
-| `listener` | (...`data`: `any`[]) => `void` | The listener function. |
+• **event**: `string`
 
-#### Returns
+The event name.
+
+• **listener**
+
+The listener function.
+
+##### Returns
 
 `this`
 
 The ManagerEvents instance.
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[on](./src/classes/ManagerEvents.md#on)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`on`](./src/classes/ManagerEvents.md#on)
 
-▸ **on**\<`T`\>(`event`, `listener`): `this`
+#### on(event, listener)
+
+> **on**\<`T`\>(`event`, `listener`): `this`
 
 Adds a typed listener for the specified event.
 
-#### Type parameters
+##### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`IEventFunctions`](../interfaces/IEventFunctions.md) |
+• **T** *extends* keyof [`IEventFunctions`](./src/interfaces/IEventFunctions.md)
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | `T` | The event name. |
-| `listener` | [`IEventFunctions`](../interfaces/IEventFunctions.md)[`T`] | The listener function. |
+• **event**: `T`
 
-#### Returns
+The event name.
+
+• **listener**: [`IEventFunctions`](./src/interfaces/IEventFunctions.md)\[`T`\]
+
+The listener function.
+
+##### Returns
 
 `this`
 
 The ManagerEvents instance.
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[on](./src/classes/ManagerEvents.md#on)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`on`](./src/classes/ManagerEvents.md#on)
 
-___
+***
 
-### once
+### once()
 
-▸ **once**(`event`, `listener`): `this`
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
 
 Adds a one-time listener for the specified event.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | `string` | The event name. |
-| `listener` | (...`args`: `any`[]) => `void` | The listener function. |
+• **event**: `string`
 
-#### Returns
+The event name.
+
+• **listener**
+
+The listener function.
+
+##### Returns
 
 `this`
 
 The ManagerEvents instance.
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[once](./src/classes/ManagerEvents.md#once)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`once`](./src/classes/ManagerEvents.md#once)
 
-▸ **once**\<`T`\>(`event`, `listener`): `this`
+#### once(event, listener)
+
+> **once**\<`T`\>(`event`, `listener`): `this`
 
 Adds a typed one-time listener for the specified event.
 
-#### Type parameters
+##### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`IEventFunctions`](../interfaces/IEventFunctions.md) |
+• **T** *extends* keyof [`IEventFunctions`](./src/interfaces/IEventFunctions.md)
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | `T` | The event name. |
-| `listener` | [`IEventFunctions`](../interfaces/IEventFunctions.md)[`T`] | The listener function. |
+• **event**: `T`
 
-#### Returns
+The event name.
+
+• **listener**: [`IEventFunctions`](./src/interfaces/IEventFunctions.md)\[`T`\]
+
+The listener function.
+
+##### Returns
 
 `this`
 
 The ManagerEvents instance.
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[once](./src/classes/ManagerEvents.md#once)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`once`](./src/classes/ManagerEvents.md#once)
 
-___
+***
 
-### prependListener
+### prependListener()
 
-▸ **prependListener**(`eventName`, `listener`): `this`
+> **prependListener**\<`K`\>(`eventName`, `listener`): `this`
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -567,30 +592,37 @@ server.prependListener('connection', (stream) => {
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event. |
-| `listener` | (...`args`: `any`[]) => `void` | The callback function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event.
+
+• **listener**
+
+The callback function
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`prependListener`](./src/classes/ManagerEvents.md#prependlistener)
+
+#### Since
 
 v6.0.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[prependListener](./src/classes/ManagerEvents.md#prependlistener)
+### prependOnceListener()
 
-___
-
-### prependOnceListener
-
-▸ **prependOnceListener**(`eventName`, `listener`): `this`
+> **prependOnceListener**\<`K`\>(`eventName`, `listener`): `this`
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -603,30 +635,37 @@ server.prependOnceListener('connection', (stream) => {
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event. |
-| `listener` | (...`args`: `any`[]) => `void` | The callback function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event.
+
+• **listener**
+
+The callback function
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`prependOnceListener`](./src/classes/ManagerEvents.md#prependoncelistener)
+
+#### Since
 
 v6.0.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[prependOnceListener](./src/classes/ManagerEvents.md#prependoncelistener)
+### rawListeners()
 
-___
-
-### rawListeners
-
-▸ **rawListeners**(`eventName`): `Function`[]
+> **rawListeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -655,29 +694,31 @@ newListeners[0]();
 emitter.emit('log');
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
+• **eventName**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`rawListeners`](./src/classes/ManagerEvents.md#rawlisteners)
+
+#### Since
 
 v9.4.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[rawListeners](./src/classes/ManagerEvents.md#rawlisteners)
+### removeAllListeners()
 
-___
-
-### removeAllListeners
-
-▸ **removeAllListeners**(`event?`): `this`
+> **removeAllListeners**(`event`?): `this`
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -689,27 +730,25 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event?` | `string` \| `symbol` |
+• **event?**: `string` \| `symbol`
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`removeAllListeners`](./src/classes/ManagerEvents.md#removealllisteners)
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[removeAllListeners](./src/classes/ManagerEvents.md#removealllisteners)
+### removeListener()
 
-___
-
-### removeListener
-
-▸ **removeListener**(`eventName`, `listener`): `this`
+> **removeListener**\<`K`\>(`eventName`, `listener`): `this`
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -788,45 +827,49 @@ ee.emit('ping');
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+• **eventName**: `string` \| `symbol`
+
+• **listener**
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`removeListener`](./src/classes/ManagerEvents.md#removelistener)
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[removeListener](./src/classes/ManagerEvents.md#removelistener)
+### request()
 
-___
-
-### request
-
-▸ **request**\<`T`\>(`method`, `options?`): `Promise`\<`T`\>
+> **request**\<`T`\>(`method`, `options`): `Promise`\<`T`\>
 
 Makes a request to the Telegram API.
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `method` | `string` | The API method to call. |
-| `options` | `Record`\<`string`, `unknown`\> | Options for the request. |
+• **method**: `string`
+
+The API method to call.
+
+• **options**: `Record`\<`string`, `unknown`\>= `{}`
+
+Options for the request.
 
 #### Returns
 
@@ -834,15 +877,15 @@ Makes a request to the Telegram API.
 
 A Promise resolving to the result of the API call.
 
-**`Throws`**
+#### Throws
 
 if the API response indicates an error.
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n`): `this`
+> **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -853,47 +896,103 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+• **n**: `number`
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`setMaxListeners`](./src/classes/ManagerEvents.md#setmaxlisteners)
+
+#### Since
 
 v0.3.5
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[setMaxListeners](./src/classes/ManagerEvents.md#setmaxlisteners)
+### transferDataToServer()
 
-___
-
-### transferDataToServer
-
-▸ **transferDataToServer**(`options`): `Promise`\<[`IApiConfig`](../interfaces/IApiConfig.md)\>
+> **transferDataToServer**(`options`): `Promise`\<[`IApiConfig`](./src/interfaces/IApiConfig.md)\>
 
 Transfers data to the server in the appropriate format (JSON or FormData).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `Record`\<`string`, `unknown`\> | Options for the request. |
+• **options**: `Record`\<`string`, `unknown`\>
+
+Options for the request.
 
 #### Returns
 
-`Promise`\<[`IApiConfig`](../interfaces/IApiConfig.md)\>
+`Promise`\<[`IApiConfig`](./src/interfaces/IApiConfig.md)\>
 
 The configuration object for the request.
 
-___
+***
 
-### getEventListeners
+### addAbortListener()
 
-▸ **getEventListeners**(`emitter`, `name`): `Function`[]
+`Experimental`
+
+> `static` **addAbortListener**(`signal`, `resource`): `Disposable`
+
+Listens once to the `abort` event on the provided `signal`.
+
+Listening to the `abort` event on abort signals is unsafe and may
+lead to resource leaks since another third party with the signal can
+call `e.stopImmediatePropagation()`. Unfortunately Node.js cannot change
+this since it would violate the web standard. Additionally, the original
+API makes it easy to forget to remove listeners.
+
+This API allows safely using `AbortSignal`s in Node.js APIs by solving these
+two issues by listening to the event such that `stopImmediatePropagation` does
+not prevent the listener from running.
+
+Returns a disposable so that it may be unsubscribed from more easily.
+
+```js
+import { addAbortListener } from 'node:events';
+
+function example(signal) {
+  let disposable;
+  try {
+    signal.addEventListener('abort', (e) => e.stopImmediatePropagation());
+    disposable = addAbortListener(signal, (e) => {
+      // Do something when signal is aborted.
+    });
+  } finally {
+    disposable?.[Symbol.dispose]();
+  }
+}
+```
+
+#### Parameters
+
+• **signal**: `AbortSignal`
+
+• **resource**
+
+#### Returns
+
+`Disposable`
+
+Disposable that removes the `abort` listener.
+
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`addAbortListener`](./src/classes/ManagerEvents.md#addabortlistener)
+
+#### Since
+
+v18.18.0
+
+***
+
+### getEventListeners()
+
+> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -922,28 +1021,75 @@ const { getEventListeners, EventEmitter } = require('events');
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `EventEmitter` \| `_DOMEventTarget` |
-| `name` | `string` \| `symbol` |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`
+
+• **name**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`getEventListeners`](./src/classes/ManagerEvents.md#geteventlisteners)
+
+#### Since
 
 v15.2.0, v14.17.0
 
+***
+
+### getMaxListeners()
+
+> `static` **getMaxListeners**(`emitter`): `number`
+
+Returns the currently set max amount of listeners.
+
+For `EventEmitter`s this behaves exactly the same as calling `.getMaxListeners` on
+the emitter.
+
+For `EventTarget`s this is the only way to get the max event listeners for the
+event target. If the number of event handlers on a single EventTarget exceeds
+the max set, the EventTarget will print a warning.
+
+```js
+import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
+
+{
+  const ee = new EventEmitter();
+  console.log(getMaxListeners(ee)); // 10
+  setMaxListeners(11, ee);
+  console.log(getMaxListeners(ee)); // 11
+}
+{
+  const et = new EventTarget();
+  console.log(getMaxListeners(et)); // 10
+  setMaxListeners(11, et);
+  console.log(getMaxListeners(et)); // 11
+}
+```
+
+#### Parameters
+
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`
+
+#### Returns
+
+`number`
+
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[getEventListeners](./src/classes/ManagerEvents.md#geteventlisteners)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`getMaxListeners`](./src/classes/ManagerEvents.md#getmaxlisteners-1)
 
-___
+#### Since
 
-### listenerCount
+v18.17.0
 
-▸ **listenerCount**(`emitter`, `eventName`): `number`
+***
+
+### ~~listenerCount()~~
+
+> `static` **listenerCount**(`emitter`, `eventName`): `number`
 
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
@@ -958,32 +1104,35 @@ console.log(listenerCount(myEmitter, 'event'));
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | `EventEmitter` | The emitter to query |
-| `eventName` | `string` \| `symbol` | The event name |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+
+The emitter to query
+
+• **eventName**: `string` \| `symbol`
+
+The event name
 
 #### Returns
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`listenerCount`](./src/classes/ManagerEvents.md#listenercount-1)
+
+#### Since
 
 v0.9.12
 
-**`Deprecated`**
+#### Deprecated
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[listenerCount](./src/classes/ManagerEvents.md#listenercount-1)
+### on()
 
-___
-
-### on
-
-▸ **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`\<`any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterableIterator`\<`any`\>
 
 ```js
 const { on, EventEmitter } = require('events');
@@ -1041,11 +1190,13 @@ process.nextTick(() => ac.abort());
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | `EventEmitter` | - |
-| `eventName` | `string` | The name of the event being listened for |
-| `options?` | `StaticEventEmitterOptions` | - |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+
+• **eventName**: `string`
+
+The name of the event being listened for
+
+• **options?**: `StaticEventEmitterOptions`
 
 #### Returns
 
@@ -1053,19 +1204,21 @@ process.nextTick(() => ac.abort());
 
 that iterates `eventName` events emitted by the `emitter`
 
-**`Since`**
+#### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`on`](./src/classes/ManagerEvents.md#on-1)
+
+#### Since
 
 v13.6.0, v12.16.0
 
-#### Inherited from
+***
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[on](./src/classes/ManagerEvents.md#on-1)
+### once()
 
-___
+#### once(emitter, eventName, options)
 
-### once
-
-▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1147,49 +1300,51 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `_NodeEventTarget` |
-| `eventName` | `string` \| `symbol` |
-| `options?` | `StaticEventEmitterOptions` |
+• **emitter**: `_NodeEventTarget`
 
-#### Returns
+• **eventName**: `string` \| `symbol`
+
+• **options?**: `StaticEventEmitterOptions`
+
+##### Returns
 
 `Promise`\<`any`[]\>
 
-**`Since`**
+##### Inherited from
+
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`once`](./src/classes/ManagerEvents.md#once-1)
+
+##### Since
 
 v11.13.0, v10.16.0
 
-#### Inherited from
+#### once(emitter, eventName, options)
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[once](./src/classes/ManagerEvents.md#once-1)
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
-▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
+##### Parameters
 
-#### Parameters
+• **emitter**: `_DOMEventTarget`
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `_DOMEventTarget` |
-| `eventName` | `string` |
-| `options?` | `StaticEventEmitterOptions` |
+• **eventName**: `string`
 
-#### Returns
+• **options?**: `StaticEventEmitterOptions`
+
+##### Returns
 
 `Promise`\<`any`[]\>
 
-#### Inherited from
+##### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[once](./src/classes/ManagerEvents.md#once-1)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`once`](./src/classes/ManagerEvents.md#once-1)
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n?`, `...eventTargets`): `void`
+> `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
 
 ```js
 const {
@@ -1205,19 +1360,20 @@ setMaxListeners(5, target, emitter);
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n?` | `number` | A non-negative number. The maximum number of listeners per `EventTarget` event. |
-| `...eventTargets` | (`EventEmitter` \| `_DOMEventTarget`)[] | - |
+• **n?**: `number`
+
+A non-negative number. The maximum number of listeners per `EventTarget` event.
+
+• ...**eventTargets?**: (`EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`)[]
 
 #### Returns
 
 `void`
 
-**`Since`**
-
-v15.4.0
-
 #### Inherited from
 
-[ManagerEvents](./src/classes/ManagerEvents.md).[setMaxListeners](./src/classes/ManagerEvents.md#setmaxlisteners-1)
+[`ManagerEvents`](./src/classes/ManagerEvents.md).[`setMaxListeners`](./src/classes/ManagerEvents.md#setmaxlisteners-1)
+
+#### Since
+
+v15.4.0

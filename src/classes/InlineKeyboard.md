@@ -2,54 +2,19 @@
 
 Represents an inline keyboard for Telegram bots.
 
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/InlineKeyboard.md#constructor)
-
-### Properties
-
-- [inline\_keyboard](./src/classes/InlineKeyboard.md#inline_keyboard)
-
-### Methods
-
-- [add](./src/classes/InlineKeyboard.md#add)
-- [clone](./src/classes/InlineKeyboard.md#clone)
-- [game](./src/classes/InlineKeyboard.md#game)
-- [login](./src/classes/InlineKeyboard.md#login)
-- [pay](./src/classes/InlineKeyboard.md#pay)
-- [row](./src/classes/InlineKeyboard.md#row)
-- [switchInline](./src/classes/InlineKeyboard.md#switchinline)
-- [switchInlineChosen](./src/classes/InlineKeyboard.md#switchinlinechosen)
-- [switchInlineCurrent](./src/classes/InlineKeyboard.md#switchinlinecurrent)
-- [text](./src/classes/InlineKeyboard.md#text)
-- [url](./src/classes/InlineKeyboard.md#url)
-- [webApp](./src/classes/InlineKeyboard.md#webapp)
-- [from](./src/classes/InlineKeyboard.md#from)
-- [game](./src/classes/InlineKeyboard.md#game-1)
-- [login](./src/classes/InlineKeyboard.md#login-1)
-- [pay](./src/classes/InlineKeyboard.md#pay-1)
-- [switchInline](./src/classes/InlineKeyboard.md#switchinline-1)
-- [switchInlineChosen](./src/classes/InlineKeyboard.md#switchinlinechosen-1)
-- [switchInlineCurrent](./src/classes/InlineKeyboard.md#switchinlinecurrent-1)
-- [text](./src/classes/InlineKeyboard.md#text-1)
-- [url](./src/classes/InlineKeyboard.md#url-1)
-- [webApp](./src/classes/InlineKeyboard.md#webapp-1)
-
 ## Constructors
 
-### constructor
+### new InlineKeyboard()
 
-• **new InlineKeyboard**(`inline_keyboard?`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **new InlineKeyboard**(`inline_keyboard`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Creates an instance of InlineKeyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `inline_keyboard` | `InlineKeyboardButton`[][] | A 2D array of inline keyboard buttons. |
+• **inline\_keyboard**: `InlineKeyboardButton`[][]= `undefined`
+
+A 2D array of inline keyboard buttons.
 
 #### Returns
 
@@ -59,23 +24,23 @@ Creates an instance of InlineKeyboard.
 
 ### inline\_keyboard
 
-• `Readonly` **inline\_keyboard**: `InlineKeyboardButton`[][]
+> `readonly` **inline\_keyboard**: `InlineKeyboardButton`[][]
 
 A 2D array of inline keyboard buttons.
 
 ## Methods
 
-### add
+### add()
 
-▸ **add**(`...buttons`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **add**(...`buttons`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds buttons to the last row of the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...buttons` | `InlineKeyboardButton`[] | The buttons to add. |
+• ...**buttons**: `InlineKeyboardButton`[]
+
+The buttons to add.
 
 #### Returns
 
@@ -83,11 +48,11 @@ Adds buttons to the last row of the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **clone**(): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Creates a deep copy of the current InlineKeyboard instance.
 
@@ -97,19 +62,19 @@ Creates a deep copy of the current InlineKeyboard instance.
 
 A new instance of InlineKeyboard with the same buttons.
 
-___
+***
 
-### game
+### game()
 
-▸ **game**(`text`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **game**(`text`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a game button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -117,20 +82,23 @@ Adds a game button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### login
+### login()
 
-▸ **login**(`text`, `loginUrl`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **login**(`text`, `loginUrl`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a login button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `loginUrl` | `string` \| `LoginUrl` | The login URL or LoginUrl object. |
+• **text**: `string`
+
+The button text.
+
+• **loginUrl**: `string` \| `LoginUrl`
+
+The login URL or LoginUrl object.
 
 #### Returns
 
@@ -138,19 +106,19 @@ Adds a login button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### pay
+### pay()
 
-▸ **pay**(`text`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **pay**(`text`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a pay button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -158,19 +126,19 @@ Adds a pay button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### row
+### row()
 
-▸ **row**(`...buttons`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **row**(...`buttons`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a new row of buttons to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...buttons` | `InlineKeyboardButton`[] | The buttons to add. |
+• ...**buttons**: `InlineKeyboardButton`[]
+
+The buttons to add.
 
 #### Returns
 
@@ -178,20 +146,23 @@ Adds a new row of buttons to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### switchInline
+### switchInline()
 
-▸ **switchInline**(`text`, `query?`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **switchInline**(`text`, `query`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a switch inline button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | The button text. |
-| `query` | `string` | `""` | The inline query to switch to. |
+• **text**: `string`
+
+The button text.
+
+• **query**: `string`= `""`
+
+The inline query to switch to.
 
 #### Returns
 
@@ -199,20 +170,23 @@ Adds a switch inline button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### switchInlineChosen
+### switchInlineChosen()
 
-▸ **switchInlineChosen**(`text`, `query?`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **switchInlineChosen**(`text`, `query`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a switch inline chosen chat button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `query` | `SwitchInlineQueryChosenChat` | The inline query to switch to in the chosen chat. |
+• **text**: `string`
+
+The button text.
+
+• **query**: `SwitchInlineQueryChosenChat`= `{}`
+
+The inline query to switch to in the chosen chat.
 
 #### Returns
 
@@ -220,20 +194,23 @@ Adds a switch inline chosen chat button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### switchInlineCurrent
+### switchInlineCurrent()
 
-▸ **switchInlineCurrent**(`text`, `query?`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **switchInlineCurrent**(`text`, `query`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a switch inline current chat button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | The button text. |
-| `query` | `string` | `""` | The inline query to switch to in the current chat. |
+• **text**: `string`
+
+The button text.
+
+• **query**: `string`= `""`
+
+The inline query to switch to in the current chat.
 
 #### Returns
 
@@ -241,20 +218,23 @@ Adds a switch inline current chat button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### text
+### text()
 
-▸ **text**(`text`, `data?`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **text**(`text`, `data`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a callback button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | The button text. |
-| `data` | `string` | `text` | The callback data. |
+• **text**: `string`
+
+The button text.
+
+• **data**: `string`= `text`
+
+The callback data.
 
 #### Returns
 
@@ -262,20 +242,23 @@ Adds a callback button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### url
+### url()
 
-▸ **url**(`text`, `url`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **url**(`text`, `url`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a URL button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `url` | `string` | The URL to be opened when the button is pressed. |
+• **text**: `string`
+
+The button text.
+
+• **url**: `string`
+
+The URL to be opened when the button is pressed.
 
 #### Returns
 
@@ -283,20 +266,23 @@ Adds a URL button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### webApp
+### webApp()
 
-▸ **webApp**(`text`, `url`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> **webApp**(`text`, `url`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Adds a WebApp button to the inline keyboard.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `url` | `string` | The URL to the WebApp. |
+• **text**: `string`
+
+The button text.
+
+• **url**: `string`
+
+The URL to the WebApp.
 
 #### Returns
 
@@ -304,19 +290,19 @@ Adds a WebApp button to the inline keyboard.
 
 The current instance for chaining.
 
-___
+***
 
-### from
+### from()
 
-▸ **from**(`source`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
+> `static` **from**(`source`): [`InlineKeyboard`](./src/classes/InlineKeyboard.md)
 
 Creates an InlineKeyboard instance from another instance or a 2D array of buttons.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `source` | [`InlineKeyboard`](./src/classes/InlineKeyboard.md) \| `InlineKeyboardButton`[][] | The source InlineKeyboard instance or 2D array of buttons. |
+• **source**: [`InlineKeyboard`](./src/classes/InlineKeyboard.md) \| `InlineKeyboardButton`[][]
+
+The source InlineKeyboard instance or 2D array of buttons.
 
 #### Returns
 
@@ -324,19 +310,19 @@ Creates an InlineKeyboard instance from another instance or a 2D array of button
 
 A new instance of InlineKeyboard.
 
-___
+***
 
-### game
+### game()
 
-▸ **game**(`text`): `GameButton`
+> `static` **game**(`text`): `GameButton`
 
 Creates a game button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -344,20 +330,23 @@ Creates a game button.
 
 The created game button.
 
-___
+***
 
-### login
+### login()
 
-▸ **login**(`text`, `loginUrl`): `LoginButton`
+> `static` **login**(`text`, `loginUrl`): `LoginButton`
 
 Creates a login button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `loginUrl` | `string` \| `LoginUrl` | The login URL or LoginUrl object. |
+• **text**: `string`
+
+The button text.
+
+• **loginUrl**: `string` \| `LoginUrl`
+
+The login URL or LoginUrl object.
 
 #### Returns
 
@@ -365,19 +354,19 @@ Creates a login button.
 
 The created login button.
 
-___
+***
 
-### pay
+### pay()
 
-▸ **pay**(`text`): `PayButton`
+> `static` **pay**(`text`): `PayButton`
 
 Creates a pay button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
+• **text**: `string`
+
+The button text.
 
 #### Returns
 
@@ -385,20 +374,23 @@ Creates a pay button.
 
 The created pay button.
 
-___
+***
 
-### switchInline
+### switchInline()
 
-▸ **switchInline**(`text`, `query?`): `SwitchInlineButton`
+> `static` **switchInline**(`text`, `query`): `SwitchInlineButton`
 
 Creates a switch inline button.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | The button text. |
-| `query` | `string` | `""` | The inline query to switch to. |
+• **text**: `string`
+
+The button text.
+
+• **query**: `string`= `""`
+
+The inline query to switch to.
 
 #### Returns
 
@@ -406,20 +398,23 @@ Creates a switch inline button.
 
 The created switch inline button.
 
-___
+***
 
-### switchInlineChosen
+### switchInlineChosen()
 
-▸ **switchInlineChosen**(`text`, `query?`): `SwitchInlineChosenChatButton`
+> `static` **switchInlineChosen**(`text`, `query`): `SwitchInlineChosenChatButton`
 
 Creates a switch inline chosen chat button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `query` | `SwitchInlineQueryChosenChat` | The inline query to switch to in the chosen chat. |
+• **text**: `string`
+
+The button text.
+
+• **query**: `SwitchInlineQueryChosenChat`= `{}`
+
+The inline query to switch to in the chosen chat.
 
 #### Returns
 
@@ -427,20 +422,23 @@ Creates a switch inline chosen chat button.
 
 The created switch inline chosen chat button.
 
-___
+***
 
-### switchInlineCurrent
+### switchInlineCurrent()
 
-▸ **switchInlineCurrent**(`text`, `query?`): `SwitchInlineCurrentChatButton`
+> `static` **switchInlineCurrent**(`text`, `query`): `SwitchInlineCurrentChatButton`
 
 Creates a switch inline current chat button.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | The button text. |
-| `query` | `string` | `""` | The inline query to switch to in the current chat. |
+• **text**: `string`
+
+The button text.
+
+• **query**: `string`= `""`
+
+The inline query to switch to in the current chat.
 
 #### Returns
 
@@ -448,20 +446,23 @@ Creates a switch inline current chat button.
 
 The created switch inline current chat button.
 
-___
+***
 
-### text
+### text()
 
-▸ **text**(`text`, `data?`): `CallbackButton`
+> `static` **text**(`text`, `data`): `CallbackButton`
 
 Creates a callback button.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | The button text. |
-| `data` | `string` | `text` | The callback data. |
+• **text**: `string`
+
+The button text.
+
+• **data**: `string`= `text`
+
+The callback data.
 
 #### Returns
 
@@ -469,20 +470,23 @@ Creates a callback button.
 
 The created callback button.
 
-___
+***
 
-### url
+### url()
 
-▸ **url**(`text`, `url`): `UrlButton`
+> `static` **url**(`text`, `url`): `UrlButton`
 
 Creates a URL button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `url` | `string` | The URL to be opened when the button is pressed. |
+• **text**: `string`
+
+The button text.
+
+• **url**: `string`
+
+The URL to be opened when the button is pressed.
 
 #### Returns
 
@@ -490,20 +494,23 @@ Creates a URL button.
 
 The created URL button.
 
-___
+***
 
-### webApp
+### webApp()
 
-▸ **webApp**(`text`, `url`): `WebAppButton`
+> `static` **webApp**(`text`, `url`): `WebAppButton`
 
 Creates a WebApp button.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | The button text. |
-| `url` | `string` | The URL to the WebApp. |
+• **text**: `string`
+
+The button text.
+
+• **url**: `string`
+
+The URL to the WebApp.
 
 #### Returns
 

@@ -1,121 +1,97 @@
-# Interface: IReactionCollection
+[**telegramsjs**](../README.md) # Interface: IReactionCollection
 
 Represents the configuration for awaiting reactions.
-
-## Table of contents
-
-### Properties
-
-- [data](./src/interfaces/IReactionCollection.md#data)
-- [filter](./src/interfaces/IReactionCollection.md#filter)
-- [onCallback](./src/interfaces/IReactionCollection.md#oncallback)
-- [onError](./src/interfaces/IReactionCollection.md#onerror)
-- [react](./src/interfaces/IReactionCollection.md#react)
-- [timeout](./src/interfaces/IReactionCollection.md#timeout)
-- [userId](./src/interfaces/IReactionCollection.md#userid)
 
 ## Properties
 
 ### data
 
-• **data**: `MessageReactionUpdated` & [`Context`](./src/modules.md#context)
+> **data**: `MessageReactionUpdated` & [`Context`](./src/type-aliases/Context.md)
 
 The reaction data and context.
 
-___
+***
 
-### filter
+### filter()?
 
-• `Optional` **filter**: (`data`: `MessageReactionUpdated` & [`Context`](./src/modules.md#context)) => `unknown`
+> `optional` **filter**: (`data`) => `unknown`
 
 The optional filter function to apply before invoking the callback.
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `unknown`
+• **data**: `MessageReactionUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `MessageReactionUpdated` & [`Context`](./src/modules.md#context) |
-
-##### Returns
+#### Returns
 
 `unknown`
 
-___
+***
 
-### onCallback
+### onCallback()
 
-• **onCallback**: (`data`: `MessageReactionUpdated` & [`Context`](./src/modules.md#context), `collection`: [`Collection`](./src/classes/Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\>) => `unknown`
+> **onCallback**: (`data`, `collection`) => `unknown`
 
 The callback function when a reaction is received.
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`, `collection`): `unknown`
+• **data**: `MessageReactionUpdated` & [`Context`](./src/type-aliases/Context.md)
 
-##### Parameters
+• **collection**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\>
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `MessageReactionUpdated` & [`Context`](./src/modules.md#context) |
-| `collection` | [`Collection`](./src/classes/Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\> |
-
-##### Returns
+#### Returns
 
 `unknown`
 
-___
+***
 
-### onError
+### onError()?
 
-• `Optional` **onError**: (`data`: [`Collection`](./src/classes/Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\>) => `unknown`
+> `optional` **onError**: (`data`) => `unknown`
 
 The optional error callback function.
 
-#### Type declaration
+#### Parameters
 
-▸ (`data`): `unknown`
+• **data**: [`Collection`](./src/packages/collection/Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\>
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | [`Collection`](./src/classes/Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\> |
-
-##### Returns
+#### Returns
 
 `unknown`
 
-___
+***
 
 ### react
 
-• **react**: `Object`
+> **react**: `object`
 
 The reaction details.
 
-#### Type declaration
+#### emoji
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emoji` | ``"👍"`` \| ``"👎"`` \| ``"❤"`` \| ``"🔥"`` \| ``"👏"`` \| ``"😁"`` \| ``"🤔"`` \| ``"🤯"`` \| ``"😱"`` \| ``"🤬"`` \| ``"😢"`` \| ``"🎉"`` \| ``"🤩"`` \| ``"🤮"`` \| ``"💩"`` \| ``"🙏"`` \| ``"👌"`` \| ``"🕊"`` \| ``"🤡"`` \| ``"🥱"`` \| ``"🥴"`` \| ``"😍"`` \| ``"🐳"`` \| ``"❤‍🔥"`` \| ``"🌚"`` \| ``"🌭"`` \| ``"💯"`` \| ``"🤣"`` \| ``"⚡"`` \| ``"🍌"`` \| ``"🏆"`` \| ``"💔"`` \| ``"🤨"`` \| ``"😐"`` \| ``"🍓"`` \| ``"🍾"`` \| ``"💋"`` \| ``"🖕"`` \| ``"😈"`` \| ``"😴"`` \| ``"😭"`` \| ``"🤓"`` \| ``"👻"`` \| ``"👨‍💻"`` \| ``"👀"`` \| ``"🎃"`` \| ``"🙈"`` \| ``"😇"`` \| ``"😨"`` \| ``"🤝"`` \| ``"✍"`` \| ``"🤗"`` \| ``"🫡"`` \| ``"🎅"`` \| ``"🎄"`` \| ``"☃"`` \| ``"💅"`` \| ``"🤪"`` \| ``"🗿"`` \| ``"🆒"`` \| ``"💘"`` \| ``"🙉"`` \| ``"🦄"`` \| ``"😘"`` \| ``"💊"`` \| ``"🙊"`` \| ``"😎"`` \| ``"👾"`` \| ``"🤷"`` \| ``"😡"`` \| ``"🥰"`` \| ``"🤷‍♂"`` \| ``"🤷‍♀"`` \| (``"👍"`` \| ``"👎"`` \| ``"❤"`` \| ``"🔥"`` \| ``"👏"`` \| ``"😁"`` \| ``"🤔"`` \| ``"🤯"`` \| ``"😱"`` \| ``"🤬"`` \| ``"😢"`` \| ``"🎉"`` \| ``"🤩"`` \| ``"🤮"`` \| ``"💩"`` \| ``"🙏"`` \| ``"👌"`` \| ``"🕊"`` \| ``"🤡"`` \| ``"🥱"`` \| ``"🥴"`` \| ``"😍"`` \| ``"🐳"`` \| ``"❤‍🔥"`` \| ``"🌚"`` \| ``"🌭"`` \| ``"💯"`` \| ``"🤣"`` \| ``"⚡"`` \| ``"🍌"`` \| ``"🏆"`` \| ``"💔"`` \| ``"🤨"`` \| ``"😐"`` \| ``"🍓"`` \| ``"🍾"`` \| ``"💋"`` \| ``"🖕"`` \| ``"😈"`` \| ``"😴"`` \| ``"😭"`` \| ``"🤓"`` \| ``"👻"`` \| ``"👨‍💻"`` \| ``"👀"`` \| ``"🎃"`` \| ``"🙈"`` \| ``"😇"`` \| ``"😨"`` \| ``"🤝"`` \| ``"✍"`` \| ``"🤗"`` \| ``"🫡"`` \| ``"🎅"`` \| ``"🎄"`` \| ``"☃"`` \| ``"💅"`` \| ``"🤪"`` \| ``"🗿"`` \| ``"🆒"`` \| ``"💘"`` \| ``"🙉"`` \| ``"🦄"`` \| ``"😘"`` \| ``"💊"`` \| ``"🙊"`` \| ``"😎"`` \| ``"👾"`` \| ``"🤷"`` \| ``"😡"`` \| ``"🥰"`` \| ``"🤷‍♂"`` \| ``"🤷‍♀"``)[] | The emoji or emojis to react to. |
-| `reactionType` | ``"new"`` \| ``"old"`` \| ``"both"`` | The type of reaction to listen for: "new", "old", or "both". |
+> **emoji**: `"👍"` \| `"👎"` \| `"❤"` \| `"🔥"` \| `"👏"` \| `"😁"` \| `"🤔"` \| `"🤯"` \| `"😱"` \| `"🤬"` \| `"😢"` \| `"🎉"` \| `"🤩"` \| `"🤮"` \| `"💩"` \| `"🙏"` \| `"👌"` \| `"🕊"` \| `"🤡"` \| `"🥱"` \| `"🥴"` \| `"😍"` \| `"🐳"` \| `"❤‍🔥"` \| `"🌚"` \| `"🌭"` \| `"💯"` \| `"🤣"` \| `"⚡"` \| `"🍌"` \| `"🏆"` \| `"💔"` \| `"🤨"` \| `"😐"` \| `"🍓"` \| `"🍾"` \| `"💋"` \| `"🖕"` \| `"😈"` \| `"😴"` \| `"😭"` \| `"🤓"` \| `"👻"` \| `"👨‍💻"` \| `"👀"` \| `"🎃"` \| `"🙈"` \| `"😇"` \| `"😨"` \| `"🤝"` \| `"✍"` \| `"🤗"` \| `"🫡"` \| `"🎅"` \| `"🎄"` \| `"☃"` \| `"💅"` \| `"🤪"` \| `"🗿"` \| `"🆒"` \| `"💘"` \| `"🙉"` \| `"🦄"` \| `"😘"` \| `"💊"` \| `"🙊"` \| `"😎"` \| `"👾"` \| `"🤷"` \| `"😡"` \| `"🥰"` \| `"🤷‍♂"` \| `"🤷‍♀"` \| (`"👍"` \| `"👎"` \| `"❤"` \| `"🔥"` \| `"👏"` \| `"😁"` \| `"🤔"` \| `"🤯"` \| `"😱"` \| `"🤬"` \| `"😢"` \| `"🎉"` \| `"🤩"` \| `"🤮"` \| `"💩"` \| `"🙏"` \| `"👌"` \| `"🕊"` \| `"🤡"` \| `"🥱"` \| `"🥴"` \| `"😍"` \| `"🐳"` \| `"❤‍🔥"` \| `"🌚"` \| `"🌭"` \| `"💯"` \| `"🤣"` \| `"⚡"` \| `"🍌"` \| `"🏆"` \| `"💔"` \| `"🤨"` \| `"😐"` \| `"🍓"` \| `"🍾"` \| `"💋"` \| `"🖕"` \| `"😈"` \| `"😴"` \| `"😭"` \| `"🤓"` \| `"👻"` \| `"👨‍💻"` \| `"👀"` \| `"🎃"` \| `"🙈"` \| `"😇"` \| `"😨"` \| `"🤝"` \| `"✍"` \| `"🤗"` \| `"🫡"` \| `"🎅"` \| `"🎄"` \| `"☃"` \| `"💅"` \| `"🤪"` \| `"🗿"` \| `"🆒"` \| `"💘"` \| `"🙉"` \| `"🦄"` \| `"😘"` \| `"💊"` \| `"🙊"` \| `"😎"` \| `"👾"` \| `"🤷"` \| `"😡"` \| `"🥰"` \| `"🤷‍♂"` \| `"🤷‍♀"`)[]
 
-___
+The emoji or emojis to react to.
+
+#### reactionType
+
+> **reactionType**: `"new"` \| `"old"` \| `"both"`
+
+The type of reaction to listen for: "new", "old", or "both".
+
+***
 
 ### timeout
 
-• **timeout**: `number`
+> **timeout**: `number`
 
 The timeout duration in milliseconds.
 
-___
+***
 
 ### userId
 
-• **userId**: `undefined` \| `number`
+> **userId**: `undefined` \| `number`
 
 The user ID associated with the reaction.

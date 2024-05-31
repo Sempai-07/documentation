@@ -3,95 +3,23 @@
 A class representing a multipart stream for composing HTTP multipart requests.
 Extends SandwichStream.
 
-## Hierarchy
+## Extends
 
 - `SandwichStream`
 
-  ↳ **`MultipartStream`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/MultipartStream.md#constructor)
-
-### Properties
-
-- [closed](./src/classes/MultipartStream.md#closed)
-- [destroyed](./src/classes/MultipartStream.md#destroyed)
-- [errored](./src/classes/MultipartStream.md#errored)
-- [readable](./src/classes/MultipartStream.md#readable)
-- [readableAborted](./src/classes/MultipartStream.md#readableaborted)
-- [readableDidRead](./src/classes/MultipartStream.md#readabledidread)
-- [readableEncoding](./src/classes/MultipartStream.md#readableencoding)
-- [readableEnded](./src/classes/MultipartStream.md#readableended)
-- [readableFlowing](./src/classes/MultipartStream.md#readableflowing)
-- [readableHighWaterMark](./src/classes/MultipartStream.md#readablehighwatermark)
-- [readableLength](./src/classes/MultipartStream.md#readablelength)
-- [readableObjectMode](./src/classes/MultipartStream.md#readableobjectmode)
-- [captureRejectionSymbol](./src/classes/MultipartStream.md#capturerejectionsymbol)
-- [captureRejections](./src/classes/MultipartStream.md#capturerejections)
-- [defaultMaxListeners](./src/classes/MultipartStream.md#defaultmaxlisteners)
-- [errorMonitor](./src/classes/MultipartStream.md#errormonitor)
-
-### Methods
-
-- [[asyncIterator]](./src/classes/MultipartStream.md#[asynciterator])
-- [\_construct](./src/classes/MultipartStream.md#_construct)
-- [\_destroy](./src/classes/MultipartStream.md#_destroy)
-- [\_read](./src/classes/MultipartStream.md#_read)
-- [add](./src/classes/MultipartStream.md#add)
-- [addListener](./src/classes/MultipartStream.md#addlistener)
-- [addPart](./src/classes/MultipartStream.md#addpart)
-- [destroy](./src/classes/MultipartStream.md#destroy)
-- [emit](./src/classes/MultipartStream.md#emit)
-- [eventNames](./src/classes/MultipartStream.md#eventnames)
-- [getMaxListeners](./src/classes/MultipartStream.md#getmaxlisteners)
-- [isPaused](./src/classes/MultipartStream.md#ispaused)
-- [listenerCount](./src/classes/MultipartStream.md#listenercount)
-- [listeners](./src/classes/MultipartStream.md#listeners)
-- [off](./src/classes/MultipartStream.md#off)
-- [on](./src/classes/MultipartStream.md#on)
-- [once](./src/classes/MultipartStream.md#once)
-- [pause](./src/classes/MultipartStream.md#pause)
-- [pipe](./src/classes/MultipartStream.md#pipe)
-- [prependListener](./src/classes/MultipartStream.md#prependlistener)
-- [prependOnceListener](./src/classes/MultipartStream.md#prependoncelistener)
-- [push](./src/classes/MultipartStream.md#push)
-- [rawListeners](./src/classes/MultipartStream.md#rawlisteners)
-- [read](./src/classes/MultipartStream.md#read)
-- [removeAllListeners](./src/classes/MultipartStream.md#removealllisteners)
-- [removeListener](./src/classes/MultipartStream.md#removelistener)
-- [resume](./src/classes/MultipartStream.md#resume)
-- [setEncoding](./src/classes/MultipartStream.md#setencoding)
-- [setMaxListeners](./src/classes/MultipartStream.md#setmaxlisteners)
-- [unpipe](./src/classes/MultipartStream.md#unpipe)
-- [unshift](./src/classes/MultipartStream.md#unshift)
-- [wrap](./src/classes/MultipartStream.md#wrap)
-- [from](./src/classes/MultipartStream.md#from)
-- [fromWeb](./src/classes/MultipartStream.md#fromweb)
-- [getEventListeners](./src/classes/MultipartStream.md#geteventlisteners)
-- [isDisturbed](./src/classes/MultipartStream.md#isdisturbed)
-- [isStream](./src/classes/MultipartStream.md#isstream)
-- [listenerCount](./src/classes/MultipartStream.md#listenercount-1)
-- [on](./src/classes/MultipartStream.md#on-1)
-- [once](./src/classes/MultipartStream.md#once-1)
-- [setMaxListeners](./src/classes/MultipartStream.md#setmaxlisteners-1)
-- [toWeb](./src/classes/MultipartStream.md#toweb)
-
 ## Constructors
 
-### constructor
+### new MultipartStream()
 
-• **new MultipartStream**(`boundary`): [`MultipartStream`](./src/classes/MultipartStream.md)
+> **new MultipartStream**(`boundary`): [`MultipartStream`](./src/classes/MultipartStream.md)
 
 Constructs a new MultipartStream instance with the specified boundary.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `boundary` | `string` | The boundary string used to separate parts in the multipart stream. |
+• **boundary**: `string`
+
+The boundary string used to separate parts in the multipart stream.
 
 #### Returns
 
@@ -99,241 +27,245 @@ Constructs a new MultipartStream instance with the specified boundary.
 
 #### Overrides
 
-SandwichStream.constructor
+`SandwichStream.constructor`
 
 ## Properties
 
 ### closed
 
-• `Readonly` **closed**: `boolean`
+> `readonly` **closed**: `boolean`
 
 Is true after 'close' has been emitted.
 
-**`Since`**
+#### Since
 
 v18.0.0
 
 #### Inherited from
 
-SandwichStream.closed
+`SandwichStream.closed`
 
-___
+***
 
 ### destroyed
 
-• **destroyed**: `boolean`
+> **destroyed**: `boolean`
 
 Is `true` after `readable.destroy()` has been called.
 
-**`Since`**
+#### Since
 
 v8.0.0
 
 #### Inherited from
 
-SandwichStream.destroyed
+`SandwichStream.destroyed`
 
-___
+***
 
 ### errored
 
-• `Readonly` **errored**: ``null`` \| `Error`
+> `readonly` **errored**: `null` \| `Error`
 
 Returns error if the stream has been destroyed with an error.
 
-**`Since`**
+#### Since
 
 v18.0.0
 
 #### Inherited from
 
-SandwichStream.errored
+`SandwichStream.errored`
 
-___
+***
 
 ### readable
 
-• **readable**: `boolean`
+> **readable**: `boolean`
 
 Is `true` if it is safe to call `readable.read()`, which means
 the stream has not been destroyed or emitted `'error'` or `'end'`.
 
-**`Since`**
+#### Since
 
 v11.4.0
 
 #### Inherited from
 
-SandwichStream.readable
+`SandwichStream.readable`
 
-___
+***
 
 ### readableAborted
 
-• `Readonly` **readableAborted**: `boolean`
+`Experimental`
+
+> `readonly` **readableAborted**: `boolean`
 
 Returns whether the stream was destroyed or errored before emitting `'end'`.
 
-**`Since`**
+#### Since
 
 v16.8.0
 
 #### Inherited from
 
-SandwichStream.readableAborted
+`SandwichStream.readableAborted`
 
-___
+***
 
 ### readableDidRead
 
-• `Readonly` **readableDidRead**: `boolean`
+`Experimental`
+
+> `readonly` **readableDidRead**: `boolean`
 
 Returns whether `'data'` has been emitted.
 
-**`Since`**
+#### Since
 
 v16.7.0, v14.18.0
 
 #### Inherited from
 
-SandwichStream.readableDidRead
+`SandwichStream.readableDidRead`
 
-___
+***
 
 ### readableEncoding
 
-• `Readonly` **readableEncoding**: ``null`` \| `BufferEncoding`
+> `readonly` **readableEncoding**: `null` \| `BufferEncoding`
 
 Getter for the property `encoding` of a given `Readable` stream. The `encoding`property can be set using the `readable.setEncoding()` method.
 
-**`Since`**
+#### Since
 
 v12.7.0
 
 #### Inherited from
 
-SandwichStream.readableEncoding
+`SandwichStream.readableEncoding`
 
-___
+***
 
 ### readableEnded
 
-• `Readonly` **readableEnded**: `boolean`
+> `readonly` **readableEnded**: `boolean`
 
 Becomes `true` when `'end'` event is emitted.
 
-**`Since`**
+#### Since
 
 v12.9.0
 
 #### Inherited from
 
-SandwichStream.readableEnded
+`SandwichStream.readableEnded`
 
-___
+***
 
 ### readableFlowing
 
-• `Readonly` **readableFlowing**: ``null`` \| `boolean`
+> `readonly` **readableFlowing**: `null` \| `boolean`
 
 This property reflects the current state of a `Readable` stream as described
 in the `Three states` section.
 
-**`Since`**
+#### Since
 
 v9.4.0
 
 #### Inherited from
 
-SandwichStream.readableFlowing
+`SandwichStream.readableFlowing`
 
-___
+***
 
 ### readableHighWaterMark
 
-• `Readonly` **readableHighWaterMark**: `number`
+> `readonly` **readableHighWaterMark**: `number`
 
 Returns the value of `highWaterMark` passed when creating this `Readable`.
 
-**`Since`**
+#### Since
 
 v9.3.0
 
 #### Inherited from
 
-SandwichStream.readableHighWaterMark
+`SandwichStream.readableHighWaterMark`
 
-___
+***
 
 ### readableLength
 
-• `Readonly` **readableLength**: `number`
+> `readonly` **readableLength**: `number`
 
 This property contains the number of bytes (or objects) in the queue
 ready to be read. The value provides introspection data regarding
 the status of the `highWaterMark`.
 
-**`Since`**
+#### Since
 
 v9.4.0
 
 #### Inherited from
 
-SandwichStream.readableLength
+`SandwichStream.readableLength`
 
-___
+***
 
 ### readableObjectMode
 
-• `Readonly` **readableObjectMode**: `boolean`
+> `readonly` **readableObjectMode**: `boolean`
 
 Getter for the property `objectMode` of a given `Readable` stream.
 
-**`Since`**
+#### Since
 
 v12.3.0
 
 #### Inherited from
 
-SandwichStream.readableObjectMode
+`SandwichStream.readableObjectMode`
 
-___
+***
 
 ### captureRejectionSymbol
 
-▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](Api.md#capturerejectionsymbol)
+> `static` `readonly` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](./src/classes/Api.md#capturerejectionsymbol)
 
 #### Inherited from
 
-SandwichStream.captureRejectionSymbol
+`SandwichStream.captureRejectionSymbol`
 
-___
+***
 
 ### captureRejections
 
-▪ `Static` **captureRejections**: `boolean`
+> `static` **captureRejections**: `boolean`
 
 Sets or gets the default captureRejection value for all emitters.
 
 #### Inherited from
 
-SandwichStream.captureRejections
+`SandwichStream.captureRejections`
 
-___
+***
 
 ### defaultMaxListeners
 
-▪ `Static` **defaultMaxListeners**: `number`
+> `static` **defaultMaxListeners**: `number`
 
 #### Inherited from
 
-SandwichStream.defaultMaxListeners
+`SandwichStream.defaultMaxListeners`
 
-___
+***
 
 ### errorMonitor
 
-▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](Api.md#errormonitor)
+> `static` `readonly` **errorMonitor**: *typeof* [`errorMonitor`](./src/classes/Api.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -345,13 +277,33 @@ regular `'error'` listener is installed.
 
 #### Inherited from
 
-SandwichStream.errorMonitor
+`SandwichStream.errorMonitor`
 
 ## Methods
 
-### [asyncIterator]
+### `[asyncDispose]`()
 
-▸ **[asyncIterator]**(): `AsyncIterableIterator`\<`any`\>
+> **\[asyncDispose\]**(): `Promise`\<`void`\>
+
+Calls `readable.destroy()` with an `AbortError` and returns a promise that fulfills when the stream is finished.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Inherited from
+
+`SandwichStream.[asyncDispose]`
+
+#### Since
+
+v18.18.0
+
+***
+
+### `[asyncIterator]`()
+
+> **\[asyncIterator\]**(): `AsyncIterableIterator`\<`any`\>
 
 #### Returns
 
@@ -359,19 +311,25 @@ SandwichStream.errorMonitor
 
 #### Inherited from
 
-SandwichStream.[asyncIterator]
+`SandwichStream.[asyncIterator]`
 
-___
+***
 
-### \_construct
+### `[captureRejectionSymbol]`()?
 
-▸ **_construct**(`callback`): `void`
+> `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
+
+#### Type parameters
+
+• **K**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | (`error?`: ``null`` \| `Error`) => `void` |
+• **error**: `Error`
+
+• **event**: `string` \| `symbol`
+
+• ...**args**: `AnyRest`
 
 #### Returns
 
@@ -379,20 +337,17 @@ ___
 
 #### Inherited from
 
-SandwichStream.\_construct
+`SandwichStream.[captureRejectionSymbol]`
 
-___
+***
 
-### \_destroy
+### \_construct()?
 
-▸ **_destroy**(`error`, `callback`): `void`
+> `optional` **\_construct**(`callback`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `error` | ``null`` \| `Error` |
-| `callback` | (`error?`: ``null`` \| `Error`) => `void` |
+• **callback**
 
 #### Returns
 
@@ -400,13 +355,33 @@ ___
 
 #### Inherited from
 
-SandwichStream.\_destroy
+`SandwichStream._construct`
 
-___
+***
 
-### \_read
+### \_destroy()
 
-▸ **_read**(): `void`
+> **\_destroy**(`error`, `callback`): `void`
+
+#### Parameters
+
+• **error**: `null` \| `Error`
+
+• **callback**
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`SandwichStream._destroy`
+
+***
+
+### \_read()
+
+> **\_read**(): `void`
 
 Works in a similar way from the Readable read, only that this one checks
 for whether or not a stream is already being handled
@@ -419,21 +394,21 @@ This instance of Sandwich Stream
 
 #### Inherited from
 
-SandwichStream.\_read
+`SandwichStream._read`
 
-___
+***
 
-### add
+### add()
 
-▸ **add**(`newStream`): `this`
+> **add**(`newStream`): `this`
 
 Add a new Readable stream in the queue
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `newStream` | `Readable` | The Readable stream |
+• **newStream**: `Readable`
+
+The Readable stream
 
 #### Returns
 
@@ -441,7 +416,11 @@ Add a new Readable stream in the queue
 
 This instance of Sandwich Stream
 
-**`Example`**
+#### Inherited from
+
+`SandwichStream.add`
+
+#### Example
 
 ```ts
 sandwichStream.add(streamOne);
@@ -449,19 +428,17 @@ sandwichStream.add(streamTwo);
 sandwichStream.add(streamThree);
 ```
 
-**`Throws`**
+#### Throws
 
 An Error in case that this request was not accepted
 
-#### Inherited from
+***
 
-SandwichStream.add
+### addListener()
 
-___
+#### addListener(event, listener)
 
-### addListener
-
-▸ **addListener**(`event`, `listener`): `this`
+> **addListener**(`event`, `listener`): `this`
 
 Event emitter
 The defined events on documents including:
@@ -473,165 +450,227 @@ The defined events on documents including:
 6. readable
 7. resume
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
-| `listener` | () => `void` |
+• **event**: `"close"`
 
-#### Returns
+• **listener**
 
-`this`
-
-#### Inherited from
-
-SandwichStream.addListener
-
-▸ **addListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `listener` | (`chunk`: `any`) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.addListener
+`SandwichStream.addListener`
 
-▸ **addListener**(`event`, `listener`): `this`
+#### addListener(event, listener)
 
-#### Parameters
+> **addListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"data"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.addListener
-
-▸ **addListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `listener` | (`err`: `Error`) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.addListener
+`SandwichStream.addListener`
 
-▸ **addListener**(`event`, `listener`): `this`
+#### addListener(event, listener)
 
-#### Parameters
+> **addListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"end"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.addListener
-
-▸ **addListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.addListener
+`SandwichStream.addListener`
 
-▸ **addListener**(`event`, `listener`): `this`
+#### addListener(event, listener)
 
-#### Parameters
+> **addListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"error"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.addListener
-
-▸ **addListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.addListener
+`SandwichStream.addListener`
 
-___
+#### addListener(event, listener)
 
-### addPart
+> **addListener**(`event`, `listener`): `this`
 
-▸ **addPart**(`part?`): `void`
+##### Parameters
+
+• **event**: `"pause"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.addListener`
+
+#### addListener(event, listener)
+
+> **addListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"readable"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.addListener`
+
+#### addListener(event, listener)
+
+> **addListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"resume"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.addListener`
+
+#### addListener(event, listener)
+
+> **addListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `string` \| `symbol`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.addListener`
+
+***
+
+### addPart()
+
+> **addPart**(`part`): `void`
 
 Adds a part to the multipart stream with optional headers and body.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `part` | `Object` | An object representing the part to add to the multipart stream. May include headers and body. |
-| `part.body?` | `any` | - |
-| `part.headers?` | `Object` | - |
+• **part**= `{}`
+
+An object representing the part to add to the multipart stream.
+               May include headers and body.
+
+• **part.body?**: `any`
+
+• **part.headers?**
 
 #### Returns
 
 `void`
 
-___
+***
 
-### destroy
+### asIndexedPairs()
 
-▸ **destroy**(`error?`): `this`
+> **asIndexedPairs**(`options`?): `Readable`
+
+This method returns a new stream with chunks of the underlying stream paired with a counter
+in the form `[index, chunk]`. The first index value is `0` and it increases by 1 for each chunk produced.
+
+#### Parameters
+
+• **options?**: `Pick`\<`ArrayOptions`, `"signal"`\>
+
+#### Returns
+
+`Readable`
+
+a stream of indexed pairs.
+
+#### Inherited from
+
+`SandwichStream.asIndexedPairs`
+
+#### Since
+
+v17.5.0
+
+***
+
+### compose()
+
+> **compose**\<`T`\>(`stream`, `options`?): `T`
+
+#### Type parameters
+
+• **T** *extends* `ReadableStream`
+
+#### Parameters
+
+• **stream**: `ComposeFnParam` \| `T` \| `Iterable`\<`T`\> \| `AsyncIterable`\<`T`\>
+
+• **options?**
+
+• **options.signal?**: `AbortSignal`
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+`SandwichStream.compose`
+
+***
+
+### destroy()
+
+> **destroy**(`error`?): `this`
 
 Destroy the stream. Optionally emit an `'error'` event, and emit a `'close'`event (unless `emitClose` is set to `false`). After this call, the readable
 stream will release any internal resources and subsequent calls to `push()`will be ignored.
@@ -643,162 +682,195 @@ Implementors should not override this method, but instead implement `readable._d
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `error?` | `Error` | Error which will be passed as payload in `'error'` event |
+• **error?**: `Error`
+
+Error which will be passed as payload in `'error'` event
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.destroy`
+
+#### Since
 
 v8.0.0
 
-#### Inherited from
+***
 
-SandwichStream.destroy
+### drop()
 
-___
+> **drop**(`limit`, `options`?): `Readable`
 
-### emit
-
-▸ **emit**(`event`): `boolean`
+This method returns a new stream with the first *limit* chunks dropped from the start.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
+• **limit**: `number`
+
+the number of chunks to drop from the readable.
+
+• **options?**: `Pick`\<`ArrayOptions`, `"signal"`\>
 
 #### Returns
 
-`boolean`
+`Readable`
+
+a stream with *limit* chunks dropped from the start.
 
 #### Inherited from
 
-SandwichStream.emit
+`SandwichStream.drop`
 
-▸ **emit**(`event`, `chunk`): `boolean`
+#### Since
 
-#### Parameters
+v17.5.0
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `chunk` | `any` |
+***
 
-#### Returns
+### emit()
 
-`boolean`
+#### emit(event)
 
-#### Inherited from
+> **emit**(`event`): `boolean`
 
-SandwichStream.emit
+##### Parameters
 
-▸ **emit**(`event`): `boolean`
+• **event**: `"close"`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-
-#### Returns
+##### Returns
 
 `boolean`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.emit
+`SandwichStream.emit`
 
-▸ **emit**(`event`, `err`): `boolean`
+#### emit(event, chunk)
 
-#### Parameters
+> **emit**(`event`, `chunk`): `boolean`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `err` | `Error` |
+##### Parameters
 
-#### Returns
+• **event**: `"data"`
 
-`boolean`
+• **chunk**: `any`
 
-#### Inherited from
-
-SandwichStream.emit
-
-▸ **emit**(`event`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-
-#### Returns
+##### Returns
 
 `boolean`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.emit
+`SandwichStream.emit`
 
-▸ **emit**(`event`): `boolean`
+#### emit(event)
 
-#### Parameters
+> **emit**(`event`): `boolean`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
+##### Parameters
 
-#### Returns
+• **event**: `"end"`
 
-`boolean`
-
-#### Inherited from
-
-SandwichStream.emit
-
-▸ **emit**(`event`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-
-#### Returns
+##### Returns
 
 `boolean`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.emit
+`SandwichStream.emit`
 
-▸ **emit**(`event`, `...args`): `boolean`
+#### emit(event, err)
 
-#### Parameters
+> **emit**(`event`, `err`): `boolean`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `...args` | `any`[] |
+##### Parameters
 
-#### Returns
+• **event**: `"error"`
+
+• **err**: `Error`
+
+##### Returns
 
 `boolean`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.emit
+`SandwichStream.emit`
 
-___
+#### emit(event)
 
-### eventNames
+> **emit**(`event`): `boolean`
 
-▸ **eventNames**(): (`string` \| `symbol`)[]
+##### Parameters
+
+• **event**: `"pause"`
+
+##### Returns
+
+`boolean`
+
+##### Inherited from
+
+`SandwichStream.emit`
+
+#### emit(event)
+
+> **emit**(`event`): `boolean`
+
+##### Parameters
+
+• **event**: `"readable"`
+
+##### Returns
+
+`boolean`
+
+##### Inherited from
+
+`SandwichStream.emit`
+
+#### emit(event)
+
+> **emit**(`event`): `boolean`
+
+##### Parameters
+
+• **event**: `"resume"`
+
+##### Returns
+
+`boolean`
+
+##### Inherited from
+
+`SandwichStream.emit`
+
+#### emit(event, args)
+
+> **emit**(`event`, ...`args`): `boolean`
+
+##### Parameters
+
+• **event**: `string` \| `symbol`
+
+• ...**args**: `any`[]
+
+##### Returns
+
+`boolean`
+
+##### Inherited from
+
+`SandwichStream.emit`
+
+***
+
+### eventNames()
+
+> **eventNames**(): (`string` \| `symbol`)[]
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -820,19 +892,215 @@ console.log(myEE.eventNames());
 
 (`string` \| `symbol`)[]
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.eventNames`
+
+#### Since
 
 v6.0.0
 
+***
+
+### every()
+
+> **every**(`fn`, `options`?): `Promise`\<`boolean`\>
+
+This method is similar to `Array.prototype.every` and calls *fn* on each chunk in the stream
+to check if all awaited return values are truthy value for *fn*. Once an *fn* call on a chunk
+`await`ed return value is falsy, the stream is destroyed and the promise is fulfilled with `false`.
+If all of the *fn* calls on the chunks return a truthy value, the promise is fulfilled with `true`.
+
+#### Parameters
+
+• **fn**
+
+a function to call on each chunk of the stream. Async or not.
+
+• **options?**: `ArrayOptions`
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+a promise evaluating to `true` if *fn* returned a truthy value for every one of the chunks.
+
 #### Inherited from
 
-SandwichStream.eventNames
+`SandwichStream.every`
 
-___
+#### Since
 
-### getMaxListeners
+v17.5.0
 
-▸ **getMaxListeners**(): `number`
+***
+
+### filter()
+
+> **filter**(`fn`, `options`?): `Readable`
+
+This method allows filtering the stream. For each chunk in the stream the *fn* function will be called
+and if it returns a truthy value, the chunk will be passed to the result stream.
+If the *fn* function returns a promise - that promise will be `await`ed.
+
+#### Parameters
+
+• **fn**
+
+a function to filter chunks from the stream. Async or not.
+
+• **options?**: `ArrayOptions`
+
+#### Returns
+
+`Readable`
+
+a stream filtered with the predicate *fn*.
+
+#### Inherited from
+
+`SandwichStream.filter`
+
+#### Since
+
+v17.4.0, v16.14.0
+
+***
+
+### find()
+
+#### find(fn, options)
+
+> **find**\<`T`\>(`fn`, `options`?): `Promise`\<`undefined` \| `T`\>
+
+This method is similar to `Array.prototype.find` and calls *fn* on each chunk in the stream
+to find a chunk with a truthy value for *fn*. Once an *fn* call's awaited return value is truthy,
+the stream is destroyed and the promise is fulfilled with value for which *fn* returned a truthy value.
+If all of the *fn* calls on the chunks return a falsy value, the promise is fulfilled with `undefined`.
+
+##### Type parameters
+
+• **T**
+
+##### Parameters
+
+• **fn**
+
+a function to call on each chunk of the stream. Async or not.
+
+• **options?**: `ArrayOptions`
+
+##### Returns
+
+`Promise`\<`undefined` \| `T`\>
+
+a promise evaluating to the first chunk for which *fn* evaluated with a truthy value,
+or `undefined` if no element was found.
+
+##### Inherited from
+
+`SandwichStream.find`
+
+##### Since
+
+v17.5.0
+
+#### find(fn, options)
+
+> **find**(`fn`, `options`?): `Promise`\<`any`\>
+
+##### Parameters
+
+• **fn**
+
+• **options?**: `ArrayOptions`
+
+##### Returns
+
+`Promise`\<`any`\>
+
+##### Inherited from
+
+`SandwichStream.find`
+
+***
+
+### flatMap()
+
+> **flatMap**(`fn`, `options`?): `Readable`
+
+This method returns a new stream by applying the given callback to each chunk of the stream
+and then flattening the result.
+
+It is possible to return a stream or another iterable or async iterable from *fn* and the result streams
+will be merged (flattened) into the returned stream.
+
+#### Parameters
+
+• **fn**
+
+a function to map over every chunk in the stream. May be async. May be a stream or generator.
+
+• **options?**: `ArrayOptions`
+
+#### Returns
+
+`Readable`
+
+a stream flat-mapped with the function *fn*.
+
+#### Inherited from
+
+`SandwichStream.flatMap`
+
+#### Since
+
+v17.5.0
+
+***
+
+### forEach()
+
+> **forEach**(`fn`, `options`?): `Promise`\<`void`\>
+
+This method allows iterating a stream. For each chunk in the stream the *fn* function will be called.
+If the *fn* function returns a promise - that promise will be `await`ed.
+
+This method is different from `for await...of` loops in that it can optionally process chunks concurrently.
+In addition, a `forEach` iteration can only be stopped by having passed a `signal` option
+and aborting the related AbortController while `for await...of` can be stopped with `break` or `return`.
+In either case the stream will be destroyed.
+
+This method is different from listening to the `'data'` event in that it uses the `readable` event
+in the underlying machinary and can limit the number of concurrent *fn* calls.
+
+#### Parameters
+
+• **fn**
+
+a function to call on each chunk of the stream. Async or not.
+
+• **options?**: `ArrayOptions`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+a promise for when the stream has finished.
+
+#### Inherited from
+
+`SandwichStream.forEach`
+
+#### Since
+
+v17.5.0
+
+***
+
+### getMaxListeners()
+
+> **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](./src/classes/MultipartStream.md#defaultmaxlisteners).
@@ -841,19 +1109,19 @@ set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](./src/c
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.getMaxListeners`
+
+#### Since
 
 v1.0.0
 
-#### Inherited from
+***
 
-SandwichStream.getMaxListeners
+### isPaused()
 
-___
-
-### isPaused
-
-▸ **isPaused**(): `boolean`
+> **isPaused**(): `boolean`
 
 The `readable.isPaused()` method returns the current operating state of the`Readable`. This is used primarily by the mechanism that underlies the`readable.pipe()` method. In most
 typical cases, there will be no reason to
@@ -873,49 +1141,88 @@ readable.isPaused(); // === false
 
 `boolean`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.isPaused`
+
+#### Since
 
 v0.11.14
 
+***
+
+### iterator()
+
+> **iterator**(`options`?): `AsyncIterableIterator`\<`any`\>
+
+The iterator created by this method gives users the option to cancel the destruction
+of the stream if the `for await...of` loop is exited by `return`, `break`, or `throw`,
+or if the iterator should destroy the stream if the stream emitted an error during iteration.
+
+#### Parameters
+
+• **options?**
+
+• **options.destroyOnReturn?**: `boolean`
+
+When set to `false`, calling `return` on the async iterator,
+or exiting a `for await...of` iteration using a `break`, `return`, or `throw` will not destroy the stream.
+**Default: `true`**.
+
+#### Returns
+
+`AsyncIterableIterator`\<`any`\>
+
 #### Inherited from
 
-SandwichStream.isPaused
+`SandwichStream.iterator`
 
-___
+#### Since
 
-### listenerCount
+v16.3.0
 
-▸ **listenerCount**(`eventName`, `listener?`): `number`
+***
+
+### listenerCount()
+
+> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
 
 Returns the number of listeners listening to the event named `eventName`.
 
 If `listener` is provided, it will return how many times the listener
 is found in the list of the listeners of the event.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event being listened for |
-| `listener?` | `Function` | The event handler function |
+• **eventName**: `string` \| `symbol`
+
+The name of the event being listened for
+
+• **listener?**: `Function`
+
+The event handler function
 
 #### Returns
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.listenerCount`
+
+#### Since
 
 v3.2.0
 
-#### Inherited from
+***
 
-SandwichStream.listenerCount
+### listeners()
 
-___
-
-### listeners
-
-▸ **listeners**(`eventName`): `Function`[]
+> **listeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -927,336 +1234,388 @@ console.log(util.inspect(server.listeners('connection')));
 // Prints: [ [Function] ]
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
+• **eventName**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.listeners`
+
+#### Since
 
 v0.1.26
 
+***
+
+### map()
+
+> **map**(`fn`, `options`?): `Readable`
+
+This method allows mapping over the stream. The *fn* function will be called for every chunk in the stream.
+If the *fn* function returns a promise - that promise will be `await`ed before being passed to the result stream.
+
+#### Parameters
+
+• **fn**
+
+a function to map over every chunk in the stream. Async or not.
+
+• **options?**: `ArrayOptions`
+
+#### Returns
+
+`Readable`
+
+a stream mapped with the function *fn*.
+
 #### Inherited from
 
-SandwichStream.listeners
+`SandwichStream.map`
 
-___
+#### Since
 
-### off
+v17.4.0, v16.14.0
 
-▸ **off**(`eventName`, `listener`): `this`
+***
+
+### off()
+
+> **off**\<`K`\>(`eventName`, `listener`): `this`
 
 Alias for `emitter.removeListener()`.
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+• **eventName**: `string` \| `symbol`
+
+• **listener**
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.off`
+
+#### Since
 
 v10.0.0
 
-#### Inherited from
+***
 
-SandwichStream.off
+### on()
 
-___
+#### on(event, listener)
 
-### on
+> **on**(`event`, `listener`): `this`
 
-▸ **on**(`event`, `listener`): `this`
+##### Parameters
 
-#### Parameters
+• **event**: `"close"`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
-| `listener` | () => `void` |
+• **listener**
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.on
+`SandwichStream.on`
 
-▸ **on**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `listener` | (`chunk`: `any`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"data"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.on
-
-▸ **on**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.on
+`SandwichStream.on`
 
-▸ **on**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `listener` | (`err`: `Error`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"end"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.on
-
-▸ **on**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.on
+`SandwichStream.on`
 
-▸ **on**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"error"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.on
-
-▸ **on**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.on
+`SandwichStream.on`
 
-▸ **on**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"pause"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.on
-
-___
-
-### once
-
-▸ **once**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.once
+`SandwichStream.on`
 
-▸ **once**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `listener` | (`chunk`: `any`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"readable"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.once
-
-▸ **once**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.once
+`SandwichStream.on`
 
-▸ **once**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `listener` | (`err`: `Error`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"resume"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.once
-
-▸ **once**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.once
+`SandwichStream.on`
 
-▸ **once**(`event`, `listener`): `this`
+#### on(event, listener)
 
-#### Parameters
+> **on**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `string` \| `symbol`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.once
-
-▸ **once**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.once
+`SandwichStream.on`
 
-▸ **once**(`event`, `listener`): `this`
+***
 
-#### Parameters
+### once()
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+#### once(event, listener)
 
-#### Returns
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"close"`
+
+• **listener**
+
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.once
+`SandwichStream.once`
 
-___
+#### once(event, listener)
 
-### pause
+> **once**(`event`, `listener`): `this`
 
-▸ **pause**(): `this`
+##### Parameters
+
+• **event**: `"data"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"end"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"error"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"pause"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"readable"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"resume"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+#### once(event, listener)
+
+> **once**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `string` \| `symbol`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.once`
+
+***
+
+### pause()
+
+> **pause**(): `this`
 
 The `readable.pause()` method will cause a stream in flowing mode to stop
 emitting `'data'` events, switching out of flowing mode. Any data that
@@ -1281,33 +1640,31 @@ The `readable.pause()` method has no effect if there is a `'readable'`event list
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.pause`
+
+#### Since
 
 v0.9.4
 
-#### Inherited from
+***
 
-SandwichStream.pause
+### pipe()
 
-___
-
-### pipe
-
-▸ **pipe**\<`T`\>(`destination`, `options?`): `T`
+> **pipe**\<`T`\>(`destination`, `options`?): `T`
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `WritableStream` |
+• **T** *extends* `WritableStream`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `destination` | `T` |
-| `options?` | `Object` |
-| `options.end?` | `boolean` |
+• **destination**: `T`
+
+• **options?**
+
+• **options.end?**: `boolean`
 
 #### Returns
 
@@ -1315,300 +1672,315 @@ ___
 
 #### Inherited from
 
-SandwichStream.pipe
+`SandwichStream.pipe`
 
-___
+***
 
-### prependListener
+### prependListener()
 
-▸ **prependListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"close"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependListener
-
-▸ **prependListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `listener` | (`chunk`: `any`) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependListener
+`SandwichStream.prependListener`
 
-▸ **prependListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"data"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependListener
-
-▸ **prependListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `listener` | (`err`: `Error`) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependListener
+`SandwichStream.prependListener`
 
-▸ **prependListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"end"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependListener
-
-▸ **prependListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependListener
+`SandwichStream.prependListener`
 
-▸ **prependListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"error"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependListener
-
-▸ **prependListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependListener
+`SandwichStream.prependListener`
 
-___
+#### prependListener(event, listener)
 
-### prependOnceListener
+> **prependListener**(`event`, `listener`): `this`
 
-▸ **prependOnceListener**(`event`, `listener`): `this`
+##### Parameters
 
-#### Parameters
+• **event**: `"pause"`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
-| `listener` | () => `void` |
+• **listener**
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependOnceListener
+`SandwichStream.prependListener`
 
-▸ **prependOnceListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `listener` | (`chunk`: `any`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"readable"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependOnceListener
-
-▸ **prependOnceListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependOnceListener
+`SandwichStream.prependListener`
 
-▸ **prependOnceListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `listener` | (`err`: `Error`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"resume"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependOnceListener
-
-▸ **prependOnceListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependOnceListener
+`SandwichStream.prependListener`
 
-▸ **prependOnceListener**(`event`, `listener`): `this`
+#### prependListener(event, listener)
 
-#### Parameters
+> **prependListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `string` \| `symbol`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.prependOnceListener
-
-▸ **prependOnceListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependOnceListener
+`SandwichStream.prependListener`
 
-▸ **prependOnceListener**(`event`, `listener`): `this`
+***
 
-#### Parameters
+### prependOnceListener()
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+#### prependOnceListener(event, listener)
 
-#### Returns
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"close"`
+
+• **listener**
+
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.prependOnceListener
+`SandwichStream.prependOnceListener`
 
-___
+#### prependOnceListener(event, listener)
 
-### push
+> **prependOnceListener**(`event`, `listener`): `this`
 
-▸ **push**(`chunk`, `encoding?`): `boolean`
+##### Parameters
+
+• **event**: `"data"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+#### prependOnceListener(event, listener)
+
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"end"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+#### prependOnceListener(event, listener)
+
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"error"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+#### prependOnceListener(event, listener)
+
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"pause"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+#### prependOnceListener(event, listener)
+
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"readable"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+#### prependOnceListener(event, listener)
+
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"resume"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+#### prependOnceListener(event, listener)
+
+> **prependOnceListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `string` \| `symbol`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.prependOnceListener`
+
+***
+
+### push()
+
+> **push**(`chunk`, `encoding`?): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chunk` | `any` |
-| `encoding?` | `BufferEncoding` |
+• **chunk**: `any`
+
+• **encoding?**: `BufferEncoding`
 
 #### Returns
 
@@ -1616,13 +1988,13 @@ ___
 
 #### Inherited from
 
-SandwichStream.push
+`SandwichStream.push`
 
-___
+***
 
-### rawListeners
+### rawListeners()
 
-▸ **rawListeners**(`eventName`): `Function`[]
+> **rawListeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -1651,29 +2023,31 @@ newListeners[0]();
 emitter.emit('log');
 ```
 
+#### Type parameters
+
+• **K**
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `eventName` | `string` \| `symbol` |
+• **eventName**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.rawListeners`
+
+#### Since
 
 v9.4.0
 
-#### Inherited from
+***
 
-SandwichStream.rawListeners
+### read()
 
-___
-
-### read
-
-▸ **read**(`size?`): `any`
+> **read**(`size`?): `any`
 
 The `readable.read()` method reads data out of the internal buffer and
 returns it. If no data is available to be read, `null` is returned. By default,
@@ -1750,27 +2124,98 @@ been emitted will return `null`. No runtime error will be raised.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `size?` | `number` | Optional argument to specify how much data to read. |
+• **size?**: `number`
+
+Optional argument to specify how much data to read.
 
 #### Returns
 
 `any`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.read`
+
+#### Since
 
 v0.9.4
 
-#### Inherited from
+***
 
-SandwichStream.read
+### reduce()
 
-___
+#### reduce(fn, initial, options)
 
-### removeAllListeners
+> **reduce**\<`T`\>(`fn`, `initial`?, `options`?): `Promise`\<`T`\>
 
-▸ **removeAllListeners**(`event?`): `this`
+This method calls *fn* on each chunk of the stream in order, passing it the result from the calculation
+on the previous element. It returns a promise for the final value of the reduction.
+
+If no *initial* value is supplied the first chunk of the stream is used as the initial value.
+If the stream is empty, the promise is rejected with a `TypeError` with the `ERR_INVALID_ARGS` code property.
+
+The reducer function iterates the stream element-by-element which means that there is no *concurrency* parameter
+or parallelism. To perform a reduce concurrently, you can extract the async function to `readable.map` method.
+
+##### Type parameters
+
+• **T** = `any`
+
+##### Parameters
+
+• **fn**
+
+a reducer function to call over every chunk in the stream. Async or not.
+
+• **initial?**: `undefined`
+
+the initial value to use in the reduction.
+
+• **options?**: `Pick`\<`ArrayOptions`, `"signal"`\>
+
+##### Returns
+
+`Promise`\<`T`\>
+
+a promise for the final value of the reduction.
+
+##### Inherited from
+
+`SandwichStream.reduce`
+
+##### Since
+
+v17.5.0
+
+#### reduce(fn, initial, options)
+
+> **reduce**\<`T`\>(`fn`, `initial`, `options`?): `Promise`\<`T`\>
+
+##### Type parameters
+
+• **T** = `any`
+
+##### Parameters
+
+• **fn**
+
+• **initial**: `T`
+
+• **options?**: `Pick`\<`ArrayOptions`, `"signal"`\>
+
+##### Returns
+
+`Promise`\<`T`\>
+
+##### Inherited from
+
+`SandwichStream.reduce`
+
+***
+
+### removeAllListeners()
+
+> **removeAllListeners**(`event`?): `this`
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -1782,167 +2227,173 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event?` | `string` \| `symbol` |
+• **event?**: `string` \| `symbol`
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.removeAllListeners`
+
+#### Since
 
 v0.1.26
 
-#### Inherited from
+***
 
-SandwichStream.removeAllListeners
+### removeListener()
 
-___
+#### removeListener(event, listener)
 
-### removeListener
+> **removeListener**(`event`, `listener`): `this`
 
-▸ **removeListener**(`event`, `listener`): `this`
+##### Parameters
 
-#### Parameters
+• **event**: `"close"`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"close"`` |
-| `listener` | () => `void` |
+• **listener**
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.removeListener
+`SandwichStream.removeListener`
 
-▸ **removeListener**(`event`, `listener`): `this`
+#### removeListener(event, listener)
 
-#### Parameters
+> **removeListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"data"`` |
-| `listener` | (`chunk`: `any`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"data"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.removeListener
-
-▸ **removeListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"end"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.removeListener
+`SandwichStream.removeListener`
 
-▸ **removeListener**(`event`, `listener`): `this`
+#### removeListener(event, listener)
 
-#### Parameters
+> **removeListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"error"`` |
-| `listener` | (`err`: `Error`) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"end"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.removeListener
-
-▸ **removeListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"pause"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.removeListener
+`SandwichStream.removeListener`
 
-▸ **removeListener**(`event`, `listener`): `this`
+#### removeListener(event, listener)
 
-#### Parameters
+> **removeListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"readable"`` |
-| `listener` | () => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"error"`
 
-`this`
+• **listener**
 
-#### Inherited from
-
-SandwichStream.removeListener
-
-▸ **removeListener**(`event`, `listener`): `this`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | ``"resume"`` |
-| `listener` | () => `void` |
-
-#### Returns
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.removeListener
+`SandwichStream.removeListener`
 
-▸ **removeListener**(`event`, `listener`): `this`
+#### removeListener(event, listener)
 
-#### Parameters
+> **removeListener**(`event`, `listener`): `this`
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `string` \| `symbol` |
-| `listener` | (...`args`: `any`[]) => `void` |
+##### Parameters
 
-#### Returns
+• **event**: `"pause"`
+
+• **listener**
+
+##### Returns
 
 `this`
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.removeListener
+`SandwichStream.removeListener`
 
-___
+#### removeListener(event, listener)
 
-### resume
+> **removeListener**(`event`, `listener`): `this`
 
-▸ **resume**(): `this`
+##### Parameters
+
+• **event**: `"readable"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.removeListener`
+
+#### removeListener(event, listener)
+
+> **removeListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `"resume"`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.removeListener`
+
+#### removeListener(event, listener)
+
+> **removeListener**(`event`, `listener`): `this`
+
+##### Parameters
+
+• **event**: `string` \| `symbol`
+
+• **listener**
+
+##### Returns
+
+`this`
+
+##### Inherited from
+
+`SandwichStream.removeListener`
+
+***
+
+### resume()
+
+> **resume**(): `this`
 
 The `readable.resume()` method causes an explicitly paused `Readable` stream to
 resume emitting `'data'` events, switching the stream into flowing mode.
@@ -1964,19 +2415,19 @@ The `readable.resume()` method has no effect if there is a `'readable'`event lis
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.resume`
+
+#### Since
 
 v0.9.4
 
-#### Inherited from
+***
 
-SandwichStream.resume
+### setEncoding()
 
-___
-
-### setEncoding
-
-▸ **setEncoding**(`encoding`): `this`
+> **setEncoding**(`encoding`): `this`
 
 The `readable.setEncoding()` method sets the character encoding for
 data read from the `Readable` stream.
@@ -2001,27 +2452,27 @@ readable.on('data', (chunk) => {
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `encoding` | `BufferEncoding` | The encoding to use. |
+• **encoding**: `BufferEncoding`
+
+The encoding to use.
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.setEncoding`
+
+#### Since
 
 v0.9.4
 
-#### Inherited from
+***
 
-SandwichStream.setEncoding
+### setMaxListeners()
 
-___
-
-### setMaxListeners
-
-▸ **setMaxListeners**(`n`): `this`
+> **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -2032,27 +2483,117 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+• **n**: `number`
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.setMaxListeners`
+
+#### Since
 
 v0.3.5
 
+***
+
+### some()
+
+> **some**(`fn`, `options`?): `Promise`\<`boolean`\>
+
+This method is similar to `Array.prototype.some` and calls *fn* on each chunk in the stream
+until the awaited return value is `true` (or any truthy value). Once an *fn* call on a chunk
+`await`ed return value is truthy, the stream is destroyed and the promise is fulfilled with `true`.
+If none of the *fn* calls on the chunks return a truthy value, the promise is fulfilled with `false`.
+
+#### Parameters
+
+• **fn**
+
+a function to call on each chunk of the stream. Async or not.
+
+• **options?**: `ArrayOptions`
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+a promise evaluating to `true` if *fn* returned a truthy value for at least one of the chunks.
+
 #### Inherited from
 
-SandwichStream.setMaxListeners
+`SandwichStream.some`
 
-___
+#### Since
 
-### unpipe
+v17.5.0
 
-▸ **unpipe**(`destination?`): `this`
+***
+
+### take()
+
+> **take**(`limit`, `options`?): `Readable`
+
+This method returns a new stream with the first *limit* chunks.
+
+#### Parameters
+
+• **limit**: `number`
+
+the number of chunks to take from the readable.
+
+• **options?**: `Pick`\<`ArrayOptions`, `"signal"`\>
+
+#### Returns
+
+`Readable`
+
+a stream with *limit* chunks taken.
+
+#### Inherited from
+
+`SandwichStream.take`
+
+#### Since
+
+v17.5.0
+
+***
+
+### toArray()
+
+> **toArray**(`options`?): `Promise`\<`any`[]\>
+
+This method allows easily obtaining the contents of a stream.
+
+As this method reads the entire stream into memory, it negates the benefits of streams. It's intended
+for interoperability and convenience, not as the primary way to consume streams.
+
+#### Parameters
+
+• **options?**: `Pick`\<`ArrayOptions`, `"signal"`\>
+
+#### Returns
+
+`Promise`\<`any`[]\>
+
+a promise containing an array with the contents of the stream.
+
+#### Inherited from
+
+`SandwichStream.toArray`
+
+#### Since
+
+v17.5.0
+
+***
+
+### unpipe()
+
+> **unpipe**(`destination`?): `this`
 
 The `readable.unpipe()` method detaches a `Writable` stream previously attached
 using the [pipe](./src/classes/MultipartStream.md#pipe) method.
@@ -2079,27 +2620,27 @@ setTimeout(() => {
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `destination?` | `WritableStream` | Optional specific stream to unpipe |
+• **destination?**: `WritableStream`
+
+Optional specific stream to unpipe
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.unpipe`
+
+#### Since
 
 v0.9.4
 
-#### Inherited from
+***
 
-SandwichStream.unpipe
+### unshift()
 
-___
-
-### unshift
-
-▸ **unshift**(`chunk`, `encoding?`): `void`
+> **unshift**(`chunk`, `encoding`?): `void`
 
 Passing `chunk` as `null` signals the end of the stream (EOF) and behaves the
 same as `readable.push(null)`, after which no more data can be written. The EOF
@@ -2163,28 +2704,32 @@ process of performing a read.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `chunk` | `any` | Chunk of data to unshift onto the read queue. For streams not operating in object mode, `chunk` must be a string, `Buffer`, `Uint8Array` or `null`. For object mode streams, `chunk` may be any JavaScript value. |
-| `encoding?` | `BufferEncoding` | Encoding of string chunks. Must be a valid `Buffer` encoding, such as `'utf8'` or `'ascii'`. |
+• **chunk**: `any`
+
+Chunk of data to unshift onto the read queue. For streams not operating in object mode, `chunk` must be a string, `Buffer`, `Uint8Array` or `null`. For object mode
+streams, `chunk` may be any JavaScript value.
+
+• **encoding?**: `BufferEncoding`
+
+Encoding of string chunks. Must be a valid `Buffer` encoding, such as `'utf8'` or `'ascii'`.
 
 #### Returns
 
 `void`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.unshift`
+
+#### Since
 
 v0.9.11
 
-#### Inherited from
+***
 
-SandwichStream.unshift
+### wrap()
 
-___
-
-### wrap
-
-▸ **wrap**(`stream`): `this`
+> **wrap**(`stream`): `this`
 
 Prior to Node.js 0.10, streams did not implement the entire `stream` module API
 as it is currently defined. (See `Compatibility` for more information.)
@@ -2210,36 +2755,93 @@ myReader.on('readable', () => {
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `stream` | `ReadableStream` | An "old style" readable stream |
+• **stream**: `ReadableStream`
+
+An "old style" readable stream
 
 #### Returns
 
 `this`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.wrap`
+
+#### Since
 
 v0.9.4
 
+***
+
+### addAbortListener()
+
+`Experimental`
+
+> `static` **addAbortListener**(`signal`, `resource`): `Disposable`
+
+Listens once to the `abort` event on the provided `signal`.
+
+Listening to the `abort` event on abort signals is unsafe and may
+lead to resource leaks since another third party with the signal can
+call `e.stopImmediatePropagation()`. Unfortunately Node.js cannot change
+this since it would violate the web standard. Additionally, the original
+API makes it easy to forget to remove listeners.
+
+This API allows safely using `AbortSignal`s in Node.js APIs by solving these
+two issues by listening to the event such that `stopImmediatePropagation` does
+not prevent the listener from running.
+
+Returns a disposable so that it may be unsubscribed from more easily.
+
+```js
+import { addAbortListener } from 'node:events';
+
+function example(signal) {
+  let disposable;
+  try {
+    signal.addEventListener('abort', (e) => e.stopImmediatePropagation());
+    disposable = addAbortListener(signal, (e) => {
+      // Do something when signal is aborted.
+    });
+  } finally {
+    disposable?.[Symbol.dispose]();
+  }
+}
+```
+
+#### Parameters
+
+• **signal**: `AbortSignal`
+
+• **resource**
+
+#### Returns
+
+`Disposable`
+
+Disposable that removes the `abort` listener.
+
 #### Inherited from
 
-SandwichStream.wrap
+`SandwichStream.addAbortListener`
 
-___
+#### Since
 
-### from
+v18.18.0
 
-▸ **from**(`iterable`, `options?`): `Readable`
+***
+
+### from()
+
+> `static` **from**(`iterable`, `options`?): `Readable`
 
 A utility method for creating Readable Streams out of iterators.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `iterable` | `Iterable`\<`any`\> \| `AsyncIterable`\<`any`\> |
-| `options?` | `ReadableOptions` |
+• **iterable**: `Iterable`\<`any`\> \| `AsyncIterable`\<`any`\>
+
+• **options?**: `ReadableOptions`
 
 #### Returns
 
@@ -2247,40 +2849,41 @@ A utility method for creating Readable Streams out of iterators.
 
 #### Inherited from
 
-SandwichStream.from
+`SandwichStream.from`
 
-___
+***
 
-### fromWeb
+### fromWeb()
 
-▸ **fromWeb**(`readableStream`, `options?`): `Readable`
+`Experimental`
+
+> `static` **fromWeb**(`readableStream`, `options`?): `Readable`
 
 A utility method for creating a `Readable` from a web `ReadableStream`.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `readableStream` | `ReadableStream`\<`any`\> |
-| `options?` | `Pick`\<`ReadableOptions`, ``"encoding"`` \| ``"highWaterMark"`` \| ``"objectMode"`` \| ``"signal"``\> |
+• **readableStream**: `ReadableStream`\<`any`\>
+
+• **options?**: `Pick`\<`ReadableOptions`, `"encoding"` \| `"highWaterMark"` \| `"objectMode"` \| `"signal"`\>
 
 #### Returns
 
 `Readable`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.fromWeb`
+
+#### Since
 
 v17.0.0
 
-#### Inherited from
+***
 
-SandwichStream.fromWeb
+### getEventListeners()
 
-___
-
-### getEventListeners
-
-▸ **getEventListeners**(`emitter`, `name`): `Function`[]
+> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -2309,74 +2912,119 @@ const { getEventListeners, EventEmitter } = require('events');
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `EventEmitter` \| `_DOMEventTarget` |
-| `name` | `string` \| `symbol` |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`
+
+• **name**: `string` \| `symbol`
 
 #### Returns
 
 `Function`[]
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.getEventListeners`
+
+#### Since
 
 v15.2.0, v14.17.0
 
+***
+
+### getMaxListeners()
+
+> `static` **getMaxListeners**(`emitter`): `number`
+
+Returns the currently set max amount of listeners.
+
+For `EventEmitter`s this behaves exactly the same as calling `.getMaxListeners` on
+the emitter.
+
+For `EventTarget`s this is the only way to get the max event listeners for the
+event target. If the number of event handlers on a single EventTarget exceeds
+the max set, the EventTarget will print a warning.
+
+```js
+import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
+
+{
+  const ee = new EventEmitter();
+  console.log(getMaxListeners(ee)); // 10
+  setMaxListeners(11, ee);
+  console.log(getMaxListeners(ee)); // 11
+}
+{
+  const et = new EventTarget();
+  console.log(getMaxListeners(et)); // 10
+  setMaxListeners(11, et);
+  console.log(getMaxListeners(et)); // 11
+}
+```
+
+#### Parameters
+
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`
+
+#### Returns
+
+`number`
+
 #### Inherited from
 
-SandwichStream.getEventListeners
+`SandwichStream.getMaxListeners`
 
-___
+#### Since
 
-### isDisturbed
+v18.17.0
 
-▸ **isDisturbed**(`stream`): `boolean`
+***
+
+### isDisturbed()
+
+> `static` **isDisturbed**(`stream`): `boolean`
 
 Returns whether the stream has been read from or cancelled.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `stream` | `Readable` \| `ReadableStream` |
+• **stream**: `Readable` \| `ReadableStream`
 
 #### Returns
 
 `boolean`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.isDisturbed`
+
+#### Since
 
 v16.8.0
 
-#### Inherited from
+***
 
-SandwichStream.isDisturbed
+### isStream()
 
-___
-
-### isStream
-
-▸ **isStream**(`stream`): stream is Stream
+> `static` **isStream**(`stream`): `stream is Stream`
 
 Checks if the provided object is a stream.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `stream` | `any` | The object to check. |
+• **stream**: `any`
+
+The object to check.
 
 #### Returns
 
-stream is Stream
+`stream is Stream`
 
 A boolean indicating whether the object is a stream.
 
-___
+***
 
-### listenerCount
+### ~~listenerCount()~~
 
-▸ **listenerCount**(`emitter`, `eventName`): `number`
+> `static` **listenerCount**(`emitter`, `eventName`): `number`
 
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
@@ -2391,32 +3039,35 @@ console.log(listenerCount(myEmitter, 'event'));
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | `EventEmitter` | The emitter to query |
-| `eventName` | `string` \| `symbol` | The event name |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+
+The emitter to query
+
+• **eventName**: `string` \| `symbol`
+
+The event name
 
 #### Returns
 
 `number`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.listenerCount`
+
+#### Since
 
 v0.9.12
 
-**`Deprecated`**
+#### Deprecated
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-#### Inherited from
+***
 
-SandwichStream.listenerCount
+### on()
 
-___
-
-### on
-
-▸ **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`\<`any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterableIterator`\<`any`\>
 
 ```js
 const { on, EventEmitter } = require('events');
@@ -2474,11 +3125,13 @@ process.nextTick(() => ac.abort());
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | `EventEmitter` | - |
-| `eventName` | `string` | The name of the event being listened for |
-| `options?` | `StaticEventEmitterOptions` | - |
+• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+
+• **eventName**: `string`
+
+The name of the event being listened for
+
+• **options?**: `StaticEventEmitterOptions`
 
 #### Returns
 
@@ -2486,19 +3139,21 @@ process.nextTick(() => ac.abort());
 
 that iterates `eventName` events emitted by the `emitter`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.on`
+
+#### Since
 
 v13.6.0, v12.16.0
 
-#### Inherited from
+***
 
-SandwichStream.on
+### once()
 
-___
+#### once(emitter, eventName, options)
 
-### once
-
-▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -2580,49 +3235,51 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `_NodeEventTarget` |
-| `eventName` | `string` \| `symbol` |
-| `options?` | `StaticEventEmitterOptions` |
+• **emitter**: `_NodeEventTarget`
 
-#### Returns
+• **eventName**: `string` \| `symbol`
+
+• **options?**: `StaticEventEmitterOptions`
+
+##### Returns
 
 `Promise`\<`any`[]\>
 
-**`Since`**
+##### Inherited from
+
+`SandwichStream.once`
+
+##### Since
 
 v11.13.0, v10.16.0
 
-#### Inherited from
+#### once(emitter, eventName, options)
 
-SandwichStream.once
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
-▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
+##### Parameters
 
-#### Parameters
+• **emitter**: `_DOMEventTarget`
 
-| Name | Type |
-| :------ | :------ |
-| `emitter` | `_DOMEventTarget` |
-| `eventName` | `string` |
-| `options?` | `StaticEventEmitterOptions` |
+• **eventName**: `string`
 
-#### Returns
+• **options?**: `StaticEventEmitterOptions`
+
+##### Returns
 
 `Promise`\<`any`[]\>
 
-#### Inherited from
+##### Inherited from
 
-SandwichStream.once
+`SandwichStream.once`
 
-___
+***
 
-### setMaxListeners
+### setMaxListeners()
 
-▸ **setMaxListeners**(`n?`, `...eventTargets`): `void`
+> `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
 
 ```js
 const {
@@ -2638,45 +3295,46 @@ setMaxListeners(5, target, emitter);
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n?` | `number` | A non-negative number. The maximum number of listeners per `EventTarget` event. |
-| `...eventTargets` | (`EventEmitter` \| `_DOMEventTarget`)[] | - |
+• **n?**: `number`
+
+A non-negative number. The maximum number of listeners per `EventTarget` event.
+
+• ...**eventTargets?**: (`EventEmitter`\<`DefaultEventMap`\> \| `_DOMEventTarget`)[]
 
 #### Returns
 
 `void`
 
-**`Since`**
+#### Inherited from
+
+`SandwichStream.setMaxListeners`
+
+#### Since
 
 v15.4.0
 
-#### Inherited from
+***
 
-SandwichStream.setMaxListeners
+### toWeb()
 
-___
+`Experimental`
 
-### toWeb
-
-▸ **toWeb**(`streamReadable`): `ReadableStream`\<`any`\>
+> `static` **toWeb**(`streamReadable`): `ReadableStream`\<`any`\>
 
 A utility method for creating a web `ReadableStream` from a `Readable`.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `streamReadable` | `Readable` |
+• **streamReadable**: `Readable`
 
 #### Returns
 
 `ReadableStream`\<`any`\>
 
-**`Since`**
-
-v17.0.0
-
 #### Inherited from
 
-SandwichStream.toWeb
+`SandwichStream.toWeb`
+
+#### Since
+
+v17.0.0

@@ -3,49 +3,29 @@
 A base class for custom error types.
 Extends the built-in Error class.
 
-## Hierarchy
+## Extends
 
 - `Error`
 
-  ↳ **`BaseError`**
+## Extended by
 
-  ↳↳ [`HTTPResponseError`](./src/classes/HTTPResponseError.md)
-
-  ↳↳ [`TelegramError`](./src/classes/TelegramError.md)
-
-  ↳↳ [`TelegramTypeError`](./src/classes/TelegramTypeError.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/BaseError.md#constructor)
-
-### Properties
-
-- [message](./src/classes/BaseError.md#message)
-- [name](./src/classes/BaseError.md#name)
-- [stack](./src/classes/BaseError.md#stack)
-- [prepareStackTrace](./src/classes/BaseError.md#preparestacktrace)
-- [stackTraceLimit](./src/classes/BaseError.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](./src/classes/BaseError.md#capturestacktrace)
+- [`HTTPResponseError`](./src/classes/HTTPResponseError.md)
+- [`TelegramError`](./src/classes/TelegramError.md)
+- [`TelegramTypeError`](./src/classes/TelegramTypeError.md)
 
 ## Constructors
 
-### constructor
+### new BaseError()
 
-• **new BaseError**(`description`): [`BaseError`](./src/classes/BaseError.md)
+> **new BaseError**(`description`): [`BaseError`](./src/classes/BaseError.md)
 
 Constructs a new BaseError instance with the specified description.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `description` | `string` | A description of the error. |
+• **description**: `string`
+
+A description of the error.
 
 #### Returns
 
@@ -53,93 +33,87 @@ Constructs a new BaseError instance with the specified description.
 
 #### Overrides
 
-Error.constructor
+`Error.constructor`
 
 ## Properties
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
 
 #### Inherited from
 
-Error.message
+`Error.message`
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Inherited from
 
-Error.name
+`Error.name`
 
-___
+***
 
-### stack
+### stack?
 
-• `Optional` **stack**: `string`
+> `optional` **stack**: `string`
 
 #### Inherited from
 
-Error.stack
+`Error.stack`
 
-___
+***
 
-### prepareStackTrace
+### prepareStackTrace()?
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
 
 Optional override for formatting stack traces
 
-**`See`**
+#### See
 
 https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
-#### Type declaration
+#### Parameters
 
-▸ (`err`, `stackTraces`): `any`
+• **err**: `Error`
 
-##### Parameters
+• **stackTraces**: `CallSite`[]
 
-| Name | Type |
-| :------ | :------ |
-| `err` | `Error` |
-| `stackTraces` | `CallSite`[] |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Error.prepareStackTrace
+`Error.prepareStackTrace`
 
-___
+***
 
 ### stackTraceLimit
 
-▪ `Static` **stackTraceLimit**: `number`
+> `static` **stackTraceLimit**: `number`
 
 #### Inherited from
 
-Error.stackTraceLimit
+`Error.stackTraceLimit`
 
 ## Methods
 
-### captureStackTrace
+### captureStackTrace()
 
-▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `targetObject` | `object` |
-| `constructorOpt?` | `Function` |
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
 
 #### Returns
 
@@ -147,4 +121,4 @@ Create .stack property on a target object
 
 #### Inherited from
 
-Error.captureStackTrace
+`Error.captureStackTrace`

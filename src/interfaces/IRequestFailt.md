@@ -1,41 +1,33 @@
 # Interface: IRequestFailt
 
-## Table of contents
-
-### Properties
-
-- [description](./src/interfaces/IRequestFailt.md#description)
-- [error\_code](./src/interfaces/IRequestFailt.md#error_code)
-- [ok](./src/interfaces/IRequestFailt.md#ok)
-- [parameters](./src/interfaces/IRequestFailt.md#parameters)
-
 ## Properties
 
 ### description
 
-• **description**: `string`
+> **description**: `string`
 
-___
+***
 
 ### error\_code
 
-• **error\_code**: `string` \| `number`
+> **error\_code**: `string` \| `number`
 
-___
+***
 
 ### ok
 
-• **ok**: ``false``
+> **ok**: `false`
 
-___
+***
 
-### parameters
+### parameters?
 
-• `Optional` **parameters**: `Object`
+> `optional` **parameters**: `object`
 
-#### Type declaration
+#### migrate\_to\_chat\_id?
 
-| Name | Type |
-| :------ | :------ |
-| `migrate_to_chat_id?` | `number` |
-| `retry_after?` | `number` |
+> `optional` **migrate\_to\_chat\_id**: `number`
+
+#### retry\_after?
+
+> `optional` **retry\_after**: `number`

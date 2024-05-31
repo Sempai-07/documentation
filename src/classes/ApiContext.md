@@ -1,168 +1,18 @@
 # Class: ApiContext
 
-## Table of contents
-
-### Constructors
-
-- [constructor](./src/classes/ApiContext.md#constructor)
-
-### Properties
-
-- [api](./src/classes/ApiContext.md#api)
-- [update](./src/classes/ApiContext.md#update)
-- [updates](./src/classes/ApiContext.md#updates)
-
-### Accessors
-
-- [callbackQuery](./src/classes/ApiContext.md#callbackquery)
-- [channelPost](./src/classes/ApiContext.md#channelpost)
-- [chat](./src/classes/ApiContext.md#chat)
-- [chatBoost](./src/classes/ApiContext.md#chatboost)
-- [chatJoinRequest](./src/classes/ApiContext.md#chatjoinrequest)
-- [chatMember](./src/classes/ApiContext.md#chatmember)
-- [chosenInlineResult](./src/classes/ApiContext.md#choseninlineresult)
-- [editedChannelPost](./src/classes/ApiContext.md#editedchannelpost)
-- [editedMessage](./src/classes/ApiContext.md#editedmessage)
-- [entities](./src/classes/ApiContext.md#entities)
-- [from](./src/classes/ApiContext.md#from)
-- [inlineMessageId](./src/classes/ApiContext.md#inlinemessageid)
-- [inlineQuery](./src/classes/ApiContext.md#inlinequery)
-- [message](./src/classes/ApiContext.md#message)
-- [messageReaction](./src/classes/ApiContext.md#messagereaction)
-- [messageReactionCount](./src/classes/ApiContext.md#messagereactioncount)
-- [msg](./src/classes/ApiContext.md#msg)
-- [msgId](./src/classes/ApiContext.md#msgid)
-- [myChatMember](./src/classes/ApiContext.md#mychatmember)
-- [passportData](./src/classes/ApiContext.md#passportdata)
-- [poll](./src/classes/ApiContext.md#poll)
-- [pollAnswer](./src/classes/ApiContext.md#pollanswer)
-- [preCheckoutQuery](./src/classes/ApiContext.md#precheckoutquery)
-- [reactions](./src/classes/ApiContext.md#reactions)
-- [removedChatBoost](./src/classes/ApiContext.md#removedchatboost)
-- [senderChat](./src/classes/ApiContext.md#senderchat)
-- [shippingQuery](./src/classes/ApiContext.md#shippingquery)
-- [updateType](./src/classes/ApiContext.md#updatetype)
-- [webAppData](./src/classes/ApiContext.md#webappdata)
-
-### Methods
-
-- [addStickerToSet](./src/classes/ApiContext.md#addstickertoset)
-- [answerCallbackQuery](./src/classes/ApiContext.md#answercallbackquery)
-- [answerInlineQuery](./src/classes/ApiContext.md#answerinlinequery)
-- [answerPreCheckoutQuery](./src/classes/ApiContext.md#answerprecheckoutquery)
-- [answerShippingQuery](./src/classes/ApiContext.md#answershippingquery)
-- [approveChatJoinRequest](./src/classes/ApiContext.md#approvechatjoinrequest)
-- [assert](./src/classes/ApiContext.md#assert)
-- [awaitReaction](./src/classes/ApiContext.md#awaitreaction)
-- [banChatMember](./src/classes/ApiContext.md#banchatmember)
-- [banChatSenderChat](./src/classes/ApiContext.md#banchatsenderchat)
-- [closeForumTopic](./src/classes/ApiContext.md#closeforumtopic)
-- [closeGeneralForumTopic](./src/classes/ApiContext.md#closegeneralforumtopic)
-- [copyMessage](./src/classes/ApiContext.md#copymessage)
-- [copyMessages](./src/classes/ApiContext.md#copymessages)
-- [createChatInviteLink](./src/classes/ApiContext.md#createchatinvitelink)
-- [createForumTopic](./src/classes/ApiContext.md#createforumtopic)
-- [createInlineKeyboardCollector](./src/classes/ApiContext.md#createinlinekeyboardcollector)
-- [createMessageCollector](./src/classes/ApiContext.md#createmessagecollector)
-- [createNewStickerSet](./src/classes/ApiContext.md#createnewstickerset)
-- [createReactionCollector](./src/classes/ApiContext.md#createreactioncollector)
-- [declineChatJoinRequest](./src/classes/ApiContext.md#declinechatjoinrequest)
-- [deleteChatPhoto](./src/classes/ApiContext.md#deletechatphoto)
-- [deleteChatStickerSet](./src/classes/ApiContext.md#deletechatstickerset)
-- [deleteForumTopic](./src/classes/ApiContext.md#deleteforumtopic)
-- [deleteMessage](./src/classes/ApiContext.md#deletemessage)
-- [deleteMessages](./src/classes/ApiContext.md#deletemessages)
-- [deleteStickerSet](./src/classes/ApiContext.md#deletestickerset)
-- [editChatInviteLink](./src/classes/ApiContext.md#editchatinvitelink)
-- [editForumTopic](./src/classes/ApiContext.md#editforumtopic)
-- [editGeneralForumTopic](./src/classes/ApiContext.md#editgeneralforumtopic)
-- [editMessageCaption](./src/classes/ApiContext.md#editmessagecaption)
-- [editMessageLiveLocation](./src/classes/ApiContext.md#editmessagelivelocation)
-- [editMessageMedia](./src/classes/ApiContext.md#editmessagemedia)
-- [editMessageReplyMarkup](./src/classes/ApiContext.md#editmessagereplymarkup)
-- [editMessageText](./src/classes/ApiContext.md#editmessagetext)
-- [exportChatInviteLink](./src/classes/ApiContext.md#exportchatinvitelink)
-- [forwardMessage](./src/classes/ApiContext.md#forwardmessage)
-- [forwardMessages](./src/classes/ApiContext.md#forwardmessages)
-- [getChat](./src/classes/ApiContext.md#getchat)
-- [getChatAdministrators](./src/classes/ApiContext.md#getchatadministrators)
-- [getChatMember](./src/classes/ApiContext.md#getchatmember)
-- [getChatMembersCount](./src/classes/ApiContext.md#getchatmemberscount)
-- [getChatMenuButton](./src/classes/ApiContext.md#getchatmenubutton)
-- [getMyDefaultAdministratorRights](./src/classes/ApiContext.md#getmydefaultadministratorrights)
-- [getUserChatBoosts](./src/classes/ApiContext.md#getuserchatboosts)
-- [hideGeneralForumTopic](./src/classes/ApiContext.md#hidegeneralforumtopic)
-- [leaveChat](./src/classes/ApiContext.md#leavechat)
-- [pinChatMessage](./src/classes/ApiContext.md#pinchatmessage)
-- [promoteChatMember](./src/classes/ApiContext.md#promotechatmember)
-- [react](./src/classes/ApiContext.md#react)
-- [reopenForumTopic](./src/classes/ApiContext.md#reopenforumtopic)
-- [reopenGeneralForumTopic](./src/classes/ApiContext.md#reopengeneralforumtopic)
-- [reply](./src/classes/ApiContext.md#reply)
-- [replyWithHTML](./src/classes/ApiContext.md#replywithhtml)
-- [replyWithMarkdownV2](./src/classes/ApiContext.md#replywithmarkdownv2)
-- [restrictChatMember](./src/classes/ApiContext.md#restrictchatmember)
-- [revokeChatInviteLink](./src/classes/ApiContext.md#revokechatinvitelink)
-- [sendAnimation](./src/classes/ApiContext.md#sendanimation)
-- [sendAudio](./src/classes/ApiContext.md#sendaudio)
-- [sendChatAction](./src/classes/ApiContext.md#sendchataction)
-- [sendContact](./src/classes/ApiContext.md#sendcontact)
-- [sendDice](./src/classes/ApiContext.md#senddice)
-- [sendDocument](./src/classes/ApiContext.md#senddocument)
-- [sendGame](./src/classes/ApiContext.md#sendgame)
-- [sendInvoice](./src/classes/ApiContext.md#sendinvoice)
-- [sendLocation](./src/classes/ApiContext.md#sendlocation)
-- [sendMediaGroup](./src/classes/ApiContext.md#sendmediagroup)
-- [sendMessage](./src/classes/ApiContext.md#sendmessage)
-- [sendPhoto](./src/classes/ApiContext.md#sendphoto)
-- [sendPoll](./src/classes/ApiContext.md#sendpoll)
-- [sendQuiz](./src/classes/ApiContext.md#sendquiz)
-- [sendSticker](./src/classes/ApiContext.md#sendsticker)
-- [sendVenue](./src/classes/ApiContext.md#sendvenue)
-- [sendVideo](./src/classes/ApiContext.md#sendvideo)
-- [sendVideoNote](./src/classes/ApiContext.md#sendvideonote)
-- [sendVoice](./src/classes/ApiContext.md#sendvoice)
-- [setChatAdministratorCustomTitle](./src/classes/ApiContext.md#setchatadministratorcustomtitle)
-- [setChatDescription](./src/classes/ApiContext.md#setchatdescription)
-- [setChatMenuButton](./src/classes/ApiContext.md#setchatmenubutton)
-- [setChatPermissions](./src/classes/ApiContext.md#setchatpermissions)
-- [setChatPhoto](./src/classes/ApiContext.md#setchatphoto)
-- [setChatStickerSet](./src/classes/ApiContext.md#setchatstickerset)
-- [setChatTitle](./src/classes/ApiContext.md#setchattitle)
-- [setCustomEmojiStickerSetThumbnail](./src/classes/ApiContext.md#setcustomemojistickersetthumbnail)
-- [setMyDefaultAdministratorRights](./src/classes/ApiContext.md#setmydefaultadministratorrights)
-- [setPassportDataErrors](./src/classes/ApiContext.md#setpassportdataerrors)
-- [setStickerEmojiList](./src/classes/ApiContext.md#setstickeremojilist)
-- [setStickerKeywords](./src/classes/ApiContext.md#setstickerkeywords)
-- [setStickerMaskPosition](./src/classes/ApiContext.md#setstickermaskposition)
-- [setStickerPositionInSet](./src/classes/ApiContext.md#setstickerpositioninset)
-- [setStickerSetThumb](./src/classes/ApiContext.md#setstickersetthumb)
-- [setStickerSetThumbnail](./src/classes/ApiContext.md#setstickersetthumbnail)
-- [setStickerSetTitle](./src/classes/ApiContext.md#setstickersettitle)
-- [stopMessageLiveLocation](./src/classes/ApiContext.md#stopmessagelivelocation)
-- [stopPoll](./src/classes/ApiContext.md#stoppoll)
-- [unbanChatMember](./src/classes/ApiContext.md#unbanchatmember)
-- [unbanChatSenderChat](./src/classes/ApiContext.md#unbanchatsenderchat)
-- [unhideGeneralForumTopic](./src/classes/ApiContext.md#unhidegeneralforumtopic)
-- [unpinAllChatMessages](./src/classes/ApiContext.md#unpinallchatmessages)
-- [unpinAllForumTopicMessages](./src/classes/ApiContext.md#unpinallforumtopicmessages)
-- [unpinAllGeneralForumTopicMessages](./src/classes/ApiContext.md#unpinallgeneralforumtopicmessages)
-- [unpinChatMessage](./src/classes/ApiContext.md#unpinchatmessage)
-- [uploadStickerFile](./src/classes/ApiContext.md#uploadstickerfile)
-
 ## Constructors
 
-### constructor
+### new ApiContext()
 
-• **new ApiContext**(`api`, `update`, `updates`): [`ApiContext`](./src/classes/ApiContext.md)
+> **new ApiContext**(`api`, `update`, `updates`): [`ApiContext`](./src/classes/ApiContext.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `api` | [`TelegramBot`](TelegramBot.md) |
-| `update` | `Update` |
-| `updates` | [`UpdateReturn`](./src/modules.md#updatereturn) |
+• **api**: [`TelegramBot`](./src/classes/TelegramBot.md)
+
+• **update**: `Update`
+
+• **updates**: [`UpdateReturn`](./src/type-aliases/UpdateReturn.md)
 
 #### Returns
 
@@ -172,1919 +22,1865 @@
 
 ### api
 
-• `Readonly` **api**: [`TelegramBot`](TelegramBot.md)
+> `readonly` **api**: [`TelegramBot`](./src/classes/TelegramBot.md)
 
-___
+***
 
 ### update
 
-• `Private` `Readonly` **update**: `Update`
+> `private` `readonly` **update**: `Update`
 
-___
+***
 
 ### updates
 
-• `Private` `Readonly` **updates**: [`UpdateReturn`](./src/modules.md#updatereturn)
+> `private` `readonly` **updates**: [`UpdateReturn`](./src/type-aliases/UpdateReturn.md)
 
 ## Accessors
 
 ### callbackQuery
 
-• `get` **callbackQuery**(): `undefined` \| `CallbackQuery`
+> `get` **callbackQuery**(): `undefined` \| `CallbackQuery`
 
 #### Returns
 
 `undefined` \| `CallbackQuery`
 
-___
+***
 
 ### channelPost
 
-• `get` **channelPost**(): `undefined` \| `Message` & `Channel`
+> `get` **channelPost**(): `undefined` \| `Message` & `Channel`
 
 #### Returns
 
 `undefined` \| `Message` & `Channel`
 
-___
+***
 
 ### chat
 
-• `get` **chat**(): `undefined` \| `Chat`
+> `get` **chat**(): `undefined` \| `Chat`
 
 #### Returns
 
 `undefined` \| `Chat`
 
-___
+***
 
 ### chatBoost
 
-• `get` **chatBoost**(): `undefined` \| `ChatBoostUpdated`
+> `get` **chatBoost**(): `undefined` \| `ChatBoostUpdated`
 
 #### Returns
 
 `undefined` \| `ChatBoostUpdated`
 
-___
+***
 
 ### chatJoinRequest
 
-• `get` **chatJoinRequest**(): `undefined` \| `ChatJoinRequest`
+> `get` **chatJoinRequest**(): `undefined` \| `ChatJoinRequest`
 
 #### Returns
 
 `undefined` \| `ChatJoinRequest`
 
-___
+***
 
 ### chatMember
 
-• `get` **chatMember**(): `undefined` \| `ChatMemberUpdated`
+> `get` **chatMember**(): `undefined` \| `ChatMemberUpdated`
 
 #### Returns
 
 `undefined` \| `ChatMemberUpdated`
 
-___
+***
 
 ### chosenInlineResult
 
-• `get` **chosenInlineResult**(): `undefined` \| `ChosenInlineResult`
+> `get` **chosenInlineResult**(): `undefined` \| `ChosenInlineResult`
 
 #### Returns
 
 `undefined` \| `ChosenInlineResult`
 
-___
+***
 
 ### editedChannelPost
 
-• `get` **editedChannelPost**(): `undefined` \| `Message` & `Edited` & `Channel`
+> `get` **editedChannelPost**(): `undefined` \| `Message` & `Edited` & `Channel`
 
 #### Returns
 
 `undefined` \| `Message` & `Edited` & `Channel`
 
-___
+***
 
 ### editedMessage
 
-• `get` **editedMessage**(): `undefined` \| `Message` & `Edited` & `NonChannel`
+> `get` **editedMessage**(): `undefined` \| `Message` & `Edited` & `NonChannel`
 
 #### Returns
 
 `undefined` \| `Message` & `Edited` & `NonChannel`
 
-___
+***
 
 ### entities
 
-• `get` **entities**(): [`Entities`](Entities.md)
+> `get` **entities**(): [`Entities`](./src/classes/Entities.md)
 
 #### Returns
 
-[`Entities`](Entities.md)
+[`Entities`](./src/classes/Entities.md)
 
-___
+***
 
 ### from
 
-• `get` **from**(): `undefined` \| `User`
+> `get` **from**(): `undefined` \| `User`
 
 #### Returns
 
 `undefined` \| `User`
 
-___
+***
 
 ### inlineMessageId
 
-• `get` **inlineMessageId**(): `undefined` \| `string`
+> `get` **inlineMessageId**(): `undefined` \| `string`
 
 #### Returns
 
 `undefined` \| `string`
 
-___
+***
 
 ### inlineQuery
 
-• `get` **inlineQuery**(): `undefined` \| `InlineQuery`
+> `get` **inlineQuery**(): `undefined` \| `InlineQuery`
 
 #### Returns
 
 `undefined` \| `InlineQuery`
 
-___
+***
 
 ### message
 
-• `get` **message**(): `undefined` \| `Message` & `NonChannel`
+> `get` **message**(): `undefined` \| `Message` & `NonChannel`
 
 #### Returns
 
 `undefined` \| `Message` & `NonChannel`
 
-___
+***
 
 ### messageReaction
 
-• `get` **messageReaction**(): `undefined` \| `MessageReactionUpdated`
+> `get` **messageReaction**(): `undefined` \| `MessageReactionUpdated`
 
 #### Returns
 
 `undefined` \| `MessageReactionUpdated`
 
-___
+***
 
 ### messageReactionCount
 
-• `get` **messageReactionCount**(): `undefined` \| `MessageReactionCountUpdated`
+> `get` **messageReactionCount**(): `undefined` \| `MessageReactionCountUpdated`
 
 #### Returns
 
 `undefined` \| `MessageReactionCountUpdated`
 
-___
+***
 
 ### msg
 
-• `get` **msg**(): `Message`
+> `get` **msg**(): `Message`
 
 #### Returns
 
 `Message`
 
-___
+***
 
 ### msgId
 
-• `get` **msgId**(): `any`
+> `get` **msgId**(): `any`
 
 #### Returns
 
 `any`
 
-___
+***
 
 ### myChatMember
 
-• `get` **myChatMember**(): `undefined` \| `ChatMemberUpdated`
+> `get` **myChatMember**(): `undefined` \| `ChatMemberUpdated`
 
 #### Returns
 
 `undefined` \| `ChatMemberUpdated`
 
-___
+***
 
 ### passportData
 
-• `get` **passportData**(): `undefined` \| `PassportData`
+> `get` **passportData**(): `undefined` \| `PassportData`
 
 #### Returns
 
 `undefined` \| `PassportData`
 
-___
+***
 
 ### poll
 
-• `get` **poll**(): `undefined` \| `Poll`
+> `get` **poll**(): `undefined` \| `Poll`
 
 #### Returns
 
 `undefined` \| `Poll`
 
-___
+***
 
 ### pollAnswer
 
-• `get` **pollAnswer**(): `undefined` \| `PollAnswer`
+> `get` **pollAnswer**(): `undefined` \| `PollAnswer`
 
 #### Returns
 
 `undefined` \| `PollAnswer`
 
-___
+***
 
 ### preCheckoutQuery
 
-• `get` **preCheckoutQuery**(): `undefined` \| `PreCheckoutQuery`
+> `get` **preCheckoutQuery**(): `undefined` \| `PreCheckoutQuery`
 
 #### Returns
 
 `undefined` \| `PreCheckoutQuery`
 
-___
+***
 
 ### reactions
 
-• `get` **reactions**(): `Object`
+> `get` **reactions**(): `object`
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `customEmoji` | `string`[] |
-| `customEmojiAdded` | `string`[] |
-| `customEmojiKept` | `string`[] |
-| `customEmojiRemoved` | `string`[] |
-| `emoji` | `string`[] |
-| `emojiAdded` | `string`[] |
-| `emojiKept` | `string`[] |
-| `emojiRemoved` | `string`[] |
+##### customEmoji
 
-___
+> **customEmoji**: `string`[]
+
+##### customEmojiAdded
+
+> **customEmojiAdded**: `string`[]
+
+##### customEmojiKept
+
+> **customEmojiKept**: `string`[]
+
+##### customEmojiRemoved
+
+> **customEmojiRemoved**: `string`[]
+
+##### emoji
+
+> **emoji**: `string`[]
+
+##### emojiAdded
+
+> **emojiAdded**: `string`[]
+
+##### emojiKept
+
+> **emojiKept**: `string`[]
+
+##### emojiRemoved
+
+> **emojiRemoved**: `string`[]
+
+***
 
 ### removedChatBoost
 
-• `get` **removedChatBoost**(): `undefined` \| `ChatBoostRemoved`
+> `get` **removedChatBoost**(): `undefined` \| `ChatBoostRemoved`
 
 #### Returns
 
 `undefined` \| `ChatBoostRemoved`
 
-___
+***
 
 ### senderChat
 
-• `get` **senderChat**(): `Chat`
+> `get` **senderChat**(): `Chat`
 
 #### Returns
 
 `Chat`
 
-___
+***
 
 ### shippingQuery
 
-• `get` **shippingQuery**(): `undefined` \| `ShippingQuery`
+> `get` **shippingQuery**(): `undefined` \| `ShippingQuery`
 
 #### Returns
 
 `undefined` \| `ShippingQuery`
 
-___
+***
 
 ### updateType
 
-• `get` **updateType**(): `undefined` \| keyof Update
+> `get` **updateType**(): `undefined` \| keyof Update
 
 #### Returns
 
 `undefined` \| keyof Update
 
-___
+***
 
 ### webAppData
 
-• `get` **webAppData**(): `undefined` \| \{ `button_text`: `string` ; `data`: \{ `json`: \<T\>() => `T` ; `text`: () => `string`  }  }
+> `get` **webAppData**(): `undefined` \| `object`
 
 #### Returns
 
-`undefined` \| \{ `button_text`: `string` ; `data`: \{ `json`: \<T\>() => `T` ; `text`: () => `string`  }  }
+`undefined` \| `object`
 
 ## Methods
 
-### addStickerToSet
+### addStickerToSet()
 
-▸ **addStickerToSet**(`args`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `name`: `string` ; `sticker`: `InputSticker` ; `user_id`: `number`  }, ``"user_id"``\> |
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### answerCallbackQuery
-
-▸ **answerCallbackQuery**(`args`): `Promise`\<``true``\>
+> **addStickerToSet**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `cache_time?`: `number` ; `callback_query_id`: `string` ; `show_alert?`: `boolean` ; `text?`: `string` ; `url?`: `string`  }, ``"callback_query_id"``\> |
+• **args**: `Omit`\<`object`, `"user_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### answerInlineQuery
+### answerCallbackQuery()
 
-▸ **answerInlineQuery**(`args`): `Promise`\<``true``\>
+> **answerCallbackQuery**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `button?`: `InlineQueryResultsButton` ; `cache_time?`: `number` ; `inline_query_id`: `string` ; `is_personal?`: `boolean` ; `next_offset?`: `string` ; `results`: readonly `InlineQueryResult`[]  }, ``"inline_query_id"``\> |
+• **args**: `Omit`\<`object`, `"callback_query_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### answerPreCheckoutQuery
+### answerInlineQuery()
 
-▸ **answerPreCheckoutQuery**(`args`): `Promise`\<``true``\>
+> **answerInlineQuery**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `error_message?`: `string` ; `ok`: `boolean` ; `pre_checkout_query_id`: `string`  }, ``"pre_checkout_query_id"``\> |
+• **args**: `Omit`\<`object`, `"inline_query_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### answerShippingQuery
+### answerPreCheckoutQuery()
 
-▸ **answerShippingQuery**(`args`): `Promise`\<``true``\>
+> **answerPreCheckoutQuery**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `error_message?`: `string` ; `ok`: `boolean` ; `shipping_options?`: readonly `ShippingOption`[] ; `shipping_query_id`: `string`  }, ``"shipping_query_id"``\> |
+• **args**: `Omit`\<`object`, `"pre_checkout_query_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### approveChatJoinRequest
+### answerShippingQuery()
 
-▸ **approveChatJoinRequest**(`userId`): `Promise`\<``true``\>
+> **answerShippingQuery**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `userId` | `number` |
+• **args**: `Omit`\<`object`, `"shipping_query_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### assert
+### approveChatJoinRequest()
 
-▸ **assert**\<`T`\>(`value`, `method`): asserts value is T
+> **approveChatJoinRequest**(`userId`): `Promise`\<`true`\>
+
+#### Parameters
+
+• **userId**: `number`
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### assert()
+
+> **assert**\<`T`\>(`value`, `method`): `asserts value is T`
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `string` \| `number` \| `object` |
+• **T** *extends* `string` \| `number` \| `object`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `undefined` \| `T` |
-| `method` | `string` |
+• **value**: `undefined` \| `T`
+
+• **method**: `string`
 
 #### Returns
 
-asserts value is T
+`asserts value is T`
 
-___
+***
 
-### awaitReaction
+### awaitReaction()
 
-▸ **awaitReaction**(`options`): `Promise`\<`unknown`\>
+> **awaitReaction**(`options`): `Promise`\<`unknown`\>
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `Object` | - |
-| `options.count?` | `number` | The number of reactions to wait for. |
-| `options.filter?` | (`data`: `MessageReactionUpdated` & [`Context`](./src/modules.md#context)) => `boolean` | The optional filter function to apply before invoking the callback. |
-| `options.onCallback` | (`data`: `MessageReactionUpdated` & [`Context`](./src/modules.md#context), `collection`: [`Collection`](Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\>) => `unknown` | The callback function when reactions are received. |
-| `options.onError?` | (`data`: [`Collection`](Collection.md)\<`string`, [`IReactionCollection`](./src/interfaces/IReactionCollection.md)\>) => `unknown` | The optional error callback function. |
-| `options.react` | `Object` | The reaction configuration. |
-| `options.react.emoji` | ``"👍"`` \| ``"👎"`` \| ``"❤"`` \| ``"🔥"`` \| ``"👏"`` \| ``"😁"`` \| ``"🤔"`` \| ``"🤯"`` \| ``"😱"`` \| ``"🤬"`` \| ``"😢"`` \| ``"🎉"`` \| ``"🤩"`` \| ``"🤮"`` \| ``"💩"`` \| ``"🙏"`` \| ``"👌"`` \| ``"🕊"`` \| ``"🤡"`` \| ``"🥱"`` \| ``"🥴"`` \| ``"😍"`` \| ``"🐳"`` \| ``"❤‍🔥"`` \| ``"🌚"`` \| ``"🌭"`` \| ``"💯"`` \| ``"🤣"`` \| ``"⚡"`` \| ``"🍌"`` \| ``"🏆"`` \| ``"💔"`` \| ``"🤨"`` \| ``"😐"`` \| ``"🍓"`` \| ``"🍾"`` \| ``"💋"`` \| ``"🖕"`` \| ``"😈"`` \| ``"😴"`` \| ``"😭"`` \| ``"🤓"`` \| ``"👻"`` \| ``"👨‍💻"`` \| ``"👀"`` \| ``"🎃"`` \| ``"🙈"`` \| ``"😇"`` \| ``"😨"`` \| ``"🤝"`` \| ``"✍"`` \| ``"🤗"`` \| ``"🫡"`` \| ``"🎅"`` \| ``"🎄"`` \| ``"☃"`` \| ``"💅"`` \| ``"🤪"`` \| ``"🗿"`` \| ``"🆒"`` \| ``"💘"`` \| ``"🙉"`` \| ``"🦄"`` \| ``"😘"`` \| ``"💊"`` \| ``"🙊"`` \| ``"😎"`` \| ``"👾"`` \| ``"🤷"`` \| ``"😡"`` \| ``"🥰"`` \| ``"🤷‍♂"`` \| ``"🤷‍♀"`` \| (``"👍"`` \| ``"👎"`` \| ``"❤"`` \| ``"🔥"`` \| ``"👏"`` \| ``"😁"`` \| ``"🤔"`` \| ``"🤯"`` \| ``"😱"`` \| ``"🤬"`` \| ``"😢"`` \| ``"🎉"`` \| ``"🤩"`` \| ``"🤮"`` \| ``"💩"`` \| ``"🙏"`` \| ``"👌"`` \| ``"🕊"`` \| ``"🤡"`` \| ``"🥱"`` \| ``"🥴"`` \| ``"😍"`` \| ``"🐳"`` \| ``"❤‍🔥"`` \| ``"🌚"`` \| ``"🌭"`` \| ``"💯"`` \| ``"🤣"`` \| ``"⚡"`` \| ``"🍌"`` \| ``"🏆"`` \| ``"💔"`` \| ``"🤨"`` \| ``"😐"`` \| ``"🍓"`` \| ``"🍾"`` \| ``"💋"`` \| ``"🖕"`` \| ``"😈"`` \| ``"😴"`` \| ``"😭"`` \| ``"🤓"`` \| ``"👻"`` \| ``"👨‍💻"`` \| ``"👀"`` \| ``"🎃"`` \| ``"🙈"`` \| ``"😇"`` \| ``"😨"`` \| ``"🤝"`` \| ``"✍"`` \| ``"🤗"`` \| ``"🫡"`` \| ``"🎅"`` \| ``"🎄"`` \| ``"☃"`` \| ``"💅"`` \| ``"🤪"`` \| ``"🗿"`` \| ``"🆒"`` \| ``"💘"`` \| ``"🙉"`` \| ``"🦄"`` \| ``"😘"`` \| ``"💊"`` \| ``"🙊"`` \| ``"😎"`` \| ``"👾"`` \| ``"🤷"`` \| ``"😡"`` \| ``"🥰"`` \| ``"🤷‍♂"`` \| ``"🤷‍♀"``)[] | The emoji or emojis to wait for. |
-| `options.react.reactionType?` | ``"new"`` \| ``"old"`` \| ``"both"`` | The type of reaction to wait for: "new", "old", or "both". |
-| `options.timeout?` | `number` | The timeout duration in milliseconds. |
+• **options**
+
+• **options.count?**: `number`
+
+The number of reactions to wait for.
+
+• **options.filter?**
+
+The optional filter function to apply before invoking the callback.
+
+• **options.onCallback**
+
+The callback function when reactions are received.
+
+• **options.onError?**
+
+The optional error callback function.
+
+• **options.react**
+
+The reaction configuration.
+
+• **options.react.emoji**: `"👍"` \| `"👎"` \| `"❤"` \| `"🔥"` \| `"👏"` \| `"😁"` \| `"🤔"` \| `"🤯"` \| `"😱"` \| `"🤬"` \| `"😢"` \| `"🎉"` \| `"🤩"` \| `"🤮"` \| `"💩"` \| `"🙏"` \| `"👌"` \| `"🕊"` \| `"🤡"` \| `"🥱"` \| `"🥴"` \| `"😍"` \| `"🐳"` \| `"❤‍🔥"` \| `"🌚"` \| `"🌭"` \| `"💯"` \| `"🤣"` \| `"⚡"` \| `"🍌"` \| `"🏆"` \| `"💔"` \| `"🤨"` \| `"😐"` \| `"🍓"` \| `"🍾"` \| `"💋"` \| `"🖕"` \| `"😈"` \| `"😴"` \| `"😭"` \| `"🤓"` \| `"👻"` \| `"👨‍💻"` \| `"👀"` \| `"🎃"` \| `"🙈"` \| `"😇"` \| `"😨"` \| `"🤝"` \| `"✍"` \| `"🤗"` \| `"🫡"` \| `"🎅"` \| `"🎄"` \| `"☃"` \| `"💅"` \| `"🤪"` \| `"🗿"` \| `"🆒"` \| `"💘"` \| `"🙉"` \| `"🦄"` \| `"😘"` \| `"💊"` \| `"🙊"` \| `"😎"` \| `"👾"` \| `"🤷"` \| `"😡"` \| `"🥰"` \| `"🤷‍♂"` \| `"🤷‍♀"` \| (`"👍"` \| `"👎"` \| `"❤"` \| `"🔥"` \| `"👏"` \| `"😁"` \| `"🤔"` \| `"🤯"` \| `"😱"` \| `"🤬"` \| `"😢"` \| `"🎉"` \| `"🤩"` \| `"🤮"` \| `"💩"` \| `"🙏"` \| `"👌"` \| `"🕊"` \| `"🤡"` \| `"🥱"` \| `"🥴"` \| `"😍"` \| `"🐳"` \| `"❤‍🔥"` \| `"🌚"` \| `"🌭"` \| `"💯"` \| `"🤣"` \| `"⚡"` \| `"🍌"` \| `"🏆"` \| `"💔"` \| `"🤨"` \| `"😐"` \| `"🍓"` \| `"🍾"` \| `"💋"` \| `"🖕"` \| `"😈"` \| `"😴"` \| `"😭"` \| `"🤓"` \| `"👻"` \| `"👨‍💻"` \| `"👀"` \| `"🎃"` \| `"🙈"` \| `"😇"` \| `"😨"` \| `"🤝"` \| `"✍"` \| `"🤗"` \| `"🫡"` \| `"🎅"` \| `"🎄"` \| `"☃"` \| `"💅"` \| `"🤪"` \| `"🗿"` \| `"🆒"` \| `"💘"` \| `"🙉"` \| `"🦄"` \| `"😘"` \| `"💊"` \| `"🙊"` \| `"😎"` \| `"👾"` \| `"🤷"` \| `"😡"` \| `"🥰"` \| `"🤷‍♂"` \| `"🤷‍♀"`)[]
+
+The emoji or emojis to wait for.
+
+• **options.react.reactionType?**: `"new"` \| `"old"` \| `"both"`
+
+The type of reaction to wait for: "new", "old", or "both".
+
+• **options.timeout?**: `number`
+
+The timeout duration in milliseconds.
 
 #### Returns
 
 `Promise`\<`unknown`\>
 
-___
+***
 
-### banChatMember
+### banChatMember()
 
-▸ **banChatMember**(`args`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `revoke_messages?`: `boolean` ; `until_date?`: `number` ; `user_id`: `number`  }, ``"chat_id"``\> |
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### banChatSenderChat
-
-▸ **banChatSenderChat**(`senderChatId`): `Promise`\<``true``\>
+> **banChatMember**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `senderChatId` | `number` |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### closeForumTopic
+### banChatSenderChat()
 
-▸ **closeForumTopic**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### closeGeneralForumTopic
-
-▸ **closeGeneralForumTopic**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### copyMessage
-
-▸ **copyMessage**(`chatId`, `args?`): `Promise`\<`MessageId`\>
+> **banChatSenderChat**(`senderChatId`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chatId` | `string` \| `number` |
-| `args?` | `Omit`\<\{ `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `from_chat_id`: `string` \| `number` ; `message_id`: `number` ; `message_thread_id?`: `number` ; `parse_mode?`: `string` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number`  }, ``"chat_id"``\> |
+• **senderChatId**: `number`
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### closeForumTopic()
+
+> **closeForumTopic**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### closeGeneralForumTopic()
+
+> **closeGeneralForumTopic**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### copyMessage()
+
+> **copyMessage**(`chatId`, `args`?): `Promise`\<`MessageId`\>
+
+#### Parameters
+
+• **chatId**: `string` \| `number`
+
+• **args?**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`MessageId`\>
 
-___
+***
 
-### copyMessages
+### copyMessages()
 
-▸ **copyMessages**(`chatId`, `messageIds`, `args?`): `Promise`\<`MessageId`[]\>
+> **copyMessages**(`chatId`, `messageIds`, `args`?): `Promise`\<`MessageId`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chatId` | `string` \| `number` |
-| `messageIds` | `number`[] |
-| `args?` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `from_chat_id`: `string` \| `number` ; `message_ids`: `number`[] ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `remove_caption?`: `boolean`  }, ``"chat_id"`` \| ``"message_ids"``\> |
+• **chatId**: `string` \| `number`
+
+• **messageIds**: `number`[]
+
+• **args?**: `Omit`\<`object`, `"chat_id"` \| `"message_ids"`\>
 
 #### Returns
 
 `Promise`\<`MessageId`[]\>
 
-___
+***
 
-### createChatInviteLink
+### createChatInviteLink()
 
-▸ **createChatInviteLink**(`args`): `Promise`\<`ChatInviteLink`\>
+> **createChatInviteLink**(`args`): `Promise`\<`ChatInviteLink`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `creates_join_request?`: `boolean` ; `expire_date?`: `number` ; `member_limit?`: `number` ; `name?`: `string`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`ChatInviteLink`\>
 
-___
+***
 
-### createForumTopic
+### createForumTopic()
 
-▸ **createForumTopic**(`args`): `Promise`\<`ForumTopic`\>
+> **createForumTopic**(`args`): `Promise`\<`ForumTopic`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `icon_color?`: ``7322096`` \| ``16766590`` \| ``13338331`` \| ``9367192`` \| ``16749490`` \| ``16478047`` ; `icon_custom_emoji_id?`: `string` ; `name`: `string`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`ForumTopic`\>
 
-___
+***
 
-### createInlineKeyboardCollector
+### createInlineKeyboardCollector()
 
-▸ **createInlineKeyboardCollector**(`options`): [`InlineKeyboardCollector`](./src/classes/InlineKeyboardCollector.md)
+> **createInlineKeyboardCollector**(`options`): [`InlineKeyboardCollector`](InlineKeyboardCollector.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `ICollectorOptions`\<`string`, [`InlineCollectorContext`](./src/modules.md#inlinecollectorcontext)\> |
+• **options**: `ICollectorOptions`\<`string`, [`InlineCollectorContext`](./src/type-aliases/InlineCollectorContext.md)\>
 
 #### Returns
 
 [`InlineKeyboardCollector`](./src/classes/InlineKeyboardCollector.md)
 
-___
+***
 
-### createMessageCollector
+### createMessageCollector()
 
-▸ **createMessageCollector**(`options`): [`MessageCollector`](./src/classes/MessageCollector.md)
+> **createMessageCollector**(`options`): [`MessageCollector`](./src/classes/MessageCollector.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `ICollectorOptions`\<`number`, [`MsgCollectorContext`](./src/modules.md#msgcollectorcontext)\> |
+• **options**: `ICollectorOptions`\<`number`, [`MsgCollectorContext`](./src/type-aliases/MsgCollectorContext.md)\>
 
 #### Returns
 
 [`MessageCollector`](./src/classes/MessageCollector.md)
 
-___
+***
 
-### createNewStickerSet
+### createNewStickerSet()
 
-▸ **createNewStickerSet**(`args`): `Promise`\<``true``\>
+> **createNewStickerSet**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `name`: `string` ; `needs_repainting?`: `boolean` ; `sticker_type?`: ``"custom_emoji"`` \| ``"regular"`` \| ``"mask"`` ; `stickers`: `InputSticker`[] ; `title`: `string` ; `user_id`: `number`  }, ``"user_id"``\> |
+• **args**: `Omit`\<`object`, `"user_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### createReactionCollector
+### createReactionCollector()
 
-▸ **createReactionCollector**(`options`): [`ReactionCollector`](./src/classes/ReactionCollector.md)
+> **createReactionCollector**(`options`): [`ReactionCollector`](./src/classes/ReactionCollector.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `ICollectorOptions`\<`string`, [`ReactCollectorContext`](./src/modules.md#reactcollectorcontext)\> |
+• **options**: `ICollectorOptions`\<`string`, [`ReactCollectorContext`](./src/type-aliases/ReactCollectorContext.md)\>
 
 #### Returns
 
 [`ReactionCollector`](./src/classes/ReactionCollector.md)
 
-___
+***
 
-### declineChatJoinRequest
+### declineChatJoinRequest()
 
-▸ **declineChatJoinRequest**(`userId`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `userId` | `number` |
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### deleteChatPhoto
-
-▸ **deleteChatPhoto**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### deleteChatStickerSet
-
-▸ **deleteChatStickerSet**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### deleteForumTopic
-
-▸ **deleteForumTopic**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### deleteMessage
-
-▸ **deleteMessage**(`messageId?`): `Promise`\<``true``\>
+> **declineChatJoinRequest**(`userId`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `messageId?` | `number` |
+• **userId**: `number`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### deleteMessages
+### deleteChatPhoto()
 
-▸ **deleteMessages**(`messageIds`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `messageIds` | `number`[] |
+> **deleteChatPhoto**(): `Promise`\<`true`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### deleteStickerSet
+### deleteChatStickerSet()
 
-▸ **deleteStickerSet**(`name`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+> **deleteChatStickerSet**(): `Promise`\<`true`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### editChatInviteLink
+### deleteForumTopic()
 
-▸ **editChatInviteLink**(`args`): `Promise`\<`ChatInviteLink`\>
+> **deleteForumTopic**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### deleteMessage()
+
+> **deleteMessage**(`messageId`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `creates_join_request?`: `boolean` ; `expire_date?`: `number` ; `invite_link`: `string` ; `member_limit?`: `number` ; `name?`: `string`  }, ``"chat_id"``\> |
+• **messageId?**: `number`
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### deleteMessages()
+
+> **deleteMessages**(`messageIds`): `Promise`\<`true`\>
+
+#### Parameters
+
+• **messageIds**: `number`[]
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### deleteStickerSet()
+
+> **deleteStickerSet**(`name`): `Promise`\<`true`\>
+
+#### Parameters
+
+• **name**: `string`
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### editChatInviteLink()
+
+> **editChatInviteLink**(`args`): `Promise`\<`ChatInviteLink`\>
+
+#### Parameters
+
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`ChatInviteLink`\>
 
-___
+***
 
-### editForumTopic
+### editForumTopic()
 
-▸ **editForumTopic**(`args`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<`Partial`\<\{ `chat_id`: `string` \| `number` ; `icon_custom_emoji_id?`: `string` ; `message_thread_id`: `number` ; `name?`: `string`  }\>, ``"chat_id"``\> |
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### editGeneralForumTopic
-
-▸ **editGeneralForumTopic**(`name`): `Promise`\<``true``\>
+> **editForumTopic**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **args**: `Omit`\<`Partial`\<`object`\>, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### editMessageCaption
+### editGeneralForumTopic()
 
-▸ **editMessageCaption**(`caption`, `args?`): `Promise`\<``true`` \| `Edited` & `CaptionableMessage`\>
+> **editGeneralForumTopic**(`name`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `caption` | `string` |
-| `args?` | `Omit`\<\{ `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id?`: `string` \| `number` ; `inline_message_id?`: `string` ; `message_id?`: `number` ; `parse_mode?`: `ParseMode` ; `reply_markup?`: `InlineKeyboardMarkup`  }, ``"caption"``\> |
+• **name**: `string`
 
 #### Returns
 
-`Promise`\<``true`` \| `Edited` & `CaptionableMessage`\>
+`Promise`\<`true`\>
 
-___
+***
 
-### editMessageLiveLocation
+### editMessageCaption()
 
-▸ **editMessageLiveLocation**(`latitude`, `longitude`, `args?`): `Promise`\<``true`` \| `Edited` & `CommonMessage` & `MsgWith`\<``"location"``\>\>
+> **editMessageCaption**(`caption`, `args`?): `Promise`\<`true` \| `Edited` & `CaptionableMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `latitude` | `number` |
-| `longitude` | `number` |
-| `args?` | `Omit`\<\{ `chat_id?`: `string` \| `number` ; `heading?`: `number` ; `horizontal_accuracy?`: `number` ; `inline_message_id?`: `string` ; `latitude`: `number` ; `live_period?`: `number` ; `longitude`: `number` ; `message_id?`: `number` ; `proximity_alert_radius?`: `number` ; `reply_markup?`: `InlineKeyboardMarkup`  }, ``"latitude"`` \| ``"longitude"``\> |
+• **caption**: `string`
+
+• **args?**: `Omit`\<`object`, `"caption"`\>
 
 #### Returns
 
-`Promise`\<``true`` \| `Edited` & `CommonMessage` & `MsgWith`\<``"location"``\>\>
+`Promise`\<`true` \| `Edited` & `CaptionableMessage`\>
 
-___
+***
 
-### editMessageMedia
+### editMessageLiveLocation()
 
-▸ **editMessageMedia**(`media`, `args?`): `Promise`\<``true`` \| `Edited` & `Message`\>
+> **editMessageLiveLocation**(`latitude`, `longitude`, `args`?): `Promise`\<`true` \| `Edited` & `CommonMessage` & `MsgWith`\<`"location"`\>\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `media` | `InputMedia` |
-| `args?` | `Omit`\<\{ `chat_id?`: `string` \| `number` ; `inline_message_id?`: `string` ; `media`: `InputMedia` ; `message_id?`: `number` ; `reply_markup?`: `InlineKeyboardMarkup`  }, ``"media"``\> |
+• **latitude**: `number`
+
+• **longitude**: `number`
+
+• **args?**: `Omit`\<`object`, `"latitude"` \| `"longitude"`\>
 
 #### Returns
 
-`Promise`\<``true`` \| `Edited` & `Message`\>
+`Promise`\<`true` \| `Edited` & `CommonMessage` & `MsgWith`\<`"location"`\>\>
 
-___
+***
 
-### editMessageReplyMarkup
+### editMessageMedia()
 
-▸ **editMessageReplyMarkup**(`markup`): `Promise`\<``true`` \| `Edited` & `Message`\>
+> **editMessageMedia**(`media`, `args`?): `Promise`\<`true` \| `Edited` & `Message`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `markup` | `InlineKeyboardMarkup` |
+• **media**: `InputMedia`
+
+• **args?**: `Omit`\<`object`, `"media"`\>
 
 #### Returns
 
-`Promise`\<``true`` \| `Edited` & `Message`\>
+`Promise`\<`true` \| `Edited` & `Message`\>
 
-___
+***
 
-### editMessageText
+### editMessageReplyMarkup()
 
-▸ **editMessageText**(`text`, `args?`): `Promise`\<``true`` \| `Edited` & `CommonMessage` & `MsgWith`\<``"text"``\>\>
+> **editMessageReplyMarkup**(`markup`): `Promise`\<`true` \| `Edited` & `Message`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
-| `args?` | `Omit`\<\{ `chat_id?`: `string` \| `number` ; `entities?`: `MessageEntity`[] ; `inline_message_id?`: `string` ; `link_preview_options?`: `LinkPreviewOptions` ; `message_id?`: `number` ; `parse_mode?`: `ParseMode` ; `reply_markup?`: `InlineKeyboardMarkup` ; `text`: `string`  }, ``"text"``\> |
+• **markup**: `InlineKeyboardMarkup`
 
 #### Returns
 
-`Promise`\<``true`` \| `Edited` & `CommonMessage` & `MsgWith`\<``"text"``\>\>
+`Promise`\<`true` \| `Edited` & `Message`\>
 
-___
+***
 
-### exportChatInviteLink
+### editMessageText()
 
-▸ **exportChatInviteLink**(): `Promise`\<`string`\>
+> **editMessageText**(`text`, `args`?): `Promise`\<`true` \| `Edited` & `CommonMessage` & `MsgWith`\<`"text"`\>\>
+
+#### Parameters
+
+• **text**: `string`
+
+• **args?**: `Omit`\<`object`, `"text"`\>
+
+#### Returns
+
+`Promise`\<`true` \| `Edited` & `CommonMessage` & `MsgWith`\<`"text"`\>\>
+
+***
+
+### exportChatInviteLink()
+
+> **exportChatInviteLink**(): `Promise`\<`string`\>
 
 #### Returns
 
 `Promise`\<`string`\>
 
-___
+***
 
-### forwardMessage
+### forwardMessage()
 
-▸ **forwardMessage**(`chatId`, `args?`): `Promise`\<`Message`\>
+> **forwardMessage**(`chatId`, `args`?): `Promise`\<`Message`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chatId` | `string` \| `number` |
-| `args?` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `from_chat_id`: `string` \| `number` ; `message_id`: `number` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean`  }, ``"chat_id"``\> |
+• **chatId**: `string` \| `number`
+
+• **args?**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`Message`\>
 
-___
+***
 
-### forwardMessages
+### forwardMessages()
 
-▸ **forwardMessages**(`chatId`, `messageIds`, `args?`): `Promise`\<`MessageId`[]\>
+> **forwardMessages**(`chatId`, `messageIds`, `args`?): `Promise`\<`MessageId`[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chatId` | `string` \| `number` |
-| `messageIds` | `number`[] |
-| `args?` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `from_chat_id`: `string` \| `number` ; `message_ids`: `number`[] ; `message_thread_id?`: `number` ; `protect_content?`: `boolean`  }, ``"chat_id"``\> |
+• **chatId**: `string` \| `number`
+
+• **messageIds**: `number`[]
+
+• **args?**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`MessageId`[]\>
 
-___
+***
 
-### getChat
+### getChat()
 
-▸ **getChat**(): `Promise`\<`ChatFullInfo`\>
+> **getChat**(): `Promise`\<`ChatFullInfo`\>
 
 #### Returns
 
 `Promise`\<`ChatFullInfo`\>
 
-___
+***
 
-### getChatAdministrators
+### getChatAdministrators()
 
-▸ **getChatAdministrators**(): `Promise`\<(`ChatMemberOwner` \| `ChatMemberAdministrator`)[]\>
+> **getChatAdministrators**(): `Promise`\<(`ChatMemberOwner` \| `ChatMemberAdministrator`)[]\>
 
 #### Returns
 
 `Promise`\<(`ChatMemberOwner` \| `ChatMemberAdministrator`)[]\>
 
-___
+***
 
-### getChatMember
+### getChatMember()
 
-▸ **getChatMember**(`user_id`): `Promise`\<`ChatMember`\>
+> **getChatMember**(`user_id`): `Promise`\<`ChatMember`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `user_id` | `number` |
+• **user\_id**: `number`
 
 #### Returns
 
 `Promise`\<`ChatMember`\>
 
-___
+***
 
-### getChatMembersCount
+### getChatMembersCount()
 
-▸ **getChatMembersCount**(): `Promise`\<`number`\>
+> **getChatMembersCount**(): `Promise`\<`number`\>
 
 #### Returns
 
 `Promise`\<`number`\>
 
-___
+***
 
-### getChatMenuButton
+### getChatMenuButton()
 
-▸ **getChatMenuButton**(): `Promise`\<`MenuButton`\>
+> **getChatMenuButton**(): `Promise`\<`MenuButton`\>
 
 #### Returns
 
 `Promise`\<`MenuButton`\>
 
-___
+***
 
-### getMyDefaultAdministratorRights
+### getMyDefaultAdministratorRights()
 
-▸ **getMyDefaultAdministratorRights**(`for_channels`): `Promise`\<`ChatAdministratorRights`\>
+> **getMyDefaultAdministratorRights**(`for_channels`): `Promise`\<`ChatAdministratorRights`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `for_channels` | `boolean` |
+• **for\_channels**: `boolean`
 
 #### Returns
 
 `Promise`\<`ChatAdministratorRights`\>
 
-___
+***
 
-### getUserChatBoosts
+### getUserChatBoosts()
 
-▸ **getUserChatBoosts**(): `Promise`\<`UserChatBoosts`\>
+> **getUserChatBoosts**(): `Promise`\<`UserChatBoosts`\>
 
 #### Returns
 
 `Promise`\<`UserChatBoosts`\>
 
-___
+***
 
-### hideGeneralForumTopic
+### hideGeneralForumTopic()
 
-▸ **hideGeneralForumTopic**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### leaveChat
-
-▸ **leaveChat**(): `Promise`\<``true``\>
+> **hideGeneralForumTopic**(): `Promise`\<`true`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### pinChatMessage
+### leaveChat()
 
-▸ **pinChatMessage**(`args`): `Promise`\<``true``\>
+> **leaveChat**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### pinChatMessage()
+
+> **pinChatMessage**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `message_id`: `number`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### promoteChatMember
+### promoteChatMember()
 
-▸ **promoteChatMember**(`args`): `Promise`\<``true``\>
+> **promoteChatMember**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `can_change_info?`: `boolean` ; `can_delete_messages?`: `boolean` ; `can_delete_stories?`: `boolean` ; `can_edit_messages?`: `boolean` ; `can_edit_stories?`: `boolean` ; `can_invite_users?`: `boolean` ; `can_manage_chat?`: `boolean` ; `can_manage_topics?`: `boolean` ; `can_manage_video_chats?`: `boolean` ; `can_pin_messages?`: `boolean` ; `can_post_messages?`: `boolean` ; `can_post_stories?`: `boolean` ; `can_promote_members?`: `boolean` ; `can_restrict_members?`: `boolean` ; `chat_id`: `string` \| `number` ; `is_anonymous?`: `boolean` ; `user_id`: `number`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### react
+### react()
 
-▸ **react**(`react`, `is_big?`): `void`
+> **react**(`react`, `is_big`): `void`
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `react` | ``"👍"`` \| ``"👎"`` \| ``"❤"`` \| ``"🔥"`` \| ``"👏"`` \| ``"😁"`` \| ``"🤔"`` \| ``"🤯"`` \| ``"😱"`` \| ``"🤬"`` \| ``"😢"`` \| ``"🎉"`` \| ``"🤩"`` \| ``"🤮"`` \| ``"💩"`` \| ``"🙏"`` \| ``"👌"`` \| ``"🕊"`` \| ``"🤡"`` \| ``"🥱"`` \| ``"🥴"`` \| ``"😍"`` \| ``"🐳"`` \| ``"❤‍🔥"`` \| ``"🌚"`` \| ``"🌭"`` \| ``"💯"`` \| ``"🤣"`` \| ``"⚡"`` \| ``"🍌"`` \| ``"🏆"`` \| ``"💔"`` \| ``"🤨"`` \| ``"😐"`` \| ``"🍓"`` \| ``"🍾"`` \| ``"💋"`` \| ``"🖕"`` \| ``"😈"`` \| ``"😴"`` \| ``"😭"`` \| ``"🤓"`` \| ``"👻"`` \| ``"👨‍💻"`` \| ``"👀"`` \| ``"🎃"`` \| ``"🙈"`` \| ``"😇"`` \| ``"😨"`` \| ``"🤝"`` \| ``"✍"`` \| ``"🤗"`` \| ``"🫡"`` \| ``"🎅"`` \| ``"🎄"`` \| ``"☃"`` \| ``"💅"`` \| ``"🤪"`` \| ``"🗿"`` \| ``"🆒"`` \| ``"💘"`` \| ``"🙉"`` \| ``"🦄"`` \| ``"😘"`` \| ``"💊"`` \| ``"🙊"`` \| ``"😎"`` \| ``"👾"`` \| ``"🤷"`` \| ``"😡"`` \| ``"🥰"`` \| ``"🤷‍♂"`` \| ``"🤷‍♀"`` \| `ReactionType` \| `ReactionType`[] | `undefined` |
-| `is_big` | `boolean` | `false` |
+• **react**: `"👍"` \| `"👎"` \| `"❤"` \| `"🔥"` \| `"👏"` \| `"😁"` \| `"🤔"` \| `"🤯"` \| `"😱"` \| `"🤬"` \| `"😢"` \| `"🎉"` \| `"🤩"` \| `"🤮"` \| `"💩"` \| `"🙏"` \| `"👌"` \| `"🕊"` \| `"🤡"` \| `"🥱"` \| `"🥴"` \| `"😍"` \| `"🐳"` \| `"❤‍🔥"` \| `"🌚"` \| `"🌭"` \| `"💯"` \| `"🤣"` \| `"⚡"` \| `"🍌"` \| `"🏆"` \| `"💔"` \| `"🤨"` \| `"😐"` \| `"🍓"` \| `"🍾"` \| `"💋"` \| `"🖕"` \| `"😈"` \| `"😴"` \| `"😭"` \| `"🤓"` \| `"👻"` \| `"👨‍💻"` \| `"👀"` \| `"🎃"` \| `"🙈"` \| `"😇"` \| `"😨"` \| `"🤝"` \| `"✍"` \| `"🤗"` \| `"🫡"` \| `"🎅"` \| `"🎄"` \| `"☃"` \| `"💅"` \| `"🤪"` \| `"🗿"` \| `"🆒"` \| `"💘"` \| `"🙉"` \| `"🦄"` \| `"😘"` \| `"💊"` \| `"🙊"` \| `"😎"` \| `"👾"` \| `"🤷"` \| `"😡"` \| `"🥰"` \| `"🤷‍♂"` \| `"🤷‍♀"` \| `ReactionType` \| `ReactionType`[]
+
+• **is\_big**: `boolean`= `false`
 
 #### Returns
 
 `void`
 
-___
+***
 
-### reopenForumTopic
+### reopenForumTopic()
 
-▸ **reopenForumTopic**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### reopenGeneralForumTopic
-
-▸ **reopenGeneralForumTopic**(): `Promise`\<``true``\>
+> **reopenForumTopic**(): `Promise`\<`true`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### reply
+### reopenGeneralForumTopic()
 
-▸ **reply**(`text`, `args?`): `Promise`\<`TextMessage`\>
+> **reopenGeneralForumTopic**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### reply()
+
+> **reply**(`text`, `args`?): `Promise`\<`TextMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
-| `args?` | `Omit`\<`Partial`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `entities?`: `MessageEntity`[] ; `link_preview_options?`: `LinkPreviewOptions` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `text`: `string`  }\>, ``"text"``\> |
+• **text**: `string`
+
+• **args?**: `Omit`\<`Partial`\<`object`\>, `"text"`\>
 
 #### Returns
 
 `Promise`\<`TextMessage`\>
 
-___
+***
 
-### replyWithHTML
+### replyWithHTML()
 
-▸ **replyWithHTML**(`html`, `args?`): `Promise`\<`TextMessage`\>
+> **replyWithHTML**(`html`, `args`?): `Promise`\<`TextMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `html` | `string` |
-| `args?` | `Omit`\<`Partial`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `entities?`: `MessageEntity`[] ; `link_preview_options?`: `LinkPreviewOptions` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `text`: `string`  }\>, ``"text"`` \| ``"parse_mode"``\> |
+• **html**: `string`
+
+• **args?**: `Omit`\<`Partial`\<`object`\>, `"text"` \| `"parse_mode"`\>
 
 #### Returns
 
 `Promise`\<`TextMessage`\>
 
-___
+***
 
-### replyWithMarkdownV2
+### replyWithMarkdownV2()
 
-▸ **replyWithMarkdownV2**(`markdown`, `args?`): `Promise`\<`TextMessage`\>
+> **replyWithMarkdownV2**(`markdown`, `args`?): `Promise`\<`TextMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `markdown` | `string` |
-| `args?` | `Omit`\<`Partial`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `entities?`: `MessageEntity`[] ; `link_preview_options?`: `LinkPreviewOptions` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `text`: `string`  }\>, ``"text"`` \| ``"parse_mode"``\> |
+• **markdown**: `string`
+
+• **args?**: `Omit`\<`Partial`\<`object`\>, `"text"` \| `"parse_mode"`\>
 
 #### Returns
 
 `Promise`\<`TextMessage`\>
 
-___
+***
 
-### restrictChatMember
+### restrictChatMember()
 
-▸ **restrictChatMember**(`args`): `Promise`\<``true``\>
+> **restrictChatMember**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `permissions`: `ChatPermissions` ; `until_date?`: `number` ; `use_independent_chat_permissions?`: `boolean` ; `user_id`: `number`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### revokeChatInviteLink
+### revokeChatInviteLink()
 
-▸ **revokeChatInviteLink**(`inviteLink`): `Promise`\<`ChatInviteLink`\>
+> **revokeChatInviteLink**(`inviteLink`): `Promise`\<`ChatInviteLink`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `inviteLink` | `string` |
+• **inviteLink**: `string`
 
 #### Returns
 
 `Promise`\<`ChatInviteLink`\>
 
-___
+***
 
-### sendAnimation
+### sendAnimation()
 
-▸ **sendAnimation**(`animation`, `args?`): `Promise`\<`AnimationMessage`\>
+> **sendAnimation**(`animation`, `args`?): `Promise`\<`AnimationMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `animation` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `animation`: `string` \| `Buffer` \| `ReadStream` ; `business_connection_id?`: `string` ; `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `duration?`: `number` ; `has_spoiler?`: `boolean` ; `height?`: `number` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `thumbnail?`: `string` \| `Buffer` \| `ReadStream` ; `width?`: `number`  }, ``"animation"``\> |
+• **animation**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"animation"`\>
 
 #### Returns
 
 `Promise`\<`AnimationMessage`\>
 
-___
+***
 
-### sendAudio
+### sendAudio()
 
-▸ **sendAudio**(`audio`, `args?`): `Promise`\<`AudioMessage`\>
+> **sendAudio**(`audio`, `args`?): `Promise`\<`AudioMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `audio` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `audio`: `string` \| `Buffer` \| `ReadStream` ; `business_connection_id?`: `string` ; `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `duration?`: `number` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `performer?`: `string` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `thumbnail?`: `string` \| `Buffer` \| `ReadStream` ; `title?`: `string`  }, ``"media"``\> |
+• **audio**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"media"`\>
 
 #### Returns
 
 `Promise`\<`AudioMessage`\>
 
-___
+***
 
-### sendChatAction
+### sendChatAction()
 
-▸ **sendChatAction**(`action`, `args?`): `Promise`\<``true``\>
+> **sendChatAction**(`action`, `args`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `action` | ``"typing"`` \| ``"upload_photo"`` \| ``"record_video"`` \| ``"upload_video"`` \| ``"record_voice"`` \| ``"upload_voice"`` \| ``"upload_document"`` \| ``"choose_sticker"`` \| ``"find_location"`` \| ``"record_video_note"`` \| ``"upload_video_note"`` |
-| `args?` | `Omit`\<`Partial`\<\{ `action`: ``"typing"`` \| ``"upload_photo"`` \| ``"record_video"`` \| ``"upload_video"`` \| ``"record_voice"`` \| ``"upload_voice"`` \| ``"upload_document"`` \| ``"choose_sticker"`` \| ``"find_location"`` \| ``"record_video_note"`` \| ``"upload_video_note"`` ; `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `message_thread_id?`: `number`  }\>, ``"action"``\> |
+• **action**: `"typing"` \| `"upload_photo"` \| `"record_video"` \| `"upload_video"` \| `"record_voice"` \| `"upload_voice"` \| `"upload_document"` \| `"choose_sticker"` \| `"find_location"` \| `"record_video_note"` \| `"upload_video_note"`
+
+• **args?**: `Omit`\<`Partial`\<`object`\>, `"action"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### sendContact
+### sendContact()
 
-▸ **sendContact**(`phoneNumber`, `firstName`, `args?`): `Promise`\<`ContactMessage`\>
+> **sendContact**(`phoneNumber`, `firstName`, `args`?): `Promise`\<`ContactMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `phoneNumber` | `string` |
-| `firstName` | `string` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `first_name`: `string` ; `last_name?`: `string` ; `message_thread_id?`: `number` ; `phone_number`: `string` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `vcard?`: `string`  }, ``"phone_number"`` \| ``"first_name"``\> |
+• **phoneNumber**: `string`
+
+• **firstName**: `string`
+
+• **args?**: `Omit`\<`object`, `"phone_number"` \| `"first_name"`\>
 
 #### Returns
 
 `Promise`\<`ContactMessage`\>
 
-___
+***
 
-### sendDice
+### sendDice()
 
-▸ **sendDice**(`args?`): `Promise`\<`DiceMessage`\>
+> **sendDice**(`args`?): `Promise`\<`DiceMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `emoji?`: `string` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number`  }, ``"chat_id"``\> |
+• **args?**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`DiceMessage`\>
 
-___
+***
 
-### sendDocument
+### sendDocument()
 
-▸ **sendDocument**(`document`, `args?`): `Promise`\<`DocumentMessage`\>
+> **sendDocument**(`document`, `args`?): `Promise`\<`DocumentMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `document` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_content_type_detection?`: `boolean` ; `disable_notification?`: `boolean` ; `document`: `string` \| `Buffer` \| `ReadStream` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `thumbnail?`: `string` \| `Buffer` \| `ReadStream`  }, ``"document"``\> |
+• **document**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"document"`\>
 
 #### Returns
 
 `Promise`\<`DocumentMessage`\>
 
-___
+***
 
-### sendGame
+### sendGame()
 
-▸ **sendGame**(`game`, `args?`): `Promise`\<`GameMessage`\>
+> **sendGame**(`game`, `args`?): `Promise`\<`GameMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `game` | `string` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `number` ; `disable_notification?`: `boolean` ; `game_short_name`: `string` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number`  }, ``"game_short_name"``\> |
+• **game**: `string`
+
+• **args?**: `Omit`\<`object`, `"game_short_name"`\>
 
 #### Returns
 
 `Promise`\<`GameMessage`\>
 
-___
+***
 
-### sendInvoice
+### sendInvoice()
 
-▸ **sendInvoice**(`payload`, `args`): `Promise`\<`InvoiceMessage`\>
+> **sendInvoice**(`payload`, `args`): `Promise`\<`InvoiceMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `payload` | `string` |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `currency`: `string` ; `description`: `string` ; `disable_notification?`: `boolean` ; `is_flexible?`: `boolean` ; `max_tip_amount?`: `number` ; `message_thread_id?`: `number` ; `need_email?`: `boolean` ; `need_name?`: `boolean` ; `need_phone_number?`: `boolean` ; `need_shipping_address?`: `boolean` ; `payload`: `string` ; `photo_height?`: `number` ; `photo_size?`: `number` ; `photo_url?`: `string` ; `photo_width?`: `number` ; `prices`: readonly `LabeledPrice`[] ; `protect_content?`: `boolean` ; `provider_data?`: `string` ; `provider_token`: `string` ; `reply_markup?`: `InlineKeyboardMarkup` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `send_email_to_provider?`: `boolean` ; `send_phone_number_to_provider?`: `boolean` ; `start_parameter?`: `string` ; `suggested_tip_amounts?`: `number`[] ; `title`: `string`  }, ``"chat_id"`` \| ``"payload"``\> |
+• **payload**: `string`
+
+• **args**: `Omit`\<`object`, `"chat_id"` \| `"payload"`\>
 
 #### Returns
 
 `Promise`\<`InvoiceMessage`\>
 
-___
+***
 
-### sendLocation
+### sendLocation()
 
-▸ **sendLocation**(`latitude`, `longitude`, `args?`): `Promise`\<`LocationMessage`\>
+> **sendLocation**(`latitude`, `longitude`, `args`?): `Promise`\<`LocationMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `latitude` | `number` |
-| `longitude` | `number` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `heading?`: `number` ; `horizontal_accuracy?`: `number` ; `latitude`: `number` ; `live_period?`: `number` ; `longitude`: `number` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `proximity_alert_radius?`: `number` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number`  }, ``"latitude"`` \| ``"longitude"``\> |
+• **latitude**: `number`
+
+• **longitude**: `number`
+
+• **args?**: `Omit`\<`object`, `"latitude"` \| `"longitude"`\>
 
 #### Returns
 
 `Promise`\<`LocationMessage`\>
 
-___
+***
 
-### sendMediaGroup
+### sendMediaGroup()
 
-▸ **sendMediaGroup**(`media`, `args?`): `Promise`\<(`PhotoMessage` \| `AudioMessage` \| `DocumentMessage` \| `VideoMessage`)[]\>
+> **sendMediaGroup**(`media`, `args`?): `Promise`\<(`PhotoMessage` \| `AudioMessage` \| `DocumentMessage` \| `VideoMessage`)[]\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `media` | readonly (`InputMediaAudio` \| `InputMediaDocument` \| `InputMediaPhoto` \| `InputMediaVideo`)[] |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `media`: readonly (`InputMediaAudio` \| `InputMediaDocument` \| `InputMediaPhoto` \| `InputMediaVideo`)[] ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number`  }, ``"media"``\> |
+• **media**: readonly (`InputMediaAudio` \| `InputMediaDocument` \| `InputMediaPhoto` \| `InputMediaVideo`)[]
+
+• **args?**: `Omit`\<`object`, `"media"`\>
 
 #### Returns
 
 `Promise`\<(`PhotoMessage` \| `AudioMessage` \| `DocumentMessage` \| `VideoMessage`)[]\>
 
-___
+***
 
-### sendMessage
+### sendMessage()
 
-▸ **sendMessage**(`text`, `args?`): `Promise`\<`TextMessage`\>
+> **sendMessage**(`text`, `args`?): `Promise`\<`TextMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `entities?`: `MessageEntity`[] ; `link_preview_options?`: `LinkPreviewOptions` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `text`: `string`  }, ``"text"`` \| ``"chat_id"``\> |
+• **text**: `string`
+
+• **args?**: `Omit`\<`object`, `"text"` \| `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`TextMessage`\>
 
-___
+***
 
-### sendPhoto
+### sendPhoto()
 
-▸ **sendPhoto**(`photo`, `args?`): `Promise`\<`PhotoMessage`\>
+> **sendPhoto**(`photo`, `args`?): `Promise`\<`PhotoMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `photo` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `has_spoiler?`: `boolean` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `photo`: `string` \| `Buffer` \| `ReadStream` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number`  }, ``"photo"``\> |
+• **photo**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"photo"`\>
 
 #### Returns
 
 `Promise`\<`PhotoMessage`\>
 
-___
+***
 
-### sendPoll
+### sendPoll()
 
-▸ **sendPoll**(`question`, `options`, `args?`): `Promise`\<`PollMessage`\>
+> **sendPoll**(`question`, `options`, `args`?): `Promise`\<`PollMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `question` | `string` |
-| `options` | `InputPollOption`[] |
-| `args?` | `Omit`\<\{ `allows_multiple_answers?`: `boolean` ; `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `close_date?`: `number` ; `correct_option_id?`: `number` ; `disable_notification?`: `boolean` ; `explanation?`: `string` ; `explanation_entities?`: `MessageEntity`[] ; `explanation_parse_mode?`: `ParseMode` ; `is_anonymous?`: `boolean` ; `is_closed?`: `boolean` ; `message_thread_id?`: `number` ; `open_period?`: `number` ; `options`: `InputPollOption`[] ; `protect_content?`: `boolean` ; `question`: `string` ; `question_entities?`: `MessageEntity`[] ; `question_parse_mode?`: `string` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `type?`: ``"quiz"`` \| ``"regular"``  }, ``"options"`` \| ``"question"``\> |
+• **question**: `string`
+
+• **options**: `InputPollOption`[]
+
+• **args?**: `Omit`\<`object`, `"options"` \| `"question"`\>
 
 #### Returns
 
 `Promise`\<`PollMessage`\>
 
-___
+***
 
-### sendQuiz
+### sendQuiz()
 
-▸ **sendQuiz**(`question`, `options`, `args?`): `Promise`\<`PollMessage`\>
+> **sendQuiz**(`question`, `options`, `args`?): `Promise`\<`PollMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `question` | `string` |
-| `options` | `InputPollOption`[] |
-| `args?` | `Omit`\<`Partial`\<\{ `allows_multiple_answers?`: `boolean` ; `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `close_date?`: `number` ; `correct_option_id?`: `number` ; `disable_notification?`: `boolean` ; `explanation?`: `string` ; `explanation_entities?`: `MessageEntity`[] ; `explanation_parse_mode?`: `ParseMode` ; `is_anonymous?`: `boolean` ; `is_closed?`: `boolean` ; `message_thread_id?`: `number` ; `open_period?`: `number` ; `options`: `InputPollOption`[] ; `protect_content?`: `boolean` ; `question`: `string` ; `question_entities?`: `MessageEntity`[] ; `question_parse_mode?`: `string` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `type?`: ``"quiz"`` \| ``"regular"``  }\>, ``"type"`` \| ``"question"``\> |
+• **question**: `string`
+
+• **options**: `InputPollOption`[]
+
+• **args?**: `Omit`\<`Partial`\<`object`\>, `"type"` \| `"question"`\>
 
 #### Returns
 
 `Promise`\<`PollMessage`\>
 
-___
+***
 
-### sendSticker
+### sendSticker()
 
-▸ **sendSticker**(`sticker`, `args?`): `Promise`\<`StickerMessage`\>
+> **sendSticker**(`sticker`, `args`?): `Promise`\<`StickerMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sticker` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `emoji?`: `string` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `sticker`: `string` \| `Buffer` \| `ReadStream`  }, ``"sticker"``\> |
+• **sticker**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"sticker"`\>
 
 #### Returns
 
 `Promise`\<`StickerMessage`\>
 
-___
+***
 
-### sendVenue
+### sendVenue()
 
-▸ **sendVenue**(`latitude`, `longitude`, `title`, `address`, `args?`): `Promise`\<`VenueMessage`\>
+> **sendVenue**(`latitude`, `longitude`, `title`, `address`, `args`?): `Promise`\<`VenueMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `latitude` | `number` |
-| `longitude` | `number` |
-| `title` | `string` |
-| `address` | `string` |
-| `args?` | `Omit`\<\{ `address`: `string` ; `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `foursquare_id?`: `string` ; `foursquare_type?`: `string` ; `google_place_id?`: `string` ; `google_place_type?`: `string` ; `latitude`: `number` ; `longitude`: `number` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `title`: `string`  }, ``"title"`` \| ``"latitude"`` \| ``"longitude"`` \| ``"address"``\> |
+• **latitude**: `number`
+
+• **longitude**: `number`
+
+• **title**: `string`
+
+• **address**: `string`
+
+• **args?**: `Omit`\<`object`, `"title"` \| `"latitude"` \| `"longitude"` \| `"address"`\>
 
 #### Returns
 
 `Promise`\<`VenueMessage`\>
 
-___
+***
 
-### sendVideo
+### sendVideo()
 
-▸ **sendVideo**(`video`, `args?`): `Promise`\<`VideoMessage`\>
+> **sendVideo**(`video`, `args`?): `Promise`\<`VideoMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `video` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `duration?`: `number` ; `has_spoiler?`: `boolean` ; `height?`: `number` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `supports_streaming?`: `boolean` ; `thumbnail?`: `string` \| `Buffer` \| `ReadStream` ; `video`: `string` \| `Buffer` \| `ReadStream` ; `width?`: `number`  }, ``"video"``\> |
+• **video**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"video"`\>
 
 #### Returns
 
 `Promise`\<`VideoMessage`\>
 
-___
+***
 
-### sendVideoNote
+### sendVideoNote()
 
-▸ **sendVideoNote**(`videoNote`, `args?`): `Promise`\<`VideoNoteMessage`\>
+> **sendVideoNote**(`videoNote`, `args`?): `Promise`\<`VideoNoteMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `videoNote` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `duration?`: `number` ; `length?`: `number` ; `message_thread_id?`: `number` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `thumbnail?`: `string` \| `Buffer` \| `ReadStream` ; `video_note`: `string` \| `Buffer` \| `ReadStream`  }, ``"video_note"``\> |
+• **videoNote**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"video_note"`\>
 
 #### Returns
 
 `Promise`\<`VideoNoteMessage`\>
 
-___
+***
 
-### sendVoice
+### sendVoice()
 
-▸ **sendVoice**(`voice`, `args?`): `Promise`\<`VoiceMessage`\>
+> **sendVoice**(`voice`, `args`?): `Promise`\<`VoiceMessage`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `voice` | `string` \| `Buffer` \| `ReadStream` |
-| `args?` | `Omit`\<\{ `business_connection_id?`: `string` ; `caption?`: `string` ; `caption_entities?`: `MessageEntity`[] ; `chat_id`: `string` \| `number` ; `disable_notification?`: `boolean` ; `duration?`: `number` ; `message_thread_id?`: `number` ; `parse_mode?`: `ParseMode` ; `protect_content?`: `boolean` ; `reply_markup?`: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply` ; `reply_parameters?`: `ReplyParameters` ; `reply_to_message_id?`: `number` ; `voice`: `string` \| `Buffer` \| `ReadStream`  }, ``"voice"``\> |
+• **voice**: `string` \| `Buffer` \| `ReadStream`
+
+• **args?**: `Omit`\<`object`, `"voice"`\>
 
 #### Returns
 
 `Promise`\<`VoiceMessage`\>
 
-___
+***
 
-### setChatAdministratorCustomTitle
+### setChatAdministratorCustomTitle()
 
-▸ **setChatAdministratorCustomTitle**(`args`): `Promise`\<``true``\>
+> **setChatAdministratorCustomTitle**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `custom_title`: `string` ; `user_id`: `number`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setChatDescription
+### setChatDescription()
 
-▸ **setChatDescription**(`description`): `Promise`\<``true``\>
+> **setChatDescription**(`description`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `description` | `string` |
+• **description**: `string`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setChatMenuButton
+### setChatMenuButton()
 
-▸ **setChatMenuButton**(`menuButton?`): `Promise`\<``true``\>
+> **setChatMenuButton**(`menuButton`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `menuButton?` | `MenuButton` |
+• **menuButton?**: `MenuButton`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setChatPermissions
+### setChatPermissions()
 
-▸ **setChatPermissions**(`args`): `Promise`\<``true``\>
+> **setChatPermissions**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `permissions`: `ChatPermissions` ; `use_independent_chat_permissions?`: `boolean`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setChatPhoto
+### setChatPhoto()
 
-▸ **setChatPhoto**(`photo`): `Promise`\<``true``\>
+> **setChatPhoto**(`photo`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `photo` | `string` \| `Buffer` \| `ReadStream` |
+• **photo**: `string` \| `Buffer` \| `ReadStream`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setChatStickerSet
+### setChatStickerSet()
 
-▸ **setChatStickerSet**(`setName`): `Promise`\<``true``\>
+> **setChatStickerSet**(`setName`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `setName` | `string` |
+• **setName**: `string`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setChatTitle
+### setChatTitle()
 
-▸ **setChatTitle**(`title`): `Promise`\<``true``\>
+> **setChatTitle**(`title`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `title` | `string` |
+• **title**: `string`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setCustomEmojiStickerSetThumbnail
+### setCustomEmojiStickerSetThumbnail()
 
-▸ **setCustomEmojiStickerSetThumbnail**(`name`): `Promise`\<``true``\>
+> **setCustomEmojiStickerSetThumbnail**(`name`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setMyDefaultAdministratorRights
+### setMyDefaultAdministratorRights()
 
-▸ **setMyDefaultAdministratorRights**(`rights?`, `for_channels?`): `Promise`\<``true``\>
+> **setMyDefaultAdministratorRights**(`rights`?, `for_channels`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `rights?` | `ChatAdministratorRights` |
-| `for_channels?` | `boolean` |
+• **rights?**: `ChatAdministratorRights`
+
+• **for\_channels?**: `boolean`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setPassportDataErrors
+### setPassportDataErrors()
 
-▸ **setPassportDataErrors**(`errors`): `Promise`\<``true``\>
+> **setPassportDataErrors**(`errors`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `errors` | readonly `PassportElementError`[] |
+• **errors**: readonly `PassportElementError`[]
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerEmojiList
+### setStickerEmojiList()
 
-▸ **setStickerEmojiList**(`sticker`, `emoji_list`): `Promise`\<``true``\>
+> **setStickerEmojiList**(`sticker`, `emoji_list`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sticker` | `string` |
-| `emoji_list` | `string`[] |
+• **sticker**: `string`
+
+• **emoji\_list**: `string`[]
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerKeywords
+### setStickerKeywords()
 
-▸ **setStickerKeywords**(`sticker`, `keywords?`): `Promise`\<``true``\>
+> **setStickerKeywords**(`sticker`, `keywords`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sticker` | `string` |
-| `keywords?` | `string`[] |
+• **sticker**: `string`
+
+• **keywords?**: `string`[]
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerMaskPosition
+### setStickerMaskPosition()
 
-▸ **setStickerMaskPosition**(`sticker`, `mask_position?`): `Promise`\<``true``\>
+> **setStickerMaskPosition**(`sticker`, `mask_position`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sticker` | `string` |
-| `mask_position?` | `MaskPosition` |
+• **sticker**: `string`
+
+• **mask\_position?**: `MaskPosition`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerPositionInSet
+### setStickerPositionInSet()
 
-▸ **setStickerPositionInSet**(`sticker`, `position`): `Promise`\<``true``\>
+> **setStickerPositionInSet**(`sticker`, `position`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sticker` | `string` |
-| `position` | `number` |
+• **sticker**: `string`
+
+• **position**: `number`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerSetThumb
+### setStickerSetThumb()
 
-▸ **setStickerSetThumb**(`args`): `Promise`\<``true``\>
+> **setStickerSetThumb**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args` | `Object` | - |
-| `args.format` | ``"video"`` \| ``"static"`` \| ``"animated"`` | Format of the thumbnail, must be one of “static” for a .WEBP or .PNG image, “animated” for a .TGS animation, or “video” for a WEBM video |
-| `args.name` | `string` | Sticker set name |
-| `args.thumbnail?` | `string` \| `Buffer` \| `ReadStream` | A .WEBP or .PNG image with the thumbnail, must be up to 128 kilobytes in size and have a width and height of exactly 100px, or a .TGS animation with a thumbnail up to 32 kilobytes in size (see https://core.telegram.org/stickers#animated-sticker-requirements for animated sticker technical requirements), or a WEBM video with the thumbnail up to 32 kilobytes in size; see https://core.telegram.org/stickers#video-sticker-requirements for video sticker technical requirements. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More information on Sending Files ». Animated and video sticker set thumbnails can't be uploaded via HTTP URL. If omitted, then the thumbnail is dropped and the first sticker is used as the thumbnail. |
-| `args.user_id` | `number` | User identifier of the sticker set owner |
+• **args**
+
+• **args.format**: `"video"` \| `"static"` \| `"animated"`
+
+Format of the thumbnail, must be one of “static” for a .WEBP or .PNG image, “animated” for a .TGS animation, or “video” for a WEBM video
+
+• **args.name**: `string`
+
+Sticker set name
+
+• **args.thumbnail?**: `string` \| `Buffer` \| `ReadStream`
+
+A .WEBP or .PNG image with the thumbnail, must be up to 128 kilobytes in size and have a width and height of exactly 100px, or a .TGS animation with a thumbnail up to 32 kilobytes in size (see https://core.telegram.org/stickers#animated-sticker-requirements for animated sticker technical requirements), or a WEBM video with the thumbnail up to 32 kilobytes in size; see https://core.telegram.org/stickers#video-sticker-requirements for video sticker technical requirements. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More information on Sending Files ». Animated and video sticker set thumbnails can't be uploaded via HTTP URL. If omitted, then the thumbnail is dropped and the first sticker is used as the thumbnail.
+
+• **args.user\_id**: `number`
+
+User identifier of the sticker set owner
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerSetThumbnail
+### setStickerSetThumbnail()
 
-▸ **setStickerSetThumbnail**(`args`): `Promise`\<``true``\>
+> **setStickerSetThumbnail**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args` | `Object` | - |
-| `args.format` | ``"video"`` \| ``"static"`` \| ``"animated"`` | Format of the thumbnail, must be one of “static” for a .WEBP or .PNG image, “animated” for a .TGS animation, or “video” for a WEBM video |
-| `args.name` | `string` | Sticker set name |
-| `args.thumbnail?` | `string` \| `Buffer` \| `ReadStream` | A .WEBP or .PNG image with the thumbnail, must be up to 128 kilobytes in size and have a width and height of exactly 100px, or a .TGS animation with a thumbnail up to 32 kilobytes in size (see https://core.telegram.org/stickers#animated-sticker-requirements for animated sticker technical requirements), or a WEBM video with the thumbnail up to 32 kilobytes in size; see https://core.telegram.org/stickers#video-sticker-requirements for video sticker technical requirements. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More information on Sending Files ». Animated and video sticker set thumbnails can't be uploaded via HTTP URL. If omitted, then the thumbnail is dropped and the first sticker is used as the thumbnail. |
-| `args.user_id` | `number` | User identifier of the sticker set owner |
+• **args**
+
+• **args.format**: `"video"` \| `"static"` \| `"animated"`
+
+Format of the thumbnail, must be one of “static” for a .WEBP or .PNG image, “animated” for a .TGS animation, or “video” for a WEBM video
+
+• **args.name**: `string`
+
+Sticker set name
+
+• **args.thumbnail?**: `string` \| `Buffer` \| `ReadStream`
+
+A .WEBP or .PNG image with the thumbnail, must be up to 128 kilobytes in size and have a width and height of exactly 100px, or a .TGS animation with a thumbnail up to 32 kilobytes in size (see https://core.telegram.org/stickers#animated-sticker-requirements for animated sticker technical requirements), or a WEBM video with the thumbnail up to 32 kilobytes in size; see https://core.telegram.org/stickers#video-sticker-requirements for video sticker technical requirements. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More information on Sending Files ». Animated and video sticker set thumbnails can't be uploaded via HTTP URL. If omitted, then the thumbnail is dropped and the first sticker is used as the thumbnail.
+
+• **args.user\_id**: `number`
+
+User identifier of the sticker set owner
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### setStickerSetTitle
+### setStickerSetTitle()
 
-▸ **setStickerSetTitle**(`name`, `title`): `Promise`\<``true``\>
+> **setStickerSetTitle**(`name`, `title`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `title` | `string` |
+• **name**: `string`
+
+• **title**: `string`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### stopMessageLiveLocation
+### stopMessageLiveLocation()
 
-▸ **stopMessageLiveLocation**(`markup?`): `Promise`\<``true`` \| `Edited` & `CommonMessage` & `MsgWith`\<``"location"``\>\>
+> **stopMessageLiveLocation**(`markup`?): `Promise`\<`true` \| `Edited` & `CommonMessage` & `MsgWith`\<`"location"`\>\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `markup?` | `InlineKeyboardMarkup` |
+• **markup?**: `InlineKeyboardMarkup`
 
 #### Returns
 
-`Promise`\<``true`` \| `Edited` & `CommonMessage` & `MsgWith`\<``"location"``\>\>
+`Promise`\<`true` \| `Edited` & `CommonMessage` & `MsgWith`\<`"location"`\>\>
 
-___
+***
 
-### stopPoll
+### stopPoll()
 
-▸ **stopPoll**(`args`): `Promise`\<`Poll`\>
+> **stopPoll**(`args`): `Promise`\<`Poll`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `message_id`: `number` ; `reply_markup?`: `InlineKeyboardMarkup`  }, ``"chat_id"``\> |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
 `Promise`\<`Poll`\>
 
-___
+***
 
-### unbanChatMember
+### unbanChatMember()
 
-▸ **unbanChatMember**(`args`): `Promise`\<``true``\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `chat_id`: `string` \| `number` ; `only_if_banned?`: `boolean` ; `user_id`: `number`  }, ``"chat_id"``\> |
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### unbanChatSenderChat
-
-▸ **unbanChatSenderChat**(`senderChatId`): `Promise`\<``true``\>
+> **unbanChatMember**(`args`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `senderChatId` | `number` |
+• **args**: `Omit`\<`object`, `"chat_id"`\>
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### unhideGeneralForumTopic
+### unbanChatSenderChat()
 
-▸ **unhideGeneralForumTopic**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### unpinAllChatMessages
-
-▸ **unpinAllChatMessages**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### unpinAllForumTopicMessages
-
-▸ **unpinAllForumTopicMessages**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### unpinAllGeneralForumTopicMessages
-
-▸ **unpinAllGeneralForumTopicMessages**(): `Promise`\<``true``\>
-
-#### Returns
-
-`Promise`\<``true``\>
-
-___
-
-### unpinChatMessage
-
-▸ **unpinChatMessage**(`message_id?`): `Promise`\<``true``\>
+> **unbanChatSenderChat**(`senderChatId`): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message_id?` | `number` |
+• **senderChatId**: `number`
 
 #### Returns
 
-`Promise`\<``true``\>
+`Promise`\<`true`\>
 
-___
+***
 
-### uploadStickerFile
+### unhideGeneralForumTopic()
 
-▸ **uploadStickerFile**(`args`): `Promise`\<`File`\>
+> **unhideGeneralForumTopic**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### unpinAllChatMessages()
+
+> **unpinAllChatMessages**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### unpinAllForumTopicMessages()
+
+> **unpinAllForumTopicMessages**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### unpinAllGeneralForumTopicMessages()
+
+> **unpinAllGeneralForumTopicMessages**(): `Promise`\<`true`\>
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### unpinChatMessage()
+
+> **unpinChatMessage**(`message_id`?): `Promise`\<`true`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Omit`\<\{ `sticker`: `string` \| `Buffer` \| `ReadStream` ; `sticker_format`: ``"video"`` \| ``"static"`` \| ``"animated"`` ; `user_id`: `number`  }, ``"user_id"``\> |
+• **message\_id?**: `number`
+
+#### Returns
+
+`Promise`\<`true`\>
+
+***
+
+### uploadStickerFile()
+
+> **uploadStickerFile**(`args`): `Promise`\<`File`\>
+
+#### Parameters
+
+• **args**: `Omit`\<`object`, `"user_id"`\>
 
 #### Returns
 
