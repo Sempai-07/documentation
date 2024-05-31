@@ -27,6 +27,7 @@
     - [Markdown](./src/packages/formatters/markdownv.md)
   - **Supported Languages**
     - [SupportedLanguages](./src/packages/formatters/SupportedLanguages.md)
+    - [parseEntities](./src/packages/formatters/parseEntities.md)
 
 ### Classes
 
