@@ -464,6 +464,44 @@
 
 ***
 
+### awaitMessage()
+
+> **awaitMessage**(`options`): `Promise`\<`unknown`\>
+
+#### Parameters
+
+• **options**
+
+• **options.count?**: `number`
+
+The number of messages to wait for.
+
+• **options.filter?**
+
+The optional filter function to apply before invoking the callback.
+
+• **options.message?**: `string` \| `string`[]
+
+The text or texts to listen for.
+
+• **options.onCallback**
+
+The callback function when messages are received.
+
+• **options.onError?**
+
+The optional error callback function.
+
+• **options.timeout?**: `number`
+
+The timeout duration in milliseconds.
+
+#### Returns
+
+`Promise`\<`unknown`\>
+
+***
+
 ### awaitReaction()
 
 > **awaitReaction**(`options`): `Promise`\<`unknown`\>
@@ -622,7 +660,7 @@ The timeout duration in milliseconds.
 
 ### createInlineKeyboardCollector()
 
-> **createInlineKeyboardCollector**(`options`): [`InlineKeyboardCollector`](InlineKeyboardCollector.md)
+> **createInlineKeyboardCollector**(`options`): [`InlineKeyboardCollector`](./src/classes/InlineKeyboardCollector.md)
 
 #### Parameters
 

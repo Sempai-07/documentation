@@ -53,7 +53,7 @@ The bot's authentication token.
 
 ### media
 
-> **media**: [`Media`](Media.md)
+> **media**: [`Media`](./src/classes/Media.md)
 
 Media instance for handling media-related requests.
 
@@ -1104,6 +1104,10 @@ Use this method to edit captions of messages. On success, if the edited message 
 
 • **params**
 
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
+
 • **params.caption?**: `string`
 
 New caption of the message, 0-1024 characters after entities parsing
@@ -1151,6 +1155,10 @@ Use this method to edit live location messages. A location can be edited until i
 #### Parameters
 
 • **params**
+
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
 
 • **params.chat\_id?**: `string` \| `number`
 
@@ -1208,6 +1216,10 @@ Use this method to edit animation, audio, document, photo, or video messages. If
 
 • **params**
 
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
+
 • **params.chat\_id?**: `string` \| `number`
 
 Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)
@@ -1244,6 +1256,10 @@ Use this method to edit only the reply markup of messages. On success, if the ed
 
 • **params**
 
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
+
 • **params.chat\_id?**: `string` \| `number`
 
 Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)
@@ -1275,6 +1291,10 @@ Use this method to edit text and game messages. On success, if the edited messag
 #### Parameters
 
 • **params**
+
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
 
 • **params.chat\_id?**: `string` \| `number`
 
@@ -1803,6 +1823,24 @@ Use this method to get the current bot short description for the given user lang
 
 ***
 
+### getStarTransactions()
+
+> **getStarTransactions**(`offset`?, `limit`?): `Promise`\<`StarTransactions`\>
+
+Returns the bot's Telegram Star transactions in chronological order. On success, returns a StarTransactions object.
+
+#### Parameters
+
+• **offset?**: `number`
+
+• **limit?**: `number`
+
+#### Returns
+
+`Promise`\<`StarTransactions`\>
+
+***
+
 ### getStickerSet()
 
 > **getStickerSet**(`name`): `Promise`\<`StickerSet`\>
@@ -2080,7 +2118,7 @@ Removes a typed listener for the specified event.
 
 ##### Type parameters
 
-• **T** *extends* keyof [`IEventFunctions`](./src/interfaces/IEventFunctions.md)
+• **T** *extends* keyof [`IEventFunctions`](../interfaces/IEventFunctions.md)
 
 ##### Parameters
 
@@ -2088,7 +2126,7 @@ Removes a typed listener for the specified event.
 
 The event name.
 
-• **listener**: [`IEventFunctions`](./src/interfaces/IEventFunctions.md)\[`T`\]
+• **listener**: [`IEventFunctions`](../interfaces/IEventFunctions.md)\[`T`\]
 
 The listener function.
 
@@ -2140,7 +2178,7 @@ Adds a typed listener for the specified event.
 
 ##### Type parameters
 
-• **T** *extends* keyof [`IEventFunctions`](./src/interfaces/IEventFunctions.md)
+• **T** *extends* keyof [`IEventFunctions`](../interfaces/IEventFunctions.md)
 
 ##### Parameters
 
@@ -2148,7 +2186,7 @@ Adds a typed listener for the specified event.
 
 The event name.
 
-• **listener**: [`IEventFunctions`](./src/interfaces/IEventFunctions.md)\[`T`\]
+• **listener**: [`IEventFunctions`](../interfaces/IEventFunctions.md)\[`T`\]
 
 The listener function.
 
@@ -2200,7 +2238,7 @@ Adds a typed one-time listener for the specified event.
 
 ##### Type parameters
 
-• **T** *extends* keyof [`IEventFunctions`](./src/interfaces/IEventFunctions.md)
+• **T** *extends* keyof [`IEventFunctions`](../interfaces/IEventFunctions.md)
 
 ##### Parameters
 
@@ -2208,7 +2246,7 @@ Adds a typed one-time listener for the specified event.
 
 The event name.
 
-• **listener**: [`IEventFunctions`](./src/interfaces/IEventFunctions.md)\[`T`\]
+• **listener**: [`IEventFunctions`](../interfaces/IEventFunctions.md)\[`T`\]
 
 The listener function.
 
@@ -2258,7 +2296,7 @@ Identifier of a message to pin
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
-already been added. Multiple calls passing the same combination of `eventName`and `listener` will result in the `listener` being added, and called, multiple
+already been added. Multiple calls passing the same combination of `eventName` and `listener` will result in the `listener` being added, and called, multiple
 times.
 
 ```js
@@ -2834,7 +2872,7 @@ Animation height
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -2922,7 +2960,7 @@ Duration of the audio in seconds
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3036,7 +3074,7 @@ Contact's last name
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3102,7 +3140,7 @@ Emoji on which the dice throw animation is based. Currently, must be one of "�
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3172,7 +3210,7 @@ File to send. Pass a file_id as String to send a file that exists on the Telegra
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3238,7 +3276,7 @@ Short name of the game, serves as the unique identifier for the game. Set up you
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3304,7 +3342,7 @@ The maximum accepted amount for tips in the smallest units of the currency (inte
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3446,7 +3484,7 @@ Longitude of the location
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3506,7 +3544,7 @@ Sends the messages silently. Users will receive a notification with no sound.
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3564,7 +3602,7 @@ Link preview generation options for the message
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3638,7 +3676,7 @@ Pass True if the photo needs to be covered with a spoiler animation
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3736,7 +3774,7 @@ Pass True if the poll needs to be immediately closed. This can be useful for pol
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3818,7 +3856,7 @@ Emoji associated with the sticker; only for just uploaded stickers
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3904,7 +3942,7 @@ Longitude of the venue
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -3982,7 +4020,7 @@ Video height
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -4069,7 +4107,7 @@ Video width and height, i.e. diameter of the video message
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -4143,7 +4181,7 @@ Duration of the voice message in seconds
 
 • **params.message\_effect\_id?**: `string`
 
-Unique identifier of the message effect to be added to the message
+Unique identifier of the message effect to be added to the message; for private chats only
 
 • **params.message\_thread\_id?**: `number`
 
@@ -4757,6 +4795,10 @@ Use this method to stop updating a live location message before live_period expi
 
 • **params**
 
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
+
 • **params.chat\_id?**: `string` \| `number`
 
 Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)
@@ -4789,6 +4831,10 @@ Use this method to stop a poll which was sent by the bot. On success, the stoppe
 
 • **params**
 
+• **params.business\_connection\_id?**: `string`
+
+Unique identifier of the business connection on behalf of which the message to be edited was sent
+
 • **params.chat\_id**: `string` \| `number`
 
 Unique identifier for the target chat or username of the target channel (in the format @channelusername)
@@ -4809,7 +4855,7 @@ An object for a new message inline keyboard.
 
 ### transferDataToServer()
 
-> **transferDataToServer**(`options`): `Promise`\<[`IApiConfig`](./src/interfaces/IApiConfig.md)\>
+> **transferDataToServer**(`options`): `Promise`\<[`IApiConfig`](../interfaces/IApiConfig.md)\>
 
 Transfers data to the server in the appropriate format (JSON or FormData).
 
@@ -4821,7 +4867,7 @@ Options for the request.
 
 #### Returns
 
-`Promise`\<[`IApiConfig`](./src/interfaces/IApiConfig.md)\>
+`Promise`\<[`IApiConfig`](../interfaces/IApiConfig.md)\>
 
 The configuration object for the request.
 
