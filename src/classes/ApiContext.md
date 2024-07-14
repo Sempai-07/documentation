@@ -1228,11 +1228,29 @@ The timeout duration in milliseconds.
 
 • **audio**: `string` \| `Buffer` \| `ReadStream`
 
-• **args?**: `Omit`\<`object`, `"media"`\>
+• **args?**: `Omit`\<`object`, `"audio"`\>
 
 #### Returns
 
 `Promise`\<`AudioMessage`\>
+
+***
+
+### sendPaidMedia()
+
+> **sendPaidMedia**(`media`, `starCount`, `args`?): `Promise`\<`PaidMediaMessage`\>
+
+#### Parameters
+
+• **media**: `InputPaidMedia`[]
+
+• **starCount**: `number`
+
+• **args?**: `Omit`\<`object`, `"media"` \| `"chat_id"` \| `"star_count"`\>
+
+#### Returns
+
+`Promise`\<`PaidMediaMessage`\>
 
 ***
 

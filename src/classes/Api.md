@@ -53,9 +53,9 @@ The bot's authentication token.
 
 ### media
 
-> **media**: [`Media`](./src/classes/Media.md)
+> **media**: [`MediaData`](./src/classes/MediaData.md)
 
-Media instance for handling media-related requests.
+MediaData instance for handling media-related requests.
 
 #### Inherited from
 
@@ -3003,6 +3003,66 @@ Track name
 #### Returns
 
 `Promise`\<`AudioMessage`\>
+
+***
+
+### sendPaidMedia()
+
+> **sendPaidMedia**(`params`): `Promise`\<`PaidMediaMessage`\>
+
+Use this method to send paid media to channel chats. On success, the sent Message is returned.
+
+#### Parameters
+
+• **params**
+
+• **params.caption?**: `string`
+
+MediaData caption, 0-1024 characters after entities parsing
+
+• **params.caption\_entities?**: `MessageEntity`[]
+
+A list of special entities that appear in the caption, which can be specified instead of parse_mode
+
+• **params.chat\_id**: `string` \| `number`
+
+Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+
+• **params.disable\_notification?**: `boolean`
+
+Sends the message silently. Users will receive a notification with no sound.
+
+• **params.media**: `InputPaidMedia`[]
+
+An array describing the media to be sent; up to 10 items
+
+• **params.parse\_mode?**: `string`
+
+Mode for parsing entities in the media caption. See formatting options for more details.
+
+• **params.protect\_content?**: `boolean`
+
+Protects the contents of the sent message from forwarding and saving
+
+• **params.reply\_markup?**: `InlineKeyboardMarkup` \| `ReplyKeyboardMarkup` \| `ReplyKeyboardRemove` \| `ForceReply`
+
+Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user
+
+• **params.reply\_parameters?**: `ReplyParameters`
+
+Description of the message to reply to
+
+• **params.show\_caption\_above\_media?**: `boolean`
+
+Pass True, if the caption must be shown above the message media
+
+• **params.star\_count**: `number`
+
+The number of Telegram Stars that must be paid to buy access to the media
+
+#### Returns
+
+`Promise`\<`PaidMediaMessage`\>
 
 ***
 

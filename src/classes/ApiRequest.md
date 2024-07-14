@@ -49,9 +49,9 @@ The Telegram Bot API token.
 
 ### media
 
-> **media**: [`Media`](./src/classes/Media.md)
+> **media**: [`MediaData`](./src/classes/MediaData.md)
 
-Media instance for handling media-related requests.
+MediaData instance for handling media-related requests.
 
 ***
 

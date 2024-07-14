@@ -1,16 +1,16 @@
-# Class: Media
+# Class: MediaData
 
 Utility class for handling media-related operations.
 
 ## Constructors
 
-### new Media()
+### new MediaData()
 
-> **new Media**(): [`Media`](./src/classes/Media.md)
+> **new MediaData**(): [`MediaData`](./src/classes/MediaData.md)
 
 #### Returns
 
-[`Media`](./src/classes/Media.md)
+[`MediaData`](./src/classes/MediaData.md)
 
 ## Properties
 
@@ -34,7 +34,7 @@ Fields in JSON payload that require special treatment when sent as form data.
 
 > `readonly` **sourceParametersMedia**: `string`[]
 
-Media parameters that can be sent as form data.
+MediaData parameters that can be sent as form data.
 
 ## Methods
 
